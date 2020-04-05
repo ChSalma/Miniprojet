@@ -14,20 +14,20 @@
 #include <main.h>
 
 
-static THD_WORKING_AREA(waProcessMeasure,256);
-static THD_FUNCTION(ProcessMeasure, arg) {
-
-    chRegSetThreadName(__FUNCTION__);
-    (void)arg;
-
-    while(1){
-        //starts getting informations
-		//waits to get the informations
-		//signals informations are ready
-			//chBSemSignal(&image_ready_sem);
-    }
-}
+//static THD_WORKING_AREA(waProcessMeasure,256);
+//static THD_FUNCTION(ProcessMeasure, arg) {
+//
+//    chRegSetThreadName(__FUNCTION__);
+//    (void)arg;
+//
+//    while(1){
+//        //starts getting informations
+//		//waits to get the informations
+//		//signals informations are ready
+//			//chBSemSignal(&image_ready_sem);
+//    }
+//}
 
 void process_sensors_start(void){
-	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO, ProcessMeasure, NULL);
+//	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO, ProcessMeasure, NULL);
 }
