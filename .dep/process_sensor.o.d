@@ -100,7 +100,9 @@ build/obj/process_sensor.o: process_sensor.c \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h \
- main.h ../../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
+ ../../lib/e-puck2_main-processor/src/sensors/proximity.h \
+ ../../lib/e-puck2_main-processor/src/motors.h main.h \
+ ../../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/dcmi.h \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/dcmi_lld.h \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/stm32_registry.h \
@@ -336,6 +338,10 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h:
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h:
+
+../../lib/e-puck2_main-processor/src/sensors/proximity.h:
+
+../../lib/e-puck2_main-processor/src/motors.h:
 
 main.h:
 

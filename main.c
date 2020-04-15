@@ -13,11 +13,6 @@
 #include <process_sensor.h>
 #include <chprintf.h>
 
-//define pour la conversion en mm
-#define DIV_FACTOR_DIST 16
-#define OFFSET_DIST 54
-
-//Je suis pas sûre de ces lignes, copier du main de chibi--> m'a permis d'éviter l'erreur de thd dans proximity.c
 //Déclaration du bus
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
@@ -53,20 +48,20 @@ int main(void)
 
 	//Init les moteurs
 	motors_init();
-	right_motor_set_speed(600);
-	left_motor_set_speed(600);
+//	right_motor_set_speed(600);
+//	left_motor_set_speed(600);
 
 	//start the threads for the pi regulator and the proximity sensors process
 //	pi_regulator_start();
-//	process_sensors_start();
+	process_sensors_start();
 
 	//init de test values
-	int test_value[2];
-	int i;
+//	int test_value[2];
+//	int i;
 
     /* Infinite loop. */
     while (1) {
-//    	//test des valeurs reçues par proximity
+    	//test des valeurs reçues par proximity
 //    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
 //    	{
 //			test_value[0] = get_prox(i);
@@ -74,7 +69,7 @@ int main(void)
 //			chprintf((BaseSequentialStream *)&SD3, "IR%d \n", i+1);
 //			chprintf((BaseSequentialStream *)&SD3, "prox = %d \n", test_value[0]);
 //			chprintf((BaseSequentialStream *)&SD3, "calibrated_prox = %d \n", test_value[1]);
-//    	}//conclusion distance[mm] = -0.0625*prox + 54 = -x/16 +54 ??
+//    	}
 //    	//test de calculs de distances
 //    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
 //    	{
@@ -83,6 +78,7 @@ int main(void)
 //    		chprintf((BaseSequentialStream *)&SD3, "IR%d \n", i+1);
 //    		chprintf((BaseSequentialStream *)&SD3, "dist[mm] = %d \n", test_value[1]);
 //    	}
+
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }
