@@ -12,6 +12,7 @@
 #include <sensors/proximity.h>
 #include <process_sensor.h>
 #include <chprintf.h>
+#include <maze_mapping.h>
 
 //Déclaration du bus
 messagebus_t bus;
