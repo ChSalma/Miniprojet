@@ -125,7 +125,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 00000000 l    df *ABS*	00000000 _arm_cmpdf2.o
 00000000 l    df *ABS*	00000000 _arm_unorddf2.o
 00000000 l    df *ABS*	00000000 main.c
-20000820 l     O .data	0000000c ser_cfg.12798
+20000820 l     O .data	0000000c ser_cfg.12803
 00000000 l    df *ABS*	00000000 process_sensor.c
 080012a0 l     F .text	0000007c ProcessMeasure
 20001204 l     O .bss	00000001 obstacle_detected
