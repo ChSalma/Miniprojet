@@ -9,7 +9,7 @@
 #include "hal.h"
 #include <stdbool.h>
 #include <sensors/proximity.h>
-#include <motors.h>
+#include <Mouvements.h>
 //#include <math.h>
 //#include <usbcfg.h>
 //#include <chprintf.h>
@@ -37,13 +37,18 @@ static THD_FUNCTION(ProcessMeasure, arg) {
     		{
     			//mettre à jour variable globale obstacle
     			obstacle_detected = true;
-    			right_motor_set_speed(-300);
-    			left_motor_set_speed(-300);
+    			if (i < (PROXIMITY_NB_CHANNELS/2)) //Obstacle détecté à droite
+    			{
+    				turn(TURN_LEFT);
+    			}
+    			else
+    			{
+    				turn(TURN_RIGHT); //Obstacle détecté à gauche
+    			}
     		}
     		else if (!obstacle_detected)
     		{
-    			right_motor_set_speed(300);
-    			left_motor_set_speed(300);
+    			go_fast();
     		}
     	}
     	chThdSleepMilliseconds(1000);
