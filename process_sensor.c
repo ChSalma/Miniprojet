@@ -17,6 +17,7 @@
 #include <main.h>
 
 #define FREE_WAY 20//un chemin est considéré comme telle si l'on a une valeur inférieure à celle-ci
+#define WALL 100
 #define OBSTACLE 800 //un mur est considéré comme trop proche lorsque qu'on atteint cette valeur
 
 static unsigned int sensors_values[PROXIMITY_NB_CHANNELS];
@@ -40,10 +41,12 @@ static THD_FUNCTION(ProcessMeasure, arg) {
     			if (i < (PROXIMITY_NB_CHANNELS/2)) //Obstacle détecté à droite
     			{
     				turn(TURN_LEFT);
+    				go_slow();
     			}
     			else
     			{
     				turn(TURN_RIGHT); //Obstacle détecté à gauche
+    				go_slow();
     			}
     		}
     		else if (!obstacle_detected)
@@ -51,8 +54,8 @@ static THD_FUNCTION(ProcessMeasure, arg) {
     			go_fast();
     		}
     	}
-    	chThdSleepMilliseconds(1000);
     	obstacle_detected = false;
+    	chThdSleepMilliseconds(1000);
 		//waits to get the informations
 		//signals informations are ready
 			//chBSemSignal(&image_ready_sem);

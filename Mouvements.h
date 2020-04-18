@@ -14,8 +14,8 @@
 #define TURN_RIGHT	-90
 #define TURN_LEFT	90
 #define HALF_TURN	180
-#define ADJUST_RIGHT -5
-#define ADJUST_LEFT 5
+#define ADJUST_RIGHT -10
+#define ADJUST_LEFT 10
 
 typedef struct robot
 {

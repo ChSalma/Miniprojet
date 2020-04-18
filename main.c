@@ -79,7 +79,6 @@ int main(void)
 //    		chprintf((BaseSequentialStream *)&SD3, "IR%d \n", i+1);
 //    		chprintf((BaseSequentialStream *)&SD3, "dist[mm] = %d \n", test_value[1]);
 //    	}
-
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }
