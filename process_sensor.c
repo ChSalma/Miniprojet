@@ -17,10 +17,12 @@
 #include <main.h>
 
 #define FREE_WAY 20//un chemin est considéré comme telle si l'on a une valeur inférieure à celle-ci
-#define WALL 100
 #define OBSTACLE 800 //un mur est considéré comme trop proche lorsque qu'on atteint cette valeur
+enum{FREE_WAY_DETECTED, WALL_DETECTED, OBSTACLE_DETECTED};
 
-static unsigned int sensors_values[PROXIMITY_NB_CHANNELS];
+static uint8_t sensors_values[PROXIMITY_NB_CHANNELS];
+//static uint8_t cases_table[][6]=//0:devant_droite, 1:
+//{{
 static bool obstacle_detected;
 static THD_WORKING_AREA(waProcessMeasure,256);
 static THD_FUNCTION(ProcessMeasure, arg) {
@@ -30,10 +32,17 @@ static THD_FUNCTION(ProcessMeasure, arg) {
 
     while(1){
         //starts getting informations
-    	int i;
+    	uint8_t i;
     	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
     	{
-    		sensors_values[i] = get_calibrated_prox(i);
+    		if (get_calibrated_prox(i) > OBSTACLE)
+    			sensors_values[i] = OBSTACLE_DETECTED;
+    		else if (get_calibrated_prox(i) < FREE_WAY)
+				sensors_values[i]= FREE_WAY_DETECTED;
+    		else
+    			sensors_values[i]= WALL_DETECTED;
+    	}
+
     		if (sensors_values[i] > OBSTACLE)
     		{
     			//mettre à jour variable globale obstacle
