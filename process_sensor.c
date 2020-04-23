@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <sensors/proximity.h>
 #include <Mouvements.h>
+#include <maze_mapping.h>
 //#include <math.h>
 //#include <usbcfg.h>
 //#include <chprintf.h>
@@ -23,8 +24,6 @@ enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SEN
 enum{FREE_WAY_DETECTED, WALL_DETECTED, OBSTACLE_DETECTED};
 
 static uint8_t sensors_values[PROXIMITY_NB_CHANNELS];
-//static uint8_t cases_table[][6]=//0:devant_droite, 1:
-//{{
 static bool obstacle_detected;
 static THD_WORKING_AREA(waProcessMeasure,256);
 static THD_FUNCTION(ProcessMeasure, arg) {
@@ -34,7 +33,7 @@ static THD_FUNCTION(ProcessMeasure, arg) {
 
     while(1){
         //starts getting informations
-    	uint8_t i;
+    	uint8_t i, next_order;
     	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
     	{
     		if (get_calibrated_prox(i) > OBSTACLE)
@@ -59,7 +58,7 @@ static THD_FUNCTION(ProcessMeasure, arg) {
     		else
     			sensors_values[FRONT_RIGHT]=FREE_WAY_DETECTED;
 
-    		//appel fonction gestion environnement avec les paramètres sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS] sensors_values[LEFT_SENS]
+    		next_order=maze_mapping_next_move((bool) sensors_values[FRONT_RIGHT], (bool) sensors_values[RIGHT_SENS], (bool) sensors_values[LEFT_SENS]);
     	}
     	else; //gestion d'obstacle
 

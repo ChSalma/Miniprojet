@@ -28,7 +28,7 @@
 		<link>
 			<name>e-puck2_main-processor</name>
 			<type>2</type>
-			<location>C:/Users/Salma Chatagny/Documents/EPFL/BA6/Microinformatique/TPs/TPs_git/lib/e-puck2_main-processor</location>
+			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/lib/e-puck2_main-processor</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

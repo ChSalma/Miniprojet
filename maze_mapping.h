@@ -8,14 +8,10 @@
 #ifndef MAZE_MAPPING_H_
 #define MAZE_MAPPING_H_
 
-#include <stdint.h>
+enum {NO_MODE_SELECTED, DISCOVER, RETURN_HOME, GO_FURTHEST_POINT_KNOWN};
+enum {KEEP_GOING, GO_RIGHT, GO_FORWARD, GO_LEFT, U_TURN, DONT_MOVE};
 
-typedef struct Crossroad
-{
-	uint8_t chosen_path;
-	float cr_pos_x, cr_pos_y;
-} CROSSROAD;
-
-
+uint8_t maze_mapping_next_move(bool, bool, bool);
+void maze_mapping_select_mode(uint8_t);
 
 #endif /* MAZE_MAPPING_H_ */
