@@ -40,6 +40,7 @@ int main(void)
 
     //Init du bus
     messagebus_init(&bus, &bus_lock, &bus_condvar);
+
     //starts the serial communication
     serial_start();
 
@@ -49,36 +50,15 @@ int main(void)
 
 	//Init les moteurs
 	motors_init();
-//	right_motor_set_speed(600);
-//	left_motor_set_speed(600);
 
 	//start the threads for the pi regulator and the proximity sensors process
 //	pi_regulator_start();
 	process_sensors_start();
-
-	//init de test values
-//	int test_value[2];
-//	int i;
+	maze_mapping_select_mode(DISCOVER); // à enlever une fois les modes mis en place
 
     /* Infinite loop. */
     while (1) {
-    	//test des valeurs reçues par proximity
-//    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
-//    	{
-//			test_value[0] = get_prox(i);
-//			test_value[1] = get_calibrated_prox(i);
-//			chprintf((BaseSequentialStream *)&SD3, "IR%d \n", i+1);
-//			chprintf((BaseSequentialStream *)&SD3, "prox = %d \n", test_value[0]);
-//			chprintf((BaseSequentialStream *)&SD3, "calibrated_prox = %d \n", test_value[1]);
-//    	}
-//    	//test de calculs de distances
-//    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
-//    	{
-//    		test_value[0] = get_prox(i);
-//    		test_value[1] = (-test_value[0])/DIV_FACTOR_DIST + OFFSET_DIST;
-//    		chprintf((BaseSequentialStream *)&SD3, "IR%d \n", i+1);
-//    		chprintf((BaseSequentialStream *)&SD3, "dist[mm] = %d \n", test_value[1]);
-//    	}
+
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }
