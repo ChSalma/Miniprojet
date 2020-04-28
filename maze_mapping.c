@@ -11,6 +11,9 @@
 #include <stdint.h>
 #include <maze_mapping.h>
 #include "ch.h"
+#include <chprintf.h>
+
+#include <main.h>
 
 #define MAX_MAP_SIZE 50
 #define RESET 0
@@ -32,7 +35,8 @@ static uint8_t mode;
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
-    if (right_status && left_status)
+	chprintf((BaseSequentialStream *)&SD3, "Corridor\n");
+	if (right_status && left_status)
         return KEEP_GOING;
 
     if (!right_status)
@@ -43,10 +47,45 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 
 uint8_t maze_mapping_memorise_crossroad(bool right_status)
 {
+//        uint8_t order;
+//
+//        robot_position=current_crossroad;
+//
+//        if (!right_status)
+//        {
+//            map[current_crossroad]+=RIGHT;
+//            order=GO_RIGHT;
+//        }
+//        else
+//        {
+//            map[current_crossroad]+=FORWARD;
+//            order=GO_FORWARD;
+//        }
+//
+//        if (map[current_crossroad]!=ALL_PATHS_CHECKED)
+//        {
+//            if (current_crossroad<MAX_MAP_SIZE)
+//                current_crossroad++;//si cette valeur dépasse MAX_MAP_SIZE, le labyrithe est trop difficile pour le programme.
+//            else
+//            	chSysHalt("Le labyrinthe est trop difficile pour le programme");
+//        }
+//        else
+//        {
+//            if (current_crossroad>RESET)
+//            {
+//                map[current_crossroad]=NO_SELECTED_PATH; //Efface la case du tableau pour une nouvelle écriture -> oublie le carrefour actuel car c'est une deadend
+//                current_crossroad--;//si cette valeur passe en dessous de zéro, cela implique que le labyrinthe n'a pas de sortie.
+//            }
+//            else
+//            	chSysHalt("Le labyrinthe n'a pas d'issue!"); //Musique de déception
+//        }
+//        crossroad_already_saved=true;
+//        return order;
     if (!crossroad_already_saved)
     {
         uint8_t order;
 
+        chprintf((BaseSequentialStream *)&SD3, "Crossroad\n");
         robot_position=current_crossroad;
 
         if (!right_status)
@@ -82,7 +121,10 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
         return order;
     }
     else
-        return KEEP_GOING;
+    {
+    	chprintf((BaseSequentialStream *)&SD3, "Still in the same crossroad\n");
+    	return KEEP_GOING;
+    }
 }
 
 uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left_status)
@@ -98,6 +140,7 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             crossroad_already_saved=false;
             if (current_crossroad>RESET)
                 current_crossroad--;
+            chprintf((BaseSequentialStream *)&SD3, "Deadend\n");
             return U_TURN;
 
         case CORRIDOR:

@@ -17,9 +17,12 @@
 
 #include <main.h>
 
-#define FREE_WAY 20//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
+#define FREE_WAY 30//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
+#define FREE_WAY_RIGHT 10
+#define FREE_WAY_FRONT 50
 #define OBSTACLE 800 //un mur est considéré comme trop proche lorsque qu'on atteint cette valeur
 #define ROBOT_DIAMETER 7.5f
+#define MAZE_UNIT 13
 
 enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SENS, FRONT_LEFT_45DEG, FRONT_LEFT};
 enum{FREE_WAY_DETECTED, WALL_DETECTED, OBSTACLE_DETECTED};
@@ -49,8 +52,8 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		{
     			sensors_values[i] = OBSTACLE_DETECTED;
     			//je vais faire en sorte que les capteurs avant considèrent un mur quand ils sont au niveau de l'obstacle...
-    			//car la déteection est trop mauvaise
-    			if ((i != 0) && (i != 7))
+    			//car la detection est trop mauvaise
+    			if ((i != FRONT_RIGHT) && (i != FRONT_LEFT))
     			{
         			obstacle_detected=TRUE;
         			i=PROXIMITY_NB_CHANNELS; //Permet de sortir de la boucle for
@@ -58,9 +61,19 @@ static THD_FUNCTION(ProcessMeasure, arg){
 
     		}
     		else if (calibrated_prox < FREE_WAY)
-    			sensors_values[i]= FREE_WAY_DETECTED;
+    		{
+    			if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
+    				sensors_values[i]= WALL_DETECTED;
+    			else
+    				sensors_values[i]= FREE_WAY_DETECTED;
+    		}
     		else
-    			sensors_values[i]= WALL_DETECTED;
+    		{
+    			if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox < FREE_WAY_FRONT))
+    				sensors_values[i]= FREE_WAY_DETECTED;
+    			else
+    				sensors_values[i]= WALL_DETECTED;
+    		}
     	}
 
     	sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
@@ -69,7 +82,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
     	if (!obstacle_detected)
     	{
     		//si les capteurs avant détecte un mur ou un obstacle ils sont set comme mur détecté
-    		if((sensors_values[FRONT_RIGHT] >= WALL_DETECTED) || (sensors_values[FRONT_LEFT] >= WALL_DETECTED))//a voir s'il faut plutôt une condition avec un & plutôt que ou
+    		if((sensors_values[FRONT_RIGHT] >= WALL_DETECTED) && (sensors_values[FRONT_LEFT] >= WALL_DETECTED))//a voir s'il faut plutôt une condition avec un & plutôt que ou
     			sensors_values[FRONT_RIGHT] = WALL_DETECTED;
     		else
     			sensors_values[FRONT_RIGHT]=FREE_WAY_DETECTED; //ligne inutile puisqu'on ne rentre là-dedans que si front-right est déjà free-way
@@ -83,18 +96,21 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			break;
     		case(GO_RIGHT): //ajouter sécurité
 				chprintf((BaseSequentialStream *)&SD3, "going right\n");
-				go_for_distance(ROBOT_DIAMETER/2); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
+				go_for_distance(2*ROBOT_DIAMETER/3); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
     			turn(TURN_RIGHT);
+    			go_for_distance(MAZE_UNIT/2);
 				go_slow();
     			break;
     		case(GO_FORWARD): //ajouter sécurité
 				chprintf((BaseSequentialStream *)&SD3, "going forward\n");
+    			go_for_distance(MAZE_UNIT/2);
     			go_slow();
     			break;
     		case(GO_LEFT): //ajouter sécurité
 				chprintf((BaseSequentialStream *)&SD3, "going left\n");
-				go_for_distance(ROBOT_DIAMETER/2);
+				go_for_distance(2*ROBOT_DIAMETER/3);
     			turn(TURN_LEFT);
+    			go_for_distance(MAZE_UNIT/2);
 				go_slow();
     			break;
     		case(U_TURN):

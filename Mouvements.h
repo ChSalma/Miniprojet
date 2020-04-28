@@ -8,7 +8,7 @@
 #ifndef MOUVEMENTS_H_
 #define MOUVEMENTS_H_
 
-#define LOW_SPEED 200
+#define LOW_SPEED 300
 #define HIGH_SPEED 600
 
 #define TURN_RIGHT	-90 //[degrees]
