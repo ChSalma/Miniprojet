@@ -13,6 +13,7 @@
 #include <process_sensor.h>
 #include <chprintf.h>
 #include <maze_mapping.h>
+#include <regulator.h>
 
 //Déclaration du bus
 messagebus_t bus;
@@ -46,13 +47,13 @@ int main(void)
 
     //Init des capteurs de proximité
     proximity_start();
-    calibrate_ir();
+    calibrate_ir(); //ajouter delay avant calibration
 
 	//Init les moteurs
 	motors_init();
 
 	//start the threads for the pi regulator and the proximity sensors process
-//	pi_regulator_start();
+	regulator_start();
 	process_sensors_start();
 	maze_mapping_select_mode(DISCOVER); // à enlever une fois les modes mis en place
 

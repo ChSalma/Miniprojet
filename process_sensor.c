@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <sensors/proximity.h>
 #include <Mouvements.h>
+#include <process_sensor.h>
 #include <maze_mapping.h>
 //#include <math.h>
 //#include <usbcfg.h>
@@ -18,13 +19,11 @@
 #include <main.h>
 
 #define FREE_WAY 30//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
-#define FREE_WAY_RIGHT 10
 #define FREE_WAY_FRONT 50
 #define OBSTACLE 800 //un mur est considéré comme trop proche lorsque qu'on atteint cette valeur
 #define ROBOT_DIAMETER 7.5f
 #define MAZE_UNIT 13
 
-enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SENS, FRONT_LEFT_45DEG, FRONT_LEFT};
 enum{FREE_WAY_DETECTED, WALL_DETECTED, OBSTACLE_DETECTED};
 
 static uint8_t sensors_values[PROXIMITY_NB_CHANNELS];
@@ -131,7 +130,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
     	}
 
     	obstacle_detected = false;
-    	chThdSleepMilliseconds(500);
+    	chThdSleepMilliseconds(40); //à 100 fonctionne bien mais ne détecte pas les "portes"
 		//waits to get the informations
 		//signals informations are ready
 			//chBSemSignal(&image_ready_sem);
@@ -139,5 +138,5 @@ static THD_FUNCTION(ProcessMeasure, arg){
 }
 
 void process_sensors_start(void){
-	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO, ProcessMeasure, NULL);
+	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO+1, ProcessMeasure, NULL);
 }

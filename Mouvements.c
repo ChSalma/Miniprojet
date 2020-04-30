@@ -21,6 +21,8 @@
 #define CIRCLE_PERIMETER	(PI*DISTANCE_WHEELS)
 #define NSTEP_ONE_CIRCLE	(CIRCLE_PERIMETER/MIN_DISPLACEMENT)
 
+static int right_motor_current_speed, left_motor_current_speed;
+
 //prototypes des fonctions
 
 //Déclaration des fonctions
@@ -50,29 +52,27 @@ void turn(int angle)
 		while(left_motor_get_pos() < -nb_steps_to_do);
 	}
 	stop(); //comme ca le robot arrête de tourner
-//
-//	while (right_motor_get_pos > 0 && left_motor_get_pos > 0);
-//	{
-//		__asm__ volatile ("nop");
-//	}
 }
 
 void go_slow(void)
 {
-	right_motor_set_speed(LOW_SPEED);
-	left_motor_set_speed(LOW_SPEED);
+	set_speed (LOW_SPEED, LOW_SPEED);
 }
 
 void go_fast(void)
 {
-	right_motor_set_speed(HIGH_SPEED);
-	left_motor_set_speed(HIGH_SPEED);
+	set_speed (HIGH_SPEED, HIGH_SPEED);
 }
-
+void set_speed (int right_motor_new_speed, int left_motor_new_speed)
+{
+	right_motor_current_speed = right_motor_new_speed;
+	left_motor_current_speed = left_motor_new_speed;
+	right_motor_set_speed(right_motor_new_speed);
+	left_motor_set_speed(left_motor_new_speed);
+}
 void stop(void)
 {
-	right_motor_set_speed(0);
-	left_motor_set_speed(0);
+	set_speed (0, 0); //est-ce considéré comme un magic number? faut-il un define?
 }
 void go_for_distance(int distance) //distance [cm]
 {
@@ -93,4 +93,14 @@ void go_for_distance(int distance) //distance [cm]
 		while(left_motor_get_pos() < -nb_steps_to_do);
 	}
 	stop();
+}
+
+int get_right_speed(void)
+{
+	return right_motor_current_speed;
+}
+
+int get_left_speed(void)
+{
+	return left_motor_current_speed;
 }

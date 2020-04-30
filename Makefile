@@ -13,6 +13,7 @@ CSRC += ./main.c \
 		./process_sensor.c \
 		./maze_mapping.c \
 		./Mouvements.c  \
+		./regulator.c \
 
 #Header folders to include
 INCDIR += 
