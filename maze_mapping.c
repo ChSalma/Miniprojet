@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <maze_mapping.h>
+#include <constantes.h>
 #include "ch.h"
 #include <chprintf.h>
 
@@ -30,7 +31,7 @@ uint8_t maze_mapping_next_step_to_goal(void);
 static uint8_t map[MAX_MAP_SIZE];
 static int8_t current_crossroad=RESET, robot_position=RESET;
 static bool crossroad_already_saved=false, switch_to_discover_mode=false, uturn_to_do=true;
-static uint8_t mode=NO_MODE_SELECTED;
+static uint8_t mode = NO_MODE_SELECTED;
 
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
@@ -92,6 +93,7 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
 
 uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left_status)
 {
+	mode = DISCOVER ; // à supprimer lorsque les micros seront opérationnels
     if (mode==NO_MODE_SELECTED)
         return DONT_MOVE;
 

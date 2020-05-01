@@ -11,15 +11,12 @@
 #include <sensors/proximity.h>
 #include <Mouvements.h>
 #include <process_sensor.h>
+#include <constantes.h>
 #include <maze_mapping.h>
-//#include <math.h>
-//#include <usbcfg.h>
 #include <chprintf.h>
 
 #include <main.h>
 
-#define FREE_WAY 30//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
-#define FREE_WAY_FRONT 50
 #define OBSTACLE 800 //un mur est considéré comme trop proche lorsque qu'on atteint cette valeur
 #define ROBOT_DIAMETER 7.5f
 #define MAZE_UNIT 13
@@ -52,27 +49,26 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			sensors_values[i] = OBSTACLE_DETECTED;
     			//je vais faire en sorte que les capteurs avant considèrent un mur quand ils sont au niveau de l'obstacle...
     			//car la detection est trop mauvaise
-    			if ((i != FRONT_RIGHT) && (i != FRONT_LEFT))
+    			if ((i != FRONT_RIGHT) && (i != FRONT_LEFT)) //on ne fait pas la différence entre un mur et un ostacle quand c'est devant
     			{
         			obstacle_detected=TRUE;
         			i=PROXIMITY_NB_CHANNELS; //Permet de sortir de la boucle for
     			}
 
     		}
-    		else if (calibrated_prox < FREE_WAY)
+    		else if (calibrated_prox < FREE_WAY_LEFT || calibrated_prox < FREE_WAY_RIGHT ||calibrated_prox < FREE_WAY_FRONT)
     		{
     			if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
+    				sensors_values[i]= WALL_DETECTED;
+    			if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
+    				sensors_values[i]= WALL_DETECTED;
+    			if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > FREE_WAY_FRONT))
     				sensors_values[i]= WALL_DETECTED;
     			else
     				sensors_values[i]= FREE_WAY_DETECTED;
     		}
     		else
-    		{
-    			if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox < FREE_WAY_FRONT))
-    				sensors_values[i]= FREE_WAY_DETECTED;
-    			else
-    				sensors_values[i]= WALL_DETECTED;
-    		}
+    			sensors_values[i]= WALL_DETECTED;
     	}
 
     	sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
@@ -95,21 +91,21 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			break;
     		case(GO_RIGHT): //ajouter sécurité
 				chprintf((BaseSequentialStream *)&SD3, "going right\n");
-				go_for_distance(2*ROBOT_DIAMETER/3); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
+				go_for_distance(3*ROBOT_DIAMETER/5); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
     			turn(TURN_RIGHT);
-    			go_for_distance(MAZE_UNIT/2);
+//    			go_for_distance(MAZE_UNIT/2);
 				go_slow();
     			break;
     		case(GO_FORWARD): //ajouter sécurité
 				chprintf((BaseSequentialStream *)&SD3, "going forward\n");
-    			go_for_distance(MAZE_UNIT/2);
+//    			go_for_distance(MAZE_UNIT/2);
     			go_slow();
     			break;
     		case(GO_LEFT): //ajouter sécurité
 				chprintf((BaseSequentialStream *)&SD3, "going left\n");
-				go_for_distance(2*ROBOT_DIAMETER/3);
+				go_for_distance(3*ROBOT_DIAMETER/5);
     			turn(TURN_LEFT);
-    			go_for_distance(MAZE_UNIT/2);
+//    			go_for_distance(MAZE_UNIT/2);
 				go_slow();
     			break;
     		case(U_TURN):
@@ -126,11 +122,11 @@ static THD_FUNCTION(ProcessMeasure, arg){
     	}
     	else //gestion d'obstacle
     	{
-    		stop(); //gestion d'obstacle manuelle
+//    		stop(); //gestion d'obstacle manuelle
     	}
 
     	obstacle_detected = false;
-    	chThdSleepMilliseconds(40); //à 100 fonctionne bien mais ne détecte pas les "portes"
+    	chThdSleepMilliseconds(30); //à 100 fonctionne bien mais ne détecte pas les "portes"
 		//waits to get the informations
 		//signals informations are ready
 			//chBSemSignal(&image_ready_sem);

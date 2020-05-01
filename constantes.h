@@ -1,0 +1,22 @@
+/*
+ * constantes.h
+ *
+ *  Created on: 1 mai 2020
+ *      Author: Salma Chatagny
+ */
+
+#ifndef CONSTANTES_H_
+#define CONSTANTES_H_
+
+//proximity_sensors
+#define FREE_WAY_FRONT 55//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
+#define FREE_WAY_RIGHT 10
+#define FREE_WAY_LEFT 30
+enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SENS, FRONT_LEFT_45DEG, FRONT_LEFT};
+
+//maze_mapping
+enum {NO_MODE_SELECTED, DISCOVER, RETURN_HOME, GO_FURTHEST_POINT_KNOWN};
+enum {KEEP_GOING, GO_RIGHT, GO_FORWARD, GO_LEFT, U_TURN, DONT_MOVE};
+
+
+#endif /* CONSTANTES_H_ */

@@ -5,6 +5,7 @@
 #include <chprintf.h>
 
 #include <maze_mapping.h>
+#include <constantes.h>
 #include <Mouvements.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>

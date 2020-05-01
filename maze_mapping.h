@@ -8,9 +8,6 @@
 #ifndef MAZE_MAPPING_H_
 #define MAZE_MAPPING_H_
 
-enum {NO_MODE_SELECTED, DISCOVER, RETURN_HOME, GO_FURTHEST_POINT_KNOWN};
-enum {KEEP_GOING, GO_RIGHT, GO_FORWARD, GO_LEFT, U_TURN, DONT_MOVE};
-
 uint8_t maze_mapping_next_move(bool, bool, bool);
 bool maze_mapping_uturn_after_selecting_mode(uint8_t);
 

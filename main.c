@@ -56,7 +56,8 @@ int main(void)
 	//start the threads for the pi regulator and the proximity sensors process
 	regulator_start();
 	process_sensors_start();
-	mic_start(&processAudioData);
+	//start the microphones thread
+	//mic_start(&processAudioData);
 
     /* Infinite loop. */
     while (1) {
