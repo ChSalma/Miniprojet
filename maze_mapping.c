@@ -29,13 +29,12 @@ uint8_t maze_mapping_next_step_to_goal(void);
 //variables globales
 static uint8_t map[MAX_MAP_SIZE];
 static int8_t current_crossroad=RESET, robot_position=RESET;
-static bool crossroad_already_saved=false, switch_to_discover_mode=false;
-static uint8_t mode;
+static bool crossroad_already_saved=false, switch_to_discover_mode=false, uturn_to_do=true;
+static uint8_t mode=NO_MODE_SELECTED;
 
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
-	chprintf((BaseSequentialStream *)&SD3, "Corridor\n");
 	if (right_status && left_status)
         return KEEP_GOING;
 
@@ -47,45 +46,10 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 
 uint8_t maze_mapping_memorise_crossroad(bool right_status)
 {
-//        uint8_t order;
-//
-//        robot_position=current_crossroad;
-//
-//        if (!right_status)
-//        {
-//            map[current_crossroad]+=RIGHT;
-//            order=GO_RIGHT;
-//        }
-//        else
-//        {
-//            map[current_crossroad]+=FORWARD;
-//            order=GO_FORWARD;
-//        }
-//
-//        if (map[current_crossroad]!=ALL_PATHS_CHECKED)
-//        {
-//            if (current_crossroad<MAX_MAP_SIZE)
-//                current_crossroad++;//si cette valeur dépasse MAX_MAP_SIZE, le labyrithe est trop difficile pour le programme.
-//            else
-//            	chSysHalt("Le labyrinthe est trop difficile pour le programme");
-//        }
-//        else
-//        {
-//            if (current_crossroad>RESET)
-//            {
-//                map[current_crossroad]=NO_SELECTED_PATH; //Efface la case du tableau pour une nouvelle écriture -> oublie le carrefour actuel car c'est une deadend
-//                current_crossroad--;//si cette valeur passe en dessous de zéro, cela implique que le labyrinthe n'a pas de sortie.
-//            }
-//            else
-//            	chSysHalt("Le labyrinthe n'a pas d'issue!"); //Musique de déception
-//        }
-//        crossroad_already_saved=true;
-//        return order;
     if (!crossroad_already_saved)
     {
         uint8_t order;
 
-        chprintf((BaseSequentialStream *)&SD3, "Crossroad\n");
         robot_position=current_crossroad;
 
         if (!right_status)
@@ -122,7 +86,6 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
     }
     else
     {
-    	chprintf((BaseSequentialStream *)&SD3, "Still in the same crossroad\n");
     	return KEEP_GOING;
     }
 }
@@ -140,7 +103,7 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             crossroad_already_saved=false;
             if (current_crossroad>RESET)
                 current_crossroad--;
-            chprintf((BaseSequentialStream *)&SD3, "Deadend\n");
+            uturn_to_do=false;
             return U_TURN;
 
         case CORRIDOR:
@@ -148,7 +111,8 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             return maze_mapping_corridor_gestion(right_status, left_status);
 
         default:
-            break;
+        	uturn_to_do=true;
+        	break;
     }
 
     switch (mode)
@@ -177,7 +141,7 @@ uint8_t maze_mapping_next_step_to_goal(void)
             else
             {
                 robot_position++;
-                order=DONT_MOVE;
+                order=U_TURN;
                 mode=NO_MODE_SELECTED;
             }
         }
@@ -211,15 +175,27 @@ uint8_t maze_mapping_next_step_to_goal(void)
         return KEEP_GOING;
 }
 
-void maze_mapping_select_mode(uint8_t mode_selected)
+bool maze_mapping_uturn_after_selecting_mode(uint8_t mode_selected)
 {
-    if ((mode_selected==DISCOVER)&&(robot_position!=current_crossroad))
+	bool do_a_uturn;
+
+	if (mode_selected!=mode)
     {
-        mode=GO_FURTHEST_POINT_KNOWN;
-        switch_to_discover_mode=true;
+    	if (((mode==RETURN_HOME)||(mode_selected==RETURN_HOME))&&uturn_to_do)
+    		do_a_uturn=true;
+    	else
+    		do_a_uturn=false;
+
+    	if ((mode_selected==DISCOVER)&&(robot_position!=current_crossroad))
+    	{
+    		mode=GO_FURTHEST_POINT_KNOWN;
+    		switch_to_discover_mode=true;
+    	}
+    	else
+    		mode=mode_selected;
     }
     else
-        mode=mode_selected;
+    	do_a_uturn=false;
 
-    //Attention à penser à gérer si nécessité de faire un U-turn ou non
+    return do_a_uturn;
 }

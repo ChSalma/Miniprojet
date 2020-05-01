@@ -12,8 +12,9 @@
 #include <sensors/proximity.h>
 #include <process_sensor.h>
 #include <chprintf.h>
-#include <maze_mapping.h>
 #include <regulator.h>
+#include <audio/microphone.h>
+#include <audio_processing.h>
 
 //Déclaration du bus
 messagebus_t bus;
@@ -55,7 +56,7 @@ int main(void)
 	//start the threads for the pi regulator and the proximity sensors process
 	regulator_start();
 	process_sensors_start();
-	maze_mapping_select_mode(DISCOVER); // à enlever une fois les modes mis en place
+	mic_start(&processAudioData);
 
     /* Infinite loop. */
     while (1) {

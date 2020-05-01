@@ -14,6 +14,8 @@ CSRC += ./main.c \
 		./maze_mapping.c \
 		./Mouvements.c  \
 		./regulator.c \
+		./audio_processing.c \
+		./fft.c \
 
 #Header folders to include
 INCDIR += 
