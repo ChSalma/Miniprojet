@@ -49,11 +49,11 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			sensors_values[i] = OBSTACLE_DETECTED;
     			//je vais faire en sorte que les capteurs avant considèrent un mur quand ils sont au niveau de l'obstacle...
     			//car la detection est trop mauvaise
-    			if ((i != FRONT_RIGHT) && (i != FRONT_LEFT)) //on ne fait pas la différence entre un mur et un ostacle quand c'est devant
-    			{
-        			obstacle_detected=TRUE;
-        			i=PROXIMITY_NB_CHANNELS; //Permet de sortir de la boucle for
-    			}
+//    			if ((i != FRONT_RIGHT) && (i != FRONT_LEFT)) //on ne fait pas la différence entre un mur et un ostacle quand c'est devant
+//    			{
+//        			obstacle_detected=TRUE;
+//        			i=PROXIMITY_NB_CHANNELS; //Permet de sortir de la boucle for
+//    			}
 
     		}
     		else if (calibrated_prox < FREE_WAY_LEFT || calibrated_prox < FREE_WAY_RIGHT ||calibrated_prox < FREE_WAY_FRONT)
@@ -80,7 +80,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		if((sensors_values[FRONT_RIGHT] >= WALL_DETECTED) && (sensors_values[FRONT_LEFT] >= WALL_DETECTED))//a voir s'il faut plutôt une condition avec un & plutôt que ou
     			sensors_values[FRONT_RIGHT] = WALL_DETECTED;
     		else
-    			sensors_values[FRONT_RIGHT]=FREE_WAY_DETECTED; //ligne inutile puisqu'on ne rentre là-dedans que si front-right est déjà free-way
+    			sensors_values[FRONT_RIGHT]=FREE_WAY_DETECTED;
 
     		next_order = maze_mapping_next_move((bool) sensors_values[FRONT_RIGHT], (bool) sensors_values[RIGHT_SENS], (bool) sensors_values[LEFT_SENS]);
     		switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
@@ -126,7 +126,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
     	}
 
     	obstacle_detected = false;
-    	chThdSleepMilliseconds(30); //à 100 fonctionne bien mais ne détecte pas les "portes"
+    	chThdSleepMilliseconds(25); //à 100 fonctionne bien mais ne détecte pas les "portes"
 		//waits to get the informations
 		//signals informations are ready
 			//chBSemSignal(&image_ready_sem);

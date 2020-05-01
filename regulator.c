@@ -11,7 +11,7 @@
 #include <constantes.h>
 #include <sensors/proximity.h>
 
-#define KP 0.25 //0.5 est trop grand
+#define KP 0.5 //0.5 est trop grand
 #define MAX_DIFF 30
 
 static THD_WORKING_AREA(waRegulator, 256);
@@ -32,8 +32,12 @@ static THD_FUNCTION(Regulator, arg) {
         		difference = MAX_DIFF;
         	if(difference < -MAX_DIFF)
         		difference = -MAX_DIFF;
-        	right_speed=get_right_speed()+KP*difference;
-        	left_speed=get_left_speed()-KP*difference;//la gestion du motor gauche n'est pas forcément nécessaire
+        	//d'abord remettre la même vitesse aux deucc moteurs puis corrigé pour éviter explosion de correction
+        	right_speed = (get_right_speed() + get_left_speed())/2; //moyenne de la vitesse
+        	left_speed = right_speed-KP*difference;
+        	right_speed += KP*difference;
+//        	right_speed=get_right_speed()+KP*difference;
+//        	left_speed=get_left_speed()-KP*difference;//la gestion du motor gauche n'est pas forcément nécessaire
 
         	set_speed(right_speed, left_speed);
         }
