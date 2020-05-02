@@ -23,6 +23,7 @@ static float micFront_output[FFT_SIZE];
 #define FREQ_DISCOVER		16	//250Hz
 #define FREQ_RETURN_HOME	19	//296Hz
 #define FREQ_GO_FPK			23	//359HZ
+#define FREQ_NO_MODE		26	//406Hz
 #define MAX_FREQ			30	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_DISCOVER_L		(FREQ_DISCOVER-1)
@@ -31,6 +32,8 @@ static float micFront_output[FFT_SIZE];
 #define FREQ_RETURN_HOME_H	(RETURN_HOME+1)
 #define FREQ_GO_FPK_L		(FREQ_GO_FPK-1)
 #define FREQ_GO_FPK_H		(FREQ_GO_FPK+1)
+#define FREQ_NO_MODE_L		(FREQ_NO_MODE-1)
+#define FREQ_NO_MODE_H		(FREQ_NO_MODE+1)
 
 void sound_remote(float* data)
 {
@@ -61,6 +64,10 @@ void sound_remote(float* data)
 	else if(max_norm_index >= FREQ_DISCOVER_L && max_norm_index <= FREQ_DISCOVER_H)
 	{
 		do_a_uturn=maze_mapping_uturn_after_selecting_mode(DISCOVER);
+	}
+	else if(max_norm_index >= FREQ_NO_MODE_L && max_norm_index <= FREQ_NO_MODE_H)
+	{
+		do_a_uturn=maze_mapping_uturn_after_selecting_mode(NO_MODE_SELECTED);
 	}
 	else
 		do_a_uturn=false;
@@ -93,6 +100,7 @@ void processAudioData(int16_t *data, uint16_t num_samples)
 	{
 		doFFT_optimized(FFT_SIZE, micFront_cmplx_input);
 		arm_cmplx_mag_f32(micFront_cmplx_input, micFront_output, FFT_SIZE);
+		nb_samples = 0;
 		sound_remote(micFront_output);
 	}
 }

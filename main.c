@@ -57,7 +57,7 @@ int main(void)
 	regulator_start();
 	process_sensors_start();
 	//start the microphones thread
-	//mic_start(&processAudioData);
+	mic_start(&processAudioData);
 
     /* Infinite loop. */
     while (1) {
