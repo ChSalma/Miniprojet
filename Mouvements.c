@@ -10,7 +10,7 @@
 #include <math.h>
 #include <motors.h>
 #include <Mouvements.h>
-//#include <chprintf.h>
+#include <constantes.h>
 
 #define NSTEP_ONE_TURN      1000 // number of step for 1 turn of the motor
 #define WHEEL_PERIMETER     13.f // [cm]
