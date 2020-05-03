@@ -19,6 +19,7 @@
 
 #define MAX_MAP_SIZE 50
 #define RESET 0
+#define DEADEND_VERIFIED 4
 
 enum {NO_SELECTED_PATH, RIGHT, FORWARD, LEFT, ALL_PATHS_CHECKED};
 enum {CORRIDOR=2, DEADEND};
@@ -27,9 +28,10 @@ enum {CORRIDOR=2, DEADEND};
 uint8_t maze_mapping_corridor_gestion(bool, bool);
 uint8_t maze_mapping_memorise_crossroad(bool);
 uint8_t maze_mapping_next_step_to_goal(void);
+uint8_t maze_mapping_multi_check_for_deadend(void);
 
 //variables globales
-static uint8_t map[MAX_MAP_SIZE];
+static uint8_t map[MAX_MAP_SIZE], multi_check_deadend=RESET;
 static int8_t current_crossroad=RESET, robot_position=RESET;
 static bool crossroad_already_saved=false, switch_to_discover_mode=false, uturn_to_do=true;
 static uint8_t mode = NO_MODE_SELECTED;
@@ -104,16 +106,15 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
     {
         case DEADEND:
             crossroad_already_saved=false;
-            if (current_crossroad>RESET)
-                current_crossroad--;
-            uturn_to_do=false;
-            return U_TURN;
+            return maze_mapping_multi_check_for_deadend();
 
         case CORRIDOR:
             crossroad_already_saved=false;
+            multi_check_deadend=RESET;
             return maze_mapping_corridor_gestion(right_status, left_status);
 
         default:
+        	multi_check_deadend=RESET;
         	uturn_to_do=true;
         	break;
     }
@@ -230,4 +231,21 @@ bool maze_mapping_mode_is_selected(void)
 		return false;
 	else
 		return true;
+}
+
+uint8_t maze_mapping_multi_check_for_deadend(void)
+{
+	if (multi_check_deadend<DEADEND_VERIFIED)
+	{
+		multi_check_deadend++;
+		return KEEP_GOING;
+	}
+	else
+	{
+		multi_check_deadend=RESET;
+		if (current_crossroad>RESET)
+			current_crossroad--;
+		uturn_to_do=false;
+		return U_TURN;
+	}
 }

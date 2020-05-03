@@ -22,7 +22,7 @@
 #define MAZE_UNIT 13
 #define AMBIENT_LIGHT_DIFF_THRESHOLD 20
 
-#define BUFFER_SIZE 3
+#define BUFFER_SIZE 6
 
 enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
@@ -52,13 +52,14 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		{
     			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
     		}
-			if ((calibrated_prox < BUFFER_SIZE*FREE_WAY_LEFT) || (calibrated_prox < BUFFER_SIZE*FREE_WAY_RIGHT) ||(calibrated_prox < BUFFER_SIZE*FREE_WAY_FRONT))
+    		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
+			if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT) ||(calibrated_prox < FREE_WAY_FRONT))
 			{
-				if((i == RIGHT_SENS) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_RIGHT))
+				if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
 					sensors_values[i]= WALL_DETECTED;
-				else if((i == LEFT_SENS) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_LEFT))
+				else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
 					sensors_values[i]= WALL_DETECTED;
-				else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_FRONT))
+				else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > FREE_WAY_FRONT))
 					sensors_values[i]= WALL_DETECTED;
 				else
 					sensors_values[i]= FREE_WAY_DETECTED;
@@ -183,7 +184,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 //			}
 //    	}
     	//previous_ambient_light_value = current_ambient_light_value;
-    	chThdSleepMilliseconds(25);
+    	chThdSleepMilliseconds(50);
     }
 }
 
