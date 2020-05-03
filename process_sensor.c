@@ -20,9 +20,11 @@
 #define ROBOT_DIAMETER 7.5f
 #define COEFF 0.7f
 #define MAZE_UNIT 13
-#define AMBIENT_LIGHT_DIFF_THRESHOLD 20
+#define AMBIENT_LIGHT_DIFF_THRESHOLD 30
+#define DIFFERENCE_THRESHOLD 30
+#define OBSTACLE_LIGHT_INTENSITY 600
 
-#define BUFFER_SIZE 3
+#define BUFFER_SIZE 6
 
 enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
@@ -40,46 +42,59 @@ static THD_FUNCTION(ProcessMeasure, arg){
 
     while(1){
         //starts getting informations
-    	uint8_t i, j, next_order;
+    	uint8_t next_order;
+    	int8_t i, j;
     	int current_ambient_light_value = get_ambient_light(RIGHT_SENS);
 
-    	//version avec moyenne mobile//
-    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
-    	{
-    		int calibrated_prox = 0;
-    		data_sensors[i + buffer_state*PROXIMITY_NB_CHANNELS] = get_calibrated_prox(i);
-    		for(j = 0; j < BUFFER_SIZE; j++)
-    		{
-    			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
-    		}
-			if ((calibrated_prox < BUFFER_SIZE*FREE_WAY_LEFT) || (calibrated_prox < BUFFER_SIZE*FREE_WAY_RIGHT) ||(calibrated_prox < BUFFER_SIZE*FREE_WAY_FRONT))
-			{
-				if((i == RIGHT_SENS) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_RIGHT))
-					sensors_values[i]= WALL_DETECTED;
-				else if((i == LEFT_SENS) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_LEFT))
-					sensors_values[i]= WALL_DETECTED;
-				else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_FRONT))
-					sensors_values[i]= WALL_DETECTED;
-				else
-					sensors_values[i]= FREE_WAY_DETECTED;
-			}
-			else
-			{
-				sensors_values[i]= WALL_DETECTED;
-			}
-    	}
-
-		sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
-		sensors_values[BACK_LEFT]= FREE_WAY_DETECTED;
-
-		if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))
-			sensors_values[FRONT_RIGHT] = WALL_DETECTED;
-		else
-		{
-			sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
-		}
 		if(!((current_ambient_light_value - previous_ambient_light_value) > AMBIENT_LIGHT_DIFF_THRESHOLD || (current_ambient_light_value - previous_ambient_light_value) < -AMBIENT_LIGHT_DIFF_THRESHOLD))
 		{
+	    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
+	    	{
+	    		if((i==FRONT_RIGHT)||(i==FRONT_LEFT)||(i==RIGHT_SENS)||(i==LEFT_SENS))
+	    		{
+	    			int calibrated_prox_previous = 0, calibrated_prox_current = 0;
+					data_sensors[i + buffer_state*PROXIMITY_NB_CHANNELS] = get_calibrated_prox(i);
+					for(j = (buffer_state+1)-BUFFER_SIZE/2; j <= buffer_state; j++)
+					{
+						if (j<0)
+							calibrated_prox_current += data_sensors[i + (j+BUFFER_SIZE)*PROXIMITY_NB_CHANNELS];
+						else
+							calibrated_prox_current += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
+					}
+					for(j = (buffer_state+1); j <= buffer_state + BUFFER_SIZE/2; j++)
+					{
+						if (j >= BUFFER_SIZE)
+							calibrated_prox_previous += data_sensors[i + (j-BUFFER_SIZE)*PROXIMITY_NB_CHANNELS];
+						else
+							calibrated_prox_previous += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
+					}
+
+					calibrated_prox_current= (int)(calibrated_prox_current/BUFFER_SIZE);
+					calibrated_prox_previous= (int)(calibrated_prox_previous/BUFFER_SIZE);
+					//chprintf((BaseSequentialStream *) &SD3, "calibrated_prox_current = %d , calibrated_prox_previous = %d, diff = %d\n",calibrated_prox_current, calibrated_prox_previous, (calibrated_prox_current-calibrated_prox_previous));
+					if ((calibrated_prox_current - calibrated_prox_previous) > DIFFERENCE_THRESHOLD)
+					{
+						sensors_values[i] = WALL_DETECTED;
+					}
+					if ((calibrated_prox_current - calibrated_prox_previous) < -DIFFERENCE_THRESHOLD)
+					{
+						sensors_values[i] = FREE_WAY_DETECTED;
+					}
+
+					if ((i==FRONT_RIGHT)||(i==FRONT_LEFT))
+						if (calibrated_prox_current >= OBSTACLE_LIGHT_INTENSITY)
+							sensors_values[i] = WALL_DETECTED;
+
+					chprintf((BaseSequentialStream *) &SD3, "sensor_id = %d , sensor_value = %d\n",i, sensors_values[i]);
+	    		}
+	    	}
+
+			if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))
+				sensors_values[FRONT_RIGHT] = WALL_DETECTED;
+			else
+			{
+				sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
+			}
 			next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
 			switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
 			{
@@ -110,68 +125,71 @@ static THD_FUNCTION(ProcessMeasure, arg){
 				break;
 			}
 		}
+
+    	previous_ambient_light_value = current_ambient_light_value;
 		buffer_state ++;
 		if (buffer_state >= BUFFER_SIZE)
 		{
 			buffer_state = 0;
 		}
-		previous_ambient_light_value = current_ambient_light_value;
-    	//version avec valeur unique et sécurité variation luminosité brusque//
-//    	if (!((current_ambient_light_value - previous_ambient_light_value) > AMBIENT_LIGHT_DIFF_THRESHOLD || (current_ambient_light_value - previous_ambient_light_value) < -AMBIENT_LIGHT_DIFF_THRESHOLD))
+
+//    	//version avec moyenne mobile//
+//    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
 //    	{
-//			for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
+//    		int calibrated_prox = 0;
+//    		data_sensors[i + buffer_state*PROXIMITY_NB_CHANNELS] = get_calibrated_prox(i);
+//    		for(j = 0; j < BUFFER_SIZE; j++)
+//    		{
+//    			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
+//    		}
+//			if ((calibrated_prox < BUFFER_SIZE*FREE_WAY_LEFT) || (calibrated_prox < BUFFER_SIZE*FREE_WAY_RIGHT) ||(calibrated_prox < BUFFER_SIZE*FREE_WAY_FRONT))
 //			{
-//
-//				calibrated_prox = get_calibrated_prox(i);
-//				if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT) ||(calibrated_prox < FREE_WAY_FRONT))
-//				{
-//					if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
-//						sensors_values[i]= WALL_DETECTED;
-//					else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
-//						sensors_values[i]= WALL_DETECTED;
-//					else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > FREE_WAY_FRONT))
-//						sensors_values[i]= WALL_DETECTED;
-//					else
-//						sensors_values[i]= FREE_WAY_DETECTED;
-//				}
-//				else
+//				if((i == RIGHT_SENS) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_RIGHT))
 //					sensors_values[i]= WALL_DETECTED;
+//				else if((i == LEFT_SENS) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_LEFT))
+//					sensors_values[i]= WALL_DETECTED;
+//				else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > BUFFER_SIZE*FREE_WAY_FRONT))
+//					sensors_values[i]= WALL_DETECTED;
+//				else
+//					sensors_values[i]= FREE_WAY_DETECTED;
 //			}
-//
-//			sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
-//			sensors_values[BACK_LEFT]= FREE_WAY_DETECTED;
-//
-//			if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))//a voir s'il faut plutôt une condition avec un & plutôt que ou
-//				sensors_values[FRONT_RIGHT] = WALL_DETECTED;
 //			else
 //			{
-//				sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
+//				sensors_values[i]= WALL_DETECTED;
 //			}
+//    	}
+//
+//		sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
+//		sensors_values[BACK_LEFT]= FREE_WAY_DETECTED;
+//
+//		if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))
+//			sensors_values[FRONT_RIGHT] = WALL_DETECTED;
+//		else
+//		{
+//			sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
+//		}
+//		if(!((current_ambient_light_value - previous_ambient_light_value) > AMBIENT_LIGHT_DIFF_THRESHOLD || (current_ambient_light_value - previous_ambient_light_value) < -AMBIENT_LIGHT_DIFF_THRESHOLD))
+//		{
 //			next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
 //			switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
 //			{
 //			case (KEEP_GOING):
-//	//			chprintf((BaseSequentialStream *)&SD3, "keep going\n");
 //				go_slow();
 //				break;
-//			case(GO_RIGHT): //ajouter sécurité
-//	//			chprintf((BaseSequentialStream *)&SD3, "going right\n");
+//			case(GO_RIGHT):
 //				go_for_distance(COEFF*ROBOT_DIAMETER); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
 //				turn(TURN_RIGHT);
 //				go_slow();
 //				break;
-//			case(GO_FORWARD): //ajouter sécurité
-//	//			chprintf((BaseSequentialStream *)&SD3, "going forward\n");
+//			case(GO_FORWARD):
 //				go_slow();
 //				break;
-//			case(GO_LEFT): //ajouter sécurité
-//	//			chprintf((BaseSequentialStream *)&SD3, "going left\n");
+//			case(GO_LEFT):
 //				go_for_distance(COEFF*ROBOT_DIAMETER);
 //				turn(TURN_LEFT);
 //				go_slow();
 //				break;
 //			case(U_TURN):
-//	//			chprintf((BaseSequentialStream *)&SD3, "oups a deadend\n");
 //				turn(HALF_TURN);
 //				go_slow();
 //				break;
@@ -181,12 +199,19 @@ static THD_FUNCTION(ProcessMeasure, arg){
 //			default:
 //				break;
 //			}
-//    	}
-    	//previous_ambient_light_value = current_ambient_light_value;
+//		}
+//		buffer_state ++;
+//		if (buffer_state >= BUFFER_SIZE)
+//		{
+//			buffer_state = 0;
+//		}
+//		previous_ambient_light_value = current_ambient_light_value;
+
     	chThdSleepMilliseconds(25);
     }
 }
 
+//PUBLIC FONCTIONS//
 void process_sensors_start(void){
 	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO+1, ProcessMeasure, NULL);
 }
