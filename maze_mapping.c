@@ -202,24 +202,24 @@ bool maze_mapping_uturn_after_selecting_mode(uint8_t mode_selected)
     	do_a_uturn=false;
     }
 
-	switch(mode)
-	{
-		case NO_MODE_SELECTED:
-			set_rgb_led(LED2, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY);
-			break;
-
-		case DISCOVER:
-			set_rgb_led(LED2, 0, RGB_MAX_INTENSITY, 0);
-			break;
-
-		case RETURN_HOME:
-			set_rgb_led(LED2, RGB_MAX_INTENSITY, 0, 0);
-			break;
-
-		case GO_FURTHEST_POINT_KNOWN:
-			set_rgb_led(LED2, 0, 0, RGB_MAX_INTENSITY);
-			break;
-	}
+//	switch(mode)
+//	{
+//		case NO_MODE_SELECTED:
+//			set_rgb_led(LED2, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY);
+//			break;
+//
+//		case DISCOVER:
+//			set_rgb_led(LED2, 0, RGB_MAX_INTENSITY, 0);
+//			break;
+//
+//		case RETURN_HOME:
+//			set_rgb_led(LED2, RGB_MAX_INTENSITY, 0, 0);
+//			break;
+//
+//		case GO_FURTHEST_POINT_KNOWN:
+//			set_rgb_led(LED2, 0, 0, RGB_MAX_INTENSITY);
+//			break;
+//	}
 
     return do_a_uturn;
 }
