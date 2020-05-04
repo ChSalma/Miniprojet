@@ -13,8 +13,9 @@
 #include <maze_mapping.h>
 
 #define KP 1
+#define KD 0.5
 #define MAX_DIFF 30
-
+#define MAX_DERIV 100
 static THD_WORKING_AREA(waRegulator, 256);
 static THD_FUNCTION(Regulator, arg) {
 
@@ -24,6 +25,8 @@ static THD_FUNCTION(Regulator, arg) {
 
     int16_t right_speed, left_speed;
     int16_t difference=0;
+    float derivate=0;
+    static float last_difference = 0;
 
     while(1)
     {
@@ -31,17 +34,26 @@ static THD_FUNCTION(Regulator, arg) {
     	{
     	    if ((get_calibrated_prox(LEFT_SENS)>FREE_WAY_LEFT)&&(get_calibrated_prox(RIGHT_SENS)>FREE_WAY_RIGHT))
     	    {
-    	    	difference = get_calibrated_prox(RIGHT_SENS)-get_calibrated_prox(LEFT_SENS); //-OFFSET
+    	    	difference = get_calibrated_prox(FRONT_RIGHT_45DEG)-get_calibrated_prox( FRONT_LEFT_45DEG); //-OFFSET
     	    	if(difference > MAX_DIFF)
     	    		difference = MAX_DIFF;
     	    	if(difference < -MAX_DIFF)
     	    		difference = -MAX_DIFF;
+    	    	//we set a maximum and a minimum for the sum to avoid an uncontrolled growth
+    	    	derivate = difference-last_difference;
+    	    	if(derivate > MAX_DERIV){
+    	    		derivate = MAX_DERIV;
+    	    	}else if(derivate < -MAX_DERIV){
+    	    		derivate = -MAX_DERIV;
+    	    	}
+
     			//d'abord remettre la même vitesse aux deucc moteurs puis corrigé pour éviter explosion de correction
     	    	right_speed = (get_right_speed() + get_left_speed())/2; //moyenne de la vitesse
-    	    	left_speed = right_speed-KP*difference;
-    	    	right_speed += KP*difference;
+    	    	left_speed = right_speed-KP*difference+KD*derivate;
+    	    	right_speed += KP*difference - KD*derivate;
 
     	    	set_speed(right_speed, left_speed);
+    	    	last_difference = difference;
     	    }
     	}
 
