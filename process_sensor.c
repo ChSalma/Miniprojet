@@ -22,7 +22,7 @@
 #define MAZE_UNIT 13
 #define AMBIENT_LIGHT_DIFF_THRESHOLD 20
 
-#define BUFFER_SIZE 6
+#define BUFFER_SIZE 3
 
 enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
@@ -184,7 +184,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 //			}
 //    	}
     	//previous_ambient_light_value = current_ambient_light_value;
-    	chThdSleepMilliseconds(50);
+    	chThdSleepMilliseconds(25);
     }
 }
 
