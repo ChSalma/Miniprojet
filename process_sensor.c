@@ -21,9 +21,9 @@
 #define COEFF 0.7f
 #define MAZE_UNIT 13
 #define AMBIENT_LIGHT_DIFF_THRESHOLD 30
-#define DIFFERENCE_THRESHOLD 30
+#define DIFFERENCE_THRESHOLD 50
 #define OBSTACLE_LIGHT_INTENSITY 600
-#define MAX_COUNT 10
+#define MAX_COUNT 7
 
 //#define BUFFER_SIZE 6
 
@@ -56,28 +56,74 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		{
 				for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
 				{
-					if((i==FRONT_RIGHT)||(i==FRONT_LEFT)||(i==RIGHT_SENS)||(i==LEFT_SENS))
+					calibrated_prox_current = get_calibrated_prox(i);
+					if(i==FRONT_RIGHT)
 					{
-						calibrated_prox_current = get_calibrated_prox(i);
-
-						if ((calibrated_prox_current - calibrated_prox_previous[i]) > DIFFERENCE_THRESHOLD)
+						if (((calibrated_prox_current - calibrated_prox_previous[i]) > DIFFERENCE_THRESHOLD) || (calibrated_prox_current > FREE_WAY_FRONT))
 						{
 							sensors_values[i] = WALL_DETECTED;
 						}
-						if ((calibrated_prox_current - calibrated_prox_previous[i]) < -DIFFERENCE_THRESHOLD)
+						else if (((calibrated_prox_current - calibrated_prox_previous[i]) < -DIFFERENCE_THRESHOLD) && (calibrated_prox_current < FREE_WAY_FRONT))
 						{
 							sensors_values[i] = FREE_WAY_DETECTED;
 						}
-						if ((i==FRONT_RIGHT)||(i==FRONT_LEFT))
-							if (calibrated_prox_current >= OBSTACLE_LIGHT_INTENSITY)
-								sensors_values[i] = WALL_DETECTED;
-		//					chprintf((BaseSequentialStream *) &SD3, "sensor_id = %d , sensor_value = %d\n",i, sensors_values[i]);
-						calibrated_prox_previous[i] = calibrated_prox_current;
 					}
+					if(i==FRONT_LEFT)
+					{
+						if (((calibrated_prox_current - calibrated_prox_previous[i]) > DIFFERENCE_THRESHOLD) || (calibrated_prox_current > FREE_WAY_FRONT))
+						{
+							sensors_values[i] = WALL_DETECTED;
+						}
+						else if (((calibrated_prox_current - calibrated_prox_previous[i]) < -DIFFERENCE_THRESHOLD) && (calibrated_prox_current < FREE_WAY_FRONT))
+						{
+							sensors_values[i] = FREE_WAY_DETECTED;
+						}
+					}
+					if(i==RIGHT_SENS)
+					{
+						if (((calibrated_prox_current - calibrated_prox_previous[i]) > DIFFERENCE_THRESHOLD) || (calibrated_prox_current > FREE_WAY_RIGHT))
+						{
+							sensors_values[i] = WALL_DETECTED;
+						}
+						else if (((calibrated_prox_current - calibrated_prox_previous[i]) < -DIFFERENCE_THRESHOLD) && (calibrated_prox_current < FREE_WAY_RIGHT))
+						{
+							sensors_values[i] = FREE_WAY_DETECTED;
+						}
+					}
+					if(i==LEFT_SENS)
+					{
+						if (((calibrated_prox_current - calibrated_prox_previous[i]) > DIFFERENCE_THRESHOLD) || (calibrated_prox_current > FREE_WAY_LEFT))
+						{
+							sensors_values[i] = WALL_DETECTED;
+						}
+						else if (((calibrated_prox_current - calibrated_prox_previous[i]) < -DIFFERENCE_THRESHOLD) && (calibrated_prox_current < FREE_WAY_LEFT))
+						{
+							sensors_values[i] = FREE_WAY_DETECTED;
+						}
+					}
+						//chprintf((BaseSequentialStream *) &SD3, "id = %d , diff = %d\n",i, calibrated_prox_current - calibrated_prox_previous[i]);
+					calibrated_prox_previous[i] = calibrated_prox_current;
 
 				}
+//					if((i==FRONT_RIGHT)||(i==FRONT_LEFT)||(i==RIGHT_SENS)||(i==LEFT_SENS))
+//					{
+//						calibrated_prox_current = get_calibrated_prox(i);
+//
+//						if (((calibrated_prox_current - calibrated_prox_previous[i]) > DIFFERENCE_THRESHOLD)||)
+//						{
+//							sensors_values[i] = WALL_DETECTED;
+//						}
+//						if ((calibrated_prox_current - calibrated_prox_previous[i]) < -DIFFERENCE_THRESHOLD)
+//						{
+//							sensors_values[i] = FREE_WAY_DETECTED;
+//						}
+//						if ((i==FRONT_RIGHT)||(i==FRONT_LEFT))
+//							if (calibrated_prox_current >= OBSTACLE_LIGHT_INTENSITY)
+//								sensors_values[i] = WALL_DETECTED;
+//						chprintf((BaseSequentialStream *) &SD3, "id = %d , diff = %d\n",i, calibrated_prox_current - calibrated_prox_previous[i]);
+//						calibrated_prox_previous[i] = calibrated_prox_current;
+//					}
 				count=0;
-
 				if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))
 					sensors_values[FRONT_RIGHT] = WALL_DETECTED;
 				else
@@ -118,8 +164,9 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		else
 				count++;
 
-			previous_ambient_light_value = current_ambient_light_value;
+
 		}
+		previous_ambient_light_value = current_ambient_light_value;
 		//buffer_state ++;
 //		if (buffer_state >= BUFFER_SIZE)
 //		{

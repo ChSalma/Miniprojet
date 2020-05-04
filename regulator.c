@@ -16,6 +16,9 @@
 #define KD 0.5
 #define MAX_DIFF 30
 #define MAX_DERIV 100
+#define THRESHOLD_45_DEG 20
+#define THRESHOLD_RIGHT 30
+#define THRESHOLD_LEFT 50
 static THD_WORKING_AREA(waRegulator, 256);
 static THD_FUNCTION(Regulator, arg) {
 
@@ -32,7 +35,10 @@ static THD_FUNCTION(Regulator, arg) {
     {
     	if(maze_mapping_mode_is_selected())
     	{
-    	    if ((get_calibrated_prox(LEFT_SENS)>FREE_WAY_LEFT)&&(get_calibrated_prox(RIGHT_SENS)>FREE_WAY_RIGHT))
+    	    if ((get_calibrated_prox(LEFT_SENS)>THRESHOLD_LEFT)&&
+    	    	(get_calibrated_prox(RIGHT_SENS)>THRESHOLD_RIGHT)&&
+				(get_calibrated_prox(FRONT_RIGHT_45DEG)>THRESHOLD_45_DEG)&&
+				(get_calibrated_prox(FRONT_LEFT_45DEG)>THRESHOLD_45_DEG))
     	    {
     	    	difference = get_calibrated_prox(FRONT_RIGHT_45DEG)-get_calibrated_prox( FRONT_LEFT_45DEG); //-OFFSET
     	    	if(difference > MAX_DIFF)
@@ -46,7 +52,7 @@ static THD_FUNCTION(Regulator, arg) {
     	    	}else if(derivate < -MAX_DERIV){
     	    		derivate = -MAX_DERIV;
     	    	}
-
+    	    	chprintf((BaseSequentialStream *) &SD3, "LEFT = %d , RIGHT = %d\n", get_calibrated_prox(FRONT_LEFT_45DEG), get_calibrated_prox(FRONT_RIGHT_45DEG));
     			//d'abord remettre la même vitesse aux deucc moteurs puis corrigé pour éviter explosion de correction
     	    	right_speed = (get_right_speed() + get_left_speed())/2; //moyenne de la vitesse
     	    	left_speed = right_speed-KP*difference+KD*derivate;
