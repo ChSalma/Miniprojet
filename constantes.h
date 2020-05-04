@@ -21,7 +21,7 @@
 //proximity_sensors
 #define FREE_WAY_FRONT 50//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
 #define FREE_WAY_RIGHT 20
-#define FREE_WAY_LEFT 30
+#define FREE_WAY_LEFT 55
 enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SENS, FRONT_LEFT_45DEG, FRONT_LEFT};
 
 //maze_mapping
