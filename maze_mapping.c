@@ -96,7 +96,7 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
 
 uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left_status)
 {
-	mode = DISCOVER ; // à supprimer lorsque les micros seront opérationnels
+	mode =  NO_MODE_SELECTED; // à supprimer lorsque les micros seront opérationnels
     if (mode==NO_MODE_SELECTED)
         return DONT_MOVE;
 

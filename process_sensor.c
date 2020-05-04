@@ -53,6 +53,10 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
     		}
     		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
+    		if(i==LEFT_SENS)//||i==FRONT_RIGHT||i==FRONT_LEFT)
+    		{
+    			chprintf((BaseSequentialStream *)&SD3, "%d %d\n", calibrated_prox, get_ambient_light(i));
+    		}
 			if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT) ||(calibrated_prox < FREE_WAY_FRONT))
 			{
 				if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
