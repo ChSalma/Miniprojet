@@ -16,9 +16,10 @@
 #define KD 0.5
 #define MAX_DIFF 30
 #define MAX_DERIV 100
-#define THRESHOLD_45_DEG 20
-#define THRESHOLD_RIGHT 30
-#define THRESHOLD_LEFT 50
+#define THRESHOLD_45_DEG 200
+#define THRESHOLD_RIGHT 100
+#define THRESHOLD_LEFT 100
+#define OFFSET 10
 static THD_WORKING_AREA(waRegulator, 256);
 static THD_FUNCTION(Regulator, arg) {
 
@@ -40,7 +41,7 @@ static THD_FUNCTION(Regulator, arg) {
 				(get_calibrated_prox(FRONT_RIGHT_45DEG)>THRESHOLD_45_DEG)&&
 				(get_calibrated_prox(FRONT_LEFT_45DEG)>THRESHOLD_45_DEG))
     	    {
-    	    	difference = get_calibrated_prox(FRONT_RIGHT_45DEG)-get_calibrated_prox( FRONT_LEFT_45DEG); //-OFFSET
+    	    	difference = get_calibrated_prox(FRONT_RIGHT_45DEG)-get_calibrated_prox( FRONT_LEFT_45DEG)-OFFSET; //-OFFSET
     	    	if(difference > MAX_DIFF)
     	    		difference = MAX_DIFF;
     	    	if(difference < -MAX_DIFF)
@@ -52,7 +53,6 @@ static THD_FUNCTION(Regulator, arg) {
     	    	}else if(derivate < -MAX_DERIV){
     	    		derivate = -MAX_DERIV;
     	    	}
-    	    	chprintf((BaseSequentialStream *) &SD3, "LEFT = %d , RIGHT = %d\n", get_calibrated_prox(FRONT_LEFT_45DEG), get_calibrated_prox(FRONT_RIGHT_45DEG));
     			//d'abord remettre la même vitesse aux deucc moteurs puis corrigé pour éviter explosion de correction
     	    	right_speed = (get_right_speed() + get_left_speed())/2; //moyenne de la vitesse
     	    	left_speed = right_speed-KP*difference+KD*derivate;
