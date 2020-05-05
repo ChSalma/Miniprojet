@@ -15,6 +15,7 @@
 #include <regulator.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>
+#include <spi_comm.h>
 
 //Déclaration du bus
 messagebus_t bus;
@@ -58,7 +59,7 @@ int main(void)
 	process_sensors_start();
 	//start the microphones thread
 	mic_start(&processAudioData);
-	//spi_comm_start();
+	spi_comm_start();
 
     /* Infinite loop. */
     while (1) {

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
   55              		.loc 1 6 0
   56 0018 FFF7FEBF 		b	calibrate_ir
   57              	.LVL0:
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 2
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 2
 
 
   58              	.L6:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  112              	.L15:
  113              		.cfi_restore_state
  114              		.loc 1 14 0
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 3
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 3
 
 
  115 0020 9A42     		cmp	r2, r3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  169 000e 1B68     		ldr	r3, [r3]
  170              		.loc 1 20 0
  171 0010 06D9     		bls	.L24
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 4
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 4
 
 
  172              		.loc 1 25 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  226              	.LVL12:
  227 0000 00B5     		push	{lr}
  228              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 5
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 5
 
 
  229              		.cfi_offset 14, -4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  283              	.Letext0:
  284              		.file 2 "../../lib/e-puck2_main-processor/src/epuck1x/../sensors/proximity.h"
  285              		.section	.debug_info,"",%progbits
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 6
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 6
 
 
  286              	.Ldebug_info0:
@@ -307,17 +307,17 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  289 0006 00000000 		.4byte	.Ldebug_abbrev0
  290 000a 04       		.byte	0x4
  291 000b 01       		.uleb128 0x1
- 292 000c 72010000 		.4byte	.LASF17
+ 292 000c F8000000 		.4byte	.LASF17
  293 0010 0C       		.byte	0xc
  294 0011 14000000 		.4byte	.LASF18
- 295 0015 F8000000 		.4byte	.LASF19
+ 295 0015 77020000 		.4byte	.LASF19
  296 0019 00000000 		.4byte	.Ldebug_ranges0+0
  297 001d 00000000 		.4byte	0
  298 0021 00000000 		.4byte	.Ldebug_line0
  299 0025 02       		.uleb128 0x2
  300 0026 01       		.byte	0x1
  301 0027 06       		.byte	0x6
- 302 0028 12030000 		.4byte	.LASF0
+ 302 0028 FB020000 		.4byte	.LASF0
  303 002c 02       		.uleb128 0x2
  304 002d 01       		.byte	0x1
  305 002e 08       		.byte	0x8
@@ -325,7 +325,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  307 0033 02       		.uleb128 0x2
  308 0034 02       		.byte	0x2
  309 0035 05       		.byte	0x5
- 310 0036 F1020000 		.4byte	.LASF2
+ 310 0036 DA020000 		.4byte	.LASF2
  311 003a 02       		.uleb128 0x2
  312 003b 02       		.byte	0x2
  313 003c 07       		.byte	0x7
@@ -333,7 +333,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  315 0041 02       		.uleb128 0x2
  316 0042 04       		.byte	0x4
  317 0043 05       		.byte	0x5
- 318 0044 09030000 		.4byte	.LASF4
+ 318 0044 F2020000 		.4byte	.LASF4
  319 0048 02       		.uleb128 0x2
  320 0049 04       		.byte	0x4
  321 004a 07       		.byte	0x7
@@ -341,11 +341,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  323 004f 02       		.uleb128 0x2
  324 0050 08       		.byte	0x8
  325 0051 05       		.byte	0x5
- 326 0052 E3020000 		.4byte	.LASF6
+ 326 0052 69020000 		.4byte	.LASF6
  327 0056 02       		.uleb128 0x2
  328 0057 08       		.byte	0x8
  329 0058 07       		.byte	0x7
- 330 0059 C3020000 		.4byte	.LASF7
+ 330 0059 49020000 		.4byte	.LASF7
  331 005d 03       		.uleb128 0x3
  332 005e 04       		.byte	0x4
  333 005f 05       		.byte	0x5
@@ -353,12 +353,12 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  335 0064 02       		.uleb128 0x2
  336 0065 04       		.byte	0x4
  337 0066 07       		.byte	0x7
- 338 0067 B6020000 		.4byte	.LASF8
+ 338 0067 3C020000 		.4byte	.LASF8
  339 006b 04       		.uleb128 0x4
  340 006c 00000000 		.4byte	.LASF9
  341 0070 01       		.byte	0x1
  342 0071 1B       		.byte	0x1b
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 7
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 7
 
 
  343 0072 5D000000 		.4byte	0x5d
@@ -368,7 +368,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  347 007f 9C       		.byte	0x9c
  348 0080 A6000000 		.4byte	0xa6
  349 0084 05       		.uleb128 0x5
- 350 0085 FB020000 		.4byte	.LASF11
+ 350 0085 E4020000 		.4byte	.LASF11
  351 0089 01       		.byte	0x1
  352 008a 1B       		.byte	0x1b
  353 008b 64000000 		.4byte	0x64
@@ -391,7 +391,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  370 00ba 9C       		.byte	0x9c
  371 00bb E1000000 		.4byte	0xe1
  372 00bf 05       		.uleb128 0x5
- 373 00c0 FB020000 		.4byte	.LASF11
+ 373 00c0 E4020000 		.4byte	.LASF11
  374 00c4 01       		.byte	0x1
  375 00c5 12       		.byte	0x12
  376 00c6 64000000 		.4byte	0x64
@@ -414,11 +414,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  393 00f5 9C       		.byte	0x9c
  394 00f6 1C010000 		.4byte	0x11c
  395 00fa 05       		.uleb128 0x5
- 396 00fb FB020000 		.4byte	.LASF11
+ 396 00fb E4020000 		.4byte	.LASF11
  397 00ff 01       		.byte	0x1
  398 0100 09       		.byte	0x9
  399 0101 64000000 		.4byte	0x64
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 8
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 8
 
 
  400 0105 74000000 		.4byte	.LLST0
@@ -459,13 +459,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  435 0161 02       		.byte	0x2
  436 0162 37       		.byte	0x37
  437 0163 09       		.uleb128 0x9
- 438 0164 DA020000 		.4byte	.LASF15
- 439 0168 DA020000 		.4byte	.LASF15
+ 438 0164 60020000 		.4byte	.LASF15
+ 439 0168 60020000 		.4byte	.LASF15
  440 016c 02       		.byte	0x2
  441 016d 2E       		.byte	0x2e
  442 016e 09       		.uleb128 0x9
- 443 016f 1E030000 		.4byte	.LASF16
- 444 0173 1E030000 		.4byte	.LASF16
+ 443 016f 07030000 		.4byte	.LASF16
+ 444 0173 07030000 		.4byte	.LASF16
  445 0177 02       		.byte	0x2
  446 0178 25       		.byte	0x25
  447 0179 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  454 0004 0E       		.uleb128 0xe
  455 0005 13       		.uleb128 0x13
  456 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 9
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 9
 
 
  457 0007 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  511 003d 18       		.uleb128 0x18
  512 003e 9742     		.uleb128 0x2117
  513 0040 19       		.uleb128 0x19
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 10
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 10
 
 
  514 0041 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  568 007c 12       		.uleb128 0x12
  569 007d 06       		.uleb128 0x6
  570 007e 40       		.uleb128 0x40
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 11
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 11
 
 
  571 007f 18       		.uleb128 0x18
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  625 0021 0100     		.2byte	0x1
  626 0023 50       		.byte	0x50
  627 0024 2D000000 		.4byte	.LVL15-1
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 12
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 12
 
 
  628 0028 38000000 		.4byte	.LFE3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  682 00a4 50       		.byte	0x50
  683 00a5 9F       		.byte	0x9f
  684 00a6 00000000 		.4byte	0
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 13
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 13
 
 
  685 00aa 00000000 		.4byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  723      70726F78 
  724              	.LASF1:
  725 005e 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 14
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 14
 
 
  725      676E6564 
@@ -829,124 +829,121 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 1
  741      656E745F 
  741      6C696768 
  741      7400
- 742              	.LASF19:
- 743 00f8 433A5C55 		.ascii	"C:\\Users\\afgou\\Desktop\\Aur\351lien\\EPFL\\Cours"
- 743      73657273 
- 743      5C616667 
- 743      6F755C44 
- 743      65736B74 
- 744 0122 5C426163 		.ascii	"\\Bachelor 3, Semestre 6\\Microinformatique\\TPs\\T"
- 744      68656C6F 
- 744      7220332C 
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 15
+ 742              	.LASF17:
+ 743 00f8 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 743      43313120 
+ 743      372E322E 
+ 743      31203230 
+ 743      31373039 
+ 744 012b 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 744      20726576 
+ 744      6973696F 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 15
 
 
- 744      2053656D 
- 744      65737472 
- 745 0151 50735F47 		.ascii	"Ps_Git\\TP6_Miniprojet\\Miniprojet\000"
- 745      69745C54 
- 745      50365F4D 
- 745      696E6970 
- 745      726F6A65 
- 746              	.LASF17:
- 747 0172 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 747      43313120 
- 747      372E322E 
- 747      31203230 
- 747      31373039 
- 748 01a5 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 748      20726576 
- 748      6973696F 
- 748      6E203235 
- 748      35323034 
- 749 01d8 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
- 749      2D6D6670 
- 749      753D6670 
- 749      76342D73 
- 749      702D6431 
- 750 020b 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 750      62202D4F 
- 750      32202D66 
- 750      6F6D6974 
- 750      2D667261 
- 751 023e 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 751      6F2D7374 
- 751      72696374 
- 751      2D616C69 
- 751      6173696E 
- 752 0271 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 752      73656374 
- 752      696F6E73 
- 752      202D6664 
- 752      6174612D 
- 753 02a4 72656369 		.ascii	"recision-constant\000"
- 753      73696F6E 
- 753      2D636F6E 
- 753      7374616E 
- 753      7400
- 754              	.LASF8:
- 755 02b6 756E7369 		.ascii	"unsigned int\000"
- 755      676E6564 
- 755      20696E74 
+ 744      6E203235 
+ 744      35323034 
+ 745 015e 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 745      2D6D6670 
+ 745      753D6670 
+ 745      76342D73 
+ 745      702D6431 
+ 746 0191 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 746      62202D4F 
+ 746      32202D66 
+ 746      6F6D6974 
+ 746      2D667261 
+ 747 01c4 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 747      6F2D7374 
+ 747      72696374 
+ 747      2D616C69 
+ 747      6173696E 
+ 748 01f7 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 748      73656374 
+ 748      696F6E73 
+ 748      202D6664 
+ 748      6174612D 
+ 749 022a 72656369 		.ascii	"recision-constant\000"
+ 749      73696F6E 
+ 749      2D636F6E 
+ 749      7374616E 
+ 749      7400
+ 750              	.LASF8:
+ 751 023c 756E7369 		.ascii	"unsigned int\000"
+ 751      676E6564 
+ 751      20696E74 
+ 751      00
+ 752              	.LASF7:
+ 753 0249 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 753      206C6F6E 
+ 753      6720756E 
+ 753      7369676E 
+ 753      65642069 
+ 754              	.LASF15:
+ 755 0260 6765745F 		.ascii	"get_prox\000"
+ 755      70726F78 
  755      00
- 756              	.LASF7:
- 757 02c3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 756              	.LASF6:
+ 757 0269 6C6F6E67 		.ascii	"long long int\000"
  757      206C6F6E 
- 757      6720756E 
- 757      7369676E 
- 757      65642069 
- 758              	.LASF15:
- 759 02da 6765745F 		.ascii	"get_prox\000"
- 759      70726F78 
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 16
+ 757      6720696E 
+ 757      7400
+ 758              	.LASF19:
+ 759 0277 433A5C55 		.ascii	"C:\\Users\\Salma Chatagny\\Documents\\EPFL\\BA6\\Mi"
+ 759      73657273 
+ 759      5C53616C 
+ 759      6D612043 
+ 759      68617461 
+ 760 02a4 63726F69 		.ascii	"croinformatique\\TPs\\TPs_git\\TP6_Miniprojet\\Mini"
+ 760      6E666F72 
+ 760      6D617469 
+ 760      7175655C 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 16
 
 
- 759      00
- 760              	.LASF6:
- 761 02e3 6C6F6E67 		.ascii	"long long int\000"
- 761      206C6F6E 
- 761      6720696E 
- 761      7400
+ 760      5450735C 
+ 761 02d3 70726F6A 		.ascii	"projet\000"
+ 761      657400
  762              	.LASF2:
- 763 02f1 73686F72 		.ascii	"short int\000"
+ 763 02da 73686F72 		.ascii	"short int\000"
  763      7420696E 
  763      7400
  764              	.LASF11:
- 765 02fb 73656E73 		.ascii	"sensor_number\000"
+ 765 02e4 73656E73 		.ascii	"sensor_number\000"
  765      6F725F6E 
  765      756D6265 
  765      7200
  766              	.LASF4:
- 767 0309 6C6F6E67 		.ascii	"long int\000"
+ 767 02f2 6C6F6E67 		.ascii	"long int\000"
  767      20696E74 
  767      00
  768              	.LASF0:
- 769 0312 7369676E 		.ascii	"signed char\000"
+ 769 02fb 7369676E 		.ascii	"signed char\000"
  769      65642063 
  769      68617200 
  770              	.LASF16:
- 771 031e 63616C69 		.ascii	"calibrate_ir\000"
+ 771 0307 63616C69 		.ascii	"calibrate_ir\000"
  771      62726174 
  771      655F6972 
  771      00
  772              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s 			page 17
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 e_prox.c
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:18     .text.e_calibrate_ir:00000000 $t
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:26     .text.e_calibrate_ir:00000000 e_calibrate_ir
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:65     .text.e_calibrate_ir:00000020 $d
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:70     .text.e_get_prox:00000000 $t
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:78     .text.e_get_prox:00000000 e_get_prox
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:136    .text.e_get_prox:00000034 $d
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:141    .text.e_get_calibrated_prox:00000000 $t
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:149    .text.e_get_calibrated_prox:00000000 e_get_calibrated_prox
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:207    .text.e_get_calibrated_prox:00000034 $d
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:212    .text.e_get_ambient_light:00000000 $t
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:220    .text.e_get_ambient_light:00000000 e_get_ambient_light
-C:\Users\afgou\AppData\Local\Temp\cch3uDyq.s:278    .text.e_get_ambient_light:00000034 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:18     .text.e_calibrate_ir:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:26     .text.e_calibrate_ir:00000000 e_calibrate_ir
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:65     .text.e_calibrate_ir:00000020 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:70     .text.e_get_prox:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:78     .text.e_get_prox:00000000 e_get_prox
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:136    .text.e_get_prox:00000034 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:141    .text.e_get_calibrated_prox:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:149    .text.e_get_calibrated_prox:00000000 e_get_calibrated_prox
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:207    .text.e_get_calibrated_prox:00000034 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:212    .text.e_get_ambient_light:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:220    .text.e_get_ambient_light:00000000 e_get_ambient_light
+C:\Users\SALMAC~1\AppData\Local\Temp\ccRLheZO.s:278    .text.e_get_ambient_light:00000034 $d
 
 UNDEFINED SYMBOLS
 calibrate_ir
