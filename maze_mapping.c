@@ -14,6 +14,7 @@
 #include "ch.h"
 #include <chprintf.h>
 #include <leds.h>
+#include <Mouvements.h>
 
 #include <main.h>
 
@@ -21,19 +22,25 @@
 #define RESET 0
 #define DEADEND_VERIFIED 8
 
-enum {NO_SELECTED_PATH, RIGHT, FORWARD, LEFT, ALL_PATHS_CHECKED};
+enum {NO_SELECTED_PATH, RIGHT, FORWARD, LEFT, ALL_PATHS_CHECKED, BEGINNING, END};
 enum {CORRIDOR=2, DEADEND};
+enum {TURN_OFF, TURN_ON};
 
 //prototypes de fonctions
 uint8_t maze_mapping_corridor_gestion(bool, bool);
+uint8_t maze_mapping_furthest_point_reached(void);
 uint8_t maze_mapping_memorise_crossroad(bool);
 uint8_t maze_mapping_next_step_to_goal(void);
 uint8_t maze_mapping_multi_check_for_deadend(void);
+void maze_mapping_set_rgb_leds(uint8_t, uint8_t, uint8_t);
+void maze_mapping_update_red_leds(unsigned int, unsigned int, unsigned int, unsigned int);
+void maze_mapping_update_rgb_leds(void);
+void maze_mapping_victory_dance(void);
 
 //variables globales
 static uint8_t map[MAX_MAP_SIZE], multi_check_deadend=RESET;
 static int8_t current_crossroad=RESET, robot_position=RESET;
-static bool crossroad_already_saved=false, switch_to_discover_mode=false, uturn_to_do=true;
+static bool crossroad_already_saved=false, switch_to_discover_mode=false, uturn_to_do=true, furthest_point_reached=false;
 static uint8_t mode = NO_MODE_SELECTED;
 
 //Déclarations des fonctions
@@ -48,45 +55,79 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
         return GO_LEFT;
 }
 
+uint8_t maze_mapping_furthest_point_reached(void)
+{
+	furthest_point_reached=false;
+
+	if (switch_to_discover_mode)
+	{
+	    mode=DISCOVER;
+	    maze_mapping_update_rgb_leds();
+	    switch_to_discover_mode=false;
+	    return KEEP_GOING;
+	}
+	else
+	{
+	    mode=NO_MODE_SELECTED;
+	    maze_mapping_update_rgb_leds();
+	    return DONT_MOVE;
+	}
+}
+
 uint8_t maze_mapping_memorise_crossroad(bool right_status)
 {
     if (!crossroad_already_saved)
     {
-        uint8_t order;
-
         robot_position=current_crossroad;
 
-        if (!right_status)
+        if (current_crossroad!=RESET)
         {
-            map[current_crossroad]+=RIGHT;
-            order=GO_RIGHT;
-        }
-        else
-        {
-            map[current_crossroad]+=FORWARD;
-            order=GO_FORWARD;
-        }
-
-        if (map[current_crossroad]!=ALL_PATHS_CHECKED)
-        {
-            if (current_crossroad<MAX_MAP_SIZE)
-                current_crossroad++;//si cette valeur dépasse MAX_MAP_SIZE, le labyrithe est trop difficile pour le programme.
-            else
-            	chSysHalt("Le labyrinthe est trop difficile pour le programme");
-        }
-        else
-        {
-            if (current_crossroad>RESET)
+            if (map[current_crossroad]!=END)
             {
-                map[current_crossroad]=NO_SELECTED_PATH; //Efface la case du tableau pour une nouvelle écriture -> oublie le carrefour actuel car c'est une deadend
-                current_crossroad--;//si cette valeur passe en dessous de zéro, cela implique que le labyrinthe n'a pas de sortie.
+				uint8_t order;
+
+				if (!right_status)
+				{
+					map[current_crossroad]+=RIGHT;
+					order=GO_RIGHT;
+				}
+				else
+				{
+					map[current_crossroad]+=FORWARD;
+					order=GO_FORWARD;
+				}
+
+				if (map[current_crossroad]!=ALL_PATHS_CHECKED)
+				{
+					if (current_crossroad<MAX_MAP_SIZE)
+						current_crossroad++;//si cette valeur dépasse MAX_MAP_SIZE, le labyrithe est trop difficile pour le programme.
+					else
+						chSysHalt("Le labyrinthe est trop difficile pour le programme");
+				}
+				else
+				{
+					map[current_crossroad]=NO_SELECTED_PATH; //Efface la case du tableau pour une nouvelle écriture -> oublie le carrefour actuel car c'est une deadend
+					current_crossroad--;//si cette valeur passe en dessous de zéro, cela implique que le labyrinthe n'a pas de sortie.
+				}
+
+				crossroad_already_saved=true;
+				return order;
             }
             else
-            	chSysHalt("Le labyrinthe n'a pas d'issue!"); //Musique de déception
+            {
+            	current_crossroad++;
+            	mode=NO_MODE_SELECTED;
+            	maze_mapping_victory_dance();
+            	return U_TURN;
+            }
         }
-
-        crossroad_already_saved=true;
-        return order;
+        else
+        {
+        	map[current_crossroad]=BEGINNING;
+        	current_crossroad++;
+        	crossroad_already_saved=true;
+        	return GO_FORWARD;
+        }
     }
     else
     {
@@ -106,12 +147,18 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
     {
         case DEADEND:
             crossroad_already_saved=false;
-            return maze_mapping_multi_check_for_deadend();
+            if (furthest_point_reached)
+            	return maze_mapping_furthest_point_reached();
+            else
+            	return maze_mapping_multi_check_for_deadend();
 
         case CORRIDOR:
             crossroad_already_saved=false;
             multi_check_deadend=RESET;
-            return maze_mapping_corridor_gestion(right_status, left_status);
+            if (furthest_point_reached)
+            	return maze_mapping_furthest_point_reached();
+            else
+            	return maze_mapping_corridor_gestion(right_status, left_status);
 
         default:
         	multi_check_deadend=RESET;
@@ -139,7 +186,10 @@ uint8_t maze_mapping_next_step_to_goal(void)
         {
             if (robot_position>=RESET)
             {
-                order=ALL_PATHS_CHECKED-map[robot_position]; //Lors du chemin de retour, un virage à droite correspond à un virage à gauche et vice versa
+                if (map[robot_position]!=END)
+                	order=ALL_PATHS_CHECKED-map[robot_position]; //Lors du chemin de retour, un virage à droite correspond à un virage à gauche et vice versa
+                else
+                	order=GO_FORWARD;
                 robot_position--;
             }
             else
@@ -147,31 +197,36 @@ uint8_t maze_mapping_next_step_to_goal(void)
                 robot_position++;
                 order=U_TURN;
                 mode=NO_MODE_SELECTED;
+                maze_mapping_victory_dance();
             }
         }
         else
         {
-            if (robot_position<=current_crossroad)
-            {
-                order=map[robot_position];
-                robot_position++;
-            }
-            else
-            {
-                robot_position--;
-                if (switch_to_discover_mode)
-                {
-                    order=KEEP_GOING;
-                    mode=DISCOVER;
-                    switch_to_discover_mode=false;
-                }
-                else
-                {
-                    order=DONT_MOVE;
-                    mode=NO_MODE_SELECTED;
-                }
-            }
+        	if (current_crossroad>RESET+1)
+        	{
+				if (map[robot_position]!=END)
+				{
+					order=map[robot_position];
+
+					if (robot_position<(current_crossroad-1))
+						robot_position++;
+					else
+						furthest_point_reached=true;
+				}
+				else
+				{
+					order=U_TURN;
+					mode=NO_MODE_SELECTED;
+					maze_mapping_victory_dance();
+				}
+        	}
+        	else
+        	{
+        		furthest_point_reached=true;
+        		order=GO_FORWARD;
+        	}
         }
+        maze_mapping_update_rgb_leds();
         crossroad_already_saved=true;
         return order;
     }
@@ -182,6 +237,12 @@ uint8_t maze_mapping_next_step_to_goal(void)
 bool maze_mapping_uturn_after_selecting_mode(uint8_t mode_selected)
 {
 	bool do_a_uturn;
+
+	if ((map[robot_position]==END)&&(mode_selected!=RETURN_HOME))
+		return false;
+
+	if ((map[robot_position]==BEGINNING)&&(mode_selected==RETURN_HOME))
+		return false;
 
 	if (mode_selected!=mode)
     {
@@ -197,30 +258,13 @@ bool maze_mapping_uturn_after_selecting_mode(uint8_t mode_selected)
     	}
     	else
     		mode=mode_selected;
+
+    	maze_mapping_update_rgb_leds();
     }
     else
     {
     	do_a_uturn=false;
     }
-
-	switch(mode)
-	{
-		case NO_MODE_SELECTED:
-			set_rgb_led(LED2, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY);
-			break;
-
-		case DISCOVER:
-			set_rgb_led(LED2, 0, RGB_MAX_INTENSITY, 0);
-			break;
-
-		case RETURN_HOME:
-			set_rgb_led(LED2, RGB_MAX_INTENSITY, 0, 0);
-			break;
-
-		case GO_FURTHEST_POINT_KNOWN:
-			set_rgb_led(LED2, 0, 0, RGB_MAX_INTENSITY);
-			break;
-	}
 
     return do_a_uturn;
 }
@@ -248,4 +292,66 @@ uint8_t maze_mapping_multi_check_for_deadend(void)
 		uturn_to_do=false;
 		return U_TURN;
 	}
+}
+
+void maze_mapping_process_end_of_maze(void)
+{
+	map[current_crossroad]=END;
+}
+
+void maze_mapping_set_rgb_leds(uint8_t red_intensity, uint8_t green_intensity, uint8_t blue_intensity)
+{
+	int led_id;
+
+	for (led_id=0; led_id<=LED8; led_id++)
+		set_rgb_led(led_id, red_intensity, green_intensity, blue_intensity);
+}
+
+void maze_mapping_update_red_leds(unsigned int led1_val, unsigned int led3_val, unsigned int led5_val, unsigned int led7_val)
+{
+	set_led(LED1, led1_val);
+	set_led(LED3, led3_val);
+	set_led(LED5, led5_val);
+	set_led(LED7, led7_val);
+}
+
+void maze_mapping_update_rgb_leds(void)
+{
+	switch(mode)
+	{
+		case NO_MODE_SELECTED:
+			maze_mapping_set_rgb_leds(RGB_MAX_INTENSITY, RGB_MAX_INTENSITY, RGB_MAX_INTENSITY);
+			break;
+
+		case DISCOVER:
+			maze_mapping_set_rgb_leds(TURN_OFF, RGB_MAX_INTENSITY, TURN_OFF);
+			break;
+
+		case RETURN_HOME:
+			maze_mapping_set_rgb_leds(RGB_MAX_INTENSITY, TURN_OFF, TURN_OFF);
+			break;
+
+		case GO_FURTHEST_POINT_KNOWN:
+			maze_mapping_set_rgb_leds(TURN_OFF, TURN_OFF, RGB_MAX_INTENSITY);
+			break;
+
+		default:
+			maze_mapping_set_rgb_leds(TURN_OFF, TURN_OFF, TURN_OFF);
+			break;
+	}
+}
+
+void maze_mapping_victory_dance(void)
+{
+	clear_leds();
+	maze_mapping_update_red_leds(TURN_ON, TURN_OFF, TURN_ON, TURN_OFF);
+	turn(-HALF_TURN);
+	maze_mapping_update_red_leds(TURN_OFF, TURN_ON, TURN_OFF, TURN_ON);
+	turn(-HALF_TURN);
+	maze_mapping_update_red_leds(TURN_ON, TURN_OFF, TURN_ON, TURN_OFF);
+	turn(HALF_TURN);
+	maze_mapping_update_red_leds(TURN_ON, TURN_ON, TURN_ON, TURN_ON);
+	turn(HALF_TURN);
+	maze_mapping_update_red_leds(TURN_OFF, TURN_OFF, TURN_OFF, TURN_OFF);
+	maze_mapping_update_rgb_leds();
 }

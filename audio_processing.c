@@ -21,10 +21,10 @@ static float micFront_output[FFT_SIZE];
 #define MAX_COUNT_INDEX 4
 
 #define MIN_FREQ			10	//we don't analyze before this index to not use resources for nothing
-#define FREQ_DISCOVER		16	//250Hz
+#define FREQ_DISCOVER		16	//250Hz 230-
 #define FREQ_RETURN_HOME	19	//296Hz
-#define FREQ_GO_FPK			23	//359HZ
-#define FREQ_NO_MODE		26	//406Hz
+#define FREQ_GO_FPK			23	//359HZ 322-370
+#define FREQ_END_MAZE		26	//406Hz 377
 #define MAX_FREQ			30	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_DISCOVER_L		(FREQ_DISCOVER-1)
@@ -33,8 +33,8 @@ static float micFront_output[FFT_SIZE];
 #define FREQ_RETURN_HOME_H	(RETURN_HOME+1)
 #define FREQ_GO_FPK_L		(FREQ_GO_FPK-1)
 #define FREQ_GO_FPK_H		(FREQ_GO_FPK+1)
-#define FREQ_NO_MODE_L		(FREQ_NO_MODE-1)
-#define FREQ_NO_MODE_H		(FREQ_NO_MODE+1)
+#define FREQ_END_MAZE_L		(FREQ_END_MAZE-1)
+#define FREQ_END_MAZE_H		(FREQ_END_MAZE+1)
 
 static uint8_t count_index=0;
 static uint16_t last_index=0;
@@ -65,24 +65,25 @@ void sound_remote(float* data)
 	if (count_index == MAX_COUNT_INDEX)
 	{
 		//RETURN_HOME
-		if(max_norm_index >= FREQ_RETURN_HOME_L && max_norm_index <= FREQ_RETURN_HOME_H)
+		if((max_norm_index >= FREQ_RETURN_HOME_L) && (max_norm_index <= FREQ_RETURN_HOME_H))
 		{
 			do_a_uturn=maze_mapping_uturn_after_selecting_mode(RETURN_HOME);
 		}
 		//GO_FPK
-		else if(max_norm_index >= FREQ_GO_FPK_L && max_norm_index <= FREQ_GO_FPK_H)
+		else if((max_norm_index >= FREQ_GO_FPK_L) && (max_norm_index <= FREQ_GO_FPK_H))
 		{
 			do_a_uturn=maze_mapping_uturn_after_selecting_mode(GO_FURTHEST_POINT_KNOWN);
 		}
 		//DISCOVER
-		else if(max_norm_index >= FREQ_DISCOVER_L && max_norm_index <= FREQ_DISCOVER_H)
+		else if((max_norm_index >= FREQ_DISCOVER_L) && (max_norm_index <= FREQ_DISCOVER_H))
 		{
 			do_a_uturn=maze_mapping_uturn_after_selecting_mode(DISCOVER);
 		}
 		//NO_MODE
-		else if(max_norm_index >= FREQ_NO_MODE_L && max_norm_index <= FREQ_NO_MODE_H)
+		else if((max_norm_index >= FREQ_END_MAZE_L) && (max_norm_index <= FREQ_END_MAZE_H))
 		{
-			do_a_uturn=maze_mapping_uturn_after_selecting_mode(NO_MODE_SELECTED);
+			maze_mapping_process_end_of_maze();
+			do_a_uturn=false;
 		}
 		else
 			do_a_uturn=false;
