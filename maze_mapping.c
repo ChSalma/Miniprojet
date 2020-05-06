@@ -28,7 +28,7 @@ enum {TURN_OFF, TURN_ON};
 
 //prototypes de fonctions
 uint8_t maze_mapping_corridor_gestion(bool, bool);
-uint8_t maze_mapping_crossroad_gestion(bool, uint8_t);
+uint8_t maze_mapping_crossroad_gestion(bool, bool, bool, uint8_t);//maze_mapping_crossroad_gestion(bool, uint8_t);
 uint8_t maze_mapping_deadend_gestion(void);
 uint8_t maze_mapping_furthest_point_reached(void);
 uint8_t maze_mapping_memorise_crossroad(bool);
@@ -51,7 +51,11 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 	if (right_status && left_status)
         return KEEP_GOING;
 
-	chprintf((BaseSequentialStream *) &SD3, "corridor\n");
+	chprintf((BaseSequentialStream *) &SD3, "corridor: L=%d, R=%d\n", left_status, right_status);
+
+	//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
+	//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
+	crossroad_already_saved=true;
 
     if (!right_status)
         return GO_RIGHT;
@@ -59,13 +63,13 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
         return GO_LEFT;
 }
 
-uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form)
+uint8_t maze_mapping_crossroad_gestion(bool right_status, bool forward_status, bool left_status, uint8_t crossroad_form)//uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form)
 {
-	if(maze_mapping_multi_check_case(crossroad_form))
+	if (!crossroad_already_saved)
 	{
-		if (!crossroad_already_saved)
+		if(maze_mapping_multi_check_case(crossroad_form))
 		{
-			chprintf((BaseSequentialStream *) &SD3, "crossroad_%d\n", (4-crossroad_form));
+			chprintf((BaseSequentialStream *) &SD3, "crossroad_%d: L=%d, F=%d, R=%d\n", (4-crossroad_form), left_status, forward_status, right_status);
 			switch (mode)
 			{
 				case DISCOVER:
@@ -75,9 +79,11 @@ uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form
 					return maze_mapping_next_step_to_goal();
 			}
 		}
+		else
+			return KEEP_GOING;
 	}
-
-	return KEEP_GOING;
+	else
+		return KEEP_GOING;
 }
 
 uint8_t maze_mapping_deadend_gestion(void)
@@ -193,7 +199,7 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
 
         default:
         	uturn_to_do=true;
-        	return maze_mapping_crossroad_gestion(right_status, crossroad_form);
+        	return maze_mapping_crossroad_gestion(right_status, forward_status, left_status, crossroad_form);//maze_mapping_crossroad_gestion(right_status, crossroad_form);
     }
 
 }

@@ -39,15 +39,15 @@ void turn(int angle)
 	if (angle>=0)
 	{
 		right_motor_set_pos(0);
-		right_motor_set_speed(LOW_SPEED);
-		left_motor_set_speed(-LOW_SPEED);
+		right_motor_set_speed(HIGH_SPEED);
+		left_motor_set_speed(-HIGH_SPEED);
 		while(right_motor_get_pos() < nb_steps_to_do);
 	}
 	else
 	{
 		left_motor_set_pos(0);
-		right_motor_set_speed(-LOW_SPEED);
-		left_motor_set_speed(LOW_SPEED);
+		right_motor_set_speed(-HIGH_SPEED);
+		left_motor_set_speed(HIGH_SPEED);
 		while(left_motor_get_pos() < -nb_steps_to_do);
 	}
 	stop(); //comme ca le robot arrête de tourner
@@ -80,15 +80,15 @@ void go_for_distance(int distance) //distance [cm]
 	if (distance>=0)
 	{
 		right_motor_set_pos(0);
-		right_motor_set_speed(LOW_SPEED);
-		left_motor_set_speed(LOW_SPEED);
+		right_motor_set_speed(HIGH_SPEED);
+		left_motor_set_speed(HIGH_SPEED);
 		while(right_motor_get_pos() < nb_steps_to_do);
 	}
 	else
 	{
 		left_motor_set_pos(0);
-		right_motor_set_speed(-LOW_SPEED);
-		left_motor_set_speed(-LOW_SPEED);
+		right_motor_set_speed(-HIGH_SPEED);
+		left_motor_set_speed(-HIGH_SPEED);
 		while(left_motor_get_pos() < -nb_steps_to_do);
 	}
 	stop();

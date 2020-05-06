@@ -9,8 +9,8 @@
 #define CONSTANTES_H_
 
 //mouvements
-#define LOW_SPEED 350
-#define HIGH_SPEED 600
+#define LOW_SPEED 200
+#define HIGH_SPEED 350
 
 #define FULL_TURN	360
 #define TURN_RIGHT	-90 //[degrees]
@@ -20,7 +20,7 @@
 #define ADJUST_LEFT 10 //[degrees]
 
 //proximity_sensors
-#define FREE_WAY_FRONT 400//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
+#define FREE_WAY_FRONT 600//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
 #define FREE_WAY_RIGHT 250
 #define FREE_WAY_LEFT 400
 enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SENS, FRONT_LEFT_45DEG, FRONT_LEFT};

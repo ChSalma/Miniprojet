@@ -43,7 +43,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
         //starts getting informations
     	uint8_t i, j, next_order;
     	int current_ambient_light_value = get_ambient_light(RIGHT_SENS);
-
+    	bool detection_needed = false;
     	//version avec moyenne mobile//
     	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
     	{
@@ -65,7 +65,9 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			else if (calibrated_prox > FREE_WAY_FRONT)
     				sensors_values[i]= WALL_DETECTED;
     			else
+    			{
     				sensors_values[i]= FREE_WAY_DETECTED;
+    			}
     		}
     		else if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT))
 			{
@@ -74,7 +76,11 @@ static THD_FUNCTION(ProcessMeasure, arg){
 				else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
 					sensors_values[i]= WALL_DETECTED;
 				else
+				{
 					sensors_values[i]= FREE_WAY_DETECTED;
+					if (i==RIGHT_SENS || i==LEFT_SENS)
+						detection_needed = true;
+				}
 			}
 			else
 			{
@@ -97,24 +103,30 @@ static THD_FUNCTION(ProcessMeasure, arg){
 			switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
 			{
 			case (KEEP_GOING):
-				go_slow();
+				if (detection_needed)
+				{
+					go_slow();
+					detection_needed = false;
+				}
+				else
+					go_fast();
 				break;
 			case(GO_RIGHT):
 				go_for_distance(COEFF*ROBOT_DIAMETER); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
 				turn(TURN_RIGHT);
-				go_slow();
+				go_fast();
 				break;
 			case(GO_FORWARD):
-				go_slow();
+				go_fast();
 				break;
 			case(GO_LEFT):
 				go_for_distance(COEFF*ROBOT_DIAMETER);
 				turn(TURN_LEFT);
-				go_slow();
+				go_fast();
 				break;
 			case(U_TURN):
 				turn(HALF_TURN);
-				go_slow();
+				go_fast();
 				break;
 			case(DONT_MOVE):
 				stop();
@@ -165,28 +177,28 @@ static THD_FUNCTION(ProcessMeasure, arg){
 //			{
 //			case (KEEP_GOING):
 //	//			chprintf((BaseSequentialStream *)&SD3, "keep going\n");
-//				go_slow();
+//				go_fast();
 //				break;
 //			case(GO_RIGHT): //ajouter sécurité
 //	//			chprintf((BaseSequentialStream *)&SD3, "going right\n");
 //				go_for_distance(COEFF*ROBOT_DIAMETER); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
 //				turn(TURN_RIGHT);
-//				go_slow();
+//				go_fast();
 //				break;
 //			case(GO_FORWARD): //ajouter sécurité
 //	//			chprintf((BaseSequentialStream *)&SD3, "going forward\n");
-//				go_slow();
+//				go_fast();
 //				break;
 //			case(GO_LEFT): //ajouter sécurité
 //	//			chprintf((BaseSequentialStream *)&SD3, "going left\n");
 //				go_for_distance(COEFF*ROBOT_DIAMETER);
 //				turn(TURN_LEFT);
-//				go_slow();
+//				go_fast();
 //				break;
 //			case(U_TURN):
 //	//			chprintf((BaseSequentialStream *)&SD3, "oups a deadend\n");
 //				turn(HALF_TURN);
-//				go_slow();
+//				go_fast();
 //				break;
 //			case(DONT_MOVE):
 //				stop();
