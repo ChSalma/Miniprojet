@@ -20,7 +20,7 @@
 #define ROBOT_DIAMETER 7.5f
 #define COEFF 0.6f
 #define MAZE_UNIT 13
-#define AMBIENT_LIGHT_DIFF_THRESHOLD 20
+#define AMBIENT_LIGHT_DIFF_THRESHOLD 50
 #define ANTICIPATION_OFFSET 300
 
 #define BUFFER_SIZE 3
@@ -54,7 +54,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
     		}
     		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
-    		chprintf((BaseSequentialStream *) &SD3, "id = %d , calibrated = %d\n",i, calibrated_prox);
+    		//chprintf((BaseSequentialStream *) &SD3, "id = %d , calibrated = %d\n",i, calibrated_prox);
     		if(i==FRONT_RIGHT || i==FRONT_LEFT)
     		{
     			//si on sait qu'on est de toute façon dans un virage ou carrefour on peut tester plus rapidemeent le capteur avant

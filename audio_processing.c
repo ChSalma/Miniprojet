@@ -18,7 +18,7 @@ static float micFront_cmplx_input[2 * FFT_SIZE];
 static float micFront_output[FFT_SIZE];
 
 #define MIN_VALUE_THRESHOLD	10000 
-#define MAX_COUNT_INDEX 4
+#define MAX_COUNT_INDEX 10
 
 #define MIN_FREQ			10	//we don't analyze before this index to not use resources for nothing
 #define FREQ_DISCOVER		16	//250Hz 230-
@@ -29,8 +29,8 @@ static float micFront_output[FFT_SIZE];
 
 #define FREQ_DISCOVER_L		(FREQ_DISCOVER-1)
 #define FREQ_DISCOVER_H		(FREQ_DISCOVER+1)
-#define FREQ_RETURN_HOME_L	(RETURN_HOME-1)
-#define FREQ_RETURN_HOME_H	(RETURN_HOME+1)
+#define FREQ_RETURN_HOME_L	(FREQ_RETURN_HOME-1)
+#define FREQ_RETURN_HOME_H	(FREQ_RETURN_HOME+1)
 #define FREQ_GO_FPK_L		(FREQ_GO_FPK-1)
 #define FREQ_GO_FPK_H		(FREQ_GO_FPK+1)
 #define FREQ_END_MAZE_L		(FREQ_END_MAZE-1)
@@ -79,7 +79,7 @@ void sound_remote(float* data)
 		{
 			do_a_uturn=maze_mapping_uturn_after_selecting_mode(DISCOVER);
 		}
-		//NO_MODE
+		//END_MAZE
 		else if((max_norm_index >= FREQ_END_MAZE_L) && (max_norm_index <= FREQ_END_MAZE_H))
 		{
 			maze_mapping_process_end_of_maze();

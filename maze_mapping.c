@@ -49,6 +49,8 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 	if (right_status && left_status)
         return KEEP_GOING;
 
+	chprintf((BaseSequentialStream *) &SD3, "corridor\n");
+
     if (!right_status)
         return GO_RIGHT;
     else
@@ -78,7 +80,7 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
 {
     if (!crossroad_already_saved)
     {
-        robot_position=current_crossroad;
+    	robot_position=current_crossroad;
 
         if (current_crossroad!=RESET)
         {
@@ -161,6 +163,10 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             	return maze_mapping_corridor_gestion(right_status, left_status);
 
         default:
+//        	if (forward_status)
+//        		crossroad_already_saved=false;
+        	if(!crossroad_already_saved)
+        		chprintf((BaseSequentialStream *) &SD3, "crossroad: L=%d, F=%d, R=%d\n", left_status, forward_status, right_status);
         	multi_check_deadend=RESET;
         	uturn_to_do=true;
         	break;
@@ -286,6 +292,7 @@ uint8_t maze_mapping_multi_check_for_deadend(void)
 	}
 	else
 	{
+		chprintf((BaseSequentialStream *) &SD3, "deadend\n");
 		multi_check_deadend=RESET;
 		if (current_crossroad>RESET)
 			current_crossroad--;
@@ -303,7 +310,7 @@ void maze_mapping_set_rgb_leds(uint8_t red_intensity, uint8_t green_intensity, u
 {
 	int led_id;
 
-	for (led_id=0; led_id<=LED8; led_id++)
+	for (led_id=LED2; led_id<=LED8; led_id++)
 		set_rgb_led(led_id, red_intensity, green_intensity, blue_intensity);
 }
 

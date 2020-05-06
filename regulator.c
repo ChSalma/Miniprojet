@@ -19,7 +19,7 @@
 #define THRESHOLD_45_DEG 100
 #define THRESHOLD_RIGHT 100
 #define THRESHOLD_LEFT 100
-#define OFFSET 10 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
+#define OFFSET 20 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
 static THD_WORKING_AREA(waRegulator, 256);
 static THD_FUNCTION(Regulator, arg) {
 
