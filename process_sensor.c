@@ -18,7 +18,7 @@
 #include <main.h>
 
 #define ROBOT_DIAMETER 7.5f
-#define COEFF 0.6f
+#define COEFF 0.5f
 #define MAZE_UNIT 13
 #define AMBIENT_LIGHT_DIFF_THRESHOLD 50
 #define ANTICIPATION_OFFSET 300
@@ -27,6 +27,7 @@
 
 enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
+static bool leaving_corridor;
 static bool sensors_values[PROXIMITY_NB_CHANNELS];
 static int previous_ambient_light_value;
 static int data_sensors[PROXIMITY_NB_CHANNELS*BUFFER_SIZE];
@@ -94,16 +95,28 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		{
 			sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
 		}
+
+		//condition qui permet d'éliminer les valeurs aberrantes liées à un chgt de luminosité brusque
 		if(!((current_ambient_light_value - previous_ambient_light_value) > AMBIENT_LIGHT_DIFF_THRESHOLD || (current_ambient_light_value - previous_ambient_light_value) < -AMBIENT_LIGHT_DIFF_THRESHOLD))
 		{
+			//lorsqu'il entre dans un nouveau carrefour ou un virage le robot avance jusqu'au centre de la case et s'arrête en attendant le prochain ordre
+			if(leaving_corridor&&(sensors_values[RIGHT_SENS]== FREE_WAY_DETECTED||
+									sensors_values[LEFT_SENS]== FREE_WAY_DETECTED))
+			{
+				go_for_distance(COEFF*ROBOT_DIAMETER);
+				stop();
+				leaving_corridor = false;
+
+			}
+			//appelle maze_mapping pour connaître le prochain mvt à effectuer
 			next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
-			switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
+			switch (next_order)
 			{
 			case (KEEP_GOING):
 				go_fast();
+				leaving_corridor = true;
 				break;
 			case(GO_RIGHT):
-				go_for_distance(COEFF*ROBOT_DIAMETER); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
 				turn(TURN_RIGHT);
 				go_fast();
 				break;
@@ -111,7 +124,6 @@ static THD_FUNCTION(ProcessMeasure, arg){
 				go_fast();
 				break;
 			case(GO_LEFT):
-				go_for_distance(COEFF*ROBOT_DIAMETER);
 				turn(TURN_LEFT);
 				go_fast();
 				break;
@@ -132,73 +144,6 @@ static THD_FUNCTION(ProcessMeasure, arg){
 			buffer_state = 0;
 		}
 		previous_ambient_light_value = current_ambient_light_value;
-    	//version avec valeur unique et sécurité variation luminosité brusque//
-//    	if (!((current_ambient_light_value - previous_ambient_light_value) > AMBIENT_LIGHT_DIFF_THRESHOLD || (current_ambient_light_value - previous_ambient_light_value) < -AMBIENT_LIGHT_DIFF_THRESHOLD))
-//    	{
-//			for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
-//			{
-//
-//				calibrated_prox = get_calibrated_prox(i);
-//				if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT) ||(calibrated_prox < FREE_WAY_FRONT))
-//				{
-//					if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
-//						sensors_values[i]= WALL_DETECTED;
-//					else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
-//						sensors_values[i]= WALL_DETECTED;
-//					else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > FREE_WAY_FRONT))
-//						sensors_values[i]= WALL_DETECTED;
-//					else
-//						sensors_values[i]= FREE_WAY_DETECTED;
-//				}
-//				else
-//					sensors_values[i]= WALL_DETECTED;
-//			}
-//
-//			sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
-//			sensors_values[BACK_LEFT]= FREE_WAY_DETECTED;
-//
-//			if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))//a voir s'il faut plutôt une condition avec un & plutôt que ou
-//				sensors_values[FRONT_RIGHT] = WALL_DETECTED;
-//			else
-//			{
-//				sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
-//			}
-//			next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
-//			switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
-//			{
-//			case (KEEP_GOING):
-//	//			chprintf((BaseSequentialStream *)&SD3, "keep going\n");
-//				go_fast();
-//				break;
-//			case(GO_RIGHT): //ajouter sécurité
-//	//			chprintf((BaseSequentialStream *)&SD3, "going right\n");
-//				go_for_distance(COEFF*ROBOT_DIAMETER); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
-//				turn(TURN_RIGHT);
-//				go_fast();
-//				break;
-//			case(GO_FORWARD): //ajouter sécurité
-//	//			chprintf((BaseSequentialStream *)&SD3, "going forward\n");
-//				go_fast();
-//				break;
-//			case(GO_LEFT): //ajouter sécurité
-//	//			chprintf((BaseSequentialStream *)&SD3, "going left\n");
-//				go_for_distance(COEFF*ROBOT_DIAMETER);
-//				turn(TURN_LEFT);
-//				go_fast();
-//				break;
-//			case(U_TURN):
-//	//			chprintf((BaseSequentialStream *)&SD3, "oups a deadend\n");
-//				turn(HALF_TURN);
-//				go_fast();
-//				break;
-//			case(DONT_MOVE):
-//				stop();
-//				break;
-//			default:
-//				break;
-//			}
-//    	}
-    	//previous_ambient_light_value = current_ambient_light_value;
     	chThdSleepMilliseconds(25);
     }
 }
