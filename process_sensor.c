@@ -43,7 +43,6 @@ static THD_FUNCTION(ProcessMeasure, arg){
         //starts getting informations
     	uint8_t i, j, next_order;
     	int current_ambient_light_value = get_ambient_light(RIGHT_SENS);
-    	bool detection_needed = false;
     	//version avec moyenne mobile//
     	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
     	{
@@ -78,8 +77,6 @@ static THD_FUNCTION(ProcessMeasure, arg){
 				else
 				{
 					sensors_values[i]= FREE_WAY_DETECTED;
-					if (i==RIGHT_SENS || i==LEFT_SENS)
-						detection_needed = true;
 				}
 			}
 			else
@@ -103,13 +100,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 			switch (next_order) //il faut penser à comment faire l'enclenchement initial du robot: est-ce qu'on appelle une autre fonction?
 			{
 			case (KEEP_GOING):
-				if (detection_needed)
-				{
-					go_slow();
-					detection_needed = false;
-				}
-				else
-					go_fast();
+				go_fast();
 				break;
 			case(GO_RIGHT):
 				go_for_distance(COEFF*ROBOT_DIAMETER); //pour éviter que le robot tourne en ayant seulement dépasser la moitié de la jonction
