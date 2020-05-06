@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 1
+>>>>>>> nouvelle_calibration
 
 
    1              		.cpu cortex-m4
@@ -57,8 +61,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
   54 000c 4FF4AF74 		mov	r4, #350
   55              		.loc 1 69 0
   56 0010 2046     		mov	r0, r4
+<<<<<<< HEAD
   57              		.loc 1 67 0
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 2
+=======
+  57              		.loc 1 68 0
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 2
+>>>>>>> nouvelle_calibration
 
 
   58 0012 1460     		str	r4, [r2]
@@ -118,7 +127,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  112              		.global	go_fast
  113              		.syntax unified
  114              		.thumb
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 3
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 3
+>>>>>>> nouvelle_calibration
 
 
  115              		.thumb_func
@@ -178,7 +191,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  169              	.LBE22:
  170              		.loc 1 64 0
  171 0026 03B0     		add	sp, sp, #12
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 4
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 4
+>>>>>>> nouvelle_calibration
 
 
  172              		.cfi_remember_state
@@ -237,8 +254,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  225 0006 0C4B     		ldr	r3, .L21+8
  226              		.loc 1 66 0
  227 0008 2568     		ldr	r5, [r4]
+<<<<<<< HEAD
  228              		.loc 1 68 0
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 5
+=======
+ 228              		.loc 1 69 0
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 5
+>>>>>>> nouvelle_calibration
 
 
  229 000a 1160     		str	r1, [r2]
@@ -297,8 +319,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  282              		.type	stop, %function
  283              	stop:
  284              	.LFB263:
+<<<<<<< HEAD
  285              		.loc 1 73 0
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 6
+=======
+ 285              		.loc 1 74 0
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 6
+>>>>>>> nouvelle_calibration
 
 
  286              		.cfi_startproc
@@ -358,7 +385,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  340 0026 BDE83040 		pop	{r4, r5, lr}
  341              		.cfi_restore 14
  342              		.cfi_restore 5
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 7
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 7
+>>>>>>> nouvelle_calibration
 
 
  343              		.cfi_restore 4
@@ -417,8 +448,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  396 001a 1B4D     		ldr	r5, .L41+8
  397 001c 83B0     		sub	sp, sp, #12
  398              		.cfi_def_cfa_offset 24
+<<<<<<< HEAD
  399              		.loc 1 35 0
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 8
+=======
+ 399              		.loc 1 36 0
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 8
+>>>>>>> nouvelle_calibration
 
 
  400 001e 2B68     		ldr	r3, [r5]
@@ -478,7 +514,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  454              	.LVL26:
  455              		.loc 1 49 0
  456 0062 0A48     		ldr	r0, .L41+12
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 9
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 9
+>>>>>>> nouvelle_calibration
 
 
  457 0064 FFF7FEFF 		bl	right_motor_set_speed
@@ -538,7 +578,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  511 0018 30B5     		push	{r4, r5, lr}
  512              		.cfi_def_cfa_offset 12
  513              		.cfi_offset 4, -12
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 10
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 10
+>>>>>>> nouvelle_calibration
 
 
  514              		.cfi_offset 5, -8
@@ -598,7 +642,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  568 005c FFF7FEBF 		b	stop
  569              	.LVL41:
  570              	.L44:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 11
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 11
+>>>>>>> nouvelle_calibration
 
 
  571              		.cfi_restore_state
@@ -658,7 +706,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  625 0004 0749     		ldr	r1, .L60+4
  626              		.loc 1 98 0
  627 0006 1A68     		ldr	r2, [r3]
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 12
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 12
+>>>>>>> nouvelle_calibration
 
 
  628              		.loc 1 100 0
@@ -718,7 +770,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  682              		.loc 1 103 0
  683 000a 83B0     		sub	sp, sp, #12
  684              		.cfi_def_cfa_offset 16
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 13
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 13
+>>>>>>> nouvelle_calibration
 
 
  685              		.loc 1 103 0
@@ -778,7 +834,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  739              		.file 16 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/chcore.h"
  740              		.file 17 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/chcore_v7m.h"
  741              		.file 18 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chdebug.h"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 14
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 14
+>>>>>>> nouvelle_calibration
 
 
  742              		.file 19 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chtm.h"
@@ -838,7 +898,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  796 0028 D0080000 		.4byte	.LASF0
  797 002c 03       		.uleb128 0x3
  798 002d 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 15
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 15
+>>>>>>> nouvelle_calibration
 
 
  799 002e 05       		.byte	0x5
@@ -897,8 +961,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  852 0096 05       		.byte	0x5
  853 0097 121F0000 		.4byte	.LASF12
  854 009b 04       		.uleb128 0x4
+<<<<<<< HEAD
  855 009c C30F0000 		.4byte	.LASF13
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 16
+=======
+ 855 009c 26100000 		.4byte	.LASF13
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 16
+>>>>>>> nouvelle_calibration
 
 
  856 00a0 02       		.byte	0x2
@@ -958,7 +1027,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  910 010d 05       		.byte	0x5
  911 010e A8       		.byte	0xa8
  912 010f F4000000 		.4byte	0xf4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 17
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 17
+>>>>>>> nouvelle_calibration
 
 
  913 0113 0A       		.uleb128 0xa
@@ -1018,7 +1091,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  967 0182 06       		.byte	0x6
  968 0183 31       		.byte	0x31
  969 0184 C4010000 		.4byte	0x1c4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 18
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 18
+>>>>>>> nouvelle_calibration
 
 
  970 0188 00       		.byte	0
@@ -1078,7 +1155,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1024 01f2 0E       		.uleb128 0xe
  1025 01f3 AB200000 		.4byte	.LASF36
  1026 01f7 06       		.byte	0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 19
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 19
+>>>>>>> nouvelle_calibration
 
 
  1027 01f8 3A       		.byte	0x3a
@@ -1138,7 +1219,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1081 0265 06       		.byte	0x6
  1082 0266 4B       		.byte	0x4b
  1083 0267 93020000 		.4byte	0x293
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 20
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 20
+>>>>>>> nouvelle_calibration
 
 
  1084 026b 00       		.byte	0
@@ -1198,7 +1283,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1138 02da 62       		.byte	0x62
  1139 02db 53020000 		.4byte	0x253
  1140 02df 88       		.byte	0x88
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 21
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 21
+>>>>>>> nouvelle_calibration
 
 
  1141 02e0 00       		.byte	0
@@ -1258,7 +1347,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1195 034a 04       		.byte	0x4
  1196 034b 10       		.uleb128 0x10
  1197 034c 5F7700   		.ascii	"_w\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 22
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 22
+>>>>>>> nouvelle_calibration
 
 
  1198 034f 06       		.byte	0x6
@@ -1318,7 +1411,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1252 03bb 06       		.byte	0x6
  1253 03bc CB       		.byte	0xcb
  1254 03bd 2D060000 		.4byte	0x62d
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 23
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 23
+>>>>>>> nouvelle_calibration
 
 
  1255 03c1 2C       		.byte	0x2c
@@ -1378,7 +1475,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1309 042d 54       		.byte	0x54
  1310 042e 0E       		.uleb128 0xe
  1311 042f 71020000 		.4byte	.LASF69
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 24
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 24
+>>>>>>> nouvelle_calibration
 
 
  1312 0433 06       		.byte	0x6
@@ -1438,7 +1539,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1366 04a9 06       		.byte	0x6
  1367 04aa 4002     		.2byte	0x240
  1368 04ac 9A060000 		.4byte	0x69a
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 25
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 25
+>>>>>>> nouvelle_calibration
 
 
  1369 04b0 08       		.byte	0x8
@@ -1497,8 +1602,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1422 0521 2C000000 		.4byte	0x2c
  1423 0525 44       		.byte	0x44
  1424 0526 18       		.uleb128 0x18
+<<<<<<< HEAD
  1425 0527 611B0000 		.4byte	.LASF85
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 26
+=======
+ 1425 0527 C41B0000 		.4byte	.LASF85
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 26
+>>>>>>> nouvelle_calibration
 
 
  1426 052b 06       		.byte	0x6
@@ -1558,7 +1668,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1480 05a4 06       		.byte	0x6
  1481 05a5 8802     		.2byte	0x288
  1482 05a7 C5080000 		.4byte	0x8c5
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 27
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 27
+>>>>>>> nouvelle_calibration
 
 
  1483 05ab EC02     		.2byte	0x2ec
@@ -1618,7 +1732,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1537 0627 15       		.uleb128 0x15
  1538 0628 C6000000 		.4byte	0xc6
  1539 062c 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 28
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 28
+>>>>>>> nouvelle_calibration
 
 
  1540 062d 06       		.uleb128 0x6
@@ -1678,7 +1796,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1594 06a1 0A220000 		.4byte	.LASF99
  1595 06a5 0E       		.byte	0xe
  1596 06a6 06       		.byte	0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 29
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 29
+>>>>>>> nouvelle_calibration
 
 
  1597 06a7 3F01     		.2byte	0x13f
@@ -1738,7 +1860,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1651 071b 5E02     		.2byte	0x25e
  1652 071d DA010000 		.4byte	0x1da
  1653 0721 24       		.byte	0x24
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 30
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 30
+>>>>>>> nouvelle_calibration
 
 
  1654 0722 18       		.uleb128 0x18
@@ -1798,7 +1924,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1708 0797 18       		.uleb128 0x18
  1709 0798 4E0A0000 		.4byte	.LASF116
  1710 079c 06       		.byte	0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 31
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 31
+>>>>>>> nouvelle_calibration
 
 
  1711 079d 6802     		.2byte	0x268
@@ -1858,7 +1988,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1765 0815 00       		.byte	0
  1766 0816 1C       		.uleb128 0x1c
  1767 0817 F0       		.byte	0xf0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 32
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 32
+>>>>>>> nouvelle_calibration
 
 
  1768 0818 06       		.byte	0x6
@@ -1918,7 +2052,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1822 088d 95190000 		.4byte	.LASF126
  1823 0891 06       		.uleb128 0x6
  1824 0892 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 33
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 33
+>>>>>>> nouvelle_calibration
 
 
  1825 0893 8C080000 		.4byte	0x88c
@@ -1978,7 +2116,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1879 090d 07       		.byte	0x7
  1880 090e 24       		.byte	0x24
  1881 090f 5E000000 		.4byte	0x5e
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 34
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 34
+>>>>>>> nouvelle_calibration
 
 
  1882 0913 04       		.uleb128 0x4
@@ -2038,7 +2180,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1936 0986 00       		.byte	0
  1937 0987 20       		.uleb128 0x20
  1938 0988 0F080000 		.4byte	.LASF141
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 35
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 35
+>>>>>>> nouvelle_calibration
 
 
  1939 098c 09       		.byte	0x9
@@ -2098,7 +2244,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  1993 0a02 E6180000 		.4byte	.LASF152
  1994 0a06 0A       		.byte	0xa
  1995 0a07 51       		.byte	0x51
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 36
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 36
+>>>>>>> nouvelle_calibration
 
 
  1996 0a08 13090000 		.4byte	0x913
@@ -2158,7 +2308,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2050 0a7a 0E       		.uleb128 0xe
  2051 0a7b E41F0000 		.4byte	.LASF162
  2052 0a7f 0C       		.byte	0xc
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 37
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 37
+>>>>>>> nouvelle_calibration
 
 
  2053 0a80 CB       		.byte	0xcb
@@ -2218,7 +2372,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2107 0aed 3601     		.2byte	0x136
  2108 0aef 610B0000 		.4byte	0xb61
  2109 0af3 2C       		.byte	0x2c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 38
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 38
+>>>>>>> nouvelle_calibration
 
 
  2110 0af4 18       		.uleb128 0x18
@@ -2278,7 +2436,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2164 0b67 49       		.byte	0x49
  2165 0b68 6C0B0000 		.4byte	0xb6c
  2166 0b6c 0F       		.uleb128 0xf
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 39
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 39
+>>>>>>> nouvelle_calibration
 
 
  2167 0b6d 7A220000 		.4byte	.LASF180
@@ -2338,7 +2500,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2221 0bdb 611C0000 		.4byte	.LASF186
  2222 0bdf 0C       		.byte	0xc
  2223 0be0 9201     		.2byte	0x192
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 40
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 40
+>>>>>>> nouvelle_calibration
 
 
  2224 0be2 D5090000 		.4byte	0x9d5
@@ -2398,7 +2564,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2278 0c56 6C01     		.2byte	0x16c
  2279 0c58 DF180000 		.4byte	0x18df
  2280 0c5c 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 41
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 41
+>>>>>>> nouvelle_calibration
 
 
  2281 0c5d 18       		.uleb128 0x18
@@ -2458,7 +2628,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2335 0cd1 18       		.uleb128 0x18
  2336 0cd2 41010000 		.4byte	.LASF201
  2337 0cd6 0C       		.byte	0xc
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 42
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 42
+>>>>>>> nouvelle_calibration
 
 
  2338 0cd7 8201     		.2byte	0x182
@@ -2518,7 +2692,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2392 0d4c C601     		.2byte	0x1c6
  2393 0d4e B50B0000 		.4byte	0xbb5
  2394 0d52 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 43
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 43
+>>>>>>> nouvelle_calibration
 
 
  2395 0d53 18       		.uleb128 0x18
@@ -2578,7 +2756,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2449 0dcb A706     		.2byte	0x6a7
  2450 0dcd 1E090000 		.4byte	0x91e
  2451 0dd1 22       		.uleb128 0x22
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 44
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 44
+>>>>>>> nouvelle_calibration
 
 
  2452 0dd2 14140000 		.4byte	.LASF216
@@ -2638,7 +2820,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2506 0e3d CD       		.byte	0xcd
  2507 0e3e 2E090000 		.4byte	0x92e
  2508 0e42 1C       		.byte	0x1c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 45
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 45
+>>>>>>> nouvelle_calibration
 
 
  2509 0e43 0E       		.uleb128 0xe
@@ -2698,7 +2884,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2563 0eaf 0E       		.uleb128 0xe
  2564 0eb0 371E0000 		.4byte	.LASF229
  2565 0eb4 0F       		.byte	0xf
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 46
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 46
+>>>>>>> nouvelle_calibration
 
 
  2566 0eb5 D7       		.byte	0xd7
@@ -2758,7 +2948,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2620 0f1d EF       		.byte	0xef
  2621 0f1e DE0E0000 		.4byte	0xede
  2622 0f22 0D       		.uleb128 0xd
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 47
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 47
+>>>>>>> nouvelle_calibration
 
 
  2623 0f23 10       		.byte	0x10
@@ -2818,7 +3012,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2677 0f8f 0F       		.byte	0xf
  2678 0f90 0501     		.2byte	0x105
  2679 0f92 660F0000 		.4byte	0xf66
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 48
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 48
+>>>>>>> nouvelle_calibration
 
 
  2680 0f96 28       		.uleb128 0x28
@@ -2878,7 +3076,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2734 1009 841B0000 		.4byte	.LASF243
  2735 100d 0F       		.byte	0xf
  2736 100e 1501     		.2byte	0x115
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 49
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 49
+>>>>>>> nouvelle_calibration
 
 
  2737 1010 CC100000 		.4byte	0x10cc
@@ -2938,7 +3140,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2791 108d 2E090000 		.4byte	0x92e
  2792 1091 1402     		.2byte	0x214
  2793 1093 19       		.uleb128 0x19
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 50
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 50
+>>>>>>> nouvelle_calibration
 
 
  2794 1094 AC1B0000 		.4byte	.LASF252
@@ -2998,7 +3204,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2848 1111 1C110000 		.4byte	0x111c
  2849 1115 0C       		.uleb128 0xc
  2850 1116 AD000000 		.4byte	0xad
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 51
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 51
+>>>>>>> nouvelle_calibration
 
 
  2851 111a 1B       		.byte	0x1b
@@ -3058,7 +3268,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2905 118b 18       		.uleb128 0x18
  2906 118c 16090000 		.4byte	.LASF263
  2907 1190 0F       		.byte	0xf
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 52
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 52
+>>>>>>> nouvelle_calibration
 
 
  2908 1191 3F01     		.2byte	0x13f
@@ -3118,7 +3332,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  2962 1202 2E090000 		.4byte	0x92e
  2963 1206 00       		.byte	0
  2964 1207 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 53
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 53
+>>>>>>> nouvelle_calibration
 
 
  2965 1208 C51C0000 		.4byte	.LASF270
@@ -3178,7 +3396,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3019 1280 28       		.byte	0x28
  3020 1281 0F       		.byte	0xf
  3021 1282 3F02     		.2byte	0x23f
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 54
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 54
+>>>>>>> nouvelle_calibration
 
 
  3022 1284 0A130000 		.4byte	0x130a
@@ -3237,8 +3459,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3075 12f7 2E090000 		.4byte	0x92e
  3076 12fb 20       		.byte	0x20
  3077 12fc 18       		.uleb128 0x18
+<<<<<<< HEAD
  3078 12fd E2200000 		.4byte	.LASF277
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 55
+=======
+ 3078 12fd 45210000 		.4byte	.LASF277
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 55
+>>>>>>> nouvelle_calibration
 
 
  3079 1301 0F       		.byte	0xf
@@ -3298,7 +3525,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3133 1373 C702     		.2byte	0x2c7
  3134 1375 33090000 		.4byte	0x933
  3135 1379 18       		.byte	0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 56
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 56
+>>>>>>> nouvelle_calibration
 
 
  3136 137a 18       		.uleb128 0x18
@@ -3358,7 +3589,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3190 13ef 18       		.uleb128 0x18
  3191 13f0 841B0000 		.4byte	.LASF243
  3192 13f4 0F       		.byte	0xf
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 57
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 57
+>>>>>>> nouvelle_calibration
 
 
  3193 13f5 D102     		.2byte	0x2d1
@@ -3418,7 +3653,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3247 1468 DF02     		.2byte	0x2df
  3248 146a 2E090000 		.4byte	0x92e
  3249 146e 08       		.byte	0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 58
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 58
+>>>>>>> nouvelle_calibration
 
 
  3250 146f 26       		.uleb128 0x26
@@ -3478,7 +3717,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3304 14df 445200   		.ascii	"DR\000"
  3305 14e2 0F       		.byte	0xf
  3306 14e3 0C03     		.2byte	0x30c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 59
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 59
+>>>>>>> nouvelle_calibration
 
 
  3307 14e5 2E090000 		.4byte	0x92e
@@ -3538,7 +3781,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3361 155d 10       		.byte	0x10
  3362 155e 6D       		.byte	0x6d
  3363 155f 38090000 		.4byte	0x938
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 60
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 60
+>>>>>>> nouvelle_calibration
 
 
  3364 1563 0F       		.uleb128 0xf
@@ -3598,7 +3845,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3418 15cf 14       		.byte	0x14
  3419 15d0 10       		.uleb128 0x10
  3420 15d1 73323200 		.ascii	"s22\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 61
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 61
+>>>>>>> nouvelle_calibration
 
 
  3421 15d5 11       		.byte	0x11
@@ -3658,7 +3909,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3475 1646 11       		.byte	0x11
  3476 1647 0501     		.2byte	0x105
  3477 1649 4D150000 		.4byte	0x154d
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 62
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 62
+>>>>>>> nouvelle_calibration
 
 
  3478 164d 3C       		.byte	0x3c
@@ -3718,7 +3973,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3532 16bb 60       		.byte	0x60
  3533 16bc 00       		.byte	0
  3534 16bd 06       		.uleb128 0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 63
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 63
+>>>>>>> nouvelle_calibration
 
 
  3535 16be 04       		.byte	0x4
@@ -3778,7 +4037,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3589 1728 0E       		.uleb128 0xe
  3590 1729 71080000 		.4byte	.LASF313
  3591 172d 12       		.byte	0x12
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 64
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 64
+>>>>>>> nouvelle_calibration
 
 
  3592 172e 73       		.byte	0x73
@@ -3838,7 +4101,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3646 1797 92160000 		.4byte	.LASF319
  3647 179b 13       		.byte	0x13
  3648 179c 4B       		.byte	0x4b
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 65
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 65
+>>>>>>> nouvelle_calibration
 
 
  3649 179d 93090000 		.4byte	0x993
@@ -3898,7 +4165,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3703 1804 C4170000 		.4byte	0x17c4
  3704 1808 09       		.uleb128 0x9
  3705 1809 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 66
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 66
+>>>>>>> nouvelle_calibration
 
 
  3706 180a 0C       		.byte	0xc
@@ -3958,7 +4229,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3760 1883 0E       		.uleb128 0xe
  3761 1884 83080000 		.4byte	.LASF336
  3762 1888 15       		.byte	0x15
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 67
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 67
+>>>>>>> nouvelle_calibration
 
 
  3763 1889 37       		.byte	0x37
@@ -4018,7 +4293,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3817 18f5 2A       		.uleb128 0x2a
  3818 18f6 636800   		.ascii	"ch\000"
  3819 18f9 0C       		.byte	0xc
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 68
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 68
+>>>>>>> nouvelle_calibration
 
 
  3820 18fa 0902     		.2byte	0x209
@@ -4077,8 +4356,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3873 1963 ED080000 		.4byte	0x8ed
  3874 1967 0B       		.byte	0xb
  3875 1968 0E       		.uleb128 0xe
+<<<<<<< HEAD
  3876 1969 541E0000 		.4byte	.LASF350
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 69
+=======
+ 3876 1969 B71E0000 		.4byte	.LASF350
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 69
+>>>>>>> nouvelle_calibration
 
 
  3877 196d 17       		.byte	0x17
@@ -4138,7 +4422,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3931 19d9 17       		.byte	0x17
  3932 19da 48       		.byte	0x48
  3933 19db ED080000 		.4byte	0x8ed
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 70
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 70
+>>>>>>> nouvelle_calibration
 
 
  3934 19df 15       		.byte	0x15
@@ -4198,7 +4486,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  3988 1a51 18       		.byte	0x18
  3989 1a52 3F       		.byte	0x3f
  3990 1a53 EB090000 		.4byte	0x9eb
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 71
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 71
+>>>>>>> nouvelle_calibration
 
 
  3991 1a57 08       		.byte	0x8
@@ -4258,7 +4550,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4045 1ac3 19       		.byte	0x19
  4046 1ac4 4F       		.byte	0x4f
  4047 1ac5 B4000000 		.4byte	0xb4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 72
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 72
+>>>>>>> nouvelle_calibration
 
 
  4048 1ac9 08       		.byte	0x8
@@ -4318,7 +4614,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4102 1b35 06       		.uleb128 0x6
  4103 1b36 04       		.byte	0x4
  4104 1b37 ED080000 		.4byte	0x8ed
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 73
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 73
+>>>>>>> nouvelle_calibration
 
 
  4105 1b3b 04       		.uleb128 0x4
@@ -4378,7 +4678,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4159 1bb9 C6000000 		.4byte	0xc6
  4160 1bbd 00       		.byte	0
  4161 1bbe 06       		.uleb128 0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 74
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 74
+>>>>>>> nouvelle_calibration
 
 
  4162 1bbf 04       		.byte	0x4
@@ -4438,7 +4742,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4216 1c2e 0C       		.uleb128 0xc
  4217 1c2f AD000000 		.4byte	0xad
  4218 1c33 0F       		.byte	0xf
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 75
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 75
+>>>>>>> nouvelle_calibration
 
 
  4219 1c34 00       		.byte	0
@@ -4498,7 +4806,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4273 1cb6 15       		.uleb128 0x15
  4274 1cb7 B4000000 		.4byte	0xb4
  4275 1cbb 15       		.uleb128 0x15
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 76
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 76
+>>>>>>> nouvelle_calibration
 
 
  4276 1cbc 170A0000 		.4byte	0xa17
@@ -4558,7 +4870,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4330 1d25 23090000 		.4byte	0x923
  4331 1d29 00       		.byte	0
  4332 1d2a 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 77
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 77
+>>>>>>> nouvelle_calibration
 
 
  4333 1d2b 9C1A0000 		.4byte	.LASF404
@@ -4618,7 +4934,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4387 1da6 14       		.uleb128 0x14
  4388 1da7 511D0000 		.4byte	0x1d51
  4389 1dab BA1D0000 		.4byte	0x1dba
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 78
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 78
+>>>>>>> nouvelle_calibration
 
 
  4390 1daf 15       		.uleb128 0x15
@@ -4678,7 +4998,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4444 1e17 0D       		.uleb128 0xd
  4445 1e18 2C       		.byte	0x2c
  4446 1e19 1C       		.byte	0x1c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 79
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 79
+>>>>>>> nouvelle_calibration
 
 
  4447 1e1a A9       		.byte	0xa9
@@ -4738,7 +5062,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4501 1e86 2E090000 		.4byte	0x92e
  4502 1e8a 20       		.byte	0x20
  4503 1e8b 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 80
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 80
+>>>>>>> nouvelle_calibration
 
 
  4504 1e8c 28190000 		.4byte	.LASF415
@@ -4798,7 +5126,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4558 1ef8 1C       		.byte	0x1c
  4559 1ef9 CD       		.byte	0xcd
  4560 1efa 23090000 		.4byte	0x923
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 81
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 81
+>>>>>>> nouvelle_calibration
 
 
  4561 1efe 14       		.byte	0x14
@@ -4858,7 +5190,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4615 1f67 0E       		.uleb128 0xe
  4616 1f68 3D0A0000 		.4byte	.LASF430
  4617 1f6c 1C       		.byte	0x1c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 82
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 82
+>>>>>>> nouvelle_calibration
 
 
  4618 1f6d F4       		.byte	0xf4
@@ -4918,7 +5254,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4672 1fde 03       		.byte	0x3
  4673 1fdf 25       		.uleb128 0x25
  4674 1fe0 BE050000 		.4byte	.LASF440
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 83
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 83
+>>>>>>> nouvelle_calibration
 
 
  4675 1fe4 04       		.byte	0x4
@@ -4978,7 +5318,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4729 2057 EC1F0000 		.4byte	0x1fec
  4730 205b 00       		.byte	0
  4731 205c 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 84
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 84
+>>>>>>> nouvelle_calibration
 
 
  4732 205d 72190000 		.4byte	.LASF450
@@ -5038,7 +5382,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4786 20d2 08       		.uleb128 0x8
  4787 20d3 CD180000 		.4byte	.LASF458
  4788 20d7 1E       		.byte	0x1e
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 85
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 85
+>>>>>>> nouvelle_calibration
 
 
  4789 20d8 4501     		.2byte	0x145
@@ -5098,7 +5446,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4843 214f 1E       		.byte	0x1e
  4844 2150 6401     		.2byte	0x164
  4845 2152 D2200000 		.4byte	0x20d2
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 86
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 86
+>>>>>>> nouvelle_calibration
 
 
  4846 2156 04       		.byte	0x4
@@ -5158,7 +5510,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4900 21c8 27210000 		.4byte	0x2127
  4901 21cc 16       		.uleb128 0x16
  4902 21cd C0210000 		.4byte	0x21c0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 87
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 87
+>>>>>>> nouvelle_calibration
 
 
  4903 21d1 1C       		.uleb128 0x1c
@@ -5218,7 +5574,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  4957 2243 CA0B0000 		.4byte	.LASF475
  4958 2247 00       		.byte	0
  4959 2248 25       		.uleb128 0x25
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 88
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 88
+>>>>>>> nouvelle_calibration
 
 
  4960 2249 C2000000 		.4byte	.LASF476
@@ -5278,7 +5638,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5014 22b8 18       		.uleb128 0x18
  5015 22b9 42140000 		.4byte	.LASF449
  5016 22bd 20       		.byte	0x20
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 89
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 89
+>>>>>>> nouvelle_calibration
 
 
  5017 22be 0A01     		.2byte	0x10a
@@ -5338,7 +5702,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5071 2333 3F01     		.2byte	0x13f
  5072 2335 41230000 		.4byte	0x2341
  5073 2339 2C       		.byte	0x2c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 90
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 90
+>>>>>>> nouvelle_calibration
 
 
  5074 233a 00       		.byte	0
@@ -5398,7 +5766,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5128 23a5 64616300 		.ascii	"dac\000"
  5129 23a9 22       		.byte	0x22
  5130 23aa FD       		.byte	0xfd
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 91
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 91
+>>>>>>> nouvelle_calibration
 
 
  5131 23ab FF230000 		.4byte	0x23ff
@@ -5458,7 +5830,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5185 2422 1B       		.uleb128 0x1b
  5186 2423 190B0000 		.4byte	.LASF503
  5187 2427 30       		.byte	0x30
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 92
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 92
+>>>>>>> nouvelle_calibration
 
 
  5188 2428 22       		.byte	0x22
@@ -5518,7 +5894,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5242 249d 22       		.byte	0x22
  5243 249e 2001     		.2byte	0x120
  5244 24a0 08090000 		.4byte	0x908
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 93
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 93
+>>>>>>> nouvelle_calibration
 
 
  5245 24a4 16       		.uleb128 0x16
@@ -5578,7 +5958,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5299 251a 15       		.uleb128 0x15
  5300 251b F7240000 		.4byte	0x24f7
  5301 251f 15       		.uleb128 0x15
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 94
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 94
+>>>>>>> nouvelle_calibration
 
 
  5302 2520 C4240000 		.4byte	0x24c4
@@ -5638,7 +6022,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5356 2590 08       		.uleb128 0x8
  5357 2591 D6100000 		.4byte	.LASF516
  5358 2595 22       		.byte	0x22
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 95
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 95
+>>>>>>> nouvelle_calibration
 
 
  5359 2596 6701     		.2byte	0x167
@@ -5698,7 +6086,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5413 2608 57220000 		.4byte	.LASF522
  5414 260c 01       		.byte	0x1
  5415 260d 25       		.uleb128 0x25
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 96
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 96
+>>>>>>> nouvelle_calibration
 
 
  5416 260e D0010000 		.4byte	.LASF523
@@ -5758,7 +6150,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5470 267d 1F260000 		.4byte	0x261f
  5471 2681 0D       		.uleb128 0xd
  5472 2682 08       		.byte	0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 97
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 97
+>>>>>>> nouvelle_calibration
 
 
  5473 2683 24       		.byte	0x24
@@ -5818,7 +6214,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5527 26ee 1F260000 		.4byte	0x261f
  5528 26f2 2B       		.uleb128 0x2b
  5529 26f3 07       		.byte	0x7
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 98
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 98
+>>>>>>> nouvelle_calibration
 
 
  5530 26f4 01       		.byte	0x1
@@ -5878,7 +6278,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5584 2767 08       		.byte	0x8
  5585 2768 26       		.uleb128 0x26
  5586 2769 74696D00 		.ascii	"tim\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 99
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 99
+>>>>>>> nouvelle_calibration
 
 
  5587 276d 26       		.byte	0x26
@@ -5938,7 +6342,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5641 27dc 2E090000 		.4byte	0x92e
  5642 27e0 10       		.byte	0x10
  5643 27e1 26       		.uleb128 0x26
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 100
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 100
+>>>>>>> nouvelle_calibration
 
 
  5644 27e2 45475200 		.ascii	"EGR\000"
@@ -5998,7 +6406,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5698 2857 A3010000 		.4byte	.LASF547
  5699 285b 27       		.byte	0x27
  5700 285c AD01     		.2byte	0x1ad
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 101
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 101
+>>>>>>> nouvelle_calibration
 
 
  5701 285e 2E090000 		.4byte	0x92e
@@ -6058,7 +6470,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5755 28d2 18       		.uleb128 0x18
  5756 28d3 8F140000 		.4byte	.LASF554
  5757 28d7 26       		.byte	0x26
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 102
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 102
+>>>>>>> nouvelle_calibration
 
 
  5758 28d8 8501     		.2byte	0x185
@@ -6118,7 +6534,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5812 294d 02       		.byte	0x2
  5813 294e 25       		.uleb128 0x25
  5814 294f E2030000 		.4byte	.LASF562
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 103
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 103
+>>>>>>> nouvelle_calibration
 
 
  5815 2953 03       		.byte	0x3
@@ -6177,8 +6597,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5868 29c0 D2040000 		.4byte	.LASF572
  5869 29c4 01       		.byte	0x1
  5870 29c5 25       		.uleb128 0x25
+<<<<<<< HEAD
  5871 29c6 BC200000 		.4byte	.LASF573
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 104
+=======
+ 5871 29c6 1F210000 		.4byte	.LASF573
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 104
+>>>>>>> nouvelle_calibration
 
 
  5872 29ca 02       		.byte	0x2
@@ -6238,7 +6663,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5926 2a3e 29       		.byte	0x29
  5927 2a3f 9C01     		.2byte	0x19c
  5928 2a41 61290000 		.4byte	0x2961
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 105
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 105
+>>>>>>> nouvelle_calibration
 
 
  5929 2a45 00       		.byte	0
@@ -6298,7 +6727,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  5983 2aba 34       		.byte	0x34
  5984 2abb 26       		.uleb128 0x26
  5985 2abc 69326300 		.ascii	"i2c\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 106
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 106
+>>>>>>> nouvelle_calibration
 
 
  5986 2ac0 29       		.byte	0x29
@@ -6357,8 +6790,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6039 2b2a 1B01     		.2byte	0x11b
  6040 2b2c 992B0000 		.4byte	0x2b99
  6041 2b30 18       		.uleb128 0x18
+<<<<<<< HEAD
  6042 2b31 42140000 		.4byte	.LASF449
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 107
+=======
+ 6042 2b31 A5140000 		.4byte	.LASF449
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 107
+>>>>>>> nouvelle_calibration
 
 
  6043 2b35 2B       		.byte	0x2b
@@ -6418,7 +6856,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6097 2ba6 AA2B0000 		.4byte	0x2baa
  6098 2baa 1F       		.uleb128 0x1f
  6099 2bab BF2B0000 		.4byte	0x2bbf
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 108
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 108
+>>>>>>> nouvelle_calibration
 
 
  6100 2baf 15       		.uleb128 0x15
@@ -6478,7 +6920,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6154 2c1e 2B       		.byte	0x2b
  6155 2c1f 1601     		.2byte	0x116
  6156 2c21 C52B0000 		.4byte	0x2bc5
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 109
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 109
+>>>>>>> nouvelle_calibration
 
 
  6157 2c25 16       		.uleb128 0x16
@@ -6538,7 +6984,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6211 2c97 2D       		.byte	0x2d
  6212 2c98 8101     		.2byte	0x181
  6213 2c9a DC2D0000 		.4byte	0x2ddc
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 110
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 110
+>>>>>>> nouvelle_calibration
 
 
  6214 2c9e 04       		.byte	0x4
@@ -6598,7 +7048,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6268 2d10 77150000 		.4byte	.LASF612
  6269 2d14 2D       		.byte	0x2d
  6270 2d15 2A01     		.2byte	0x12a
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 111
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 111
+>>>>>>> nouvelle_calibration
 
 
  6271 2d17 ED080000 		.4byte	0x8ed
@@ -6658,7 +7112,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6325 2d8c 5C01     		.2byte	0x15c
  6326 2d8e E12C0000 		.4byte	0x2ce1
  6327 2d92 08       		.byte	0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 112
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 112
+>>>>>>> nouvelle_calibration
 
 
  6328 2d93 18       		.uleb128 0x18
@@ -6718,7 +7176,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6382 2e0c C801     		.2byte	0x1c8
  6383 2e0e 6D2C0000 		.4byte	0x2c6d
  6384 2e12 2B       		.uleb128 0x2b
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 113
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 113
+>>>>>>> nouvelle_calibration
 
 
  6385 2e13 07       		.byte	0x7
@@ -6778,7 +7240,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6439 2e7f 3B1B0000 		.4byte	0x1b3b
  6440 2e83 0C       		.byte	0xc
  6441 2e84 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 114
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 114
+>>>>>>> nouvelle_calibration
 
 
  6442 2e85 B3100000 		.4byte	.LASF628
@@ -6838,7 +7304,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6496 2ef0 67657400 		.ascii	"get\000"
  6497 2ef4 2E       		.byte	0x2e
  6498 2ef5 6E       		.byte	0x6e
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 115
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 115
+>>>>>>> nouvelle_calibration
 
 
  6499 2ef6 BE1B0000 		.4byte	0x1bbe
@@ -6897,8 +7367,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6552 2f61 96130000 		.4byte	.LASF638
  6553 2f65 01       		.byte	0x1
  6554 2f66 25       		.uleb128 0x25
+<<<<<<< HEAD
  6555 2f67 7A110000 		.4byte	.LASF639
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 116
+=======
+ 6555 2f67 DD110000 		.4byte	.LASF639
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 116
+>>>>>>> nouvelle_calibration
 
 
  6556 2f6b 02       		.byte	0x2
@@ -6958,7 +7433,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6610 2fda 31       		.byte	0x31
  6611 2fdb F7       		.byte	0xf7
  6612 2fdc 23090000 		.4byte	0x923
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 117
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 117
+>>>>>>> nouvelle_calibration
 
 
  6613 2fe0 28       		.byte	0x28
@@ -7017,8 +7496,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6666 304b CF       		.byte	0xcf
  6667 304c 69300000 		.4byte	0x3069
  6668 3050 0E       		.uleb128 0xe
+<<<<<<< HEAD
  6669 3051 480C0000 		.4byte	.LASF647
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 118
+=======
+ 6669 3051 AB0C0000 		.4byte	.LASF647
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 118
+>>>>>>> nouvelle_calibration
 
 
  6670 3055 31       		.byte	0x31
@@ -7078,7 +7562,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6724 30c1 0E       		.uleb128 0xe
  6725 30c2 6C160000 		.4byte	.LASF631
  6726 30c6 31       		.byte	0x31
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 119
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 119
+>>>>>>> nouvelle_calibration
 
 
  6727 30c7 EC       		.byte	0xec
@@ -7137,8 +7625,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6780 3133 04       		.byte	0x4
  6781 3134 00       		.byte	0
  6782 3135 04       		.uleb128 0x4
+<<<<<<< HEAD
  6783 3136 700C0000 		.4byte	.LASF663
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 120
+=======
+ 6783 3136 D30C0000 		.4byte	.LASF663
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 120
+>>>>>>> nouvelle_calibration
 
 
  6784 313a 32       		.byte	0x32
@@ -7198,7 +7691,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6838 31af 0B220000 		.4byte	0x220b
  6839 31b3 28       		.byte	0x28
  6840 31b4 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 121
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 121
+>>>>>>> nouvelle_calibration
 
 
  6841 31b5 80070000 		.4byte	.LASF583
@@ -7258,7 +7755,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6895 3228 B401     		.2byte	0x1b4
  6896 322a 08090000 		.4byte	0x908
  6897 322e 0A       		.byte	0xa
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 122
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 122
+>>>>>>> nouvelle_calibration
 
 
  6898 322f 00       		.byte	0
@@ -7318,7 +7819,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  6952 32a6 8B01     		.2byte	0x18b
  6953 32a8 EB3C0000 		.4byte	0x3ceb
  6954 32ac 0C       		.byte	0xc
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 123
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 123
+>>>>>>> nouvelle_calibration
 
 
  6955 32ad 18       		.uleb128 0x18
@@ -7378,7 +7883,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7009 3322 18       		.uleb128 0x18
  7010 3323 51180000 		.4byte	.LASF682
  7011 3327 35       		.byte	0x35
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 124
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 124
+>>>>>>> nouvelle_calibration
 
 
  7012 3328 B901     		.2byte	0x1b9
@@ -7438,7 +7947,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7066 3398 45000000 		.4byte	0x45
  7067 339c 34       		.byte	0x34
  7068 339d 0401     		.2byte	0x104
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 125
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 125
+>>>>>>> nouvelle_calibration
 
 
  7069 339f C2330000 		.4byte	0x33c2
@@ -7498,7 +8011,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7123 340d 2001     		.2byte	0x120
  7124 340f CE330000 		.4byte	0x33ce
  7125 3413 2D       		.uleb128 0x2d
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 126
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 126
+>>>>>>> nouvelle_calibration
 
 
  7126 3414 07       		.byte	0x7
@@ -7557,8 +8074,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7179 3482 16       		.uleb128 0x16
  7180 3483 76340000 		.4byte	0x3476
  7181 3487 08       		.uleb128 0x8
+<<<<<<< HEAD
  7182 3488 D1210000 		.4byte	.LASF713
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 127
+=======
+ 7182 3488 BA210000 		.4byte	.LASF713
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 127
+>>>>>>> nouvelle_calibration
 
 
  7183 348c 34       		.byte	0x34
@@ -7618,7 +8140,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7237 3505 0F350000 		.4byte	0x350f
  7238 3509 15       		.uleb128 0x15
  7239 350a A4340000 		.4byte	0x34a4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 128
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 128
+>>>>>>> nouvelle_calibration
 
 
  7240 350e 00       		.byte	0
@@ -7678,7 +8204,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7294 357e 39120000 		.4byte	.LASF722
  7295 3582 36       		.byte	0x36
  7296 3583 3C       		.byte	0x3c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 129
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 129
+>>>>>>> nouvelle_calibration
 
 
  7297 3584 2E090000 		.4byte	0x92e
@@ -7737,8 +8267,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7350 35ec 2E090000 		.4byte	0x92e
  7351 35f0 0C       		.byte	0xc
  7352 35f1 0E       		.uleb128 0xe
+<<<<<<< HEAD
  7353 35f2 0B150000 		.4byte	.LASF731
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 130
+=======
+ 7353 35f2 6E150000 		.4byte	.LASF731
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 130
+>>>>>>> nouvelle_calibration
 
 
  7354 35f6 36       		.byte	0x36
@@ -7798,7 +8333,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7408 365f 5E       		.byte	0x5e
  7409 3660 2E090000 		.4byte	0x92e
  7410 3664 0C       		.byte	0xc
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 131
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 131
+>>>>>>> nouvelle_calibration
 
 
  7411 3665 0E       		.uleb128 0xe
@@ -7858,7 +8397,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7465 36d1 E5210000 		.4byte	.LASF742
  7466 36d5 36       		.byte	0x36
  7467 36d6 6D       		.byte	0x6d
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 132
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 132
+>>>>>>> nouvelle_calibration
 
 
  7468 36d7 2E090000 		.4byte	0x92e
@@ -7918,7 +8461,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7522 3743 2E090000 		.4byte	0x92e
  7523 3747 30       		.byte	0x30
  7524 3748 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 133
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 133
+>>>>>>> nouvelle_calibration
 
 
  7525 3749 1D200000 		.4byte	.LASF752
@@ -7978,7 +8525,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7579 37ba 88030000 		.4byte	.LASF760
  7580 37be 36       		.byte	0x36
  7581 37bf 86       		.byte	0x86
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 134
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 134
+>>>>>>> nouvelle_calibration
 
 
  7582 37c0 2E090000 		.4byte	0x92e
@@ -8038,7 +8589,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7636 3834 F2390000 		.4byte	0x39f2
  7637 3838 0007     		.2byte	0x700
  7638 383a 12       		.uleb128 0x12
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 135
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 135
+>>>>>>> nouvelle_calibration
 
 
  7639 383b 2A180000 		.4byte	.LASF769
@@ -8098,7 +8653,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7693 38b0 3D040000 		.4byte	.LASF778
  7694 38b4 36       		.byte	0x36
  7695 38b5 A2       		.byte	0xa2
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 136
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 136
+>>>>>>> nouvelle_calibration
 
 
  7696 38b6 2E090000 		.4byte	0x92e
@@ -8158,7 +8717,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7750 392b 073A0000 		.4byte	0x3a07
  7751 392f C008     		.2byte	0x8c0
  7752 3931 2F       		.uleb128 0x2f
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 137
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 137
+>>>>>>> nouvelle_calibration
 
 
  7753 3932 696500   		.ascii	"ie\000"
@@ -8218,7 +8781,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7807 39a8 0B       		.uleb128 0xb
  7808 39a9 2E090000 		.4byte	0x92e
  7809 39ad B8390000 		.4byte	0x39b8
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 138
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 138
+>>>>>>> nouvelle_calibration
 
 
  7810 39b1 0C       		.uleb128 0xc
@@ -8278,7 +8845,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7864 3a2c 0B       		.uleb128 0xb
  7865 3a2d 2E090000 		.4byte	0x92e
  7866 3a31 3C3A0000 		.4byte	0x3a3c
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 139
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 139
+>>>>>>> nouvelle_calibration
 
 
  7867 3a35 0C       		.uleb128 0xc
@@ -8338,7 +8909,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7921 3aa5 0D       		.uleb128 0xd
  7922 3aa6 04       		.byte	0x4
  7923 3aa7 35       		.byte	0x35
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 140
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 140
+>>>>>>> nouvelle_calibration
 
 
  7924 3aa8 DD       		.byte	0xdd
@@ -8398,7 +8973,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  7978 3b0e D7       		.byte	0xd7
  7979 3b0f B4000000 		.4byte	0xb4
  7980 3b13 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 141
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 141
+>>>>>>> nouvelle_calibration
 
 
  7981 3b14 0E       		.uleb128 0xe
@@ -8458,7 +9037,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8035 3b7b 0001     		.2byte	0x100
  8036 3b7d 9A3B0000 		.4byte	0x3b9a
  8037 3b81 1E       		.uleb128 0x1e
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 142
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 142
+>>>>>>> nouvelle_calibration
 
 
  8038 3b82 351C0000 		.4byte	.LASF797
@@ -8518,7 +9101,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8092 3bf0 1801     		.2byte	0x118
  8093 3bf2 793C0000 		.4byte	0x3c79
  8094 3bf6 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 143
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 143
+>>>>>>> nouvelle_calibration
 
 
  8095 3bf7 6F150000 		.4byte	.LASF809
@@ -8578,7 +9165,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8149 3c6c 13200000 		.4byte	.LASF818
  8150 3c70 35       		.byte	0x35
  8151 3c71 5601     		.2byte	0x156
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 144
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 144
+>>>>>>> nouvelle_calibration
 
 
  8152 3c73 351B0000 		.4byte	0x1b35
@@ -8638,7 +9229,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8206 3ce6 04       		.byte	0x4
  8207 3ce7 E03C0000 		.4byte	0x3ce0
  8208 3ceb 0B       		.uleb128 0xb
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 145
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 145
+>>>>>>> nouvelle_calibration
 
 
  8209 3cec FB3C0000 		.4byte	0x3cfb
@@ -8698,7 +9293,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8263 3d62 2C000000 		.4byte	0x2c
  8264 3d66 00000000 		.4byte	.LFB266
  8265 3d6a 28000000 		.4byte	.LFE266-.LFB266
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 146
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 146
+>>>>>>> nouvelle_calibration
 
 
  8266 3d6e 01       		.uleb128 0x1
@@ -8758,7 +9357,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8320 3dec EF400000 		.4byte	0x40ef
  8321 3df0 FC3D0000 		.4byte	0x3dfc
  8322 3df4 38       		.uleb128 0x38
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 147
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 147
+>>>>>>> nouvelle_calibration
 
 
  8323 3df5 01       		.uleb128 0x1
@@ -8818,7 +9421,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8377 3e68 00       		.byte	0
  8378 3e69 34       		.uleb128 0x34
  8379 3e6a 58070000 		.4byte	.LASF832
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 148
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 148
+>>>>>>> nouvelle_calibration
 
 
  8380 3e6e 01       		.byte	0x1
@@ -8878,7 +9485,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8434 3edd 41       		.byte	0x41
  8435 3ede 2C000000 		.4byte	0x2c
  8436 3ee2 3E       		.uleb128 0x3e
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 149
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 149
+>>>>>>> nouvelle_calibration
 
 
  8437 3ee3 871E0000 		.4byte	.LASF834
@@ -8937,8 +9548,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8490 3f54 34       		.uleb128 0x34
  8491 3f55 7C1C0000 		.4byte	.LASF836
  8492 3f59 01       		.byte	0x1
+<<<<<<< HEAD
  8493 3f5a 38       		.byte	0x38
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 150
+=======
+ 8493 3f5a 39       		.byte	0x39
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 150
+>>>>>>> nouvelle_calibration
 
 
  8494 3f5b 00000000 		.4byte	.LFB260
@@ -8997,8 +9613,13 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8547 3fcf 35       		.uleb128 0x35
  8548 3fd0 72010000 		.4byte	.LASF839
  8549 3fd4 01       		.byte	0x1
+<<<<<<< HEAD
  8550 3fd5 22       		.byte	0x22
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 151
+=======
+ 8550 3fd5 23       		.byte	0x23
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 151
+>>>>>>> nouvelle_calibration
 
 
  8551 3fd6 2C000000 		.4byte	0x2c
@@ -9058,7 +9679,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8605 4053 01       		.uleb128 0x1
  8606 4054 50       		.byte	0x50
  8607 4055 03       		.uleb128 0x3
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 152
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 152
+>>>>>>> nouvelle_calibration
 
 
  8608 4056 0B       		.byte	0xb
@@ -9118,7 +9743,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8662 40cd F3       		.byte	0xf3
  8663 40ce 01       		.uleb128 0x1
  8664 40cf 51       		.byte	0x51
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 153
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 153
+>>>>>>> nouvelle_calibration
 
 
  8665 40d0 00       		.byte	0
@@ -9178,7 +9807,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8719 000d 11       		.uleb128 0x11
  8720 000e 01       		.uleb128 0x1
  8721 000f 10       		.uleb128 0x10
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 154
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 154
+>>>>>>> nouvelle_calibration
 
 
  8722 0010 17       		.uleb128 0x17
@@ -9238,7 +9871,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8776 0046 07       		.uleb128 0x7
  8777 0047 13       		.uleb128 0x13
  8778 0048 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 155
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 155
+>>>>>>> nouvelle_calibration
 
 
  8779 0049 03       		.uleb128 0x3
@@ -9298,7 +9935,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8833 007f 0C       		.uleb128 0xc
  8834 0080 21       		.uleb128 0x21
  8835 0081 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 156
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 156
+>>>>>>> nouvelle_calibration
 
 
  8836 0082 49       		.uleb128 0x49
@@ -9358,7 +9999,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8890 00b8 3A       		.uleb128 0x3a
  8891 00b9 0B       		.uleb128 0xb
  8892 00ba 3B       		.uleb128 0x3b
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 157
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 157
+>>>>>>> nouvelle_calibration
 
 
  8893 00bb 0B       		.uleb128 0xb
@@ -9418,7 +10063,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  8947 00f1 00       		.byte	0
  8948 00f2 15       		.uleb128 0x15
  8949 00f3 05       		.uleb128 0x5
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 158
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 158
+>>>>>>> nouvelle_calibration
 
 
  8950 00f4 00       		.byte	0
@@ -9478,7 +10127,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9004 012a 05       		.uleb128 0x5
  9005 012b 00       		.byte	0
  9006 012c 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 159
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 159
+>>>>>>> nouvelle_calibration
 
 
  9007 012d 1A       		.uleb128 0x1a
@@ -9538,7 +10191,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9061 0163 0B       		.uleb128 0xb
  9062 0164 3B       		.uleb128 0x3b
  9063 0165 05       		.uleb128 0x5
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 160
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 160
+>>>>>>> nouvelle_calibration
 
 
  9064 0166 49       		.uleb128 0x49
@@ -9598,7 +10255,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9118 019c 01       		.byte	0x1
  9119 019d 03       		.uleb128 0x3
  9120 019e 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 161
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 161
+>>>>>>> nouvelle_calibration
 
 
  9121 019f 3E       		.uleb128 0x3e
@@ -9658,7 +10319,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9175 01d5 3B       		.uleb128 0x3b
  9176 01d6 05       		.uleb128 0x5
  9177 01d7 49       		.uleb128 0x49
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 162
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 162
+>>>>>>> nouvelle_calibration
 
 
  9178 01d8 13       		.uleb128 0x13
@@ -9718,7 +10383,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9232 020e 0B       		.uleb128 0xb
  9233 020f 49       		.uleb128 0x49
  9234 0210 13       		.uleb128 0x13
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 163
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 163
+>>>>>>> nouvelle_calibration
 
 
  9235 0211 3A       		.uleb128 0x3a
@@ -9778,7 +10447,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9289 0247 03       		.uleb128 0x3
  9290 0248 08       		.uleb128 0x8
  9291 0249 3A       		.uleb128 0x3a
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 164
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 164
+>>>>>>> nouvelle_calibration
 
 
  9292 024a 0B       		.uleb128 0xb
@@ -9838,7 +10511,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9346 0280 9742     		.uleb128 0x2117
  9347 0282 19       		.uleb128 0x19
  9348 0283 01       		.uleb128 0x1
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 165
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 165
+>>>>>>> nouvelle_calibration
 
 
  9349 0284 13       		.uleb128 0x13
@@ -9898,7 +10575,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9403 02bd 00       		.byte	0
  9404 02be 03       		.uleb128 0x3
  9405 02bf 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 166
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 166
+>>>>>>> nouvelle_calibration
 
 
  9406 02c0 3A       		.uleb128 0x3a
@@ -9958,7 +10639,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9460 02fe 00       		.byte	0
  9461 02ff 00       		.byte	0
  9462 0300 3B       		.uleb128 0x3b
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 167
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 167
+>>>>>>> nouvelle_calibration
 
 
  9463 0301 05       		.uleb128 0x5
@@ -10018,7 +10703,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9517 033a 05       		.uleb128 0x5
  9518 033b 00       		.byte	0
  9519 033c 31       		.uleb128 0x31
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 168
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 168
+>>>>>>> nouvelle_calibration
 
 
  9520 033d 13       		.uleb128 0x13
@@ -10078,7 +10767,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9574 0374 0E       		.uleb128 0xe
  9575 0375 3A       		.uleb128 0x3a
  9576 0376 0B       		.uleb128 0xb
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 169
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 169
+>>>>>>> nouvelle_calibration
 
 
  9577 0377 3B       		.uleb128 0x3b
@@ -10138,7 +10831,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9631 005a 54       		.byte	0x54
  9632 005b 72000000 		.4byte	.LVL45
  9633 005f 7C000000 		.4byte	.LVL47
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 170
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 170
+>>>>>>> nouvelle_calibration
 
 
  9634 0063 0400     		.2byte	0x4
@@ -10198,7 +10895,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9688 00cb F3       		.byte	0xf3
  9689 00cc 01       		.uleb128 0x1
  9690 00cd 50       		.byte	0x50
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 171
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 171
+>>>>>>> nouvelle_calibration
 
 
  9691 00ce F7       		.byte	0xf7
@@ -10258,7 +10959,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9745 0125 F7       		.byte	0xf7
  9746 0126 2C       		.uleb128 0x2c
  9747 0127 F7       		.byte	0xf7
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 172
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 172
+>>>>>>> nouvelle_calibration
 
 
  9748 0128 00       		.uleb128 0
@@ -10318,7 +11023,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9802 0018 00000000 		.4byte	.LFB261
  9803 001c 40000000 		.4byte	.LFE261-.LFB261
  9804 0020 00000000 		.4byte	.LFB262
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 173
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 173
+>>>>>>> nouvelle_calibration
 
 
  9805 0024 3C000000 		.4byte	.LFE262-.LFB262
@@ -10378,7 +11087,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9859 009c 90000000 		.4byte	.LFE259
  9860 00a0 00000000 		.4byte	.LFB264
  9861 00a4 88000000 		.4byte	.LFE264
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 174
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 174
+>>>>>>> nouvelle_calibration
 
 
  9862 00a8 00000000 		.4byte	.LFB265
@@ -10438,7 +11151,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9890      4D425553 
  9890      5F444556 
  9890      49434500 
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 175
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 175
+>>>>>>> nouvelle_calibration
 
 
  9891              	.LASF325:
@@ -10498,7 +11215,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9918      74617465 
  9918      00
  9919              	.LASF49:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 176
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 176
+>>>>>>> nouvelle_calibration
 
 
  9920 0112 5F617465 		.ascii	"_atexit\000"
@@ -10558,7 +11279,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9952 018b 5F696E64 		.ascii	"_ind\000"
  9952      00
  9953              	.LASF290:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 177
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 177
+>>>>>>> nouvelle_calibration
 
 
  9954 0190 4D41534B 		.ascii	"MASK\000"
@@ -10618,7 +11343,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  9986 0213 6C6F636B 		.ascii	"lock_cnt\000"
  9986      5F636E74 
  9986      00
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 178
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 178
+>>>>>>> nouvelle_calibration
 
 
  9987              	.LASF182:
@@ -10678,7 +11407,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10017              	.LASF762:
  10018 029d 48505458 		.ascii	"HPTXSTS\000"
  10018      53545300 
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 179
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 179
+>>>>>>> nouvelle_calibration
 
 
  10019              	.LASF418:
@@ -10738,7 +11471,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10047              	.LASF577:
  10048 033a 636C6F63 		.ascii	"clock_speed\000"
  10048      6B5F7370 
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 180
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 180
+>>>>>>> nouvelle_calibration
 
 
  10048      65656400 
@@ -10798,7 +11535,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10080 03bf 715F746F 		.ascii	"q_top\000"
  10080      7000
  10081              	.LASF58:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 181
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 181
+>>>>>>> nouvelle_calibration
 
 
  10082 03c5 5F6C6266 		.ascii	"_lbfsize\000"
@@ -10858,7 +11599,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10110      6974696E 
  10110      6700
  10111              	.LASF326:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 182
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 182
+>>>>>>> nouvelle_calibration
 
 
  10112 0450 6B65726E 		.ascii	"kernel_stats_t\000"
@@ -10918,7 +11663,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10136 04e8 63665F6F 		.ascii	"cf_off_older\000"
  10136      66665F6F 
  10136      6C646572 
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 183
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 183
+>>>>>>> nouvelle_calibration
 
 
  10136      00
@@ -10978,7 +11727,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10164 0576 52455350 		.ascii	"RESP3\000"
  10164      3300
  10165              	.LASF285:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 184
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 184
+>>>>>>> nouvelle_calibration
 
 
  10166 057c 52455350 		.ascii	"RESP4\000"
@@ -11038,7 +11791,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10192      00
  10193              	.LASF575:
  10194 060a 69326364 		.ascii	"i2cdutycycle_t\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 185
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 185
+>>>>>>> nouvelle_calibration
 
 
  10194      75747963 
@@ -11098,7 +11855,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10224 068d 47414842 		.ascii	"GAHBCFG\000"
  10224      43464700 
  10225              	.LASF509:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 186
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 186
+>>>>>>> nouvelle_calibration
 
 
  10226 0695 64616363 		.ascii	"daccallback_t\000"
@@ -11158,7 +11919,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10252      54535200 
  10253              	.LASF328:
  10254 0727 65786974 		.ascii	"exitcode\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 187
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 187
+>>>>>>> nouvelle_calibration
 
 
  10254      636F6465 
@@ -11218,7 +11983,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10283              	.LASF525:
  10284 07af 45585444 		.ascii	"EXTDriver\000"
  10284      72697665 
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 188
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 188
+>>>>>>> nouvelle_calibration
 
 
  10284      7200
@@ -11278,7 +12047,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10310 0846 656E645F 		.ascii	"end_cb\000"
  10310      636200
  10311              	.LASF810:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 189
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 189
+>>>>>>> nouvelle_calibration
 
 
  10312 084d 73657475 		.ascii	"setup_cb\000"
@@ -11338,7 +12111,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10339              	.LASF521:
  10340 08d6 4558545F 		.ascii	"EXT_UNINIT\000"
  10340      554E494E 
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 190
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 190
+>>>>>>> nouvelle_calibration
 
 
  10340      495400
@@ -11398,7 +12175,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10372      00
  10373              	.LASF456:
  10374 095c 646D6173 		.ascii	"dmastp\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 191
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 191
+>>>>>>> nouvelle_calibration
 
 
  10374      747000
@@ -11458,7 +12239,11 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10400      73697A65 
  10400      00
  10401              	.LASF795:
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 192
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 192
+>>>>>>> nouvelle_calibration
 
 
  10402 09ed 73746D33 		.ascii	"stm32_otg_params_t\000"
@@ -11504,6 +12289,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10422      6C656E5F 
  10422      73746174 
  10422      6500
+<<<<<<< HEAD
  10423              	.LASF351:
  10424 0a5c 63665F6F 		.ascii	"cf_off_newer\000"
  10424      66665F6E 
@@ -11542,6 +12328,52 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10441              	.LASF123:
  10442 0aaa 5F6E6D61 		.ascii	"_nmalloc\000"
  10442      6C6C6F63 
+=======
+ 10423              	.LASF848:
+ 10424 0a5c 433A5C55 		.ascii	"C:\\Users\\Salma Chatagny\\Documents\\EPFL\\BA6\\Mi"
+ 10424      73657273 
+ 10424      5C53616C 
+ 10424      6D612043 
+ 10424      68617461 
+ 10425 0a89 63726F69 		.ascii	"croinformatique\\TPs\\TPs_git\\TP6_Miniprojet\\Mini"
+ 10425      6E666F72 
+ 10425      6D617469 
+ 10425      7175655C 
+ 10425      5450735C 
+ 10426 0ab8 70726F6A 		.ascii	"projet\000"
+ 10426      657400
+ 10427              	.LASF351:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 193
+
+
+ 10428 0abf 63665F6F 		.ascii	"cf_off_newer\000"
+ 10428      66665F6E 
+ 10428      65776572 
+ 10428      00
+ 10429              	.LASF773:
+ 10430 0acc 44494550 		.ascii	"DIEPMSK\000"
+ 10430      4D534B00 
+ 10431              	.LASF740:
+ 10432 0ad4 474F5447 		.ascii	"GOTGINT\000"
+ 10432      494E5400 
+ 10433              	.LASF812:
+ 10434 0adc 6F75745F 		.ascii	"out_cb\000"
+ 10434      636200
+ 10435              	.LASF764:
+ 10436 0ae3 4841494E 		.ascii	"HAINTMSK\000"
+ 10436      544D534B 
+ 10436      00
+ 10437              	.LASF674:
+ 10438 0aec 6F75745F 		.ascii	"out_params\000"
+ 10438      70617261 
+ 10438      6D7300
+ 10439              	.LASF308:
+ 10440 0af7 73655F77 		.ascii	"se_wtobjp\000"
+ 10440      746F626A 
+ 10440      7000
+ 10441              	.LASF226:
+ 10442 0b01 4A535152 		.ascii	"JSQR\000"
+>>>>>>> nouvelle_calibration
  10442      00
  10443              	.LASF555:
  10444 0ab3 64696572 		.ascii	"dier\000"
@@ -11551,6 +12383,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10446      726F7465 
  10446      63746564 
  10446      00
+<<<<<<< HEAD
  10447              	.LASF192:
  10448 0ac5 76697274 		.ascii	"virtual_timer_t\000"
  10448      75616C5F 
@@ -11575,6 +12408,36 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10458      00
  10459              	.LASF604:
  10460 0afd 50574D5F 		.ascii	"PWM_STOP\000"
+=======
+ 10447              	.LASF555:
+ 10448 0b16 64696572 		.ascii	"dier\000"
+ 10448      00
+ 10449              	.LASF652:
+ 10450 0b1b 69735F70 		.ascii	"is_protected\000"
+ 10450      726F7465 
+ 10450      63746564 
+ 10450      00
+ 10451              	.LASF192:
+ 10452 0b28 76697274 		.ascii	"virtual_timer_t\000"
+ 10452      75616C5F 
+ 10452      74696D65 
+ 10452      725F7400 
+ 10453              	.LASF814:
+ 10454 0b38 6F75745F 		.ascii	"out_maxsize\000"
+ 10454      6D617873 
+ 10454      697A6500 
+ 10455              	.LASF187:
+ 10456 0b44 725F6374 		.ascii	"r_ctx\000"
+ 10456      7800
+ 10457              	.LASF194:
+ 10458 0b4a 76745F6E 		.ascii	"vt_next\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 194
+
+
+ 10458      65787400 
+ 10459              	.LASF589:
+ 10460 0b52 4932535F 		.ascii	"I2S_STOP\000"
+>>>>>>> nouvelle_calibration
  10460      53544F50 
  10460      00
  10461              	.LASF142:
@@ -11626,6 +12489,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10486      77635F65 
  10486      76656E74 
  10486      5F7400
+<<<<<<< HEAD
  10487              	.LASF622:
  10488 0b75 53445F53 		.ascii	"SD_STOP\000"
  10488      544F5000 
@@ -11895,6 +12759,278 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10607              	.LASF190:
  10608 0eed 725F6375 		.ascii	"r_current\000"
  10608      7272656E 
+=======
+ 10487              	.LASF303:
+ 10488 0bbe 73746B61 		.ascii	"stkalign_t\000"
+ 10488      6C69676E 
+ 10488      5F7400
+ 10489              	.LASF310:
+ 10490 0bc9 63685F73 		.ascii	"ch_swc_event_t\000"
+ 10490      77635F65 
+ 10490      76656E74 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 195
+
+
+ 10490      5F7400
+ 10491              	.LASF622:
+ 10492 0bd8 53445F53 		.ascii	"SD_STOP\000"
+ 10492      544F5000 
+ 10493              	.LASF719:
+ 10494 0be0 72657376 		.ascii	"resvd8\000"
+ 10494      643800
+ 10495              	.LASF16:
+ 10496 0be7 73697A65 		.ascii	"size_t\000"
+ 10496      5F7400
+ 10497              	.LASF106:
+ 10498 0bee 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 10498      616C7469 
+ 10498      6D655F62 
+ 10498      756600
+ 10499              	.LASF786:
+ 10500 0bfd 72657376 		.ascii	"resvd880\000"
+ 10500      64383830 
+ 10500      00
+ 10501              	.LASF830:
+ 10502 0c06 6E625F73 		.ascii	"nb_steps_to_do\000"
+ 10502      74657073 
+ 10502      5F746F5F 
+ 10502      646F00
+ 10503              	.LASF24:
+ 10504 0c15 5F5F636F 		.ascii	"__count\000"
+ 10504      756E7400 
+ 10505              	.LASF129:
+ 10506 0c1d 75696E74 		.ascii	"uint8_t\000"
+ 10506      385F7400 
+ 10507              	.LASF723:
+ 10508 0c25 72657376 		.ascii	"resvd14\000"
+ 10508      64313400 
+ 10509              	.LASF475:
+ 10510 0c2d 43414E5F 		.ascii	"CAN_UNINIT\000"
+ 10510      554E494E 
+ 10510      495400
+ 10511              	.LASF724:
+ 10512 0c38 72657376 		.ascii	"resvd18\000"
+ 10512      64313800 
+ 10513              	.LASF189:
+ 10514 0c40 725F6F6C 		.ascii	"r_older\000"
+ 10514      64657200 
+ 10515              	.LASF158:
+ 10516 0c48 705F7072 		.ascii	"p_prev\000"
+ 10516      657600
+ 10517              	.LASF353:
+ 10518 0c4f 63665F6F 		.ascii	"cf_off_name\000"
+ 10518      66665F6E 
+ 10518      616D6500 
+ 10519              	.LASF615:
+ 10520 0c5b 50574D43 		.ascii	"PWMChannelConfig\000"
+ 10520      68616E6E 
+ 10520      656C436F 
+ 10520      6E666967 
+ 10520      00
+ 10521              	.LASF614:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 196
+
+
+ 10522 0c6c 70776D63 		.ascii	"pwmcnt_t\000"
+ 10522      6E745F74 
+ 10522      00
+ 10523              	.LASF782:
+ 10524 0c75 44494550 		.ascii	"DIEPEMPMSK\000"
+ 10524      454D504D 
+ 10524      534B00
+ 10525              	.LASF727:
+ 10526 0c80 44494550 		.ascii	"DIEPCTL\000"
+ 10526      43544C00 
+ 10527              	.LASF369:
+ 10528 0c88 656C5F77 		.ascii	"el_wflags\000"
+ 10528      666C6167 
+ 10528      7300
+ 10529              	.LASF683:
+ 10530 0c92 6F746770 		.ascii	"otgparams\000"
+ 10530      6172616D 
+ 10530      7300
+ 10531              	.LASF311:
+ 10532 0c9c 74625F73 		.ascii	"tb_size\000"
+ 10532      697A6500 
+ 10533              	.LASF427:
+ 10534 0ca4 50444461 		.ascii	"PDData\000"
+ 10534      746100
+ 10535              	.LASF647:
+ 10536 0cab 73637261 		.ascii	"scratchpad\000"
+ 10536      74636870 
+ 10536      616400
+ 10537              	.LASF88:
+ 10538 0cb6 5F637674 		.ascii	"_cvtbuf\000"
+ 10538      62756600 
+ 10539              	.LASF816:
+ 10540 0cbe 6F75745F 		.ascii	"out_state\000"
+ 10540      73746174 
+ 10540      6500
+ 10541              	.LASF373:
+ 10542 0cc8 696F5F71 		.ascii	"io_queue_t\000"
+ 10542      75657565 
+ 10542      5F7400
+ 10543              	.LASF663:
+ 10544 0cd3 73706973 		.ascii	"spistate_t\000"
+ 10544      74617465 
+ 10544      5F7400
+ 10545              	.LASF560:
+ 10546 0cde 4932435F 		.ascii	"I2C_STOP\000"
+ 10546      53544F50 
+ 10546      00
+ 10547              	.LASF582:
+ 10548 0ce7 61646472 		.ascii	"addr\000"
+ 10548      00
+ 10549              	.LASF241:
+ 10550 0cec 52463052 		.ascii	"RF0R\000"
+ 10550      00
+ 10551              	.LASF445:
+ 10552 0cf1 4144435F 		.ascii	"ADC_ERR_DMAFAILURE\000"
+ 10552      4552525F 
+ 10552      444D4146 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 197
+
+
+ 10552      41494C55 
+ 10552      524500
+ 10553              	.LASF661:
+ 10554 0d04 5350495F 		.ascii	"SPI_ACTIVE\000"
+ 10554      41435449 
+ 10554      564500
+ 10555              	.LASF300:
+ 10556 0d0f 47545052 		.ascii	"GTPR\000"
+ 10556      00
+ 10557              	.LASF529:
+ 10558 0d14 45585443 		.ascii	"EXTChannelConfig\000"
+ 10558      68616E6E 
+ 10558      656C436F 
+ 10558      6E666967 
+ 10558      00
+ 10559              	.LASF410:
+ 10560 0d25 4F535045 		.ascii	"OSPEEDR\000"
+ 10560      45445200 
+ 10561              	.LASF493:
+ 10562 0d2d 4441435F 		.ascii	"DAC_READY\000"
+ 10562      52454144 
+ 10562      5900
+ 10563              	.LASF751:
+ 10564 0d37 72657376 		.ascii	"resvd30\000"
+ 10564      64333000 
+ 10565              	.LASF23:
+ 10566 0d3f 5F5F7763 		.ascii	"__wchb\000"
+ 10566      686200
+ 10567              	.LASF117:
+ 10568 0d46 5F6D6272 		.ascii	"_mbrtowc_state\000"
+ 10568      746F7763 
+ 10568      5F737461 
+ 10568      746500
+ 10569              	.LASF780:
+ 10570 0d55 44564255 		.ascii	"DVBUSPULSE\000"
+ 10570      5350554C 
+ 10570      534500
+ 10571              	.LASF37:
+ 10572 0d60 5F5F746D 		.ascii	"__tm_hour\000"
+ 10572      5F686F75 
+ 10572      7200
+ 10573              	.LASF394:
+ 10574 0d6a 424C4B5F 		.ascii	"BLK_STOP\000"
+ 10574      53544F50 
+ 10574      00
+ 10575              	.LASF630:
+ 10576 0d73 53657269 		.ascii	"SerialDriverVMT\000"
+ 10576      616C4472 
+ 10576      69766572 
+ 10576      564D5400 
+ 10577              	.LASF701:
+ 10578 0d83 5553425F 		.ascii	"USB_EP0_ERROR\000"
+ 10578      4550305F 
+ 10578      4552524F 
+ 10578      5200
+ 10579              	.LASF21:
+ 10580 0d91 77696E74 		.ascii	"wint_t\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 198
+
+
+ 10580      5F7400
+ 10581              	.LASF653:
+ 10582 0d98 636F6E6E 		.ascii	"connect\000"
+ 10582      65637400 
+ 10583              	.LASF89:
+ 10584 0da0 5F6E6577 		.ascii	"_new\000"
+ 10584      00
+ 10585              	.LASF448:
+ 10586 0da5 41444344 		.ascii	"ADCDriver\000"
+ 10586      72697665 
+ 10586      7200
+ 10587              	.LASF794:
+ 10588 0daf 6E756D5F 		.ascii	"num_endpoints\000"
+ 10588      656E6470 
+ 10588      6F696E74 
+ 10588      7300
+ 10589              	.LASF471:
+ 10590 0dbd 41444343 		.ascii	"ADCConfig\000"
+ 10590      6F6E6669 
+ 10590      6700
+ 10591              	.LASF802:
+ 10592 0dc7 746F7473 		.ascii	"totsize\000"
+ 10592      697A6500 
+ 10593              	.LASF97:
+ 10594 0dcf 5F6E696F 		.ascii	"_niobs\000"
+ 10594      627300
+ 10595              	.LASF354:
+ 10596 0dd6 63665F6F 		.ascii	"cf_off_stklimit\000"
+ 10596      66665F73 
+ 10596      746B6C69 
+ 10596      6D697400 
+ 10597              	.LASF623:
+ 10598 0de6 53445F52 		.ascii	"SD_READY\000"
+ 10598      45414459 
+ 10598      00
+ 10599              	.LASF717:
+ 10600 0def 75736267 		.ascii	"usbgetdescriptor_t\000"
+ 10600      65746465 
+ 10600      73637269 
+ 10600      70746F72 
+ 10600      5F7400
+ 10601              	.LASF846:
+ 10602 0e02 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 10602      43313120 
+ 10602      372E322E 
+ 10602      31203230 
+ 10602      31373039 
+ 10603 0e35 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 10603      20726576 
+ 10603      6973696F 
+ 10603      6E203235 
+ 10603      35323034 
+ 10604 0e68 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 10604      2D6D6670 
+ 10604      753D6670 
+ 10604      76342D73 
+ 10604      702D6431 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 199
+
+
+ 10605 0e9b 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 10605      62202D4F 
+ 10605      32202D66 
+ 10605      6F6D6974 
+ 10605      2D667261 
+ 10606 0ece 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 10606      6F2D7374 
+ 10606      72696374 
+ 10606      2D616C69 
+ 10606      6173696E 
+ 10607 0f01 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 10607      73656374 
+ 10607      696F6E73 
+ 10607      202D6664 
+ 10607      6174612D 
+ 10608 0f34 72656369 		.ascii	"recision-constant\000"
+ 10608      73696F6E 
+ 10608      2D636F6E 
+ 10608      7374616E 
+>>>>>>> nouvelle_calibration
  10608      7400
  10609              	.LASF73:
  10610 0ef7 5F657272 		.ascii	"_errno\000"
@@ -11923,6 +13059,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10622      325F6770 
  10622      696F5F74 
  10622      00
+<<<<<<< HEAD
  10623              	.LASF327:
  10624 0f39 7264796D 		.ascii	"rdymsg\000"
  10624      736700
@@ -12134,6 +13271,222 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10726      00
  10727              	.LASF225:
  10728 113d 53515233 		.ascii	"SQR3\000"
+=======
+ 10623              	.LASF588:
+ 10624 0f84 4932535F 		.ascii	"I2S_UNINIT\000"
+ 10624      554E494E 
+ 10624      495400
+ 10625              	.LASF416:
+ 10626 0f8f 73746D33 		.ascii	"stm32_gpio_t\000"
+ 10626      325F6770 
+ 10626      696F5F74 
+ 10626      00
+ 10627              	.LASF327:
+ 10628 0f9c 7264796D 		.ascii	"rdymsg\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 200
+
+
+ 10628      736700
+ 10629              	.LASF45:
+ 10630 0fa3 5F666E61 		.ascii	"_fnargs\000"
+ 10630      72677300 
+ 10631              	.LASF605:
+ 10632 0fab 50574D5F 		.ascii	"PWM_READY\000"
+ 10632      52454144 
+ 10632      5900
+ 10633              	.LASF232:
+ 10634 0fb5 54445452 		.ascii	"TDTR\000"
+ 10634      00
+ 10635              	.LASF240:
+ 10636 0fba 43414E5F 		.ascii	"CAN_FilterRegister_TypeDef\000"
+ 10636      46696C74 
+ 10636      65725265 
+ 10636      67697374 
+ 10636      65725F54 
+ 10637              	.LASF486:
+ 10638 0fd5 6572726F 		.ascii	"error_event\000"
+ 10638      725F6576 
+ 10638      656E7400 
+ 10639              	.LASF461:
+ 10640 0fe1 6E756D5F 		.ascii	"num_channels\000"
+ 10640      6368616E 
+ 10640      6E656C73 
+ 10640      00
+ 10641              	.LASF221:
+ 10642 0fee 4A4F4652 		.ascii	"JOFR3\000"
+ 10642      3300
+ 10643              	.LASF754:
+ 10644 0ff4 72657376 		.ascii	"resvd58\000"
+ 10644      64353800 
+ 10645              	.LASF803:
+ 10646 0ffc 55534249 		.ascii	"USBInEndpointState\000"
+ 10646      6E456E64 
+ 10646      706F696E 
+ 10646      74537461 
+ 10646      746500
+ 10647              	.LASF159:
+ 10648 100f 705F7072 		.ascii	"p_prio\000"
+ 10648      696F00
+ 10649              	.LASF374:
+ 10650 1016 696F5F71 		.ascii	"io_queue\000"
+ 10650      75657565 
+ 10650      00
+ 10651              	.LASF424:
+ 10652 101f 50414461 		.ascii	"PAData\000"
+ 10652      746100
+ 10653              	.LASF13:
+ 10654 1026 5F5F7569 		.ascii	"__uint64_t\000"
+ 10654      6E743634 
+ 10654      5F7400
+ 10655              	.LASF29:
+ 10656 1031 5F6E6578 		.ascii	"_next\000"
+ 10656      7400
+ 10657              	.LASF610:
+ 10658 1037 70776D63 		.ascii	"pwmcallback_t\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 201
+
+
+ 10658      616C6C62 
+ 10658      61636B5F 
+ 10658      7400
+ 10659              	.LASF504:
+ 10660 1045 70617261 		.ascii	"params\000"
+ 10660      6D7300
+ 10661              	.LASF700:
+ 10662 104c 5553425F 		.ascii	"USB_EP0_SENDING_STS\000"
+ 10662      4550305F 
+ 10662      53454E44 
+ 10662      494E475F 
+ 10662      53545300 
+ 10663              	.LASF114:
+ 10664 1060 5F736967 		.ascii	"_signal_buf\000"
+ 10664      6E616C5F 
+ 10664      62756600 
+ 10665              	.LASF565:
+ 10666 106c 69326373 		.ascii	"i2cstate_t\000"
+ 10666      74617465 
+ 10666      5F7400
+ 10667              	.LASF59:
+ 10668 1077 5F636F6F 		.ascii	"_cookie\000"
+ 10668      6B696500 
+ 10669              	.LASF702:
+ 10670 107f 75736265 		.ascii	"usbep0state_t\000"
+ 10670      70307374 
+ 10670      6174655F 
+ 10670      7400
+ 10671              	.LASF508:
+ 10672 108d 64616365 		.ascii	"dacerror_t\000"
+ 10672      72726F72 
+ 10672      5F7400
+ 10673              	.LASF244:
+ 10674 1098 7354784D 		.ascii	"sTxMailBox\000"
+ 10674      61696C42 
+ 10674      6F7800
+ 10675              	.LASF443:
+ 10676 10a3 61646373 		.ascii	"adcsample_t\000"
+ 10676      616D706C 
+ 10676      655F7400 
+ 10677              	.LASF541:
+ 10678 10af 67707463 		.ascii	"gptcallback_t\000"
+ 10678      616C6C62 
+ 10678      61636B5F 
+ 10678      7400
+ 10679              	.LASF377:
+ 10680 10bd 715F6275 		.ascii	"q_buffer\000"
+ 10680      66666572 
+ 10680      00
+ 10681              	.LASF157:
+ 10682 10c6 705F6E65 		.ascii	"p_next\000"
+ 10682      787400
+ 10683              	.LASF587:
+ 10684 10cd 49324344 		.ascii	"I2CD1\000"
+ 10684      3100
+ 10685              	.LASF728:
+ 10686 10d3 72657376 		.ascii	"resvd4\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 202
+
+
+ 10686      643400
+ 10687              	.LASF670:
+ 10688 10da 55534244 		.ascii	"USBDriver\000"
+ 10688      72697665 
+ 10688      7200
+ 10689              	.LASF787:
+ 10690 10e4 72657376 		.ascii	"resvd8C0\000"
+ 10690      64384330 
+ 10690      00
+ 10691              	.LASF824:
+ 10692 10ed 55534243 		.ascii	"USBConfig\000"
+ 10692      6F6E6669 
+ 10692      6700
+ 10693              	.LASF730:
+ 10694 10f7 72657376 		.ascii	"resvdC\000"
+ 10694      644300
+ 10695              	.LASF617:
+ 10696 10fe 50574D44 		.ascii	"PWMD2\000"
+ 10696      3200
+ 10697              	.LASF618:
+ 10698 1104 50574D44 		.ascii	"PWMD3\000"
+ 10698      3300
+ 10699              	.LASF619:
+ 10700 110a 50574D44 		.ascii	"PWMD4\000"
+ 10700      3400
+ 10701              	.LASF620:
+ 10702 1110 50574D44 		.ascii	"PWMD5\000"
+ 10702      3500
+ 10703              	.LASF628:
+ 10704 1116 6F717565 		.ascii	"oqueue\000"
+ 10704      756500
+ 10705              	.LASF146:
+ 10706 111d 74726566 		.ascii	"trefs_t\000"
+ 10706      735F7400 
+ 10707              	.LASF176:
+ 10708 1125 705F6D70 		.ascii	"p_mpool\000"
+ 10708      6F6F6C00 
+ 10709              	.LASF278:
+ 10710 112d 4932435F 		.ascii	"I2C_TypeDef\000"
+ 10710      54797065 
+ 10710      44656600 
+ 10711              	.LASF516:
+ 10712 1139 44414343 		.ascii	"DACConversionGroup\000"
+ 10712      6F6E7665 
+ 10712      7273696F 
+ 10712      6E47726F 
+ 10712      757000
+ 10713              	.LASF35:
+ 10714 114c 5F5F746D 		.ascii	"__tm_sec\000"
+ 10714      5F736563 
+ 10714      00
+ 10715              	.LASF817:
+ 10716 1155 696E5F6D 		.ascii	"in_multiplier\000"
+ 10716      756C7469 
+ 10716      706C6965 
+ 10716      7200
+ 10717              	.LASF441:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 203
+
+
+ 10718 1163 4144435F 		.ascii	"ADC_ERROR\000"
+ 10718      4552524F 
+ 10718      5200
+ 10719              	.LASF44:
+ 10720 116d 5F6F6E5F 		.ascii	"_on_exit_args\000"
+ 10720      65786974 
+ 10720      5F617267 
+ 10720      7300
+ 10721              	.LASF304:
+ 10722 117b 636F6E74 		.ascii	"context\000"
+ 10722      65787400 
+ 10723              	.LASF144:
+ 10724 1183 746D6F64 		.ascii	"tmode_t\000"
+ 10724      655F7400 
+ 10725              	.LASF439:
+ 10726 118b 4144435F 		.ascii	"ADC_ACTIVE\000"
+ 10726      41435449 
+ 10726      564500
+ 10727              	.LASF223:
+ 10728 1196 53515231 		.ascii	"SQR1\000"
+>>>>>>> nouvelle_calibration
  10728      00
  10729              	.LASF412:
  10730 1142 42535252 		.ascii	"BSRR\000"
@@ -12150,6 +13503,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10734      5F686F6F 
  10734      6B5F6362 
  10734      00
+<<<<<<< HEAD
  10735              	.LASF119:
  10736 116b 5F776372 		.ascii	"_wcrtomb_state\000"
  10736      746F6D62 
@@ -12473,6 +13827,339 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10893              	.LASF554:
  10894 148f 63616C6C 		.ascii	"callback\000"
  10894      6261636B 
+=======
+ 10735              	.LASF391:
+ 10736 11aa 73746D33 		.ascii	"stm32_dma_stream_t\000"
+ 10736      325F646D 
+ 10736      615F7374 
+ 10736      7265616D 
+ 10736      5F7400
+ 10737              	.LASF822:
+ 10738 11bd 72657175 		.ascii	"requests_hook_cb\000"
+ 10738      65737473 
+ 10738      5F686F6F 
+ 10738      6B5F6362 
+ 10738      00
+ 10739              	.LASF119:
+ 10740 11ce 5F776372 		.ascii	"_wcrtomb_state\000"
+ 10740      746F6D62 
+ 10740      5F737461 
+ 10740      746500
+ 10741              	.LASF639:
+ 10742 11dd 5344435F 		.ascii	"SDC_MODE_8BIT\000"
+ 10742      4D4F4445 
+ 10742      5F384249 
+ 10742      5400
+ 10743              	.LASF800:
+ 10744 11eb 74787369 		.ascii	"txsize\000"
+ 10744      7A6500
+ 10745              	.LASF512:
+ 10746 11f2 4441435F 		.ascii	"DAC_DHRM_12BIT_LEFT\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 204
+
+
+ 10746      4448524D 
+ 10746      5F313242 
+ 10746      49545F4C 
+ 10746      45465400 
+ 10747              	.LASF608:
+ 10748 1206 70657269 		.ascii	"period\000"
+ 10748      6F6400
+ 10749              	.LASF338:
+ 10750 120d 6D5F7175 		.ascii	"m_queue\000"
+ 10750      65756500 
+ 10751              	.LASF564:
+ 10752 1215 4932435F 		.ascii	"I2C_LOCKED\000"
+ 10752      4C4F434B 
+ 10752      454400
+ 10753              	.LASF205:
+ 10754 1220 6973725F 		.ascii	"isr_cnt\000"
+ 10754      636E7400 
+ 10755              	.LASF691:
+ 10756 1228 5553425F 		.ascii	"USB_READY\000"
+ 10756      52454144 
+ 10756      5900
+ 10757              	.LASF636:
+ 10758 1232 72656164 		.ascii	"readt\000"
+ 10758      7400
+ 10759              	.LASF743:
+ 10760 1238 47525354 		.ascii	"GRSTCTL\000"
+ 10760      43544C00 
+ 10761              	.LASF538:
+ 10762 1240 67707473 		.ascii	"gptstate_t\000"
+ 10762      74617465 
+ 10762      5F7400
+ 10763              	.LASF28:
+ 10764 124b 5F5F554C 		.ascii	"__ULong\000"
+ 10764      6F6E6700 
+ 10765              	.LASF204:
+ 10766 1253 70616E69 		.ascii	"panic_msg\000"
+ 10766      635F6D73 
+ 10766      6700
+ 10767              	.LASF662:
+ 10768 125d 5350495F 		.ascii	"SPI_COMPLETE\000"
+ 10768      434F4D50 
+ 10768      4C455445 
+ 10768      00
+ 10769              	.LASF286:
+ 10770 126a 4454494D 		.ascii	"DTIMER\000"
+ 10770      455200
+ 10771              	.LASF188:
+ 10772 1271 725F6E65 		.ascii	"r_newer\000"
+ 10772      77657200 
+ 10773              	.LASF708:
+ 10774 1279 5553425F 		.ascii	"USB_EVENT_STALLED\000"
+ 10774      4556454E 
+ 10774      545F5354 
+ 10774      414C4C45 
+ 10774      4400
+ 10775              	.LASF360:
+ 10776 128b 63686465 		.ascii	"chdebug_t\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 205
+
+
+ 10776      6275675F 
+ 10776      7400
+ 10777              	.LASF806:
+ 10778 1295 72787369 		.ascii	"rxsize\000"
+ 10778      7A6500
+ 10779              	.LASF722:
+ 10780 129c 48435453 		.ascii	"HCTSIZ\000"
+ 10780      495A00
+ 10781              	.LASF705:
+ 10782 12a3 5553425F 		.ascii	"USB_EVENT_CONFIGURED\000"
+ 10782      4556454E 
+ 10782      545F434F 
+ 10782      4E464947 
+ 10782      55524544 
+ 10783              	.LASF654:
+ 10784 12b8 64697363 		.ascii	"disconnect\000"
+ 10784      6F6E6E65 
+ 10784      637400
+ 10785              	.LASF633:
+ 10786 12c3 70757474 		.ascii	"putt\000"
+ 10786      00
+ 10787              	.LASF147:
+ 10788 12c8 74736C69 		.ascii	"tslices_t\000"
+ 10788      6365735F 
+ 10788      7400
+ 10789              	.LASF104:
+ 10790 12d2 5F737472 		.ascii	"_strtok_last\000"
+ 10790      746F6B5F 
+ 10790      6C617374 
+ 10790      00
+ 10791              	.LASF347:
+ 10792 12df 63685F74 		.ascii	"ch_timesize\000"
+ 10792      696D6573 
+ 10792      697A6500 
+ 10793              	.LASF687:
+ 10794 12eb 77615F70 		.ascii	"wa_pump\000"
+ 10794      756D7000 
+ 10795              	.LASF291:
+ 10796 12f3 4649464F 		.ascii	"FIFOCNT\000"
+ 10796      434E5400 
+ 10797              	.LASF372:
+ 10798 12fb 6576656E 		.ascii	"event_source_t\000"
+ 10798      745F736F 
+ 10798      75726365 
+ 10798      5F7400
+ 10799              	.LASF757:
+ 10800 130a 72657376 		.ascii	"resvd140\000"
+ 10800      64313430 
+ 10800      00
+ 10801              	.LASF196:
+ 10802 1313 76745F64 		.ascii	"vt_delta\000"
+ 10802      656C7461 
+ 10802      00
+ 10803              	.LASF100:
+ 10804 131c 5F736565 		.ascii	"_seed\000"
+ 10804      6400
+ 10805              	.LASF312:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 206
+
+
+ 10806 1322 74625F70 		.ascii	"tb_ptr\000"
+ 10806      747200
+ 10807              	.LASF515:
+ 10808 1329 74726967 		.ascii	"trigger\000"
+ 10808      67657200 
+ 10809              	.LASF62:
+ 10810 1331 5F736565 		.ascii	"_seek\000"
+ 10810      6B00
+ 10811              	.LASF706:
+ 10812 1337 5553425F 		.ascii	"USB_EVENT_SUSPEND\000"
+ 10812      4556454E 
+ 10812      545F5355 
+ 10812      5350454E 
+ 10812      4400
+ 10813              	.LASF130:
+ 10814 1349 696E7431 		.ascii	"int16_t\000"
+ 10814      365F7400 
+ 10815              	.LASF534:
+ 10816 1351 4750545F 		.ascii	"GPT_STOP\000"
+ 10816      53544F50 
+ 10816      00
+ 10817              	.LASF231:
+ 10818 135a 4144435F 		.ascii	"ADC_TypeDef\000"
+ 10818      54797065 
+ 10818      44656600 
+ 10819              	.LASF735:
+ 10820 1366 444F4550 		.ascii	"DOEPCTL\000"
+ 10820      43544C00 
+ 10821              	.LASF7:
+ 10822 136e 73686F72 		.ascii	"short unsigned int\000"
+ 10822      7420756E 
+ 10822      7369676E 
+ 10822      65642069 
+ 10822      6E7400
+ 10823              	.LASF576:
+ 10824 1381 6F705F6D 		.ascii	"op_mode\000"
+ 10824      6F646500 
+ 10825              	.LASF1:
+ 10826 1389 7369676E 		.ascii	"signed char\000"
+ 10826      65642063 
+ 10826      68617200 
+ 10827              	.LASF613:
+ 10828 1395 70776D63 		.ascii	"pwmchnmsk_t\000"
+ 10828      686E6D73 
+ 10828      6B5F7400 
+ 10829              	.LASF168:
+ 10830 13a1 705F7072 		.ascii	"p_preempt\000"
+ 10830      65656D70 
+ 10830      7400
+ 10831              	.LASF590:
+ 10832 13ab 4932535F 		.ascii	"I2S_READY\000"
+ 10832      52454144 
+ 10832      5900
+ 10833              	.LASF153:
+ 10834 13b5 75636E74 		.ascii	"ucnt_t\000"
+ 10834      5F7400
+ 10835              	.LASF234:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 207
+
+
+ 10836 13bc 54444852 		.ascii	"TDHR\000"
+ 10836      00
+ 10837              	.LASF437:
+ 10838 13c1 4144435F 		.ascii	"ADC_STOP\000"
+ 10838      53544F50 
+ 10838      00
+ 10839              	.LASF699:
+ 10840 13ca 5553425F 		.ascii	"USB_EP0_RX\000"
+ 10840      4550305F 
+ 10840      525800
+ 10841              	.LASF137:
+ 10842 13d5 5F5F6664 		.ascii	"__fdlibm_ieee\000"
+ 10842      6C69626D 
+ 10842      5F696565 
+ 10842      6500
+ 10843              	.LASF611:
+ 10844 13e3 70776D6D 		.ascii	"pwmmode_t\000"
+ 10844      6F64655F 
+ 10844      7400
+ 10845              	.LASF680:
+ 10846 13ed 73746174 		.ascii	"status\000"
+ 10846      757300
+ 10847              	.LASF287:
+ 10848 13f4 444C454E 		.ascii	"DLEN\000"
+ 10848      00
+ 10849              	.LASF638:
+ 10850 13f9 5344435F 		.ascii	"SDC_MODE_4BIT\000"
+ 10850      4D4F4445 
+ 10850      5F344249 
+ 10850      5400
+ 10851              	.LASF712:
+ 10852 1407 55534244 		.ascii	"USBDescriptor\000"
+ 10852      65736372 
+ 10852      6970746F 
+ 10852      7200
+ 10853              	.LASF825:
+ 10854 1415 55534244 		.ascii	"USBD1\000"
+ 10854      3100
+ 10855              	.LASF665:
+ 10856 141b 73706963 		.ascii	"spicallback_t\000"
+ 10856      616C6C62 
+ 10856      61636B5F 
+ 10856      7400
+ 10857              	.LASF86:
+ 10858 1429 5F667265 		.ascii	"_freelist\000"
+ 10858      656C6973 
+ 10858      7400
+ 10859              	.LASF681:
+ 10860 1433 61646472 		.ascii	"address\000"
+ 10860      65737300 
+ 10861              	.LASF171:
+ 10862 143b 705F6D73 		.ascii	"p_msgqueue\000"
+ 10862      67717565 
+ 10862      756500
+ 10863              	.LASF357:
+ 10864 1446 63665F6F 		.ascii	"cf_off_refs\000"
+ 10864      66665F72 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 208
+
+
+ 10864      65667300 
+ 10865              	.LASF355:
+ 10866 1452 63665F6F 		.ascii	"cf_off_state\000"
+ 10866      66665F73 
+ 10866      74617465 
+ 10866      00
+ 10867              	.LASF339:
+ 10868 145f 6D5F6F77 		.ascii	"m_owner\000"
+ 10868      6E657200 
+ 10869              	.LASF835:
+ 10870 1467 676F5F66 		.ascii	"go_fast\000"
+ 10870      61737400 
+ 10871              	.LASF67:
+ 10872 146f 5F6F6666 		.ascii	"_offset\000"
+ 10872      73657400 
+ 10873              	.LASF216:
+ 10874 1477 53797374 		.ascii	"SystemCoreClock\000"
+ 10874      656D436F 
+ 10874      7265436C 
+ 10874      6F636B00 
+ 10875              	.LASF459:
+ 10876 1487 61646365 		.ascii	"adcerrorcallback_t\000"
+ 10876      72726F72 
+ 10876      63616C6C 
+ 10876      6261636B 
+ 10876      5F7400
+ 10877              	.LASF494:
+ 10878 149a 4441435F 		.ascii	"DAC_ACTIVE\000"
+ 10878      41435449 
+ 10878      564500
+ 10879              	.LASF449:
+ 10880 14a5 73746174 		.ascii	"state\000"
+ 10880      6500
+ 10881              	.LASF345:
+ 10882 14ab 63685F76 		.ascii	"ch_version\000"
+ 10882      65727369 
+ 10882      6F6E00
+ 10883              	.LASF52:
+ 10884 14b6 5F5F7362 		.ascii	"__sbuf\000"
+ 10884      756600
+ 10885              	.LASF646:
+ 10886 14bd 7364696F 		.ascii	"sdio\000"
+ 10886      00
+ 10887              	.LASF257:
+ 10888 14c2 53575452 		.ascii	"SWTRIGR\000"
+ 10888      49475200 
+ 10889              	.LASF698:
+ 10890 14ca 5553425F 		.ascii	"USB_EP0_WAITING_STS\000"
+ 10890      4550305F 
+ 10890      57414954 
+ 10890      494E475F 
+ 10890      53545300 
+ 10891              	.LASF113:
+ 10892 14de 5F6C3634 		.ascii	"_l64a_buf\000"
+ 10892      615F6275 
+ 10892      6600
+ 10893              	.LASF238:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 209
+
+
+ 10894 14e8 52444852 		.ascii	"RDHR\000"
+>>>>>>> nouvelle_calibration
  10894      00
  10895              	.LASF209:
  10896 1498 63685F73 		.ascii	"ch_system\000"
@@ -12525,6 +14212,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10916 150b 44494550 		.ascii	"DIEPTSIZ\000"
  10916      5453495A 
  10916      00
+<<<<<<< HEAD
  10917              	.LASF464:
  10918 1514 736D7072 		.ascii	"smpr1\000"
  10918      3100
@@ -12575,12 +14263,68 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  10939              	.LASF9:
  10940 1589 6C6F6E67 		.ascii	"long int\000"
  10940      20696E74 
+=======
+ 10917              	.LASF120:
+ 10918 155d 5F776373 		.ascii	"_wcsrtombs_state\000"
+ 10918      72746F6D 
+ 10918      62735F73 
+ 10918      74617465 
+ 10918      00
+ 10919              	.LASF731:
+ 10920 156e 44494550 		.ascii	"DIEPTSIZ\000"
+ 10920      5453495A 
+ 10920      00
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 210
+
+
+ 10921              	.LASF464:
+ 10922 1577 736D7072 		.ascii	"smpr1\000"
+ 10922      3100
+ 10923              	.LASF465:
+ 10924 157d 736D7072 		.ascii	"smpr2\000"
+ 10924      3200
+ 10925              	.LASF842:
+ 10926 1583 6C656674 		.ascii	"left_motor_set_speed\000"
+ 10926      5F6D6F74 
+ 10926      6F725F73 
+ 10926      65745F73 
+ 10926      70656564 
+ 10927              	.LASF181:
+ 10928 1598 74687265 		.ascii	"threads_queue_t\000"
+ 10928      6164735F 
+ 10928      71756575 
+ 10928      655F7400 
+ 10929              	.LASF402:
+ 10930 15a8 626C6B73 		.ascii	"blkstate_t\000"
+ 10930      74617465 
+ 10930      5F7400
+ 10931              	.LASF849:
+ 10932 15b3 5F5F6664 		.ascii	"__fdlibm_version\000"
+ 10932      6C69626D 
+ 10932      5F766572 
+ 10932      73696F6E 
+ 10932      00
+ 10933              	.LASF169:
+ 10934 15c4 705F7469 		.ascii	"p_time\000"
+ 10934      6D6500
+ 10935              	.LASF167:
+ 10936 15cb 705F7265 		.ascii	"p_refs\000"
+ 10936      667300
+ 10937              	.LASF809:
+ 10938 15d2 65705F6D 		.ascii	"ep_mode\000"
+ 10938      6F646500 
+ 10939              	.LASF612:
+ 10940 15da 70776D63 		.ascii	"pwmchannel_t\000"
+ 10940      68616E6E 
+ 10940      656C5F74 
+>>>>>>> nouvelle_calibration
  10940      00
  10941              	.LASF847:
  10942 1592 4D6F7576 		.ascii	"Mouvements.c\000"
  10942      656D656E 
  10942      74732E63 
  10942      00
+<<<<<<< HEAD
  10943              	.LASF212:
  10944 159f 6D61696E 		.ascii	"mainthread\000"
  10944      74687265 
@@ -12696,6 +14440,124 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11002      65656400 
  11003              	.LASF413:
  11004 16a7 4C434B52 		.ascii	"LCKR\000"
+=======
+ 10943              	.LASF9:
+ 10944 15ec 6C6F6E67 		.ascii	"long int\000"
+ 10944      20696E74 
+ 10944      00
+ 10945              	.LASF847:
+ 10946 15f5 4D6F7576 		.ascii	"Mouvements.c\000"
+ 10946      656D656E 
+ 10946      74732E63 
+ 10946      00
+ 10947              	.LASF212:
+ 10948 1602 6D61696E 		.ascii	"mainthread\000"
+ 10948      74687265 
+ 10948      616400
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 211
+
+
+ 10949              	.LASF841:
+ 10950 160d 72696768 		.ascii	"right_motor_set_speed\000"
+ 10950      745F6D6F 
+ 10950      746F725F 
+ 10950      7365745F 
+ 10950      73706565 
+ 10951              	.LASF677:
+ 10952 1623 6570306E 		.ascii	"ep0n\000"
+ 10952      00
+ 10953              	.LASF790:
+ 10954 1628 72657376 		.ascii	"resvdE04\000"
+ 10954      64453034 
+ 10954      00
+ 10955              	.LASF566:
+ 10956 1631 69326361 		.ascii	"i2caddr_t\000"
+ 10956      6464725F 
+ 10956      7400
+ 10957              	.LASF112:
+ 10958 163b 5F776374 		.ascii	"_wctomb_state\000"
+ 10958      6F6D625F 
+ 10958      73746174 
+ 10958      6500
+ 10959              	.LASF501:
+ 10960 1649 646D6169 		.ascii	"dmairqprio\000"
+ 10960      72717072 
+ 10960      696F00
+ 10961              	.LASF539:
+ 10962 1654 47505444 		.ascii	"GPTDriver\000"
+ 10962      72697665 
+ 10962      7200
+ 10963              	.LASF376:
+ 10964 165e 715F636F 		.ascii	"q_counter\000"
+ 10964      756E7465 
+ 10964      7200
+ 10965              	.LASF431:
+ 10966 1668 50484461 		.ascii	"PHData\000"
+ 10966      746100
+ 10967              	.LASF434:
+ 10968 166f 696F706F 		.ascii	"ioportid_t\000"
+ 10968      72746964 
+ 10968      5F7400
+ 10969              	.LASF472:
+ 10970 167a 41444344 		.ascii	"ADCD1\000"
+ 10970      3100
+ 10971              	.LASF473:
+ 10972 1680 41444344 		.ascii	"ADCD2\000"
+ 10972      3200
+ 10973              	.LASF474:
+ 10974 1686 41444344 		.ascii	"ADCD3\000"
+ 10974      3300
+ 10975              	.LASF758:
+ 10976 168c 48434647 		.ascii	"HCFG\000"
+ 10976      00
+ 10977              	.LASF457:
+ 10978 1691 646D616D 		.ascii	"dmamode\000"
+ 10978      6F646500 
+ 10979              	.LASF320:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 212
+
+
+ 10980 1699 63756D75 		.ascii	"cumulative\000"
+ 10980      6C617469 
+ 10980      766500
+ 10981              	.LASF98:
+ 10982 16a4 5F696F62 		.ascii	"_iobs\000"
+ 10982      7300
+ 10983              	.LASF78:
+ 10984 16aa 5F656D65 		.ascii	"_emergency\000"
+ 10984      7267656E 
+ 10984      637900
+ 10985              	.LASF634:
+ 10986 16b5 67657474 		.ascii	"gett\000"
+ 10986      00
+ 10987              	.LASF330:
+ 10988 16ba 77747472 		.ascii	"wttrp\000"
+ 10988      7000
+ 10989              	.LASF380:
+ 10990 16c0 715F7264 		.ascii	"q_rdptr\000"
+ 10990      70747200 
+ 10991              	.LASF122:
+ 10992 16c8 5F6E6578 		.ascii	"_nextf\000"
+ 10992      746600
+ 10993              	.LASF631:
+ 10994 16cf 77726974 		.ascii	"write\000"
+ 10994      6500
+ 10995              	.LASF108:
+ 10996 16d5 5F72616E 		.ascii	"_rand_next\000"
+ 10996      645F6E65 
+ 10996      787400
+ 10997              	.LASF627:
+ 10998 16e0 69717565 		.ascii	"iqueue\000"
+ 10998      756500
+ 10999              	.LASF811:
+ 11000 16e7 696E5F63 		.ascii	"in_cb\000"
+ 11000      6200
+ 11001              	.LASF736:
+ 11002 16ed 444F4550 		.ascii	"DOEPINT\000"
+ 11002      494E5400 
+ 11003              	.LASF319:
+ 11004 16f5 6C617374 		.ascii	"last\000"
+>>>>>>> nouvelle_calibration
  11004      00
  11005              	.LASF624:
  11006 16ac 73647374 		.ascii	"sdstate_t\000"
@@ -12705,6 +14567,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11008 16b6 75696E74 		.ascii	"uint32_t\000"
  11008      33325F74 
  11008      00
+<<<<<<< HEAD
  11009              	.LASF498:
  11010 16bf 64617461 		.ascii	"dataoffset\000"
  11010      6F666673 
@@ -12865,6 +14728,169 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11089              	.LASF779:
  11090 1837 44564255 		.ascii	"DVBUSDIS\000"
  11090      53444953 
+=======
+ 11009              	.LASF624:
+ 11010 170f 73647374 		.ascii	"sdstate_t\000"
+ 11010      6174655F 
+ 11010      7400
+ 11011              	.LASF133:
+ 11012 1719 75696E74 		.ascii	"uint32_t\000"
+ 11012      33325F74 
+ 11012      00
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 213
+
+
+ 11013              	.LASF498:
+ 11014 1722 64617461 		.ascii	"dataoffset\000"
+ 11014      6F666673 
+ 11014      657400
+ 11015              	.LASF30:
+ 11016 172d 5F6D6178 		.ascii	"_maxwds\000"
+ 11016      77647300 
+ 11017              	.LASF400:
+ 11018 1735 424C4B5F 		.ascii	"BLK_WRITING\000"
+ 11018      57524954 
+ 11018      494E4700 
+ 11019              	.LASF237:
+ 11020 1741 52444C52 		.ascii	"RDLR\000"
+ 11020      00
+ 11021              	.LASF17:
+ 11022 1746 6C6F6E67 		.ascii	"long double\000"
+ 11022      20646F75 
+ 11022      626C6500 
+ 11023              	.LASF302:
+ 11024 1752 72656761 		.ascii	"regarm_t\000"
+ 11024      726D5F74 
+ 11024      00
+ 11025              	.LASF150:
+ 11026 175b 6576656E 		.ascii	"eventmask_t\000"
+ 11026      746D6173 
+ 11026      6B5F7400 
+ 11027              	.LASF135:
+ 11028 1767 7375626F 		.ascii	"suboptarg\000"
+ 11028      70746172 
+ 11028      6700
+ 11029              	.LASF251:
+ 11030 1771 46464131 		.ascii	"FFA1R\000"
+ 11030      5200
+ 11031              	.LASF242:
+ 11032 1777 52463152 		.ascii	"RF1R\000"
+ 11032      00
+ 11033              	.LASF692:
+ 11034 177c 5553425F 		.ascii	"USB_SELECTED\000"
+ 11034      53454C45 
+ 11034      43544544 
+ 11034      00
+ 11035              	.LASF478:
+ 11036 1789 43414E5F 		.ascii	"CAN_READY\000"
+ 11036      52454144 
+ 11036      5900
+ 11037              	.LASF11:
+ 11038 1793 6C6F6E67 		.ascii	"long unsigned int\000"
+ 11038      20756E73 
+ 11038      69676E65 
+ 11038      6420696E 
+ 11038      7400
+ 11039              	.LASF591:
+ 11040 17a5 4932535F 		.ascii	"I2S_ACTIVE\000"
+ 11040      41435449 
+ 11040      564500
+ 11041              	.LASF535:
+ 11042 17b0 4750545F 		.ascii	"GPT_READY\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 214
+
+
+ 11042      52454144 
+ 11042      5900
+ 11043              	.LASF497:
+ 11044 17ba 64616373 		.ascii	"dacstate_t\000"
+ 11044      74617465 
+ 11044      5F7400
+ 11045              	.LASF307:
+ 11046 17c5 73655F74 		.ascii	"se_tp\000"
+ 11046      7000
+ 11047              	.LASF379:
+ 11048 17cb 715F7772 		.ascii	"q_wrptr\000"
+ 11048      70747200 
+ 11049              	.LASF505:
+ 11050 17d3 64616373 		.ascii	"dacsample_t\000"
+ 11050      616D706C 
+ 11050      655F7400 
+ 11051              	.LASF704:
+ 11052 17df 5553425F 		.ascii	"USB_EVENT_ADDRESS\000"
+ 11052      4556454E 
+ 11052      545F4144 
+ 11052      44524553 
+ 11052      5300
+ 11053              	.LASF599:
+ 11054 17f1 69327363 		.ascii	"i2scfgr\000"
+ 11054      66677200 
+ 11055              	.LASF281:
+ 11056 17f9 52455350 		.ascii	"RESPCMD\000"
+ 11056      434D4400 
+ 11057              	.LASF484:
+ 11058 1801 72786675 		.ascii	"rxfull_event\000"
+ 11058      6C6C5F65 
+ 11058      76656E74 
+ 11058      00
+ 11059              	.LASF709:
+ 11060 180e 75736265 		.ascii	"usbevent_t\000"
+ 11060      76656E74 
+ 11060      5F7400
+ 11061              	.LASF63:
+ 11062 1819 5F636C6F 		.ascii	"_close\000"
+ 11062      736500
+ 11063              	.LASF94:
+ 11064 1820 63686172 		.ascii	"char\000"
+ 11064      00
+ 11065              	.LASF481:
+ 11066 1825 43414E43 		.ascii	"CANConfig\000"
+ 11066      6F6E6669 
+ 11066      6700
+ 11067              	.LASF428:
+ 11068 182f 50454461 		.ascii	"PEData\000"
+ 11068      746100
+ 11069              	.LASF185:
+ 11070 1836 725F7175 		.ascii	"r_queue\000"
+ 11070      65756500 
+ 11071              	.LASF96:
+ 11072 183e 5F676C75 		.ascii	"_glue\000"
+ 11072      6500
+ 11073              	.LASF649:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 215
+
+
+ 11074 1844 53444343 		.ascii	"SDCConfig\000"
+ 11074      6F6E6669 
+ 11074      6700
+ 11075              	.LASF609:
+ 11076 184e 656E6162 		.ascii	"enabled\000"
+ 11076      6C656400 
+ 11077              	.LASF506:
+ 11078 1856 4441435F 		.ascii	"DAC_ERR_DMAFAILURE\000"
+ 11078      4552525F 
+ 11078      444D4146 
+ 11078      41494C55 
+ 11078      524500
+ 11079              	.LASF748:
+ 11080 1869 47525846 		.ascii	"GRXFSIZ\000"
+ 11080      53495A00 
+ 11081              	.LASF655:
+ 11082 1871 73796E63 		.ascii	"sync\000"
+ 11082      00
+ 11083              	.LASF629:
+ 11084 1876 75736172 		.ascii	"usart\000"
+ 11084      7400
+ 11085              	.LASF641:
+ 11086 187c 7364636D 		.ascii	"sdcmode_t\000"
+ 11086      6F64655F 
+ 11086      7400
+ 11087              	.LASF382:
+ 11088 1886 715F6C69 		.ascii	"q_link\000"
+ 11088      6E6B00
+ 11089              	.LASF769:
+ 11090 188d 44434647 		.ascii	"DCFG\000"
+>>>>>>> nouvelle_calibration
  11090      00
  11091              	.LASF745:
  11092 1840 47494E54 		.ascii	"GINTMSK\000"
@@ -12882,6 +14908,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11098 185f 5F617465 		.ascii	"_atexit0\000"
  11098      78697430 
  11098      00
+<<<<<<< HEAD
  11099              	.LASF423:
  11100 1868 73746D33 		.ascii	"stm32_gpio_setup_t\000"
  11100      325F6770 
@@ -12920,6 +14947,47 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11114 18c0 6B65726E 		.ascii	"kernel_stats\000"
  11114      656C5F73 
  11114      74617473 
+=======
+ 11099              	.LASF682:
+ 11100 18b4 636F6E66 		.ascii	"configuration\000"
+ 11100      69677572 
+ 11100      6174696F 
+ 11100      6E00
+ 11101              	.LASF90:
+ 11102 18c2 5F617465 		.ascii	"_atexit0\000"
+ 11102      78697430 
+ 11102      00
+ 11103              	.LASF423:
+ 11104 18cb 73746D33 		.ascii	"stm32_gpio_setup_t\000"
+ 11104      325F6770 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 216
+
+
+ 11104      696F5F73 
+ 11104      65747570 
+ 11104      5F7400
+ 11105              	.LASF392:
+ 11106 18de 5F73746D 		.ascii	"_stm32_dma_streams\000"
+ 11106      33325F64 
+ 11106      6D615F73 
+ 11106      74726561 
+ 11106      6D7300
+ 11107              	.LASF259:
+ 11108 18f1 44485231 		.ascii	"DHR12L1\000"
+ 11108      324C3100 
+ 11109              	.LASF262:
+ 11110 18f9 44485231 		.ascii	"DHR12L2\000"
+ 11110      324C3200 
+ 11111              	.LASF115:
+ 11112 1901 5F676574 		.ascii	"_getdate_err\000"
+ 11112      64617465 
+ 11112      5F657272 
+ 11112      00
+ 11113              	.LASF640:
+ 11114 190e 73646362 		.ascii	"sdcbusmode_t\000"
+ 11114      75736D6F 
+ 11114      64655F74 
+>>>>>>> nouvelle_calibration
  11114      00
  11115              	.LASF458:
  11116 18cd 61646363 		.ascii	"adccallback_t\000"
@@ -12933,6 +15001,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11119              	.LASF152:
  11120 18e6 636E745F 		.ascii	"cnt_t\000"
  11120      7400
+<<<<<<< HEAD
  11121              	.LASF524:
  11122 18ec 65787473 		.ascii	"extstate_t\000"
  11122      74617465 
@@ -13091,6 +15160,163 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11193              	.LASF765:
  11194 1a7a 72657376 		.ascii	"resvd41C\000"
  11194      64343143 
+=======
+ 11121              	.LASF164:
+ 11122 193e 705F7374 		.ascii	"p_stklimit\000"
+ 11122      6B6C696D 
+ 11122      697400
+ 11123              	.LASF152:
+ 11124 1949 636E745F 		.ascii	"cnt_t\000"
+ 11124      7400
+ 11125              	.LASF524:
+ 11126 194f 65787473 		.ascii	"extstate_t\000"
+ 11126      74617465 
+ 11126      5F7400
+ 11127              	.LASF697:
+ 11128 195a 5553425F 		.ascii	"USB_EP0_WAITING_TX0\000"
+ 11128      4550305F 
+ 11128      57414954 
+ 11128      494E475F 
+ 11128      54583000 
+ 11129              	.LASF676:
+ 11130 196e 6570306E 		.ascii	"ep0next\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 217
+
+
+ 11130      65787400 
+ 11131              	.LASF726:
+ 11132 1976 73746D33 		.ascii	"stm32_otg_host_chn_t\000"
+ 11132      325F6F74 
+ 11132      675F686F 
+ 11132      73745F63 
+ 11132      686E5F74 
+ 11133              	.LASF415:
+ 11134 198b 41465248 		.ascii	"AFRH\000"
+ 11134      00
+ 11135              	.LASF414:
+ 11136 1990 4146524C 		.ascii	"AFRL\000"
+ 11136      00
+ 11137              	.LASF127:
+ 11138 1995 5F696D70 		.ascii	"_impure_ptr\000"
+ 11138      7572655F 
+ 11138      70747200 
+ 11139              	.LASF358:
+ 11140 19a1 63665F6F 		.ascii	"cf_off_preempt\000"
+ 11140      66665F70 
+ 11140      7265656D 
+ 11140      707400
+ 11141              	.LASF495:
+ 11142 19b0 4441435F 		.ascii	"DAC_COMPLETE\000"
+ 11142      434F4D50 
+ 11142      4C455445 
+ 11142      00
+ 11143              	.LASF66:
+ 11144 19bd 5F626C6B 		.ascii	"_blksize\000"
+ 11144      73697A65 
+ 11144      00
+ 11145              	.LASF721:
+ 11146 19c6 4843494E 		.ascii	"HCINTMSK\000"
+ 11146      544D534B 
+ 11146      00
+ 11147              	.LASF64:
+ 11148 19cf 5F756275 		.ascii	"_ubuf\000"
+ 11148      6600
+ 11149              	.LASF450:
+ 11150 19d5 636F6E66 		.ascii	"config\000"
+ 11150      696700
+ 11151              	.LASF558:
+ 11152 19dc 47505444 		.ascii	"GPTD11\000"
+ 11152      313100
+ 11153              	.LASF110:
+ 11154 19e3 5F6D626C 		.ascii	"_mblen_state\000"
+ 11154      656E5F73 
+ 11154      74617465 
+ 11154      00
+ 11155              	.LASF92:
+ 11156 19f0 5F5F7367 		.ascii	"__sglue\000"
+ 11156      6C756500 
+ 11157              	.LASF126:
+ 11158 19f8 5F5F6C6F 		.ascii	"__locale_t\000"
+ 11158      63616C65 
+ 11158      5F7400
+ 11159              	.LASF396:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 218
+
+
+ 11160 1a03 424C4B5F 		.ascii	"BLK_CONNECTING\000"
+ 11160      434F4E4E 
+ 11160      45435449 
+ 11160      4E4700
+ 11161              	.LASF82:
+ 11162 1a12 5F5F636C 		.ascii	"__cleanup\000"
+ 11162      65616E75 
+ 11162      7000
+ 11163              	.LASF491:
+ 11164 1a1c 4441435F 		.ascii	"DAC_UNINIT\000"
+ 11164      554E494E 
+ 11164      495400
+ 11165              	.LASF444:
+ 11166 1a27 6164635F 		.ascii	"adc_channels_num_t\000"
+ 11166      6368616E 
+ 11166      6E656C73 
+ 11166      5F6E756D 
+ 11166      5F7400
+ 11167              	.LASF191:
+ 11168 1a3a 76746675 		.ascii	"vtfunc_t\000"
+ 11168      6E635F74 
+ 11168      00
+ 11169              	.LASF239:
+ 11170 1a43 43414E5F 		.ascii	"CAN_FIFOMailBox_TypeDef\000"
+ 11170      4649464F 
+ 11170      4D61696C 
+ 11170      426F785F 
+ 11170      54797065 
+ 11171              	.LASF269:
+ 11172 1a5b 4441435F 		.ascii	"DAC_TypeDef\000"
+ 11172      54797065 
+ 11172      44656600 
+ 11173              	.LASF329:
+ 11174 1a67 77746F62 		.ascii	"wtobjp\000"
+ 11174      6A7000
+ 11175              	.LASF20:
+ 11176 1a6e 5F66706F 		.ascii	"_fpos_t\000"
+ 11176      735F7400 
+ 11177              	.LASF511:
+ 11178 1a76 4441435F 		.ascii	"DAC_DHRM_12BIT_RIGHT\000"
+ 11178      4448524D 
+ 11178      5F313242 
+ 11178      49545F52 
+ 11178      49474854 
+ 11179              	.LASF57:
+ 11180 1a8b 5F66696C 		.ascii	"_file\000"
+ 11180      6500
+ 11181              	.LASF175:
+ 11182 1a91 705F7265 		.ascii	"p_realprio\000"
+ 11182      616C7072 
+ 11182      696F00
+ 11183              	.LASF644:
+ 11184 1a9c 63617061 		.ascii	"capacity\000"
+ 11184      63697479 
+ 11184      00
+ 11185              	.LASF381:
+ 11186 1aa5 715F6E6F 		.ascii	"q_notify\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 219
+
+
+ 11186      74696679 
+ 11186      00
+ 11187              	.LASF332:
+ 11188 1aae 77746D74 		.ascii	"wtmtxp\000"
+ 11188      787000
+ 11189              	.LASF55:
+ 11190 1ab5 5F5F7346 		.ascii	"__sFILE\000"
+ 11190      494C4500 
+ 11191              	.LASF136:
+ 11192 1abd 646F7562 		.ascii	"double\000"
+ 11192      6C6500
+ 11193              	.LASF51:
+ 11194 1ac4 5F666E73 		.ascii	"_fns\000"
+>>>>>>> nouvelle_calibration
  11194      00
  11195              	.LASF26:
  11196 1a83 5F6D6273 		.ascii	"_mbstate_t\000"
@@ -13123,6 +15349,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11210 1ac8 5F5F696E 		.ascii	"__int32_t\000"
  11210      7433325F 
  11210      7400
+<<<<<<< HEAD
  11211              	.LASF10:
  11212 1ad2 5F5F7569 		.ascii	"__uint32_t\000"
  11212      6E743332 
@@ -13208,6 +15435,92 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11250      3100
  11251              	.LASF248:
  11252 1b98 52455345 		.ascii	"RESERVED2\000"
+=======
+ 11211              	.LASF411:
+ 11212 1b25 50555044 		.ascii	"PUPDR\000"
+ 11212      5200
+ 11213              	.LASF8:
+ 11214 1b2b 5F5F696E 		.ascii	"__int32_t\000"
+ 11214      7433325F 
+ 11214      7400
+ 11215              	.LASF10:
+ 11216 1b35 5F5F7569 		.ascii	"__uint32_t\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 220
+
+
+ 11216      6E743332 
+ 11216      5F7400
+ 11217              	.LASF203:
+ 11218 1b40 63685F73 		.ascii	"ch_system_debug\000"
+ 11218      79737465 
+ 11218      6D5F6465 
+ 11218      62756700 
+ 11219              	.LASF776:
+ 11220 1b50 4441494E 		.ascii	"DAINTMSK\000"
+ 11220      544D534B 
+ 11220      00
+ 11221              	.LASF531:
+ 11222 1b59 45585443 		.ascii	"EXTConfig\000"
+ 11222      6F6E6669 
+ 11222      6700
+ 11223              	.LASF25:
+ 11224 1b63 5F5F7661 		.ascii	"__value\000"
+ 11224      6C756500 
+ 11225              	.LASF695:
+ 11226 1b6b 5553425F 		.ascii	"USB_EP0_WAITING_SETUP\000"
+ 11226      4550305F 
+ 11226      57414954 
+ 11226      494E475F 
+ 11226      53455455 
+ 11227              	.LASF48:
+ 11228 1b81 5F69735F 		.ascii	"_is_cxa\000"
+ 11228      63786100 
+ 11229              	.LASF399:
+ 11230 1b89 424C4B5F 		.ascii	"BLK_READING\000"
+ 11230      52454144 
+ 11230      494E4700 
+ 11231              	.LASF421:
+ 11232 1b95 6166726C 		.ascii	"afrl\000"
+ 11232      00
+ 11233              	.LASF798:
+ 11234 1b9a 71756575 		.ascii	"queue\000"
+ 11234      6500
+ 11235              	.LASF678:
+ 11236 1ba0 65703065 		.ascii	"ep0endcb\000"
+ 11236      6E646362 
+ 11236      00
+ 11237              	.LASF838:
+ 11238 1ba9 64697374 		.ascii	"distance\000"
+ 11238      616E6365 
+ 11238      00
+ 11239              	.LASF389:
+ 11240 1bb2 73656C66 		.ascii	"selfindex\000"
+ 11240      696E6465 
+ 11240      7800
+ 11241              	.LASF362:
+ 11242 1bbc 6D757465 		.ascii	"mutex_t\000"
+ 11242      785F7400 
+ 11243              	.LASF85:
+ 11244 1bc4 5F703573 		.ascii	"_p5s\000"
+ 11244      00
+ 11245              	.LASF173:
+ 11246 1bc9 705F6570 		.ascii	"p_epending\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 221
+
+
+ 11246      656E6469 
+ 11246      6E6700
+ 11247              	.LASF408:
+ 11248 1bd4 4D4F4445 		.ascii	"MODER\000"
+ 11248      5200
+ 11249              	.LASF592:
+ 11250 1bda 4932535F 		.ascii	"I2S_COMPLETE\000"
+ 11250      434F4D50 
+ 11250      4C455445 
+ 11250      00
+ 11251              	.LASF243:
+ 11252 1be7 52455345 		.ascii	"RESERVED0\000"
+>>>>>>> nouvelle_calibration
  11252      52564544 
  11252      3200
  11253              	.LASF250:
@@ -13221,6 +15534,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11257              	.LASF254:
  11258 1bb6 52455345 		.ascii	"RESERVED5\000"
  11258      52564544 
+<<<<<<< HEAD
  11258      3500
  11259              	.LASF819:
  11260 1bc0 55534245 		.ascii	"USBEndpointConfig\000"
@@ -13470,6 +15784,257 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11376      697800
  11377              	.LASF229:
  11378 1e37 4A445233 		.ascii	"JDR3\000"
+=======
+ 11258      3300
+ 11259              	.LASF252:
+ 11260 1c0f 52455345 		.ascii	"RESERVED4\000"
+ 11260      52564544 
+ 11260      3400
+ 11261              	.LASF254:
+ 11262 1c19 52455345 		.ascii	"RESERVED5\000"
+ 11262      52564544 
+ 11262      3500
+ 11263              	.LASF819:
+ 11264 1c23 55534245 		.ascii	"USBEndpointConfig\000"
+ 11264      6E64706F 
+ 11264      696E7443 
+ 11264      6F6E6669 
+ 11264      6700
+ 11265              	.LASF258:
+ 11266 1c35 44485231 		.ascii	"DHR12R1\000"
+ 11266      32523100 
+ 11267              	.LASF261:
+ 11268 1c3d 44485231 		.ascii	"DHR12R2\000"
+ 11268      32523200 
+ 11269              	.LASF527:
+ 11270 1c45 65787463 		.ascii	"extcallback_t\000"
+ 11270      616C6C62 
+ 11270      61636B5F 
+ 11270      7400
+ 11271              	.LASF483:
+ 11272 1c53 72787175 		.ascii	"rxqueue\000"
+ 11272      65756500 
+ 11273              	.LASF306:
+ 11274 1c5b 73655F74 		.ascii	"se_time\000"
+ 11274      696D6500 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 222
+
+
+ 11275              	.LASF767:
+ 11276 1c63 72657376 		.ascii	"resvd444\000"
+ 11276      64343434 
+ 11276      00
+ 11277              	.LASF435:
+ 11278 1c6c 70616C5F 		.ascii	"pal_default_config\000"
+ 11278      64656661 
+ 11278      756C745F 
+ 11278      636F6E66 
+ 11278      696700
+ 11279              	.LASF453:
+ 11280 1c7f 67727070 		.ascii	"grpp\000"
+ 11280      00
+ 11281              	.LASF264:
+ 11282 1c84 44485231 		.ascii	"DHR12RD\000"
+ 11282      32524400 
+ 11283              	.LASF366:
+ 11284 1c8c 656C5F6C 		.ascii	"el_listener\000"
+ 11284      69737465 
+ 11284      6E657200 
+ 11285              	.LASF797:
+ 11286 1c98 6C696E65 		.ascii	"linear\000"
+ 11286      617200
+ 11287              	.LASF827:
+ 11288 1c9f 6C656674 		.ascii	"left_motor_current_speed\000"
+ 11288      5F6D6F74 
+ 11288      6F725F63 
+ 11288      75727265 
+ 11288      6E745F73 
+ 11289              	.LASF551:
+ 11290 1cb8 73746D33 		.ascii	"stm32_tim_t\000"
+ 11290      325F7469 
+ 11290      6D5F7400 
+ 11291              	.LASF186:
+ 11292 1cc4 725F7072 		.ascii	"r_prio\000"
+ 11292      696F00
+ 11293              	.LASF684:
+ 11294 1ccb 706D6E65 		.ascii	"pmnext\000"
+ 11294      787400
+ 11295              	.LASF215:
+ 11296 1cd2 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 11296      52784275 
+ 11296      66666572 
+ 11296      00
+ 11297              	.LASF836:
+ 11298 1cdf 676F5F73 		.ascii	"go_slow\000"
+ 11298      6C6F7700 
+ 11299              	.LASF405:
+ 11300 1ce7 426C6F63 		.ascii	"BlockDeviceInfo\000"
+ 11300      6B446576 
+ 11300      69636549 
+ 11300      6E666F00 
+ 11301              	.LASF14:
+ 11302 1cf7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 11302      206C6F6E 
+ 11302      6720756E 
+ 11302      7369676E 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 223
+
+
+ 11302      65642069 
+ 11303              	.LASF293:
+ 11304 1d0e 5344494F 		.ascii	"SDIO_TypeDef\000"
+ 11304      5F547970 
+ 11304      65446566 
+ 11304      00
+ 11305              	.LASF315:
+ 11306 1d1b 6F666673 		.ascii	"offset\000"
+ 11306      657400
+ 11307              	.LASF669:
+ 11308 1d22 53504944 		.ascii	"SPID1\000"
+ 11308      3100
+ 11309              	.LASF270:
+ 11310 1d28 4E445452 		.ascii	"NDTR\000"
+ 11310      00
+ 11311              	.LASF371:
+ 11312 1d2d 65735F6E 		.ascii	"es_next\000"
+ 11312      65787400 
+ 11313              	.LASF107:
+ 11314 1d35 5F67616D 		.ascii	"_gamma_signgam\000"
+ 11314      6D615F73 
+ 11314      69676E67 
+ 11314      616D00
+ 11315              	.LASF733:
+ 11316 1d44 72657376 		.ascii	"resvd1C\000"
+ 11316      64314300 
+ 11317              	.LASF214:
+ 11318 1d4c 69646C65 		.ascii	"idle_thread_wa\000"
+ 11318      5F746872 
+ 11318      6561645F 
+ 11318      776100
+ 11319              	.LASF729:
+ 11320 1d5b 44494550 		.ascii	"DIEPINT\000"
+ 11320      494E5400 
+ 11321              	.LASF837:
+ 11322 1d63 7475726E 		.ascii	"turn\000"
+ 11322      00
+ 11323              	.LASF299:
+ 11324 1d68 5350495F 		.ascii	"SPI_TypeDef\000"
+ 11324      54797065 
+ 11324      44656600 
+ 11325              	.LASF197:
+ 11326 1d74 76745F66 		.ascii	"vt_func\000"
+ 11326      756E6300 
+ 11327              	.LASF542:
+ 11328 1d7c 534D4352 		.ascii	"SMCR\000"
+ 11328      00
+ 11329              	.LASF774:
+ 11330 1d81 444F4550 		.ascii	"DOEPMSK\000"
+ 11330      4D534B00 
+ 11331              	.LASF828:
+ 11332 1d89 6765745F 		.ascii	"get_left_speed\000"
+ 11332      6C656674 
+ 11332      5F737065 
+ 11332      656400
+ 11333              	.LASF193:
+ 11334 1d98 63685F76 		.ascii	"ch_virtual_timer\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 224
+
+
+ 11334      69727475 
+ 11334      616C5F74 
+ 11334      696D6572 
+ 11334      00
+ 11335              	.LASF166:
+ 11336 1da9 705F666C 		.ascii	"p_flags\000"
+ 11336      61677300 
+ 11337              	.LASF333:
+ 11338 1db1 65776D61 		.ascii	"ewmask\000"
+ 11338      736B00
+ 11339              	.LASF368:
+ 11340 1db8 656C5F66 		.ascii	"el_flags\000"
+ 11340      6C616773 
+ 11340      00
+ 11341              	.LASF370:
+ 11342 1dc1 6576656E 		.ascii	"event_source\000"
+ 11342      745F736F 
+ 11342      75726365 
+ 11342      00
+ 11343              	.LASF174:
+ 11344 1dce 705F6D74 		.ascii	"p_mtxlist\000"
+ 11344      786C6973 
+ 11344      7400
+ 11345              	.LASF490:
+ 11346 1dd8 43414E44 		.ascii	"CAND1\000"
+ 11346      3100
+ 11347              	.LASF249:
+ 11348 1dde 46533152 		.ascii	"FS1R\000"
+ 11348      00
+ 11349              	.LASF145:
+ 11350 1de3 74737461 		.ascii	"tstate_t\000"
+ 11350      74655F74 
+ 11350      00
+ 11351              	.LASF128:
+ 11352 1dec 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 11352      62616C5F 
+ 11352      696D7075 
+ 11352      72655F70 
+ 11352      747200
+ 11353              	.LASF775:
+ 11354 1dff 4441494E 		.ascii	"DAINT\000"
+ 11354      5400
+ 11355              	.LASF668:
+ 11356 1e05 53504943 		.ascii	"SPIConfig\000"
+ 11356      6F6E6669 
+ 11356      6700
+ 11357              	.LASF79:
+ 11358 1e0f 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 11358      70656369 
+ 11358      66696564 
+ 11358      5F6C6F63 
+ 11358      616C655F 
+ 11359              	.LASF420:
+ 11360 1e28 70757064 		.ascii	"pupdr\000"
+ 11360      7200
+ 11361              	.LASF510:
+ 11362 1e2e 64616365 		.ascii	"dacerrorcallback_t\000"
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 225
+
+
+ 11362      72726F72 
+ 11362      63616C6C 
+ 11362      6261636B 
+ 11362      5F7400
+ 11363              	.LASF671:
+ 11364 1e41 7472616E 		.ascii	"transmitting\000"
+ 11364      736D6974 
+ 11364      74696E67 
+ 11364      00
+ 11365              	.LASF530:
+ 11366 1e4e 6368616E 		.ascii	"channels\000"
+ 11366      6E656C73 
+ 11366      00
+ 11367              	.LASF280:
+ 11368 1e57 434C4B43 		.ascii	"CLKCR\000"
+ 11368      5200
+ 11369              	.LASF643:
+ 11370 1e5d 53444344 		.ascii	"SDCDriver\000"
+ 11370      72697665 
+ 11370      7200
+ 11371              	.LASF163:
+ 11372 1e67 705F6E61 		.ascii	"p_name\000"
+ 11372      6D6500
+ 11373              	.LASF81:
+ 11374 1e6e 5F5F7364 		.ascii	"__sdidinit\000"
+ 11374      6964696E 
+ 11374      697400
+ 11375              	.LASF625:
+ 11376 1e79 53657269 		.ascii	"SerialDriver\000"
+ 11376      616C4472 
+ 11376      69766572 
+ 11376      00
+ 11377              	.LASF227:
+ 11378 1e86 4A445231 		.ascii	"JDR1\000"
+>>>>>>> nouvelle_calibration
  11378      00
  11379              	.LASF230:
  11380 1e3c 4A445234 		.ascii	"JDR4\000"
@@ -13478,6 +16043,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11382 1e41 444F4550 		.ascii	"DOEPTSIZ\000"
  11382      5453495A 
  11382      00
+<<<<<<< HEAD
  11383              	.LASF438:
  11384 1e4a 4144435F 		.ascii	"ADC_READY\000"
  11384      52454144 
@@ -13502,6 +16068,29 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
 
 
  11392      64343043 
+=======
+ 11383              	.LASF230:
+ 11384 1e9f 4A445234 		.ascii	"JDR4\000"
+ 11384      00
+ 11385              	.LASF737:
+ 11386 1ea4 444F4550 		.ascii	"DOEPTSIZ\000"
+ 11386      5453495A 
+ 11386      00
+ 11387              	.LASF438:
+ 11388 1ead 4144435F 		.ascii	"ADC_READY\000"
+ 11388      52454144 
+ 11388      5900
+ 11389              	.LASF350:
+ 11390 1eb7 63665F6F 		.ascii	"cf_off_ctx\000"
+ 11390      66665F63 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 226
+
+
+ 11390      747800
+ 11391              	.LASF27:
+ 11392 1ec2 5F666C6F 		.ascii	"_flock_t\000"
+ 11392      636B5F74 
+>>>>>>> nouvelle_calibration
  11392      00
  11393              	.LASF834:
  11394 1e87 6C656674 		.ascii	"left_motor_new_speed\000"
@@ -13513,6 +16102,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11396 1e9c 63697263 		.ascii	"circular\000"
  11396      756C6172 
  11396      00
+<<<<<<< HEAD
  11397              	.LASF593:
  11398 1ea5 69327373 		.ascii	"i2sstate_t\000"
  11398      74617465 
@@ -13587,6 +16177,84 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11431              	.LASF447:
  11432 1f59 61646365 		.ascii	"adcerror_t\000"
  11432      72726F72 
+=======
+ 11397              	.LASF834:
+ 11398 1eea 6C656674 		.ascii	"left_motor_new_speed\000"
+ 11398      5F6D6F74 
+ 11398      6F725F6E 
+ 11398      65775F73 
+ 11398      70656564 
+ 11399              	.LASF460:
+ 11400 1eff 63697263 		.ascii	"circular\000"
+ 11400      756C6172 
+ 11400      00
+ 11401              	.LASF593:
+ 11402 1f08 69327373 		.ascii	"i2sstate_t\000"
+ 11402      74617465 
+ 11402      5F7400
+ 11403              	.LASF417:
+ 11404 1f13 6D6F6465 		.ascii	"moder\000"
+ 11404      7200
+ 11405              	.LASF664:
+ 11406 1f19 53504944 		.ascii	"SPIDriver\000"
+ 11406      72697665 
+ 11406      7200
+ 11407              	.LASF335:
+ 11408 1f23 735F7175 		.ascii	"s_queue\000"
+ 11408      65756500 
+ 11409              	.LASF324:
+ 11410 1f2b 6D5F6372 		.ascii	"m_crit_thd\000"
+ 11410      69745F74 
+ 11410      686400
+ 11411              	.LASF492:
+ 11412 1f36 4441435F 		.ascii	"DAC_STOP\000"
+ 11412      53544F50 
+ 11412      00
+ 11413              	.LASF768:
+ 11414 1f3f 72657376 		.ascii	"resvd700\000"
+ 11414      64373030 
+ 11414      00
+ 11415              	.LASF297:
+ 11416 1f48 49325343 		.ascii	"I2SCFGR\000"
+ 11416      46475200 
+ 11417              	.LASF831:
+ 11418 1f50 676F5F66 		.ascii	"go_for_distance\000"
+ 11418      6F725F64 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 227
+
+
+ 11418      69737461 
+ 11418      6E636500 
+ 11419              	.LASF342:
+ 11420 1f60 63685F69 		.ascii	"ch_identifier\000"
+ 11420      64656E74 
+ 11420      69666965 
+ 11420      7200
+ 11421              	.LASF635:
+ 11422 1f6e 77726974 		.ascii	"writet\000"
+ 11422      657400
+ 11423              	.LASF12:
+ 11424 1f75 6C6F6E67 		.ascii	"long long int\000"
+ 11424      206C6F6E 
+ 11424      6720696E 
+ 11424      7400
+ 11425              	.LASF755:
+ 11426 1f83 48505458 		.ascii	"HPTXFSIZ\000"
+ 11426      4653495A 
+ 11426      00
+ 11427              	.LASF349:
+ 11428 1f8c 63665F6F 		.ascii	"cf_off_prio\000"
+ 11428      66665F70 
+ 11428      72696F00 
+ 11429              	.LASF71:
+ 11430 1f98 5F666C61 		.ascii	"_flags2\000"
+ 11430      67733200 
+ 11431              	.LASF321:
+ 11432 1fa0 74696D65 		.ascii	"time_measurement_t\000"
+ 11432      5F6D6561 
+ 11432      73757265 
+ 11432      6D656E74 
+>>>>>>> nouvelle_calibration
  11432      5F7400
  11433              	.LASF821:
  11434 1f64 6765745F 		.ascii	"get_descriptor_cb\000"
@@ -13611,6 +16279,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11442      4F4D6169 
  11442      6C426F78 
  11442      00
+<<<<<<< HEAD
  11443              	.LASF648:
  11444 1fa2 6275735F 		.ascii	"bus_width\000"
  11444      77696474 
@@ -13764,6 +16433,164 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11514      00
  11515              	.LASF468:
  11516 210b 73717233 		.ascii	"sqr3\000"
+=======
+ 11443              	.LASF660:
+ 11444 1fee 5350495F 		.ascii	"SPI_READY\000"
+ 11444      52454144 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 228
+
+
+ 11444      5900
+ 11445              	.LASF245:
+ 11446 1ff8 73464946 		.ascii	"sFIFOMailBox\000"
+ 11446      4F4D6169 
+ 11446      6C426F78 
+ 11446      00
+ 11447              	.LASF648:
+ 11448 2005 6275735F 		.ascii	"bus_width\000"
+ 11448      77696474 
+ 11448      6800
+ 11449              	.LASF266:
+ 11450 200f 44485238 		.ascii	"DHR8RD\000"
+ 11450      524400
+ 11451              	.LASF770:
+ 11452 2016 4443544C 		.ascii	"DCTL\000"
+ 11452      00
+ 11453              	.LASF650:
+ 11454 201b 53444344 		.ascii	"SDCDriverVMT\000"
+ 11454      72697665 
+ 11454      72564D54 
+ 11454      00
+ 11455              	.LASF796:
+ 11456 2028 74786275 		.ascii	"txbuf\000"
+ 11456      6600
+ 11457              	.LASF789:
+ 11458 202e 50434743 		.ascii	"PCGCCTL\000"
+ 11458      43544C00 
+ 11459              	.LASF707:
+ 11460 2036 5553425F 		.ascii	"USB_EVENT_WAKEUP\000"
+ 11460      4556454E 
+ 11460      545F5741 
+ 11460      4B455550 
+ 11460      00
+ 11461              	.LASF162:
+ 11462 2047 705F6F6C 		.ascii	"p_older\000"
+ 11462      64657200 
+ 11463              	.LASF401:
+ 11464 204f 424C4B5F 		.ascii	"BLK_SYNCING\000"
+ 11464      53594E43 
+ 11464      494E4700 
+ 11465              	.LASF432:
+ 11466 205b 50494461 		.ascii	"PIData\000"
+ 11466      746100
+ 11467              	.LASF840:
+ 11468 2062 72696768 		.ascii	"right_motor_set_pos\000"
+ 11468      745F6D6F 
+ 11468      746F725F 
+ 11468      7365745F 
+ 11468      706F7300 
+ 11469              	.LASF818:
+ 11470 2076 73657475 		.ascii	"setup_buf\000"
+ 11470      705F6275 
+ 11470      6600
+ 11471              	.LASF752:
+ 11472 2080 72657376 		.ascii	"resvd34\000"
+ 11472      64333400 
+ 11473              	.LASF557:
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 229
+
+
+ 11474 2088 47505444 		.ascii	"GPTD6\000"
+ 11474      3600
+ 11475              	.LASF463:
+ 11476 208e 6572726F 		.ascii	"error_cb\000"
+ 11476      725F6362 
+ 11476      00
+ 11477              	.LASF397:
+ 11478 2097 424C4B5F 		.ascii	"BLK_DISCONNECTING\000"
+ 11478      44495343 
+ 11478      4F4E4E45 
+ 11478      4354494E 
+ 11478      4700
+ 11479              	.LASF666:
+ 11480 20a9 7373706F 		.ascii	"ssport\000"
+ 11480      727400
+ 11481              	.LASF843:
+ 11482 20b0 72696768 		.ascii	"right_motor_get_pos\000"
+ 11482      745F6D6F 
+ 11482      746F725F 
+ 11482      6765745F 
+ 11482      706F7300 
+ 11483              	.LASF178:
+ 11484 20c4 74687265 		.ascii	"thread_reference_t\000"
+ 11484      61645F72 
+ 11484      65666572 
+ 11484      656E6365 
+ 11484      5F7400
+ 11485              	.LASF526:
+ 11486 20d7 65787063 		.ascii	"expchannel_t\000"
+ 11486      68616E6E 
+ 11486      656C5F74 
+ 11486      00
+ 11487              	.LASF672:
+ 11488 20e4 72656365 		.ascii	"receiving\000"
+ 11488      6976696E 
+ 11488      6700
+ 11489              	.LASF95:
+ 11490 20ee 5F5F4649 		.ascii	"__FILE\000"
+ 11490      4C4500
+ 11491              	.LASF553:
+ 11492 20f5 66726571 		.ascii	"frequency\000"
+ 11492      75656E63 
+ 11492      7900
+ 11493              	.LASF31:
+ 11494 20ff 5F736967 		.ascii	"_sign\000"
+ 11494      6E00
+ 11495              	.LASF815:
+ 11496 2105 696E5F73 		.ascii	"in_state\000"
+ 11496      74617465 
+ 11496      00
+ 11497              	.LASF36:
+ 11498 210e 5F5F746D 		.ascii	"__tm_min\000"
+ 11498      5F6D696E 
+ 11498      00
+ 11499              	.LASF343:
+ 11500 2117 63685F7A 		.ascii	"ch_zero\000"
+ 11500      65726F00 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 230
+
+
+ 11501              	.LASF573:
+ 11502 211f 46415354 		.ascii	"FAST_DUTY_CYCLE_2\000"
+ 11502      5F445554 
+ 11502      595F4359 
+ 11502      434C455F 
+ 11502      3200
+ 11503              	.LASF288:
+ 11504 2131 44435452 		.ascii	"DCTRL\000"
+ 11504      4C00
+ 11505              	.LASF348:
+ 11506 2137 63685F74 		.ascii	"ch_threadsize\000"
+ 11506      68726561 
+ 11506      6473697A 
+ 11506      6500
+ 11507              	.LASF277:
+ 11508 2145 464C5452 		.ascii	"FLTR\000"
+ 11508      00
+ 11509              	.LASF544:
+ 11510 214a 43434D52 		.ascii	"CCMR1\000"
+ 11510      3100
+ 11511              	.LASF545:
+ 11512 2150 43434D52 		.ascii	"CCMR2\000"
+ 11512      3200
+ 11513              	.LASF549:
+ 11514 2156 43434D52 		.ascii	"CCMR3\000"
+ 11514      3300
+ 11515              	.LASF15:
+ 11516 215c 756E7369 		.ascii	"unsigned int\000"
+ 11516      676E6564 
+ 11516      20696E74 
+>>>>>>> nouvelle_calibration
  11516      00
  11517              	.LASF109:
  11518 2110 5F723438 		.ascii	"_r48\000"
@@ -13771,6 +16598,7 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11519              	.LASF759:
  11520 2115 48464952 		.ascii	"HFIR\000"
  11520      00
+<<<<<<< HEAD
  11521              	.LASF689:
  11522 211a 5553425F 		.ascii	"USB_UNINIT\000"
  11522      554E494E 
@@ -13804,6 +16632,31 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11532      50365F4D 
  11532      696E6970 
  11532      726F6A65 
+=======
+ 11521              	.LASF109:
+ 11522 2173 5F723438 		.ascii	"_r48\000"
+ 11522      00
+ 11523              	.LASF759:
+ 11524 2178 48464952 		.ascii	"HFIR\000"
+ 11524      00
+ 11525              	.LASF689:
+ 11526 217d 5553425F 		.ascii	"USB_UNINIT\000"
+ 11526      554E494E 
+ 11526      495400
+ 11527              	.LASF386:
+ 11528 2188 73747265 		.ascii	"stream\000"
+ 11528      616D00
+ 11529              	.LASF470:
+ 11530 218f 64756D6D 		.ascii	"dummy\000"
+ 11530      7900
+ 11531              	.LASF571:
+ 11532 2195 6932636F 		.ascii	"i2copmode_t\000"
+ 11532      706D6F64 
+ 11532      655F7400 
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 231
+
+
+>>>>>>> nouvelle_calibration
  11533              	.LASF364:
  11534 21b8 6576656E 		.ascii	"event_listener\000"
  11534      745F6C69 
@@ -13864,7 +16717,14 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11560      61787369 
  11560      7A6500
  11561              	.LASF429:
+<<<<<<< HEAD
  11562 2250 50464461 		.ascii	"PFData\000"
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 232
+
+
+ 11562 2239 50464461 		.ascii	"PFData\000"
+>>>>>>> nouvelle_calibration
  11562      746100
  11563              	.LASF522:
  11564 2257 4558545F 		.ascii	"EXT_STOP\000"
@@ -13902,11 +16762,16 @@ ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 1
  11582      74617465 
  11582      5F7400
  11583              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+<<<<<<< HEAD
 ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s 			page 233
+=======
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s 			page 233
+>>>>>>> nouvelle_calibration
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Mouvements.c
+<<<<<<< HEAD
 C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:18     .text.go_slow:00000000 $t
 C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:26     .text.go_slow:00000000 go_slow
 C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:101    .text.go_slow:00000034 $d
@@ -13935,6 +16800,36 @@ C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:710    .bss.left_motor_current_spee
 C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:714    .bss.left_motor_current_speed:00000000 left_motor_current_speed
 C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:717    .bss.right_motor_current_speed:00000000 $d
 C:\Users\afgou\AppData\Local\Temp\ccD2h1Nx.s:721    .bss.right_motor_current_speed:00000000 right_motor_current_speed
+=======
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:18     .text.go_slow:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:26     .text.go_slow:00000000 go_slow
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:101    .text.go_slow:00000034 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:110    .text.go_fast:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:118    .text.go_fast:00000000 go_fast
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:192    .text.go_fast:00000034 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:201    .text.set_speed:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:209    .text.set_speed:00000000 set_speed
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:268    .text.set_speed:00000030 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:275    .text.stop:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:283    .text.stop:00000000 stop
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:357    .text.stop:00000034 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:366    .text.turn:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:374    .text.turn:00000000 turn
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:480    .text.turn:00000080 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:488    .text.go_for_distance:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:496    .text.go_for_distance:00000000 go_for_distance
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:600    .text.go_for_distance:00000080 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:606    .text.get_right_speed:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:614    .text.get_right_speed:00000000 get_right_speed
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:652    .text.get_right_speed:00000020 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:658    .text.get_left_speed:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:666    .text.get_left_speed:00000000 get_left_speed
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:704    .text.get_left_speed:00000020 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:710    .bss.left_motor_current_speed:00000000 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:714    .bss.left_motor_current_speed:00000000 left_motor_current_speed
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:717    .bss.right_motor_current_speed:00000000 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccytwW2k.s:721    .bss.right_motor_current_speed:00000000 right_motor_current_speed
+>>>>>>> nouvelle_calibration
 
 UNDEFINED SYMBOLS
 right_motor_set_speed

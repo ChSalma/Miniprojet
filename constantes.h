@@ -20,9 +20,9 @@
 #define ADJUST_LEFT 10 //[degrees]
 
 //proximity_sensors
-#define FREE_WAY_FRONT 100//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
-#define FREE_WAY_RIGHT 100
-#define FREE_WAY_LEFT 100
+#define FREE_WAY_FRONT 400//un chemin est considéré comme tel si l'on a une valeur inférieure à celle-ci
+#define FREE_WAY_RIGHT 250
+#define FREE_WAY_LEFT 400
 enum{FRONT_RIGHT, FRONT_RIGHT_45DEG, RIGHT_SENS, BACK_RIGHT, BACK_LEFT, LEFT_SENS, FRONT_LEFT_45DEG, FRONT_LEFT};
 
 //maze_mapping

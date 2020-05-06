@@ -18,9 +18,10 @@
 #include <main.h>
 
 #define ROBOT_DIAMETER 7.5f
-#define COEFF 0.7f
+#define COEFF 0.6f
 #define MAZE_UNIT 13
 #define AMBIENT_LIGHT_DIFF_THRESHOLD 20
+#define ANTICIPATION_OFFSET 300
 
 #define BUFFER_SIZE 3
 
@@ -53,13 +54,24 @@ static THD_FUNCTION(ProcessMeasure, arg){
     			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
     		}
     		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
-			if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT) ||(calibrated_prox < FREE_WAY_FRONT))
+    		chprintf((BaseSequentialStream *) &SD3, "id = %d , calibrated = %d\n",i, calibrated_prox);
+    		if(i==FRONT_RIGHT || i==FRONT_LEFT)
+    		{
+    			//si on sait qu'on est de toute façon dans un virage ou carrefour on peut tester plus rapidemeent le capteur avant
+
+    			if(((sensors_values[RIGHT_SENS]==FREE_WAY_DETECTED||sensors_values[LEFT_SENS]==FREE_WAY_DETECTED))&&
+    				(calibrated_prox > (FREE_WAY_FRONT-ANTICIPATION_OFFSET)))
+    				sensors_values[i]= WALL_DETECTED;
+    			else if (calibrated_prox > FREE_WAY_FRONT)
+    				sensors_values[i]= WALL_DETECTED;
+    			else
+    				sensors_values[i]= FREE_WAY_DETECTED;
+    		}
+    		else if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT))
 			{
 				if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
 					sensors_values[i]= WALL_DETECTED;
 				else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
-					sensors_values[i]= WALL_DETECTED;
-				else if(((i == FRONT_RIGHT) || (i==FRONT_LEFT)) && (calibrated_prox > FREE_WAY_FRONT))
 					sensors_values[i]= WALL_DETECTED;
 				else
 					sensors_values[i]= FREE_WAY_DETECTED;
