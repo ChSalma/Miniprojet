@@ -13,13 +13,13 @@
 #include <maze_mapping.h>
 
 #define KP 1
-#define KD 0.5
+#define KD 0.6
 #define MAX_DIFF 30
 #define MAX_DERIV 100
-#define THRESHOLD_45_DEG 200
+#define THRESHOLD_45_DEG 100
 #define THRESHOLD_RIGHT 100
 #define THRESHOLD_LEFT 100
-#define OFFSET 10
+#define OFFSET 10 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
 static THD_WORKING_AREA(waRegulator, 256);
 static THD_FUNCTION(Regulator, arg) {
 

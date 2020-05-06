@@ -64,13 +64,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  21 .debug_ranges 00003da0  00000000  00000000  001491c8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_line   0002ff1d  00000000  00000000  0014cf68  2**0
+ 22 .debug_line   0002ff20  00000000  00000000  0014cf68  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_str    00009228  00000000  00000000  0017ce85  2**0
+ 23 .debug_str    00009228  00000000  00000000  0017ce88  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_frame  000084b0  00000000  00000000  001860b0  2**2
+ 24 .debug_frame  000084b8  00000000  00000000  001860b0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_loc    00017896  00000000  00000000  0018e560  2**0
+ 25 .debug_loc    00017896  00000000  00000000  0018e568  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -134,7 +134,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 20000b20 l     O .data	0000000c ser_cfg.12831
 00000000 l    df *ABS*	00000000 process_sensor.c
 080021c0 l     F .text	0000003c chprintf.constprop.0
-08002200 l     F .text	00000178 ProcessMeasure
+08002200 l     F .text	00000174 ProcessMeasure
 200015b8 l     O .bss	00000001 buffer_state
 200015bc l     O .bss	00000060 data_sensors
 2000161c l     O .bss	00000004 previous_ambient_light_value
@@ -156,7 +156,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 200018dc l     O .bss	00000004 left_motor_current_speed
 200018e0 l     O .bss	00000004 right_motor_current_speed
 00000000 l    df *ABS*	00000000 regulator.c
-08002900 l     F .text	0000011c Regulator
+08002900 l     F .text	00000120 Regulator
 200018e4 l     O .bss	00000004 last_difference.11894
 200018e8 l     O .bss	00000278 waRegulator
 08011540 l     O .text	0000000a __FUNCTION__.11889
