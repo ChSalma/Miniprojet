@@ -21,7 +21,7 @@
 #define ROBOT_DIAMETER 7.5f
 #define COEFF 0.5f
 #define MAZE_UNIT 13
-#define AMBIENT_LIGHT_DIFF_THRESHOLD 50
+//#define AMBIENT_LIGHT_DIFF_THRESHOLD 50
 #define ANTICIPATION_OFFSET 300
 
 #define BUFFER_SIZE 3
@@ -30,120 +30,131 @@ enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
 static bool leaving_corridor;
 static bool sensors_values[PROXIMITY_NB_CHANNELS];
-static int previous_ambient_light_value, reference_distance;
+static int reference_distance;
 static int data_sensors[PROXIMITY_NB_CHANNELS*BUFFER_SIZE];
 static uint8_t buffer_state;
 
 static THD_WORKING_AREA(waProcessMeasure,256);
-//INTERNAL FUNCTIONS
+/*INTERNAL FUNCTIONS*/
 
-void do_follow_wall_regulation(int);
+void do_follow_wall_regulation(int sensor_id)
+{
+	if (leaving_corridor)
+		reference_distance=1.1*data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS];
 
+	regulator_follow_wall(reference_distance, data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS], sensor_id);
+}
+void process_sensors_values(void)
+{
+	uint8_t i, j;
+	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
+	{
+		int calibrated_prox = 0;
+		data_sensors[i + buffer_state*PROXIMITY_NB_CHANNELS] = get_calibrated_prox(i);
+		for(j = 0; j < BUFFER_SIZE; j++)
+		{
+			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
+		}
+		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
+		//chprintf((BaseSequentialStream *) &SD3, "id = %d , calibrated = %d\n",i, calibrated_prox);
+		if(i==FRONT_RIGHT || i==FRONT_LEFT)
+		{
+			//si on sait qu'on est de toute façon dans un virage ou carrefour on peut tester plus rapidemeent le capteur avant
+
+			if(((sensors_values[RIGHT_SENS]==FREE_WAY_DETECTED||sensors_values[LEFT_SENS]==FREE_WAY_DETECTED))&&
+				(calibrated_prox > (FREE_WAY_FRONT-ANTICIPATION_OFFSET)))
+				sensors_values[i]= WALL_DETECTED;
+			else if (calibrated_prox > FREE_WAY_FRONT)
+				sensors_values[i]= WALL_DETECTED;
+			else
+			{
+				sensors_values[i]= FREE_WAY_DETECTED;
+			}
+		}
+		else if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT))
+		{
+			if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
+				sensors_values[i]= WALL_DETECTED;
+			else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
+				sensors_values[i]= WALL_DETECTED;
+			else
+			{
+				sensors_values[i]= FREE_WAY_DETECTED;
+			}
+		}
+		else
+		{
+			sensors_values[i]= WALL_DETECTED;
+		}
+	}
+
+	sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
+	sensors_values[BACK_LEFT]= FREE_WAY_DETECTED;
+
+	if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))
+		sensors_values[FRONT_RIGHT] = WALL_DETECTED;
+	else
+	{
+		sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
+	}
+}
+
+/*THREAD*/
 static THD_FUNCTION(ProcessMeasure, arg){
 
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 
     while(1){
-        //starts getting informations
-    	uint8_t i, j, next_order;
-    	int current_ambient_light_value = get_ambient_light(RIGHT_SENS);
-    	//version avec moyenne mobile//
-    	for(i = 0; i < PROXIMITY_NB_CHANNELS; i++)
-    	{
-    		int calibrated_prox = 0;
-    		data_sensors[i + buffer_state*PROXIMITY_NB_CHANNELS] = get_calibrated_prox(i);
-    		for(j = 0; j < BUFFER_SIZE; j++)
-    		{
-    			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
-    		}
-    		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
-    		//chprintf((BaseSequentialStream *) &SD3, "id = %d , calibrated = %d\n",i, calibrated_prox);
-    		if(i==FRONT_RIGHT || i==FRONT_LEFT)
-    		{
-    			//si on sait qu'on est de toute façon dans un virage ou carrefour on peut tester plus rapidemeent le capteur avant
+    	uint8_t next_order;
+    	/*DETECTION DE L'ENVIRONNEMENT*/
+    	process_sensors_values();
 
-    			if(((sensors_values[RIGHT_SENS]==FREE_WAY_DETECTED||sensors_values[LEFT_SENS]==FREE_WAY_DETECTED))&&
-    				(calibrated_prox > (FREE_WAY_FRONT-ANTICIPATION_OFFSET)))
-    				sensors_values[i]= WALL_DETECTED;
-    			else if (calibrated_prox > FREE_WAY_FRONT)
-    				sensors_values[i]= WALL_DETECTED;
-    			else
-    			{
-    				sensors_values[i]= FREE_WAY_DETECTED;
-    			}
-    		}
-    		else if ((calibrated_prox < FREE_WAY_LEFT) || (calibrated_prox < FREE_WAY_RIGHT))
-			{
-				if((i == RIGHT_SENS) && (calibrated_prox > FREE_WAY_RIGHT))
-					sensors_values[i]= WALL_DETECTED;
-				else if((i == LEFT_SENS) && (calibrated_prox > FREE_WAY_LEFT))
-					sensors_values[i]= WALL_DETECTED;
-				else
-				{
-					sensors_values[i]= FREE_WAY_DETECTED;
-				}
-			}
-			else
-			{
-				sensors_values[i]= WALL_DETECTED;
-			}
-    	}
+    	/*GO TO THE MIDDLE OF AREA*/
 
-		sensors_values[BACK_RIGHT]= FREE_WAY_DETECTED; //Those sensors won't be used at all
-		sensors_values[BACK_LEFT]= FREE_WAY_DETECTED;
+    	//if the robot is entering a crossroad or a corner he goes in the middle of the unit//
+    	//to be well positioned for next move and for characterization of its environment.//
 
-		if((sensors_values[FRONT_RIGHT] == WALL_DETECTED) && (sensors_values[FRONT_LEFT] == WALL_DETECTED))
-			sensors_values[FRONT_RIGHT] = WALL_DETECTED;
-		else
+		if(leaving_corridor&&(sensors_values[RIGHT_SENS]== FREE_WAY_DETECTED||
+								sensors_values[LEFT_SENS]== FREE_WAY_DETECTED))
 		{
-			sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
+			go_for_distance(COEFF*ROBOT_DIAMETER);
+			stop();
+			leaving_corridor = false;
 		}
 
-		//condition qui permet d'éliminer les valeurs aberrantes liées à un chgt de luminosité brusque
-		if(!((current_ambient_light_value - previous_ambient_light_value) > AMBIENT_LIGHT_DIFF_THRESHOLD || (current_ambient_light_value - previous_ambient_light_value) < -AMBIENT_LIGHT_DIFF_THRESHOLD))
-		{
-			//lorsqu'il entre dans un nouveau carrefour ou un virage le robot avance jusqu'au centre de la case et s'arrête en attendant le prochain ordre
-			if(leaving_corridor&&(sensors_values[RIGHT_SENS]== FREE_WAY_DETECTED||
-									sensors_values[LEFT_SENS]== FREE_WAY_DETECTED))
-			{
-				go_for_distance(COEFF*ROBOT_DIAMETER);
-				stop();
-				leaving_corridor = false;
+		/*ORDER AQUISITION*/
 
-			}
-			//appelle maze_mapping pour connaître le prochain mvt à effectuer
-			next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
-			switch (next_order)
-			{
-			case (KEEP_GOING):
-				go_fast();
-				leaving_corridor = true;
-				break;
-			case(GO_RIGHT):
-				turn(TURN_RIGHT);
-				go_fast();
-				break;
-			case(GO_FORWARD):
-				go_fast();
-				break;
-			case(GO_LEFT):
-				turn(TURN_LEFT);
-				go_fast();
-				break;
-			case(U_TURN):
-				turn(HALF_TURN);
-				go_fast();
-				break;
-			case(DONT_MOVE):
-				stop();
-				break;
-			default:
-				break;
-			}
+		next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
+		switch (next_order)
+		{
+		case (KEEP_GOING):
+			go_fast();
+			leaving_corridor = true;
+			break;
+		case(GO_RIGHT):
+			turn(TURN_RIGHT);
+			go_fast();
+			break;
+		case(GO_FORWARD):
+			go_fast();
+			break;
+		case(GO_LEFT):
+			turn(TURN_LEFT);
+			go_fast();
+			break;
+		case(U_TURN):
+			turn(HALF_TURN);
+			go_fast();
+			break;
+		case(DONT_MOVE):
+			stop();
+			break;
+		default:
+			break;
 		}
 
-		//regulation
+		/*REGULATION*/
 		if(maze_mapping_mode_is_selected())
 		{
 			if ((sensors_values[LEFT_SENS]==WALL_DETECTED)&&(sensors_values[RIGHT_SENS]==WALL_DETECTED))
@@ -163,19 +174,12 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		{
 			buffer_state = 0;
 		}
-		previous_ambient_light_value = current_ambient_light_value;
     	chThdSleepMilliseconds(25);
     }
 }
 
-void do_follow_wall_regulation(int sensor_id)
-{
-	if (leaving_corridor)
-		reference_distance=data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS];
 
-	regulator_follow_wall(reference_distance, data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS], sensor_id);
-}
-
+/*PUBLIC FONCTIONS*/
 void process_sensors_start(void){
 	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO+1, ProcessMeasure, NULL);
 }

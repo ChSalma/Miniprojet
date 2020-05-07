@@ -11,12 +11,12 @@
 #include <constantes.h>
 
 #define KP 1
-#define KP_FW 0.5
+#define KP_FW 0.8
 #define KD 0.5
 #define MAX_DIFF 30
 #define MAX_DERIV 100
-#define THRESHOLD_45_DEG 100
-#define OFFSET 50 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
+#define THRESHOLD_45_DEG 140
+#define OFFSET 0 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
 
 static float last_difference = 0;
 
@@ -64,7 +64,7 @@ void regulator_follow_wall(int reference_value, int current_value, int sensor_id
 	if(difference < -MAX_DIFF)
 		difference = -MAX_DIFF;
 
-	if (sensor_id==LEFT_SENS)
+	if (sensor_id==RIGHT_SENS)//(sensor_id==LEFT_SENS)
 		difference = -difference;
 
 	right_speed = (get_right_speed() + get_left_speed())/2; //moyenne de la vitesse
