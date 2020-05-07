@@ -31,7 +31,7 @@ static int right_motor_current_speed, left_motor_current_speed;
 
 
 /****************************PUBLIC FUNCTIONS*************************************/
-void turn(int angle)
+void turn(int angle, int speed)
 {
 	int nb_steps_to_do;
 	nb_steps_to_do = (int) (angle*NSTEP_ONE_CIRCLE/FULL_TURN);
@@ -39,15 +39,15 @@ void turn(int angle)
 	if (angle>=0)
 	{
 		right_motor_set_pos(0);
-		right_motor_set_speed(HIGH_SPEED);
-		left_motor_set_speed(-HIGH_SPEED);
+		right_motor_set_speed(speed);
+		left_motor_set_speed(-speed);
 		while(right_motor_get_pos() < nb_steps_to_do);
 	}
 	else
 	{
 		left_motor_set_pos(0);
-		right_motor_set_speed(-HIGH_SPEED);
-		left_motor_set_speed(HIGH_SPEED);
+		right_motor_set_speed(-speed);
+		left_motor_set_speed(speed);
 		while(left_motor_get_pos() < -nb_steps_to_do);
 	}
 	stop(); //comme ca le robot arrête de tourner

@@ -8,7 +8,7 @@
 #ifndef MOUVEMENTS_H_
 #define MOUVEMENTS_H_
 
-void turn(int angle); //angle [degrees]
+void turn(int angle, int speed); //angle [degrees]
 void go_slow(void);
 void go_fast(void);
 void set_speed (int right_motor_new_speed, int left_motor_new_speed);

@@ -106,7 +106,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
     while(1){
     	uint8_t next_order;
     	if(maze_mapping_do_a_uturn())
-    		turn(HALF_TURN);
+    		turn(HALF_TURN, HIGH_SPEED);
     	/*DETECTION DE L'ENVIRONNEMENT*/
     	process_sensors_values();
 
@@ -133,18 +133,18 @@ static THD_FUNCTION(ProcessMeasure, arg){
 			leaving_corridor = true;
 			break;
 		case(GO_RIGHT):
-			turn(TURN_RIGHT);
+			turn(TURN_RIGHT, HIGH_SPEED);
 			go_fast();
 			break;
 		case(GO_FORWARD):
 			go_fast();
 			break;
 		case(GO_LEFT):
-			turn(TURN_LEFT);
+			turn(TURN_LEFT, HIGH_SPEED);
 			go_fast();
 			break;
 		case(U_TURN):
-			turn(HALF_TURN);
+			turn(HALF_TURN, HIGH_SPEED);
 			go_fast();
 			break;
 		case(DONT_MOVE):

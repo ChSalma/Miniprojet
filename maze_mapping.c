@@ -246,6 +246,7 @@ uint8_t maze_mapping_next_step_to_goal(void)
 			else
 			{
 				order=U_TURN;
+				uturn_to_do=false;
 				mode=NO_MODE_SELECTED;
 				maze_mapping_victory_dance();
 			}
@@ -381,13 +382,13 @@ void maze_mapping_victory_dance(void)
 {
 	clear_leds();
 	maze_mapping_update_red_leds(TURN_ON, TURN_OFF, TURN_ON, TURN_OFF);
-	turn(-HALF_TURN);
+	turn(-HALF_TURN, ULTRA_HIGH_SPEED);
 	maze_mapping_update_red_leds(TURN_OFF, TURN_ON, TURN_OFF, TURN_ON);
-	turn(-HALF_TURN);
+	turn(-HALF_TURN, ULTRA_HIGH_SPEED);
 	maze_mapping_update_red_leds(TURN_ON, TURN_OFF, TURN_ON, TURN_OFF);
-	turn(HALF_TURN);
+	turn(HALF_TURN, ULTRA_HIGH_SPEED);
 	maze_mapping_update_red_leds(TURN_ON, TURN_ON, TURN_ON, TURN_ON);
-	turn(HALF_TURN);
+	turn(HALF_TURN, ULTRA_HIGH_SPEED);
 	maze_mapping_update_red_leds(TURN_OFF, TURN_OFF, TURN_OFF, TURN_OFF);
 	maze_mapping_update_rgb_leds();
 }
