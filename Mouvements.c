@@ -13,8 +13,8 @@
 #include <constantes.h>
 
 #define NSTEP_ONE_TURN      1000 // number of step for 1 turn of the motor
-#define WHEEL_PERIMETER     13.f // [cm]
-#define MIN_DISPLACEMENT	(WHEEL_PERIMETER/NSTEP_ONE_TURN)
+#define WHEEL_PERIMETER     130.f // [mm]
+#define MIN_DISPLACEMENT	(WHEEL_PERIMETER/NSTEP_ONE_TURN/10)
 #define PI					3.141592f
 #define DISTANCE_WHEELS		5.5f
 #define CIRCLE_PERIMETER	(PI*DISTANCE_WHEELS)
@@ -71,9 +71,9 @@ void set_speed (int right_motor_new_speed, int left_motor_new_speed)
 }
 void stop(void)
 {
-	set_speed (0, 0); //est-ce considéré comme un magic number? faut-il un define?
+	set_speed (0, 0);
 }
-void go_for_distance(int distance) //distance [cm]
+void go_for_distance(int distance) //distance [mm]
 {
 	int nb_steps_to_do;
 	nb_steps_to_do = (int) (distance*NSTEP_ONE_TURN/WHEEL_PERIMETER);

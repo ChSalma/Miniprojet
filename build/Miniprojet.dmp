@@ -56,21 +56,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  17 .comment      0000015e  00000000  00000000  000315d9  2**0
                   CONTENTS, READONLY
- 18 .debug_info   00104f92  00000000  00000000  00031737  2**0
+ 18 .debug_info   00104fbf  00000000  00000000  00031737  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_abbrev 000114ff  00000000  00000000  001366c9  2**0
+ 19 .debug_abbrev 0001153a  00000000  00000000  001366f6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_aranges 00001d10  00000000  00000000  00147bc8  2**3
+ 20 .debug_aranges 00001d10  00000000  00000000  00147c30  2**3
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_ranges 00003d78  00000000  00000000  001498d8  2**0
+ 21 .debug_ranges 00003d48  00000000  00000000  00149940  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_line   00030027  00000000  00000000  0014d650  2**0
+ 22 .debug_line   00030017  00000000  00000000  0014d688  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_str    00009400  00000000  00000000  0017d677  2**0
+ 23 .debug_str    00009400  00000000  00000000  0017d69f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_frame  000086d4  00000000  00000000  00186a78  2**2
+ 24 .debug_frame  000086ec  00000000  00000000  00186aa0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_loc    00017e07  00000000  00000000  0018f14c  2**0
+ 25 .debug_loc    00017d85  00000000  00000000  0018f18c  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -576,7 +576,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 080013d4 g     F .text	00000022 .hidden __floatsidf
 08001fe8 g     F .text	00000082 .hidden __ltdf2
 08005c90 g     F .text	00000044 chThdSuspendS
-080027a0 g     F .text	000000a0 maze_mapping_uturn_after_selecting_mode
+080027b0 g     F .text	000000a0 maze_mapping_uturn_after_selecting_mode
 08006080 g     F .text	0000002c _stats_start_measure_crit_thd
 200099bc g     O .bss	00000010 GPTD11
 08006c00 g     F .text	00000034 chOQObjectInit
@@ -606,12 +606,12 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 200015a8 g       .bss	00000000 _bss_start
 080057f0 g     F .text	00000070 chSchDoRescheduleBehind
 08001930 g     F .text	00000040 .hidden __fixunsdfsi
-08002cd0 g     F .text	00000088 go_for_distance
+08002cd0 g     F .text	0000008c go_for_distance
 20009af4 g     O .bss	00000004 __malloc_top_pad
 20020000 g       *ABS*	00000000 __heap_end__
 20005a8c g     O .bss	00000068 PDM_filter_SPI
 080e0000 g       startup	00000000 _aseba_bytecode_end
-08002ac0 g     F .text	000000b8 maze_mapping_next_move
+08002ad0 g     F .text	000000b0 maze_mapping_next_move
 080013b4 g     F .text	0000001e .hidden __aeabi_ui2d
 08010e00 g     F .text	0000001c _localeconv_r
 08010fb0 g     F .text	00000012 __i2b
@@ -683,12 +683,12 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 08004fb0 g     F .text	00000020 chSysHalt
 0800c150 g     F .text	0000003c Vector118
 08001970 g     F .text	0000009e .hidden __aeabi_d2f
-080024f0 g     F .text	00000074 maze_mapping_corridor_gestion
+080024f0 g     F .text	00000080 maze_mapping_corridor_gestion
 08000470 g     F .text	000002c0 PDM_Filter_64_LSB
 08009e70 g     F .text	00000048 Vector64
 20009af8 g       .bss	00000000 _bss_end
 0800aed0 g     F .text	00000080 sdc_lld_write
-08002840 g     F .text	00000080 maze_mapping_victory_dance
+08002850 g     F .text	00000080 maze_mapping_victory_dance
 08009810 g     F .text	00000098 adc_lld_init
 080001c0 g     F .text	00000000 Reset_Handler
 08004590 g     F .text	0000002c left_motor_set_pos
@@ -801,7 +801,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 20009ac4 g     O .bss	00000028 __malloc_current_mallinfo
 08006180 g     F .text	0000007c chSemWaitS
 080113a0 g     F .text	000000c2 __d2b
-08002a20 g     F .text	000000a0 maze_mapping_crossroad_gestion
+08002a30 g     F .text	000000a0 maze_mapping_crossroad_gestion
 08004e80  w    F .text	00000020 __late_init
 080075a0 g     F .text	00000024 gptInit
 08004a70 g     F .text	00000040 calibrate_ir
@@ -846,7 +846,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 08005170 g     F .text	0000003c _dbg_check_lock_from_isr
 20000000 g       startup	00000000 __ram1_start__
 0800a8f0 g     F .text	00000050 sdc_lld_send_cmd_short
-08002970 g     F .text	000000ac maze_mapping_next_step_to_goal
+08002980 g     F .text	000000ac maze_mapping_next_step_to_goal
 0800e600 g     F .text	00000094 memset
 0800d140 g     F .text	00000006 __ieee754_sqrtf
 08004030 g     F .text	00000084 MemManage_Handler
@@ -903,7 +903,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 08003ed0 g     F .text	000000b0 mpu_configure_region
 08004eb0  w    F .text	0000001c Vector1BC
 08004c70 g     F .text	00000020 _fini
-080028c0 g     F .text	000000b0 maze_mapping_memorise_crossroad
+080028d0 g     F .text	000000b0 maze_mapping_memorise_crossroad
 08003b90 g     F .text	00000180 mp45dt02Init
 08004eb0  w    F .text	0000001c Vector17C
 0800c660 g     F .text	00000038 pwm_lld_enable_periodic_notification
@@ -1023,7 +1023,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 08002c00 g     F .text	00000040 stop
 08004530 g     F .text	00000030 left_motor_get_pos
 20020000 g       *ABS*	00000000 __ram0_end__
-08002750 g     F .text	00000050 maze_mapping_furthest_point_reached
+08002750 g     F .text	00000058 maze_mapping_furthest_point_reached
 0800bc80 g     F .text	00000050 i2s_lld_init
 0800a830 g     F .text	0000002c sdc_lld_stop_clk
 08006c40 g     F .text	000000cc chOQPutTimeout

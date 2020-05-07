@@ -18,10 +18,8 @@
 
 #include <main.h>
 
-#define ROBOT_DIAMETER 7.5f
-#define COEFF 0.5f
-#define MAZE_UNIT 13
-//#define AMBIENT_LIGHT_DIFF_THRESHOLD 50
+#define ROBOT_DIAMETER 75.f
+#define COEFF 0.4f
 #define ANTICIPATION_OFFSET 300
 
 #define BUFFER_SIZE 3

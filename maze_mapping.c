@@ -48,15 +48,18 @@ static uint8_t mode = NO_MODE_SELECTED;
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
+	chprintf((BaseSequentialStream *) &SD3, "corridor: L=%d, R=%d\n", left_status, right_status);
 	if (right_status && left_status)
+	{
+		memorise_crossroad=true;
         return KEEP_GOING;
+	}
 	//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
 	//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
-	memorise_crossroad=false;
 
 	if(maze_mapping_multi_check_case(CORRIDOR))
 	{
-		chprintf((BaseSequentialStream *) &SD3, "corridor: L=%d, R=%d\n", left_status, right_status);
+		memorise_crossroad=false;
 		if (!right_status)
 			return GO_RIGHT;
 		else
@@ -106,7 +109,7 @@ uint8_t maze_mapping_deadend_gestion(void)
 uint8_t maze_mapping_furthest_point_reached(void)
 {
 	furthest_point_reached=false;
-
+	memorise_crossroad=true;
 	if (switch_to_discover_mode)
 	{
 	    mode=DISCOVER;
@@ -193,7 +196,6 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             	return maze_mapping_deadend_gestion();
 
         case CORRIDOR:
-            memorise_crossroad=true;
             if (furthest_point_reached)
             	return maze_mapping_furthest_point_reached();
             else

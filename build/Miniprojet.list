@@ -2902,7 +2902,7 @@ Disassembly of section .text:
  80022a6:	d01a      	beq.n	80022de <process_sensors_values+0x9e>
  80022a8:	2907      	cmp	r1, #7
  80022aa:	d018      	beq.n	80022de <process_sensors_values+0x9e>
- 80022ac:	f5b3 7fc8 	cmp.w	r3, #400	; 0x190
+ 80022ac:	f5b3 7faf 	cmp.w	r3, #350	; 0x15e
  80022b0:	dbd7      	blt.n	8002262 <process_sensors_values+0x22>
  80022b2:	2301      	movs	r3, #1
  80022b4:	2907      	cmp	r1, #7
@@ -2974,7 +2974,7 @@ Disassembly of section .text:
  8002350:	d043      	beq.n	80023da <ProcessMeasure+0xba>
  8002352:	460a      	mov	r2, r1
  8002354:	7820      	ldrb	r0, [r4, #0]
- 8002356:	f000 fbb3 	bl	8002ac0 <maze_mapping_next_move>
+ 8002356:	f000 fbbb 	bl	8002ad0 <maze_mapping_next_move>
  800235a:	2805      	cmp	r0, #5
  800235c:	d809      	bhi.n	8002372 <ProcessMeasure+0x52>
  800235e:	e8df f000 	tbb	[pc, r0]
@@ -3023,7 +3023,7 @@ Disassembly of section .text:
  80023d0:	f000 fc36 	bl	8002c40 <turn>
  80023d4:	f000 fbd4 	bl	8002b80 <go_fast>
  80023d8:	e7cb      	b.n	8002372 <ProcessMeasure+0x52>
- 80023da:	2003      	movs	r0, #3
+ 80023da:	201a      	movs	r0, #26
  80023dc:	f000 fc78 	bl	8002cd0 <go_for_distance>
  80023e0:	f000 fc0e 	bl	8002c00 <stop>
  80023e4:	7037      	strb	r7, [r6, #0]
@@ -3132,56 +3132,60 @@ Disassembly of section .text:
 	...
 
 080024f0 <maze_mapping_corridor_gestion>:
- 80024f0:	b5f0      	push	{r4, r5, r6, r7, lr}
- 80024f2:	4d16      	ldr	r5, [pc, #88]	; (800254c <maze_mapping_corridor_gestion+0x5c>)
- 80024f4:	b083      	sub	sp, #12
- 80024f6:	682b      	ldr	r3, [r5, #0]
- 80024f8:	9301      	str	r3, [sp, #4]
- 80024fa:	460f      	mov	r7, r1
- 80024fc:	4606      	mov	r6, r0
- 80024fe:	b100      	cbz	r0, 8002502 <maze_mapping_corridor_gestion+0x12>
- 8002500:	bb01      	cbnz	r1, 8002544 <maze_mapping_corridor_gestion+0x54>
- 8002502:	4b13      	ldr	r3, [pc, #76]	; (8002550 <maze_mapping_corridor_gestion+0x60>)
- 8002504:	4a13      	ldr	r2, [pc, #76]	; (8002554 <maze_mapping_corridor_gestion+0x64>)
- 8002506:	781c      	ldrb	r4, [r3, #0]
- 8002508:	2000      	movs	r0, #0
- 800250a:	2c02      	cmp	r4, #2
- 800250c:	7010      	strb	r0, [r2, #0]
- 800250e:	d00a      	beq.n	8002526 <maze_mapping_corridor_gestion+0x36>
- 8002510:	4a11      	ldr	r2, [pc, #68]	; (8002558 <maze_mapping_corridor_gestion+0x68>)
- 8002512:	2402      	movs	r4, #2
- 8002514:	7010      	strb	r0, [r2, #0]
- 8002516:	701c      	strb	r4, [r3, #0]
- 8002518:	9a01      	ldr	r2, [sp, #4]
- 800251a:	682b      	ldr	r3, [r5, #0]
- 800251c:	429a      	cmp	r2, r3
- 800251e:	4620      	mov	r0, r4
- 8002520:	d112      	bne.n	8002548 <maze_mapping_corridor_gestion+0x58>
- 8002522:	b003      	add	sp, #12
- 8002524:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8002526:	f7ff ffa3 	bl	8002470 <maze_mapping_multi_check_case.part.0>
- 800252a:	2800      	cmp	r0, #0
- 800252c:	d0f4      	beq.n	8002518 <maze_mapping_corridor_gestion+0x28>
- 800252e:	463a      	mov	r2, r7
- 8002530:	4633      	mov	r3, r6
- 8002532:	490a      	ldr	r1, [pc, #40]	; (800255c <maze_mapping_corridor_gestion+0x6c>)
- 8002534:	480a      	ldr	r0, [pc, #40]	; (8002560 <maze_mapping_corridor_gestion+0x70>)
- 8002536:	f7ff ffbb 	bl	80024b0 <chprintf.constprop.6>
- 800253a:	2e00      	cmp	r6, #0
- 800253c:	bf0c      	ite	eq
- 800253e:	2401      	moveq	r4, #1
- 8002540:	2403      	movne	r4, #3
- 8002542:	e7e9      	b.n	8002518 <maze_mapping_corridor_gestion+0x28>
- 8002544:	2400      	movs	r4, #0
- 8002546:	e7e7      	b.n	8002518 <maze_mapping_corridor_gestion+0x28>
- 8002548:	f7ff fe22 	bl	8002190 <__stack_chk_fail>
- 800254c:	20000b00 	.word	0x20000b00
- 8002550:	20000b2c 	.word	0x20000b2c
- 8002554:	20000b2d 	.word	0x20000b2d
- 8002558:	200018df 	.word	0x200018df
+ 80024f0:	b570      	push	{r4, r5, r6, lr}
+ 80024f2:	4e19      	ldr	r6, [pc, #100]	; (8002558 <maze_mapping_corridor_gestion+0x68>)
+ 80024f4:	b082      	sub	sp, #8
+ 80024f6:	4605      	mov	r5, r0
+ 80024f8:	460c      	mov	r4, r1
+ 80024fa:	6833      	ldr	r3, [r6, #0]
+ 80024fc:	9301      	str	r3, [sp, #4]
+ 80024fe:	4917      	ldr	r1, [pc, #92]	; (800255c <maze_mapping_corridor_gestion+0x6c>)
+ 8002500:	4817      	ldr	r0, [pc, #92]	; (8002560 <maze_mapping_corridor_gestion+0x70>)
+ 8002502:	462b      	mov	r3, r5
+ 8002504:	4622      	mov	r2, r4
+ 8002506:	f7ff ffd3 	bl	80024b0 <chprintf.constprop.6>
+ 800250a:	b105      	cbz	r5, 800250e <maze_mapping_corridor_gestion+0x1e>
+ 800250c:	b9e4      	cbnz	r4, 8002548 <maze_mapping_corridor_gestion+0x58>
+ 800250e:	4b15      	ldr	r3, [pc, #84]	; (8002564 <maze_mapping_corridor_gestion+0x74>)
+ 8002510:	781c      	ldrb	r4, [r3, #0]
+ 8002512:	2c02      	cmp	r4, #2
+ 8002514:	d00b      	beq.n	800252e <maze_mapping_corridor_gestion+0x3e>
+ 8002516:	4a14      	ldr	r2, [pc, #80]	; (8002568 <maze_mapping_corridor_gestion+0x78>)
+ 8002518:	2100      	movs	r1, #0
+ 800251a:	2402      	movs	r4, #2
+ 800251c:	7011      	strb	r1, [r2, #0]
+ 800251e:	701c      	strb	r4, [r3, #0]
+ 8002520:	9a01      	ldr	r2, [sp, #4]
+ 8002522:	6833      	ldr	r3, [r6, #0]
+ 8002524:	429a      	cmp	r2, r3
+ 8002526:	4620      	mov	r0, r4
+ 8002528:	d113      	bne.n	8002552 <maze_mapping_corridor_gestion+0x62>
+ 800252a:	b002      	add	sp, #8
+ 800252c:	bd70      	pop	{r4, r5, r6, pc}
+ 800252e:	f7ff ff9f 	bl	8002470 <maze_mapping_multi_check_case.part.0>
+ 8002532:	2800      	cmp	r0, #0
+ 8002534:	d0f4      	beq.n	8002520 <maze_mapping_corridor_gestion+0x30>
+ 8002536:	4b0d      	ldr	r3, [pc, #52]	; (800256c <maze_mapping_corridor_gestion+0x7c>)
+ 8002538:	2d00      	cmp	r5, #0
+ 800253a:	f04f 0200 	mov.w	r2, #0
+ 800253e:	bf0c      	ite	eq
+ 8002540:	2401      	moveq	r4, #1
+ 8002542:	2403      	movne	r4, #3
+ 8002544:	701a      	strb	r2, [r3, #0]
+ 8002546:	e7eb      	b.n	8002520 <maze_mapping_corridor_gestion+0x30>
+ 8002548:	4b08      	ldr	r3, [pc, #32]	; (800256c <maze_mapping_corridor_gestion+0x7c>)
+ 800254a:	2201      	movs	r2, #1
+ 800254c:	701a      	strb	r2, [r3, #0]
+ 800254e:	2400      	movs	r4, #0
+ 8002550:	e7e6      	b.n	8002520 <maze_mapping_corridor_gestion+0x30>
+ 8002552:	f7ff fe1d 	bl	8002190 <__stack_chk_fail>
+ 8002556:	bf00      	nop
+ 8002558:	20000b00 	.word	0x20000b00
  800255c:	08011a40 	.word	0x08011a40
  8002560:	20009a4c 	.word	0x20009a4c
-	...
+ 8002564:	20000b2c 	.word	0x20000b2c
+ 8002568:	200018df 	.word	0x200018df
+ 800256c:	20000b2d 	.word	0x20000b2d
 
 08002570 <maze_mapping_deadend_gestion>:
  8002570:	b510      	push	{r4, lr}
@@ -3381,453 +3385,452 @@ Disassembly of section .text:
 
 08002750 <maze_mapping_furthest_point_reached>:
  8002750:	b570      	push	{r4, r5, r6, lr}
- 8002752:	4e0f      	ldr	r6, [pc, #60]	; (8002790 <maze_mapping_furthest_point_reached+0x40>)
- 8002754:	4d0f      	ldr	r5, [pc, #60]	; (8002794 <maze_mapping_furthest_point_reached+0x44>)
- 8002756:	4a10      	ldr	r2, [pc, #64]	; (8002798 <maze_mapping_furthest_point_reached+0x48>)
- 8002758:	7833      	ldrb	r3, [r6, #0]
- 800275a:	6829      	ldr	r1, [r5, #0]
- 800275c:	b082      	sub	sp, #8
- 800275e:	2400      	movs	r4, #0
- 8002760:	9101      	str	r1, [sp, #4]
- 8002762:	7014      	strb	r4, [r2, #0]
- 8002764:	b163      	cbz	r3, 8002780 <maze_mapping_furthest_point_reached+0x30>
- 8002766:	4b0d      	ldr	r3, [pc, #52]	; (800279c <maze_mapping_furthest_point_reached+0x4c>)
- 8002768:	2201      	movs	r2, #1
- 800276a:	701a      	strb	r2, [r3, #0]
- 800276c:	f7ff ffa0 	bl	80026b0 <maze_mapping_update_rgb_leds>
- 8002770:	7034      	strb	r4, [r6, #0]
- 8002772:	4620      	mov	r0, r4
- 8002774:	9a01      	ldr	r2, [sp, #4]
- 8002776:	682b      	ldr	r3, [r5, #0]
- 8002778:	429a      	cmp	r2, r3
- 800277a:	d107      	bne.n	800278c <maze_mapping_furthest_point_reached+0x3c>
- 800277c:	b002      	add	sp, #8
- 800277e:	bd70      	pop	{r4, r5, r6, pc}
- 8002780:	4a06      	ldr	r2, [pc, #24]	; (800279c <maze_mapping_furthest_point_reached+0x4c>)
- 8002782:	7013      	strb	r3, [r2, #0]
- 8002784:	f7ff ff94 	bl	80026b0 <maze_mapping_update_rgb_leds>
- 8002788:	2005      	movs	r0, #5
- 800278a:	e7f3      	b.n	8002774 <maze_mapping_furthest_point_reached+0x24>
- 800278c:	f7ff fd00 	bl	8002190 <__stack_chk_fail>
- 8002790:	200018e1 	.word	0x200018e1
- 8002794:	20000b00 	.word	0x20000b00
- 8002798:	200018a9 	.word	0x200018a9
- 800279c:	200018de 	.word	0x200018de
+ 8002752:	4e10      	ldr	r6, [pc, #64]	; (8002794 <maze_mapping_furthest_point_reached+0x44>)
+ 8002754:	4d10      	ldr	r5, [pc, #64]	; (8002798 <maze_mapping_furthest_point_reached+0x48>)
+ 8002756:	4811      	ldr	r0, [pc, #68]	; (800279c <maze_mapping_furthest_point_reached+0x4c>)
+ 8002758:	682b      	ldr	r3, [r5, #0]
+ 800275a:	4911      	ldr	r1, [pc, #68]	; (80027a0 <maze_mapping_furthest_point_reached+0x50>)
+ 800275c:	7832      	ldrb	r2, [r6, #0]
+ 800275e:	b082      	sub	sp, #8
+ 8002760:	2400      	movs	r4, #0
+ 8002762:	9301      	str	r3, [sp, #4]
+ 8002764:	2301      	movs	r3, #1
+ 8002766:	7004      	strb	r4, [r0, #0]
+ 8002768:	700b      	strb	r3, [r1, #0]
+ 800276a:	b15a      	cbz	r2, 8002784 <maze_mapping_furthest_point_reached+0x34>
+ 800276c:	4a0d      	ldr	r2, [pc, #52]	; (80027a4 <maze_mapping_furthest_point_reached+0x54>)
+ 800276e:	7013      	strb	r3, [r2, #0]
+ 8002770:	f7ff ff9e 	bl	80026b0 <maze_mapping_update_rgb_leds>
+ 8002774:	7034      	strb	r4, [r6, #0]
+ 8002776:	4620      	mov	r0, r4
+ 8002778:	9a01      	ldr	r2, [sp, #4]
+ 800277a:	682b      	ldr	r3, [r5, #0]
+ 800277c:	429a      	cmp	r2, r3
+ 800277e:	d107      	bne.n	8002790 <maze_mapping_furthest_point_reached+0x40>
+ 8002780:	b002      	add	sp, #8
+ 8002782:	bd70      	pop	{r4, r5, r6, pc}
+ 8002784:	4b07      	ldr	r3, [pc, #28]	; (80027a4 <maze_mapping_furthest_point_reached+0x54>)
+ 8002786:	701a      	strb	r2, [r3, #0]
+ 8002788:	f7ff ff92 	bl	80026b0 <maze_mapping_update_rgb_leds>
+ 800278c:	2005      	movs	r0, #5
+ 800278e:	e7f3      	b.n	8002778 <maze_mapping_furthest_point_reached+0x28>
+ 8002790:	f7ff fcfe 	bl	8002190 <__stack_chk_fail>
+ 8002794:	200018e1 	.word	0x200018e1
+ 8002798:	20000b00 	.word	0x20000b00
+ 800279c:	200018a9 	.word	0x200018a9
+ 80027a0:	20000b2d 	.word	0x20000b2d
+ 80027a4:	200018de 	.word	0x200018de
+	...
 
-080027a0 <maze_mapping_uturn_after_selecting_mode>:
- 80027a0:	b530      	push	{r4, r5, lr}
- 80027a2:	4a20      	ldr	r2, [pc, #128]	; (8002824 <maze_mapping_uturn_after_selecting_mode+0x84>)
- 80027a4:	4b20      	ldr	r3, [pc, #128]	; (8002828 <maze_mapping_uturn_after_selecting_mode+0x88>)
- 80027a6:	f992 1000 	ldrsb.w	r1, [r2]
- 80027aa:	4c20      	ldr	r4, [pc, #128]	; (800282c <maze_mapping_uturn_after_selecting_mode+0x8c>)
- 80027ac:	5c5a      	ldrb	r2, [r3, r1]
- 80027ae:	6823      	ldr	r3, [r4, #0]
- 80027b0:	b083      	sub	sp, #12
- 80027b2:	2a06      	cmp	r2, #6
- 80027b4:	9301      	str	r3, [sp, #4]
- 80027b6:	4603      	mov	r3, r0
- 80027b8:	d010      	beq.n	80027dc <maze_mapping_uturn_after_selecting_mode+0x3c>
- 80027ba:	2a05      	cmp	r2, #5
- 80027bc:	d018      	beq.n	80027f0 <maze_mapping_uturn_after_selecting_mode+0x50>
- 80027be:	4a1c      	ldr	r2, [pc, #112]	; (8002830 <maze_mapping_uturn_after_selecting_mode+0x90>)
- 80027c0:	7810      	ldrb	r0, [r2, #0]
- 80027c2:	4298      	cmp	r0, r3
- 80027c4:	d00c      	beq.n	80027e0 <maze_mapping_uturn_after_selecting_mode+0x40>
- 80027c6:	2802      	cmp	r0, #2
- 80027c8:	d023      	beq.n	8002812 <maze_mapping_uturn_after_selecting_mode+0x72>
- 80027ca:	2b02      	cmp	r3, #2
- 80027cc:	d024      	beq.n	8002818 <maze_mapping_uturn_after_selecting_mode+0x78>
- 80027ce:	2500      	movs	r5, #0
- 80027d0:	2b01      	cmp	r3, #1
- 80027d2:	d014      	beq.n	80027fe <maze_mapping_uturn_after_selecting_mode+0x5e>
- 80027d4:	7013      	strb	r3, [r2, #0]
- 80027d6:	f7ff ff6b 	bl	80026b0 <maze_mapping_update_rgb_leds>
- 80027da:	e002      	b.n	80027e2 <maze_mapping_uturn_after_selecting_mode+0x42>
- 80027dc:	2802      	cmp	r0, #2
- 80027de:	d0ee      	beq.n	80027be <maze_mapping_uturn_after_selecting_mode+0x1e>
- 80027e0:	2500      	movs	r5, #0
- 80027e2:	9a01      	ldr	r2, [sp, #4]
- 80027e4:	6823      	ldr	r3, [r4, #0]
- 80027e6:	429a      	cmp	r2, r3
- 80027e8:	4628      	mov	r0, r5
- 80027ea:	d118      	bne.n	800281e <maze_mapping_uturn_after_selecting_mode+0x7e>
- 80027ec:	b003      	add	sp, #12
- 80027ee:	bd30      	pop	{r4, r5, pc}
- 80027f0:	2802      	cmp	r0, #2
- 80027f2:	d0f5      	beq.n	80027e0 <maze_mapping_uturn_after_selecting_mode+0x40>
- 80027f4:	4a0e      	ldr	r2, [pc, #56]	; (8002830 <maze_mapping_uturn_after_selecting_mode+0x90>)
- 80027f6:	7810      	ldrb	r0, [r2, #0]
- 80027f8:	4298      	cmp	r0, r3
- 80027fa:	d1e4      	bne.n	80027c6 <maze_mapping_uturn_after_selecting_mode+0x26>
- 80027fc:	e7f0      	b.n	80027e0 <maze_mapping_uturn_after_selecting_mode+0x40>
- 80027fe:	480d      	ldr	r0, [pc, #52]	; (8002834 <maze_mapping_uturn_after_selecting_mode+0x94>)
- 8002800:	f990 0000 	ldrsb.w	r0, [r0]
- 8002804:	4288      	cmp	r0, r1
- 8002806:	d0e5      	beq.n	80027d4 <maze_mapping_uturn_after_selecting_mode+0x34>
- 8002808:	480b      	ldr	r0, [pc, #44]	; (8002838 <maze_mapping_uturn_after_selecting_mode+0x98>)
- 800280a:	2103      	movs	r1, #3
- 800280c:	7003      	strb	r3, [r0, #0]
- 800280e:	7011      	strb	r1, [r2, #0]
- 8002810:	e7e1      	b.n	80027d6 <maze_mapping_uturn_after_selecting_mode+0x36>
- 8002812:	480a      	ldr	r0, [pc, #40]	; (800283c <maze_mapping_uturn_after_selecting_mode+0x9c>)
- 8002814:	7805      	ldrb	r5, [r0, #0]
- 8002816:	e7db      	b.n	80027d0 <maze_mapping_uturn_after_selecting_mode+0x30>
- 8002818:	4908      	ldr	r1, [pc, #32]	; (800283c <maze_mapping_uturn_after_selecting_mode+0x9c>)
- 800281a:	780d      	ldrb	r5, [r1, #0]
- 800281c:	e7da      	b.n	80027d4 <maze_mapping_uturn_after_selecting_mode+0x34>
- 800281e:	f7ff fcb7 	bl	8002190 <__stack_chk_fail>
- 8002822:	bf00      	nop
- 8002824:	200018e0 	.word	0x200018e0
- 8002828:	200018ac 	.word	0x200018ac
- 800282c:	20000b00 	.word	0x20000b00
- 8002830:	200018de 	.word	0x200018de
- 8002834:	200018a8 	.word	0x200018a8
- 8002838:	200018e1 	.word	0x200018e1
- 800283c:	20000b2e 	.word	0x20000b2e
+080027b0 <maze_mapping_uturn_after_selecting_mode>:
+ 80027b0:	b530      	push	{r4, r5, lr}
+ 80027b2:	4a20      	ldr	r2, [pc, #128]	; (8002834 <maze_mapping_uturn_after_selecting_mode+0x84>)
+ 80027b4:	4b20      	ldr	r3, [pc, #128]	; (8002838 <maze_mapping_uturn_after_selecting_mode+0x88>)
+ 80027b6:	f992 1000 	ldrsb.w	r1, [r2]
+ 80027ba:	4c20      	ldr	r4, [pc, #128]	; (800283c <maze_mapping_uturn_after_selecting_mode+0x8c>)
+ 80027bc:	5c5a      	ldrb	r2, [r3, r1]
+ 80027be:	6823      	ldr	r3, [r4, #0]
+ 80027c0:	b083      	sub	sp, #12
+ 80027c2:	2a06      	cmp	r2, #6
+ 80027c4:	9301      	str	r3, [sp, #4]
+ 80027c6:	4603      	mov	r3, r0
+ 80027c8:	d010      	beq.n	80027ec <maze_mapping_uturn_after_selecting_mode+0x3c>
+ 80027ca:	2a05      	cmp	r2, #5
+ 80027cc:	d018      	beq.n	8002800 <maze_mapping_uturn_after_selecting_mode+0x50>
+ 80027ce:	4a1c      	ldr	r2, [pc, #112]	; (8002840 <maze_mapping_uturn_after_selecting_mode+0x90>)
+ 80027d0:	7810      	ldrb	r0, [r2, #0]
+ 80027d2:	4298      	cmp	r0, r3
+ 80027d4:	d00c      	beq.n	80027f0 <maze_mapping_uturn_after_selecting_mode+0x40>
+ 80027d6:	2802      	cmp	r0, #2
+ 80027d8:	d023      	beq.n	8002822 <maze_mapping_uturn_after_selecting_mode+0x72>
+ 80027da:	2b02      	cmp	r3, #2
+ 80027dc:	d024      	beq.n	8002828 <maze_mapping_uturn_after_selecting_mode+0x78>
+ 80027de:	2500      	movs	r5, #0
+ 80027e0:	2b01      	cmp	r3, #1
+ 80027e2:	d014      	beq.n	800280e <maze_mapping_uturn_after_selecting_mode+0x5e>
+ 80027e4:	7013      	strb	r3, [r2, #0]
+ 80027e6:	f7ff ff63 	bl	80026b0 <maze_mapping_update_rgb_leds>
+ 80027ea:	e002      	b.n	80027f2 <maze_mapping_uturn_after_selecting_mode+0x42>
+ 80027ec:	2802      	cmp	r0, #2
+ 80027ee:	d0ee      	beq.n	80027ce <maze_mapping_uturn_after_selecting_mode+0x1e>
+ 80027f0:	2500      	movs	r5, #0
+ 80027f2:	9a01      	ldr	r2, [sp, #4]
+ 80027f4:	6823      	ldr	r3, [r4, #0]
+ 80027f6:	429a      	cmp	r2, r3
+ 80027f8:	4628      	mov	r0, r5
+ 80027fa:	d118      	bne.n	800282e <maze_mapping_uturn_after_selecting_mode+0x7e>
+ 80027fc:	b003      	add	sp, #12
+ 80027fe:	bd30      	pop	{r4, r5, pc}
+ 8002800:	2802      	cmp	r0, #2
+ 8002802:	d0f5      	beq.n	80027f0 <maze_mapping_uturn_after_selecting_mode+0x40>
+ 8002804:	4a0e      	ldr	r2, [pc, #56]	; (8002840 <maze_mapping_uturn_after_selecting_mode+0x90>)
+ 8002806:	7810      	ldrb	r0, [r2, #0]
+ 8002808:	4298      	cmp	r0, r3
+ 800280a:	d1e4      	bne.n	80027d6 <maze_mapping_uturn_after_selecting_mode+0x26>
+ 800280c:	e7f0      	b.n	80027f0 <maze_mapping_uturn_after_selecting_mode+0x40>
+ 800280e:	480d      	ldr	r0, [pc, #52]	; (8002844 <maze_mapping_uturn_after_selecting_mode+0x94>)
+ 8002810:	f990 0000 	ldrsb.w	r0, [r0]
+ 8002814:	4288      	cmp	r0, r1
+ 8002816:	d0e5      	beq.n	80027e4 <maze_mapping_uturn_after_selecting_mode+0x34>
+ 8002818:	480b      	ldr	r0, [pc, #44]	; (8002848 <maze_mapping_uturn_after_selecting_mode+0x98>)
+ 800281a:	2103      	movs	r1, #3
+ 800281c:	7003      	strb	r3, [r0, #0]
+ 800281e:	7011      	strb	r1, [r2, #0]
+ 8002820:	e7e1      	b.n	80027e6 <maze_mapping_uturn_after_selecting_mode+0x36>
+ 8002822:	480a      	ldr	r0, [pc, #40]	; (800284c <maze_mapping_uturn_after_selecting_mode+0x9c>)
+ 8002824:	7805      	ldrb	r5, [r0, #0]
+ 8002826:	e7db      	b.n	80027e0 <maze_mapping_uturn_after_selecting_mode+0x30>
+ 8002828:	4908      	ldr	r1, [pc, #32]	; (800284c <maze_mapping_uturn_after_selecting_mode+0x9c>)
+ 800282a:	780d      	ldrb	r5, [r1, #0]
+ 800282c:	e7da      	b.n	80027e4 <maze_mapping_uturn_after_selecting_mode+0x34>
+ 800282e:	f7ff fcaf 	bl	8002190 <__stack_chk_fail>
+ 8002832:	bf00      	nop
+ 8002834:	200018e0 	.word	0x200018e0
+ 8002838:	200018ac 	.word	0x200018ac
+ 800283c:	20000b00 	.word	0x20000b00
+ 8002840:	200018de 	.word	0x200018de
+ 8002844:	200018a8 	.word	0x200018a8
+ 8002848:	200018e1 	.word	0x200018e1
+ 800284c:	20000b2e 	.word	0x20000b2e
 
-08002840 <maze_mapping_victory_dance>:
- 8002840:	b510      	push	{r4, lr}
- 8002842:	4c1e      	ldr	r4, [pc, #120]	; (80028bc <maze_mapping_victory_dance+0x7c>)
- 8002844:	b082      	sub	sp, #8
- 8002846:	6823      	ldr	r3, [r4, #0]
- 8002848:	9301      	str	r3, [sp, #4]
- 800284a:	f001 fb09 	bl	8003e60 <clear_leds>
- 800284e:	2300      	movs	r3, #0
- 8002850:	2201      	movs	r2, #1
- 8002852:	4619      	mov	r1, r3
- 8002854:	4610      	mov	r0, r2
- 8002856:	f7ff ff03 	bl	8002660 <maze_mapping_update_red_leds>
- 800285a:	f06f 00b3 	mvn.w	r0, #179	; 0xb3
- 800285e:	f000 f9ef 	bl	8002c40 <turn>
- 8002862:	2301      	movs	r3, #1
- 8002864:	2200      	movs	r2, #0
- 8002866:	4619      	mov	r1, r3
- 8002868:	4610      	mov	r0, r2
- 800286a:	f7ff fef9 	bl	8002660 <maze_mapping_update_red_leds>
- 800286e:	f06f 00b3 	mvn.w	r0, #179	; 0xb3
- 8002872:	f000 f9e5 	bl	8002c40 <turn>
- 8002876:	2300      	movs	r3, #0
- 8002878:	2201      	movs	r2, #1
- 800287a:	4619      	mov	r1, r3
- 800287c:	4610      	mov	r0, r2
- 800287e:	f7ff feef 	bl	8002660 <maze_mapping_update_red_leds>
- 8002882:	20b4      	movs	r0, #180	; 0xb4
- 8002884:	f000 f9dc 	bl	8002c40 <turn>
- 8002888:	2301      	movs	r3, #1
- 800288a:	461a      	mov	r2, r3
- 800288c:	4619      	mov	r1, r3
- 800288e:	4618      	mov	r0, r3
- 8002890:	f7ff fee6 	bl	8002660 <maze_mapping_update_red_leds>
- 8002894:	20b4      	movs	r0, #180	; 0xb4
- 8002896:	f000 f9d3 	bl	8002c40 <turn>
- 800289a:	2300      	movs	r3, #0
- 800289c:	461a      	mov	r2, r3
- 800289e:	4619      	mov	r1, r3
- 80028a0:	4618      	mov	r0, r3
- 80028a2:	f7ff fedd 	bl	8002660 <maze_mapping_update_red_leds>
- 80028a6:	9a01      	ldr	r2, [sp, #4]
- 80028a8:	6823      	ldr	r3, [r4, #0]
- 80028aa:	429a      	cmp	r2, r3
- 80028ac:	d104      	bne.n	80028b8 <maze_mapping_victory_dance+0x78>
- 80028ae:	b002      	add	sp, #8
- 80028b0:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
- 80028b4:	f7ff befc 	b.w	80026b0 <maze_mapping_update_rgb_leds>
- 80028b8:	f7ff fc6a 	bl	8002190 <__stack_chk_fail>
- 80028bc:	20000b00 	.word	0x20000b00
+08002850 <maze_mapping_victory_dance>:
+ 8002850:	b510      	push	{r4, lr}
+ 8002852:	4c1e      	ldr	r4, [pc, #120]	; (80028cc <maze_mapping_victory_dance+0x7c>)
+ 8002854:	b082      	sub	sp, #8
+ 8002856:	6823      	ldr	r3, [r4, #0]
+ 8002858:	9301      	str	r3, [sp, #4]
+ 800285a:	f001 fb01 	bl	8003e60 <clear_leds>
+ 800285e:	2300      	movs	r3, #0
+ 8002860:	2201      	movs	r2, #1
+ 8002862:	4619      	mov	r1, r3
+ 8002864:	4610      	mov	r0, r2
+ 8002866:	f7ff fefb 	bl	8002660 <maze_mapping_update_red_leds>
+ 800286a:	f06f 00b3 	mvn.w	r0, #179	; 0xb3
+ 800286e:	f000 f9e7 	bl	8002c40 <turn>
+ 8002872:	2301      	movs	r3, #1
+ 8002874:	2200      	movs	r2, #0
+ 8002876:	4619      	mov	r1, r3
+ 8002878:	4610      	mov	r0, r2
+ 800287a:	f7ff fef1 	bl	8002660 <maze_mapping_update_red_leds>
+ 800287e:	f06f 00b3 	mvn.w	r0, #179	; 0xb3
+ 8002882:	f000 f9dd 	bl	8002c40 <turn>
+ 8002886:	2300      	movs	r3, #0
+ 8002888:	2201      	movs	r2, #1
+ 800288a:	4619      	mov	r1, r3
+ 800288c:	4610      	mov	r0, r2
+ 800288e:	f7ff fee7 	bl	8002660 <maze_mapping_update_red_leds>
+ 8002892:	20b4      	movs	r0, #180	; 0xb4
+ 8002894:	f000 f9d4 	bl	8002c40 <turn>
+ 8002898:	2301      	movs	r3, #1
+ 800289a:	461a      	mov	r2, r3
+ 800289c:	4619      	mov	r1, r3
+ 800289e:	4618      	mov	r0, r3
+ 80028a0:	f7ff fede 	bl	8002660 <maze_mapping_update_red_leds>
+ 80028a4:	20b4      	movs	r0, #180	; 0xb4
+ 80028a6:	f000 f9cb 	bl	8002c40 <turn>
+ 80028aa:	2300      	movs	r3, #0
+ 80028ac:	461a      	mov	r2, r3
+ 80028ae:	4619      	mov	r1, r3
+ 80028b0:	4618      	mov	r0, r3
+ 80028b2:	f7ff fed5 	bl	8002660 <maze_mapping_update_red_leds>
+ 80028b6:	9a01      	ldr	r2, [sp, #4]
+ 80028b8:	6823      	ldr	r3, [r4, #0]
+ 80028ba:	429a      	cmp	r2, r3
+ 80028bc:	d104      	bne.n	80028c8 <maze_mapping_victory_dance+0x78>
+ 80028be:	b002      	add	sp, #8
+ 80028c0:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+ 80028c4:	f7ff bef4 	b.w	80026b0 <maze_mapping_update_rgb_leds>
+ 80028c8:	f7ff fc62 	bl	8002190 <__stack_chk_fail>
+ 80028cc:	20000b00 	.word	0x20000b00
 
-080028c0 <maze_mapping_memorise_crossroad>:
- 80028c0:	b570      	push	{r4, r5, r6, lr}
- 80028c2:	4924      	ldr	r1, [pc, #144]	; (8002954 <maze_mapping_memorise_crossroad+0x94>)
- 80028c4:	4c24      	ldr	r4, [pc, #144]	; (8002958 <maze_mapping_memorise_crossroad+0x98>)
- 80028c6:	f991 3000 	ldrsb.w	r3, [r1]
- 80028ca:	4d24      	ldr	r5, [pc, #144]	; (800295c <maze_mapping_memorise_crossroad+0x9c>)
- 80028cc:	6822      	ldr	r2, [r4, #0]
- 80028ce:	702b      	strb	r3, [r5, #0]
- 80028d0:	b082      	sub	sp, #8
- 80028d2:	9201      	str	r2, [sp, #4]
- 80028d4:	b32b      	cbz	r3, 8002922 <maze_mapping_memorise_crossroad+0x62>
- 80028d6:	4d22      	ldr	r5, [pc, #136]	; (8002960 <maze_mapping_memorise_crossroad+0xa0>)
- 80028d8:	5cea      	ldrb	r2, [r5, r3]
- 80028da:	2a06      	cmp	r2, #6
- 80028dc:	d02e      	beq.n	800293c <maze_mapping_memorise_crossroad+0x7c>
- 80028de:	b1a0      	cbz	r0, 800290a <maze_mapping_memorise_crossroad+0x4a>
- 80028e0:	3202      	adds	r2, #2
- 80028e2:	b2d2      	uxtb	r2, r2
- 80028e4:	2a04      	cmp	r2, #4
- 80028e6:	54ea      	strb	r2, [r5, r3]
- 80028e8:	f04f 0602 	mov.w	r6, #2
- 80028ec:	d014      	beq.n	8002918 <maze_mapping_memorise_crossroad+0x58>
- 80028ee:	2b31      	cmp	r3, #49	; 0x31
- 80028f0:	dc20      	bgt.n	8002934 <maze_mapping_memorise_crossroad+0x74>
- 80028f2:	3301      	adds	r3, #1
- 80028f4:	700b      	strb	r3, [r1, #0]
- 80028f6:	4b1b      	ldr	r3, [pc, #108]	; (8002964 <maze_mapping_memorise_crossroad+0xa4>)
- 80028f8:	2200      	movs	r2, #0
- 80028fa:	701a      	strb	r2, [r3, #0]
- 80028fc:	9a01      	ldr	r2, [sp, #4]
- 80028fe:	6823      	ldr	r3, [r4, #0]
- 8002900:	429a      	cmp	r2, r3
- 8002902:	4630      	mov	r0, r6
- 8002904:	d123      	bne.n	800294e <maze_mapping_memorise_crossroad+0x8e>
- 8002906:	b002      	add	sp, #8
- 8002908:	bd70      	pop	{r4, r5, r6, pc}
- 800290a:	3201      	adds	r2, #1
- 800290c:	b2d2      	uxtb	r2, r2
- 800290e:	2a04      	cmp	r2, #4
- 8002910:	54ea      	strb	r2, [r5, r3]
- 8002912:	f04f 0601 	mov.w	r6, #1
- 8002916:	d1ea      	bne.n	80028ee <maze_mapping_memorise_crossroad+0x2e>
- 8002918:	2200      	movs	r2, #0
- 800291a:	54ea      	strb	r2, [r5, r3]
- 800291c:	3b01      	subs	r3, #1
- 800291e:	700b      	strb	r3, [r1, #0]
- 8002920:	e7e9      	b.n	80028f6 <maze_mapping_memorise_crossroad+0x36>
- 8002922:	4a0f      	ldr	r2, [pc, #60]	; (8002960 <maze_mapping_memorise_crossroad+0xa0>)
- 8002924:	480f      	ldr	r0, [pc, #60]	; (8002964 <maze_mapping_memorise_crossroad+0xa4>)
- 8002926:	2505      	movs	r5, #5
- 8002928:	7015      	strb	r5, [r2, #0]
- 800292a:	2201      	movs	r2, #1
- 800292c:	7003      	strb	r3, [r0, #0]
- 800292e:	700a      	strb	r2, [r1, #0]
- 8002930:	2602      	movs	r6, #2
- 8002932:	e7e3      	b.n	80028fc <maze_mapping_memorise_crossroad+0x3c>
- 8002934:	480c      	ldr	r0, [pc, #48]	; (8002968 <maze_mapping_memorise_crossroad+0xa8>)
- 8002936:	f002 fb3b 	bl	8004fb0 <chSysHalt>
- 800293a:	e7dc      	b.n	80028f6 <maze_mapping_memorise_crossroad+0x36>
- 800293c:	4a0b      	ldr	r2, [pc, #44]	; (800296c <maze_mapping_memorise_crossroad+0xac>)
- 800293e:	3301      	adds	r3, #1
- 8002940:	2000      	movs	r0, #0
- 8002942:	700b      	strb	r3, [r1, #0]
- 8002944:	7010      	strb	r0, [r2, #0]
- 8002946:	2604      	movs	r6, #4
- 8002948:	f7ff ff7a 	bl	8002840 <maze_mapping_victory_dance>
- 800294c:	e7d6      	b.n	80028fc <maze_mapping_memorise_crossroad+0x3c>
- 800294e:	f7ff fc1f 	bl	8002190 <__stack_chk_fail>
- 8002952:	bf00      	nop
- 8002954:	200018a8 	.word	0x200018a8
- 8002958:	20000b00 	.word	0x20000b00
- 800295c:	200018e0 	.word	0x200018e0
- 8002960:	200018ac 	.word	0x200018ac
- 8002964:	20000b2d 	.word	0x20000b2d
- 8002968:	08011a90 	.word	0x08011a90
- 800296c:	200018de 	.word	0x200018de
+080028d0 <maze_mapping_memorise_crossroad>:
+ 80028d0:	b570      	push	{r4, r5, r6, lr}
+ 80028d2:	4924      	ldr	r1, [pc, #144]	; (8002964 <maze_mapping_memorise_crossroad+0x94>)
+ 80028d4:	4c24      	ldr	r4, [pc, #144]	; (8002968 <maze_mapping_memorise_crossroad+0x98>)
+ 80028d6:	f991 3000 	ldrsb.w	r3, [r1]
+ 80028da:	4d24      	ldr	r5, [pc, #144]	; (800296c <maze_mapping_memorise_crossroad+0x9c>)
+ 80028dc:	6822      	ldr	r2, [r4, #0]
+ 80028de:	702b      	strb	r3, [r5, #0]
+ 80028e0:	b082      	sub	sp, #8
+ 80028e2:	9201      	str	r2, [sp, #4]
+ 80028e4:	b32b      	cbz	r3, 8002932 <maze_mapping_memorise_crossroad+0x62>
+ 80028e6:	4d22      	ldr	r5, [pc, #136]	; (8002970 <maze_mapping_memorise_crossroad+0xa0>)
+ 80028e8:	5cea      	ldrb	r2, [r5, r3]
+ 80028ea:	2a06      	cmp	r2, #6
+ 80028ec:	d02e      	beq.n	800294c <maze_mapping_memorise_crossroad+0x7c>
+ 80028ee:	b1a0      	cbz	r0, 800291a <maze_mapping_memorise_crossroad+0x4a>
+ 80028f0:	3202      	adds	r2, #2
+ 80028f2:	b2d2      	uxtb	r2, r2
+ 80028f4:	2a04      	cmp	r2, #4
+ 80028f6:	54ea      	strb	r2, [r5, r3]
+ 80028f8:	f04f 0602 	mov.w	r6, #2
+ 80028fc:	d014      	beq.n	8002928 <maze_mapping_memorise_crossroad+0x58>
+ 80028fe:	2b31      	cmp	r3, #49	; 0x31
+ 8002900:	dc20      	bgt.n	8002944 <maze_mapping_memorise_crossroad+0x74>
+ 8002902:	3301      	adds	r3, #1
+ 8002904:	700b      	strb	r3, [r1, #0]
+ 8002906:	4b1b      	ldr	r3, [pc, #108]	; (8002974 <maze_mapping_memorise_crossroad+0xa4>)
+ 8002908:	2200      	movs	r2, #0
+ 800290a:	701a      	strb	r2, [r3, #0]
+ 800290c:	9a01      	ldr	r2, [sp, #4]
+ 800290e:	6823      	ldr	r3, [r4, #0]
+ 8002910:	429a      	cmp	r2, r3
+ 8002912:	4630      	mov	r0, r6
+ 8002914:	d123      	bne.n	800295e <maze_mapping_memorise_crossroad+0x8e>
+ 8002916:	b002      	add	sp, #8
+ 8002918:	bd70      	pop	{r4, r5, r6, pc}
+ 800291a:	3201      	adds	r2, #1
+ 800291c:	b2d2      	uxtb	r2, r2
+ 800291e:	2a04      	cmp	r2, #4
+ 8002920:	54ea      	strb	r2, [r5, r3]
+ 8002922:	f04f 0601 	mov.w	r6, #1
+ 8002926:	d1ea      	bne.n	80028fe <maze_mapping_memorise_crossroad+0x2e>
+ 8002928:	2200      	movs	r2, #0
+ 800292a:	54ea      	strb	r2, [r5, r3]
+ 800292c:	3b01      	subs	r3, #1
+ 800292e:	700b      	strb	r3, [r1, #0]
+ 8002930:	e7e9      	b.n	8002906 <maze_mapping_memorise_crossroad+0x36>
+ 8002932:	4a0f      	ldr	r2, [pc, #60]	; (8002970 <maze_mapping_memorise_crossroad+0xa0>)
+ 8002934:	480f      	ldr	r0, [pc, #60]	; (8002974 <maze_mapping_memorise_crossroad+0xa4>)
+ 8002936:	2505      	movs	r5, #5
+ 8002938:	7015      	strb	r5, [r2, #0]
+ 800293a:	2201      	movs	r2, #1
+ 800293c:	7003      	strb	r3, [r0, #0]
+ 800293e:	700a      	strb	r2, [r1, #0]
+ 8002940:	2602      	movs	r6, #2
+ 8002942:	e7e3      	b.n	800290c <maze_mapping_memorise_crossroad+0x3c>
+ 8002944:	480c      	ldr	r0, [pc, #48]	; (8002978 <maze_mapping_memorise_crossroad+0xa8>)
+ 8002946:	f002 fb33 	bl	8004fb0 <chSysHalt>
+ 800294a:	e7dc      	b.n	8002906 <maze_mapping_memorise_crossroad+0x36>
+ 800294c:	4a0b      	ldr	r2, [pc, #44]	; (800297c <maze_mapping_memorise_crossroad+0xac>)
+ 800294e:	3301      	adds	r3, #1
+ 8002950:	2000      	movs	r0, #0
+ 8002952:	700b      	strb	r3, [r1, #0]
+ 8002954:	7010      	strb	r0, [r2, #0]
+ 8002956:	2604      	movs	r6, #4
+ 8002958:	f7ff ff7a 	bl	8002850 <maze_mapping_victory_dance>
+ 800295c:	e7d6      	b.n	800290c <maze_mapping_memorise_crossroad+0x3c>
+ 800295e:	f7ff fc17 	bl	8002190 <__stack_chk_fail>
+ 8002962:	bf00      	nop
+ 8002964:	200018a8 	.word	0x200018a8
+ 8002968:	20000b00 	.word	0x20000b00
+ 800296c:	200018e0 	.word	0x200018e0
+ 8002970:	200018ac 	.word	0x200018ac
+ 8002974:	20000b2d 	.word	0x20000b2d
+ 8002978:	08011a90 	.word	0x08011a90
+ 800297c:	200018de 	.word	0x200018de
 
-08002970 <maze_mapping_next_step_to_goal>:
- 8002970:	b530      	push	{r4, r5, lr}
- 8002972:	4923      	ldr	r1, [pc, #140]	; (8002a00 <maze_mapping_next_step_to_goal+0x90>)
- 8002974:	4d23      	ldr	r5, [pc, #140]	; (8002a04 <maze_mapping_next_step_to_goal+0x94>)
- 8002976:	780c      	ldrb	r4, [r1, #0]
- 8002978:	682b      	ldr	r3, [r5, #0]
- 800297a:	b083      	sub	sp, #12
- 800297c:	2c02      	cmp	r4, #2
- 800297e:	9301      	str	r3, [sp, #4]
- 8002980:	d01c      	beq.n	80029bc <maze_mapping_next_step_to_goal+0x4c>
- 8002982:	4b21      	ldr	r3, [pc, #132]	; (8002a08 <maze_mapping_next_step_to_goal+0x98>)
- 8002984:	f993 3000 	ldrsb.w	r3, [r3]
- 8002988:	2b01      	cmp	r3, #1
- 800298a:	dd32      	ble.n	80029f2 <maze_mapping_next_step_to_goal+0x82>
- 800298c:	481f      	ldr	r0, [pc, #124]	; (8002a0c <maze_mapping_next_step_to_goal+0x9c>)
- 800298e:	4c20      	ldr	r4, [pc, #128]	; (8002a10 <maze_mapping_next_step_to_goal+0xa0>)
- 8002990:	f990 2000 	ldrsb.w	r2, [r0]
- 8002994:	5ca4      	ldrb	r4, [r4, r2]
- 8002996:	2c06      	cmp	r4, #6
- 8002998:	d025      	beq.n	80029e6 <maze_mapping_next_step_to_goal+0x76>
- 800299a:	3b01      	subs	r3, #1
- 800299c:	429a      	cmp	r2, r3
- 800299e:	da1e      	bge.n	80029de <maze_mapping_next_step_to_goal+0x6e>
- 80029a0:	3201      	adds	r2, #1
- 80029a2:	7002      	strb	r2, [r0, #0]
- 80029a4:	f7ff fe84 	bl	80026b0 <maze_mapping_update_rgb_leds>
- 80029a8:	9a01      	ldr	r2, [sp, #4]
- 80029aa:	682b      	ldr	r3, [r5, #0]
- 80029ac:	4919      	ldr	r1, [pc, #100]	; (8002a14 <maze_mapping_next_step_to_goal+0xa4>)
- 80029ae:	2500      	movs	r5, #0
- 80029b0:	429a      	cmp	r2, r3
- 80029b2:	4620      	mov	r0, r4
- 80029b4:	700d      	strb	r5, [r1, #0]
- 80029b6:	d121      	bne.n	80029fc <maze_mapping_next_step_to_goal+0x8c>
- 80029b8:	b003      	add	sp, #12
- 80029ba:	bd30      	pop	{r4, r5, pc}
- 80029bc:	4a13      	ldr	r2, [pc, #76]	; (8002a0c <maze_mapping_next_step_to_goal+0x9c>)
- 80029be:	f992 3000 	ldrsb.w	r3, [r2]
- 80029c2:	2b00      	cmp	r3, #0
- 80029c4:	dd0f      	ble.n	80029e6 <maze_mapping_next_step_to_goal+0x76>
- 80029c6:	4912      	ldr	r1, [pc, #72]	; (8002a10 <maze_mapping_next_step_to_goal+0xa0>)
- 80029c8:	5cc8      	ldrb	r0, [r1, r3]
- 80029ca:	2806      	cmp	r0, #6
- 80029cc:	bf18      	it	ne
- 80029ce:	f1c0 0004 	rsbne	r0, r0, #4
- 80029d2:	f103 33ff 	add.w	r3, r3, #4294967295
- 80029d6:	bf18      	it	ne
- 80029d8:	b2c4      	uxtbne	r4, r0
- 80029da:	7013      	strb	r3, [r2, #0]
- 80029dc:	e7e2      	b.n	80029a4 <maze_mapping_next_step_to_goal+0x34>
- 80029de:	4b0e      	ldr	r3, [pc, #56]	; (8002a18 <maze_mapping_next_step_to_goal+0xa8>)
- 80029e0:	2201      	movs	r2, #1
- 80029e2:	701a      	strb	r2, [r3, #0]
- 80029e4:	e7de      	b.n	80029a4 <maze_mapping_next_step_to_goal+0x34>
- 80029e6:	2300      	movs	r3, #0
- 80029e8:	700b      	strb	r3, [r1, #0]
- 80029ea:	2404      	movs	r4, #4
- 80029ec:	f7ff ff28 	bl	8002840 <maze_mapping_victory_dance>
- 80029f0:	e7d8      	b.n	80029a4 <maze_mapping_next_step_to_goal+0x34>
- 80029f2:	4b09      	ldr	r3, [pc, #36]	; (8002a18 <maze_mapping_next_step_to_goal+0xa8>)
- 80029f4:	2201      	movs	r2, #1
- 80029f6:	701a      	strb	r2, [r3, #0]
- 80029f8:	2402      	movs	r4, #2
- 80029fa:	e7d3      	b.n	80029a4 <maze_mapping_next_step_to_goal+0x34>
- 80029fc:	f7ff fbc8 	bl	8002190 <__stack_chk_fail>
- 8002a00:	200018de 	.word	0x200018de
- 8002a04:	20000b00 	.word	0x20000b00
- 8002a08:	200018a8 	.word	0x200018a8
- 8002a0c:	200018e0 	.word	0x200018e0
- 8002a10:	200018ac 	.word	0x200018ac
- 8002a14:	20000b2d 	.word	0x20000b2d
- 8002a18:	200018a9 	.word	0x200018a9
- 8002a1c:	00000000 	.word	0x00000000
+08002980 <maze_mapping_next_step_to_goal>:
+ 8002980:	b530      	push	{r4, r5, lr}
+ 8002982:	4923      	ldr	r1, [pc, #140]	; (8002a10 <maze_mapping_next_step_to_goal+0x90>)
+ 8002984:	4d23      	ldr	r5, [pc, #140]	; (8002a14 <maze_mapping_next_step_to_goal+0x94>)
+ 8002986:	780c      	ldrb	r4, [r1, #0]
+ 8002988:	682b      	ldr	r3, [r5, #0]
+ 800298a:	b083      	sub	sp, #12
+ 800298c:	2c02      	cmp	r4, #2
+ 800298e:	9301      	str	r3, [sp, #4]
+ 8002990:	d01c      	beq.n	80029cc <maze_mapping_next_step_to_goal+0x4c>
+ 8002992:	4b21      	ldr	r3, [pc, #132]	; (8002a18 <maze_mapping_next_step_to_goal+0x98>)
+ 8002994:	f993 3000 	ldrsb.w	r3, [r3]
+ 8002998:	2b01      	cmp	r3, #1
+ 800299a:	dd32      	ble.n	8002a02 <maze_mapping_next_step_to_goal+0x82>
+ 800299c:	481f      	ldr	r0, [pc, #124]	; (8002a1c <maze_mapping_next_step_to_goal+0x9c>)
+ 800299e:	4c20      	ldr	r4, [pc, #128]	; (8002a20 <maze_mapping_next_step_to_goal+0xa0>)
+ 80029a0:	f990 2000 	ldrsb.w	r2, [r0]
+ 80029a4:	5ca4      	ldrb	r4, [r4, r2]
+ 80029a6:	2c06      	cmp	r4, #6
+ 80029a8:	d025      	beq.n	80029f6 <maze_mapping_next_step_to_goal+0x76>
+ 80029aa:	3b01      	subs	r3, #1
+ 80029ac:	429a      	cmp	r2, r3
+ 80029ae:	da1e      	bge.n	80029ee <maze_mapping_next_step_to_goal+0x6e>
+ 80029b0:	3201      	adds	r2, #1
+ 80029b2:	7002      	strb	r2, [r0, #0]
+ 80029b4:	f7ff fe7c 	bl	80026b0 <maze_mapping_update_rgb_leds>
+ 80029b8:	9a01      	ldr	r2, [sp, #4]
+ 80029ba:	682b      	ldr	r3, [r5, #0]
+ 80029bc:	4919      	ldr	r1, [pc, #100]	; (8002a24 <maze_mapping_next_step_to_goal+0xa4>)
+ 80029be:	2500      	movs	r5, #0
+ 80029c0:	429a      	cmp	r2, r3
+ 80029c2:	4620      	mov	r0, r4
+ 80029c4:	700d      	strb	r5, [r1, #0]
+ 80029c6:	d121      	bne.n	8002a0c <maze_mapping_next_step_to_goal+0x8c>
+ 80029c8:	b003      	add	sp, #12
+ 80029ca:	bd30      	pop	{r4, r5, pc}
+ 80029cc:	4a13      	ldr	r2, [pc, #76]	; (8002a1c <maze_mapping_next_step_to_goal+0x9c>)
+ 80029ce:	f992 3000 	ldrsb.w	r3, [r2]
+ 80029d2:	2b00      	cmp	r3, #0
+ 80029d4:	dd0f      	ble.n	80029f6 <maze_mapping_next_step_to_goal+0x76>
+ 80029d6:	4912      	ldr	r1, [pc, #72]	; (8002a20 <maze_mapping_next_step_to_goal+0xa0>)
+ 80029d8:	5cc8      	ldrb	r0, [r1, r3]
+ 80029da:	2806      	cmp	r0, #6
+ 80029dc:	bf18      	it	ne
+ 80029de:	f1c0 0004 	rsbne	r0, r0, #4
+ 80029e2:	f103 33ff 	add.w	r3, r3, #4294967295
+ 80029e6:	bf18      	it	ne
+ 80029e8:	b2c4      	uxtbne	r4, r0
+ 80029ea:	7013      	strb	r3, [r2, #0]
+ 80029ec:	e7e2      	b.n	80029b4 <maze_mapping_next_step_to_goal+0x34>
+ 80029ee:	4b0e      	ldr	r3, [pc, #56]	; (8002a28 <maze_mapping_next_step_to_goal+0xa8>)
+ 80029f0:	2201      	movs	r2, #1
+ 80029f2:	701a      	strb	r2, [r3, #0]
+ 80029f4:	e7de      	b.n	80029b4 <maze_mapping_next_step_to_goal+0x34>
+ 80029f6:	2300      	movs	r3, #0
+ 80029f8:	700b      	strb	r3, [r1, #0]
+ 80029fa:	2404      	movs	r4, #4
+ 80029fc:	f7ff ff28 	bl	8002850 <maze_mapping_victory_dance>
+ 8002a00:	e7d8      	b.n	80029b4 <maze_mapping_next_step_to_goal+0x34>
+ 8002a02:	4b09      	ldr	r3, [pc, #36]	; (8002a28 <maze_mapping_next_step_to_goal+0xa8>)
+ 8002a04:	2201      	movs	r2, #1
+ 8002a06:	701a      	strb	r2, [r3, #0]
+ 8002a08:	2402      	movs	r4, #2
+ 8002a0a:	e7d3      	b.n	80029b4 <maze_mapping_next_step_to_goal+0x34>
+ 8002a0c:	f7ff fbc0 	bl	8002190 <__stack_chk_fail>
+ 8002a10:	200018de 	.word	0x200018de
+ 8002a14:	20000b00 	.word	0x20000b00
+ 8002a18:	200018a8 	.word	0x200018a8
+ 8002a1c:	200018e0 	.word	0x200018e0
+ 8002a20:	200018ac 	.word	0x200018ac
+ 8002a24:	20000b2d 	.word	0x20000b2d
+ 8002a28:	200018a9 	.word	0x200018a9
+ 8002a2c:	00000000 	.word	0x00000000
 
-08002a20 <maze_mapping_crossroad_gestion>:
- 8002a20:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
- 8002a24:	4d1f      	ldr	r5, [pc, #124]	; (8002aa4 <maze_mapping_crossroad_gestion+0x84>)
- 8002a26:	4c20      	ldr	r4, [pc, #128]	; (8002aa8 <maze_mapping_crossroad_gestion+0x88>)
- 8002a28:	782d      	ldrb	r5, [r5, #0]
- 8002a2a:	6826      	ldr	r6, [r4, #0]
- 8002a2c:	b084      	sub	sp, #16
- 8002a2e:	9603      	str	r6, [sp, #12]
- 8002a30:	b145      	cbz	r5, 8002a44 <maze_mapping_crossroad_gestion+0x24>
- 8002a32:	4606      	mov	r6, r0
- 8002a34:	481d      	ldr	r0, [pc, #116]	; (8002aac <maze_mapping_crossroad_gestion+0x8c>)
- 8002a36:	7805      	ldrb	r5, [r0, #0]
- 8002a38:	429d      	cmp	r5, r3
- 8002a3a:	d00c      	beq.n	8002a56 <maze_mapping_crossroad_gestion+0x36>
- 8002a3c:	4a1c      	ldr	r2, [pc, #112]	; (8002ab0 <maze_mapping_crossroad_gestion+0x90>)
- 8002a3e:	7003      	strb	r3, [r0, #0]
- 8002a40:	2300      	movs	r3, #0
- 8002a42:	7013      	strb	r3, [r2, #0]
- 8002a44:	9a03      	ldr	r2, [sp, #12]
- 8002a46:	6823      	ldr	r3, [r4, #0]
- 8002a48:	429a      	cmp	r2, r3
- 8002a4a:	f04f 0002 	mov.w	r0, #2
- 8002a4e:	d126      	bne.n	8002a9e <maze_mapping_crossroad_gestion+0x7e>
- 8002a50:	b004      	add	sp, #16
- 8002a52:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 8002a56:	4688      	mov	r8, r1
- 8002a58:	4617      	mov	r7, r2
- 8002a5a:	f7ff fd09 	bl	8002470 <maze_mapping_multi_check_case.part.0>
- 8002a5e:	2800      	cmp	r0, #0
- 8002a60:	d0f0      	beq.n	8002a44 <maze_mapping_crossroad_gestion+0x24>
- 8002a62:	463b      	mov	r3, r7
- 8002a64:	f1c5 0204 	rsb	r2, r5, #4
- 8002a68:	e9cd 8600 	strd	r8, r6, [sp]
- 8002a6c:	4911      	ldr	r1, [pc, #68]	; (8002ab4 <maze_mapping_crossroad_gestion+0x94>)
- 8002a6e:	4812      	ldr	r0, [pc, #72]	; (8002ab8 <maze_mapping_crossroad_gestion+0x98>)
- 8002a70:	f7ff fd1e 	bl	80024b0 <chprintf.constprop.6>
- 8002a74:	4b11      	ldr	r3, [pc, #68]	; (8002abc <maze_mapping_crossroad_gestion+0x9c>)
- 8002a76:	9a03      	ldr	r2, [sp, #12]
- 8002a78:	781b      	ldrb	r3, [r3, #0]
- 8002a7a:	2b01      	cmp	r3, #1
- 8002a7c:	6823      	ldr	r3, [r4, #0]
- 8002a7e:	d006      	beq.n	8002a8e <maze_mapping_crossroad_gestion+0x6e>
- 8002a80:	429a      	cmp	r2, r3
- 8002a82:	d10c      	bne.n	8002a9e <maze_mapping_crossroad_gestion+0x7e>
- 8002a84:	b004      	add	sp, #16
- 8002a86:	e8bd 41f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, lr}
- 8002a8a:	f7ff bf71 	b.w	8002970 <maze_mapping_next_step_to_goal>
- 8002a8e:	429a      	cmp	r2, r3
- 8002a90:	d105      	bne.n	8002a9e <maze_mapping_crossroad_gestion+0x7e>
- 8002a92:	4630      	mov	r0, r6
+08002a30 <maze_mapping_crossroad_gestion>:
+ 8002a30:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+ 8002a34:	4d1f      	ldr	r5, [pc, #124]	; (8002ab4 <maze_mapping_crossroad_gestion+0x84>)
+ 8002a36:	4c20      	ldr	r4, [pc, #128]	; (8002ab8 <maze_mapping_crossroad_gestion+0x88>)
+ 8002a38:	782d      	ldrb	r5, [r5, #0]
+ 8002a3a:	6826      	ldr	r6, [r4, #0]
+ 8002a3c:	b084      	sub	sp, #16
+ 8002a3e:	9603      	str	r6, [sp, #12]
+ 8002a40:	b145      	cbz	r5, 8002a54 <maze_mapping_crossroad_gestion+0x24>
+ 8002a42:	4606      	mov	r6, r0
+ 8002a44:	481d      	ldr	r0, [pc, #116]	; (8002abc <maze_mapping_crossroad_gestion+0x8c>)
+ 8002a46:	7805      	ldrb	r5, [r0, #0]
+ 8002a48:	429d      	cmp	r5, r3
+ 8002a4a:	d00c      	beq.n	8002a66 <maze_mapping_crossroad_gestion+0x36>
+ 8002a4c:	4a1c      	ldr	r2, [pc, #112]	; (8002ac0 <maze_mapping_crossroad_gestion+0x90>)
+ 8002a4e:	7003      	strb	r3, [r0, #0]
+ 8002a50:	2300      	movs	r3, #0
+ 8002a52:	7013      	strb	r3, [r2, #0]
+ 8002a54:	9a03      	ldr	r2, [sp, #12]
+ 8002a56:	6823      	ldr	r3, [r4, #0]
+ 8002a58:	429a      	cmp	r2, r3
+ 8002a5a:	f04f 0002 	mov.w	r0, #2
+ 8002a5e:	d126      	bne.n	8002aae <maze_mapping_crossroad_gestion+0x7e>
+ 8002a60:	b004      	add	sp, #16
+ 8002a62:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+ 8002a66:	4688      	mov	r8, r1
+ 8002a68:	4617      	mov	r7, r2
+ 8002a6a:	f7ff fd01 	bl	8002470 <maze_mapping_multi_check_case.part.0>
+ 8002a6e:	2800      	cmp	r0, #0
+ 8002a70:	d0f0      	beq.n	8002a54 <maze_mapping_crossroad_gestion+0x24>
+ 8002a72:	463b      	mov	r3, r7
+ 8002a74:	f1c5 0204 	rsb	r2, r5, #4
+ 8002a78:	e9cd 8600 	strd	r8, r6, [sp]
+ 8002a7c:	4911      	ldr	r1, [pc, #68]	; (8002ac4 <maze_mapping_crossroad_gestion+0x94>)
+ 8002a7e:	4812      	ldr	r0, [pc, #72]	; (8002ac8 <maze_mapping_crossroad_gestion+0x98>)
+ 8002a80:	f7ff fd16 	bl	80024b0 <chprintf.constprop.6>
+ 8002a84:	4b11      	ldr	r3, [pc, #68]	; (8002acc <maze_mapping_crossroad_gestion+0x9c>)
+ 8002a86:	9a03      	ldr	r2, [sp, #12]
+ 8002a88:	781b      	ldrb	r3, [r3, #0]
+ 8002a8a:	2b01      	cmp	r3, #1
+ 8002a8c:	6823      	ldr	r3, [r4, #0]
+ 8002a8e:	d006      	beq.n	8002a9e <maze_mapping_crossroad_gestion+0x6e>
+ 8002a90:	429a      	cmp	r2, r3
+ 8002a92:	d10c      	bne.n	8002aae <maze_mapping_crossroad_gestion+0x7e>
  8002a94:	b004      	add	sp, #16
  8002a96:	e8bd 41f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, lr}
- 8002a9a:	f7ff bf11 	b.w	80028c0 <maze_mapping_memorise_crossroad>
- 8002a9e:	f7ff fb77 	bl	8002190 <__stack_chk_fail>
- 8002aa2:	bf00      	nop
- 8002aa4:	20000b2d 	.word	0x20000b2d
- 8002aa8:	20000b00 	.word	0x20000b00
- 8002aac:	20000b2c 	.word	0x20000b2c
- 8002ab0:	200018df 	.word	0x200018df
- 8002ab4:	08011a60 	.word	0x08011a60
- 8002ab8:	20009a4c 	.word	0x20009a4c
- 8002abc:	200018de 	.word	0x200018de
+ 8002a9a:	f7ff bf71 	b.w	8002980 <maze_mapping_next_step_to_goal>
+ 8002a9e:	429a      	cmp	r2, r3
+ 8002aa0:	d105      	bne.n	8002aae <maze_mapping_crossroad_gestion+0x7e>
+ 8002aa2:	4630      	mov	r0, r6
+ 8002aa4:	b004      	add	sp, #16
+ 8002aa6:	e8bd 41f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, lr}
+ 8002aaa:	f7ff bf11 	b.w	80028d0 <maze_mapping_memorise_crossroad>
+ 8002aae:	f7ff fb6f 	bl	8002190 <__stack_chk_fail>
+ 8002ab2:	bf00      	nop
+ 8002ab4:	20000b2d 	.word	0x20000b2d
+ 8002ab8:	20000b00 	.word	0x20000b00
+ 8002abc:	20000b2c 	.word	0x20000b2c
+ 8002ac0:	200018df 	.word	0x200018df
+ 8002ac4:	08011a60 	.word	0x08011a60
+ 8002ac8:	20009a4c 	.word	0x20009a4c
+ 8002acc:	200018de 	.word	0x200018de
 
-08002ac0 <maze_mapping_next_move>:
- 8002ac0:	b5f0      	push	{r4, r5, r6, r7, lr}
- 8002ac2:	4b28      	ldr	r3, [pc, #160]	; (8002b64 <maze_mapping_next_move+0xa4>)
- 8002ac4:	4c28      	ldr	r4, [pc, #160]	; (8002b68 <maze_mapping_next_move+0xa8>)
- 8002ac6:	781b      	ldrb	r3, [r3, #0]
- 8002ac8:	6825      	ldr	r5, [r4, #0]
- 8002aca:	b083      	sub	sp, #12
- 8002acc:	9501      	str	r5, [sp, #4]
- 8002ace:	b343      	cbz	r3, 8002b22 <maze_mapping_next_move+0x62>
- 8002ad0:	460d      	mov	r5, r1
- 8002ad2:	18ab      	adds	r3, r5, r2
- 8002ad4:	4403      	add	r3, r0
- 8002ad6:	b2db      	uxtb	r3, r3
- 8002ad8:	2b02      	cmp	r3, #2
- 8002ada:	4611      	mov	r1, r2
- 8002adc:	d010      	beq.n	8002b00 <maze_mapping_next_move+0x40>
- 8002ade:	2b03      	cmp	r3, #3
- 8002ae0:	d127      	bne.n	8002b32 <maze_mapping_next_move+0x72>
- 8002ae2:	4b22      	ldr	r3, [pc, #136]	; (8002b6c <maze_mapping_next_move+0xac>)
- 8002ae4:	4a22      	ldr	r2, [pc, #136]	; (8002b70 <maze_mapping_next_move+0xb0>)
- 8002ae6:	781b      	ldrb	r3, [r3, #0]
- 8002ae8:	2101      	movs	r1, #1
- 8002aea:	7011      	strb	r1, [r2, #0]
- 8002aec:	9a01      	ldr	r2, [sp, #4]
- 8002aee:	b373      	cbz	r3, 8002b4e <maze_mapping_next_move+0x8e>
- 8002af0:	6823      	ldr	r3, [r4, #0]
- 8002af2:	429a      	cmp	r2, r3
- 8002af4:	d133      	bne.n	8002b5e <maze_mapping_next_move+0x9e>
- 8002af6:	b003      	add	sp, #12
- 8002af8:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
- 8002afc:	f7ff be28 	b.w	8002750 <maze_mapping_furthest_point_reached>
- 8002b00:	4b1a      	ldr	r3, [pc, #104]	; (8002b6c <maze_mapping_next_move+0xac>)
- 8002b02:	4a1b      	ldr	r2, [pc, #108]	; (8002b70 <maze_mapping_next_move+0xb0>)
- 8002b04:	781b      	ldrb	r3, [r3, #0]
- 8002b06:	2001      	movs	r0, #1
- 8002b08:	7010      	strb	r0, [r2, #0]
- 8002b0a:	9a01      	ldr	r2, [sp, #4]
- 8002b0c:	2b00      	cmp	r3, #0
- 8002b0e:	d1ef      	bne.n	8002af0 <maze_mapping_next_move+0x30>
- 8002b10:	6823      	ldr	r3, [r4, #0]
- 8002b12:	429a      	cmp	r2, r3
- 8002b14:	d123      	bne.n	8002b5e <maze_mapping_next_move+0x9e>
- 8002b16:	4628      	mov	r0, r5
- 8002b18:	b003      	add	sp, #12
- 8002b1a:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
- 8002b1e:	f7ff bce7 	b.w	80024f0 <maze_mapping_corridor_gestion>
- 8002b22:	9a01      	ldr	r2, [sp, #4]
- 8002b24:	6823      	ldr	r3, [r4, #0]
- 8002b26:	429a      	cmp	r2, r3
- 8002b28:	f04f 0005 	mov.w	r0, #5
- 8002b2c:	d117      	bne.n	8002b5e <maze_mapping_next_move+0x9e>
- 8002b2e:	b003      	add	sp, #12
- 8002b30:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8002b32:	9e01      	ldr	r6, [sp, #4]
- 8002b34:	6821      	ldr	r1, [r4, #0]
- 8002b36:	4f0f      	ldr	r7, [pc, #60]	; (8002b74 <maze_mapping_next_move+0xb4>)
- 8002b38:	2401      	movs	r4, #1
- 8002b3a:	428e      	cmp	r6, r1
- 8002b3c:	703c      	strb	r4, [r7, #0]
- 8002b3e:	d10e      	bne.n	8002b5e <maze_mapping_next_move+0x9e>
- 8002b40:	4601      	mov	r1, r0
- 8002b42:	4628      	mov	r0, r5
- 8002b44:	b003      	add	sp, #12
- 8002b46:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
- 8002b4a:	f7ff bf69 	b.w	8002a20 <maze_mapping_crossroad_gestion>
- 8002b4e:	6823      	ldr	r3, [r4, #0]
- 8002b50:	429a      	cmp	r2, r3
- 8002b52:	d104      	bne.n	8002b5e <maze_mapping_next_move+0x9e>
- 8002b54:	b003      	add	sp, #12
- 8002b56:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
- 8002b5a:	f7ff bd09 	b.w	8002570 <maze_mapping_deadend_gestion>
- 8002b5e:	f7ff fb17 	bl	8002190 <__stack_chk_fail>
- 8002b62:	bf00      	nop
- 8002b64:	200018de 	.word	0x200018de
- 8002b68:	20000b00 	.word	0x20000b00
- 8002b6c:	200018a9 	.word	0x200018a9
- 8002b70:	20000b2d 	.word	0x20000b2d
- 8002b74:	20000b2e 	.word	0x20000b2e
-	...
+08002ad0 <maze_mapping_next_move>:
+ 8002ad0:	b5f0      	push	{r4, r5, r6, r7, lr}
+ 8002ad2:	4b26      	ldr	r3, [pc, #152]	; (8002b6c <maze_mapping_next_move+0x9c>)
+ 8002ad4:	4c26      	ldr	r4, [pc, #152]	; (8002b70 <maze_mapping_next_move+0xa0>)
+ 8002ad6:	781b      	ldrb	r3, [r3, #0]
+ 8002ad8:	6825      	ldr	r5, [r4, #0]
+ 8002ada:	b083      	sub	sp, #12
+ 8002adc:	9501      	str	r5, [sp, #4]
+ 8002ade:	b32b      	cbz	r3, 8002b2c <maze_mapping_next_move+0x5c>
+ 8002ae0:	460d      	mov	r5, r1
+ 8002ae2:	18ab      	adds	r3, r5, r2
+ 8002ae4:	4403      	add	r3, r0
+ 8002ae6:	b2db      	uxtb	r3, r3
+ 8002ae8:	2b02      	cmp	r3, #2
+ 8002aea:	4611      	mov	r1, r2
+ 8002aec:	d010      	beq.n	8002b10 <maze_mapping_next_move+0x40>
+ 8002aee:	2b03      	cmp	r3, #3
+ 8002af0:	d124      	bne.n	8002b3c <maze_mapping_next_move+0x6c>
+ 8002af2:	4b20      	ldr	r3, [pc, #128]	; (8002b74 <maze_mapping_next_move+0xa4>)
+ 8002af4:	4a20      	ldr	r2, [pc, #128]	; (8002b78 <maze_mapping_next_move+0xa8>)
+ 8002af6:	781b      	ldrb	r3, [r3, #0]
+ 8002af8:	2101      	movs	r1, #1
+ 8002afa:	7011      	strb	r1, [r2, #0]
+ 8002afc:	9a01      	ldr	r2, [sp, #4]
+ 8002afe:	b35b      	cbz	r3, 8002b58 <maze_mapping_next_move+0x88>
+ 8002b00:	6823      	ldr	r3, [r4, #0]
+ 8002b02:	429a      	cmp	r2, r3
+ 8002b04:	d130      	bne.n	8002b68 <maze_mapping_next_move+0x98>
+ 8002b06:	b003      	add	sp, #12
+ 8002b08:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
+ 8002b0c:	f7ff be20 	b.w	8002750 <maze_mapping_furthest_point_reached>
+ 8002b10:	4b18      	ldr	r3, [pc, #96]	; (8002b74 <maze_mapping_next_move+0xa4>)
+ 8002b12:	9a01      	ldr	r2, [sp, #4]
+ 8002b14:	781b      	ldrb	r3, [r3, #0]
+ 8002b16:	2b00      	cmp	r3, #0
+ 8002b18:	d1f2      	bne.n	8002b00 <maze_mapping_next_move+0x30>
+ 8002b1a:	6823      	ldr	r3, [r4, #0]
+ 8002b1c:	429a      	cmp	r2, r3
+ 8002b1e:	d123      	bne.n	8002b68 <maze_mapping_next_move+0x98>
+ 8002b20:	4628      	mov	r0, r5
+ 8002b22:	b003      	add	sp, #12
+ 8002b24:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
+ 8002b28:	f7ff bce2 	b.w	80024f0 <maze_mapping_corridor_gestion>
+ 8002b2c:	9a01      	ldr	r2, [sp, #4]
+ 8002b2e:	6823      	ldr	r3, [r4, #0]
+ 8002b30:	429a      	cmp	r2, r3
+ 8002b32:	f04f 0005 	mov.w	r0, #5
+ 8002b36:	d117      	bne.n	8002b68 <maze_mapping_next_move+0x98>
+ 8002b38:	b003      	add	sp, #12
+ 8002b3a:	bdf0      	pop	{r4, r5, r6, r7, pc}
+ 8002b3c:	9e01      	ldr	r6, [sp, #4]
+ 8002b3e:	6821      	ldr	r1, [r4, #0]
+ 8002b40:	4f0e      	ldr	r7, [pc, #56]	; (8002b7c <maze_mapping_next_move+0xac>)
+ 8002b42:	2401      	movs	r4, #1
+ 8002b44:	428e      	cmp	r6, r1
+ 8002b46:	703c      	strb	r4, [r7, #0]
+ 8002b48:	d10e      	bne.n	8002b68 <maze_mapping_next_move+0x98>
+ 8002b4a:	4601      	mov	r1, r0
+ 8002b4c:	4628      	mov	r0, r5
+ 8002b4e:	b003      	add	sp, #12
+ 8002b50:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
+ 8002b54:	f7ff bf6c 	b.w	8002a30 <maze_mapping_crossroad_gestion>
+ 8002b58:	6823      	ldr	r3, [r4, #0]
+ 8002b5a:	429a      	cmp	r2, r3
+ 8002b5c:	d104      	bne.n	8002b68 <maze_mapping_next_move+0x98>
+ 8002b5e:	b003      	add	sp, #12
+ 8002b60:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
+ 8002b64:	f7ff bd04 	b.w	8002570 <maze_mapping_deadend_gestion>
+ 8002b68:	f7ff fb12 	bl	8002190 <__stack_chk_fail>
+ 8002b6c:	200018de 	.word	0x200018de
+ 8002b70:	20000b00 	.word	0x20000b00
+ 8002b74:	200018a9 	.word	0x200018a9
+ 8002b78:	20000b2d 	.word	0x20000b2d
+ 8002b7c:	20000b2e 	.word	0x20000b2e
 
 08002b80 <go_fast>:
  8002b80:	b530      	push	{r4, r5, lr}
@@ -3951,7 +3954,7 @@ Disassembly of section .text:
  8002cb8:	dbfb      	blt.n	8002cb2 <turn+0x72>
  8002cba:	e7e7      	b.n	8002c8c <turn+0x4c>
  8002cbc:	f7ff fa68 	bl	8002190 <__stack_chk_fail>
- 8002cc0:	44a62452 	.word	0x44a62452
+ 8002cc0:	44a62453 	.word	0x44a62453
  8002cc4:	43b40000 	.word	0x43b40000
  8002cc8:	20000b00 	.word	0x20000b00
  8002ccc:	fffffea2 	.word	0xfffffea2
@@ -3960,11 +3963,11 @@ Disassembly of section .text:
  8002cd0:	f44f 737a 	mov.w	r3, #1000	; 0x3e8
  8002cd4:	fb03 f300 	mul.w	r3, r3, r0
  8002cd8:	ee07 3a90 	vmov	s15, r3
- 8002cdc:	eeb8 7ae7 	vcvt.f32.s32	s14, s15
- 8002ce0:	eef2 6a0a 	vmov.f32	s13, #42	; 0x41500000  13.0
- 8002ce4:	eec7 7a26 	vdiv.f32	s15, s14, s13
- 8002ce8:	b530      	push	{r4, r5, lr}
- 8002cea:	4d19      	ldr	r5, [pc, #100]	; (8002d50 <go_for_distance+0x80>)
+ 8002cdc:	eddf 6a1c 	vldr	s13, [pc, #112]	; 8002d50 <go_for_distance+0x80>
+ 8002ce0:	eeb8 7ae7 	vcvt.f32.s32	s14, s15
+ 8002ce4:	b530      	push	{r4, r5, lr}
+ 8002ce6:	eec7 7a26 	vdiv.f32	s15, s14, s13
+ 8002cea:	4d1a      	ldr	r5, [pc, #104]	; (8002d54 <go_for_distance+0x84>)
  8002cec:	b083      	sub	sp, #12
  8002cee:	682b      	ldr	r3, [r5, #0]
  8002cf0:	9301      	str	r3, [sp, #4]
@@ -3989,9 +3992,9 @@ Disassembly of section .text:
  8002d28:	e8bd 4030 	ldmia.w	sp!, {r4, r5, lr}
  8002d2c:	f7ff bf68 	b.w	8002c00 <stop>
  8002d30:	f001 fc2e 	bl	8004590 <left_motor_set_pos>
- 8002d34:	4807      	ldr	r0, [pc, #28]	; (8002d54 <go_for_distance+0x84>)
+ 8002d34:	4808      	ldr	r0, [pc, #32]	; (8002d58 <go_for_distance+0x88>)
  8002d36:	f001 fbe3 	bl	8004500 <right_motor_set_speed>
- 8002d3a:	4806      	ldr	r0, [pc, #24]	; (8002d54 <go_for_distance+0x84>)
+ 8002d3a:	4807      	ldr	r0, [pc, #28]	; (8002d58 <go_for_distance+0x88>)
  8002d3c:	f001 fbc8 	bl	80044d0 <left_motor_set_speed>
  8002d40:	4264      	negs	r4, r4
  8002d42:	f001 fbf5 	bl	8004530 <left_motor_get_pos>
@@ -3999,9 +4002,10 @@ Disassembly of section .text:
  8002d48:	dbfb      	blt.n	8002d42 <go_for_distance+0x72>
  8002d4a:	e7e8      	b.n	8002d1e <go_for_distance+0x4e>
  8002d4c:	f7ff fa20 	bl	8002190 <__stack_chk_fail>
- 8002d50:	20000b00 	.word	0x20000b00
- 8002d54:	fffffea2 	.word	0xfffffea2
-	...
+ 8002d50:	43020000 	.word	0x43020000
+ 8002d54:	20000b00 	.word	0x20000b00
+ 8002d58:	fffffea2 	.word	0xfffffea2
+ 8002d5c:	00000000 	.word	0x00000000
 
 08002d60 <get_right_speed>:
  8002d60:	b500      	push	{lr}
@@ -4042,130 +4046,127 @@ Disassembly of section .text:
 	...
 
 08002dc0 <regulator_difference>:
- 8002dc0:	b5f0      	push	{r4, r5, r6, r7, lr}
- 8002dc2:	ed2d 8b02 	vpush	{d8}
- 8002dc6:	4e31      	ldr	r6, [pc, #196]	; (8002e8c <regulator_difference+0xcc>)
+ 8002dc0:	b530      	push	{r4, r5, lr}
+ 8002dc2:	ed2d 8b04 	vpush	{d8-d9}
+ 8002dc6:	4c30      	ldr	r4, [pc, #192]	; (8002e88 <regulator_difference+0xc8>)
  8002dc8:	b083      	sub	sp, #12
- 8002dca:	6833      	ldr	r3, [r6, #0]
+ 8002dca:	6823      	ldr	r3, [r4, #0]
  8002dcc:	9301      	str	r3, [sp, #4]
  8002dce:	288c      	cmp	r0, #140	; 0x8c
- 8002dd0:	dd4f      	ble.n	8002e72 <regulator_difference+0xb2>
+ 8002dd0:	dd4d      	ble.n	8002e6e <regulator_difference+0xae>
  8002dd2:	298c      	cmp	r1, #140	; 0x8c
- 8002dd4:	dd4d      	ble.n	8002e72 <regulator_difference+0xb2>
- 8002dd6:	1a44      	subs	r4, r0, r1
- 8002dd8:	b224      	sxth	r4, r4
- 8002dda:	f06f 001d 	mvn.w	r0, #29
- 8002dde:	4284      	cmp	r4, r0
- 8002de0:	bfb8      	it	lt
- 8002de2:	4604      	movlt	r4, r0
- 8002de4:	2c1e      	cmp	r4, #30
- 8002de6:	bfa8      	it	ge
- 8002de8:	241e      	movge	r4, #30
- 8002dea:	4f29      	ldr	r7, [pc, #164]	; (8002e90 <regulator_difference+0xd0>)
- 8002dec:	eddf 7a29 	vldr	s15, [pc, #164]	; 8002e94 <regulator_difference+0xd4>
- 8002df0:	ed97 8a00 	vldr	s16, [r7]
- 8002df4:	ee07 4a10 	vmov	s14, r4
- 8002df8:	eef8 8ac7 	vcvt.f32.s32	s17, s14
- 8002dfc:	ee38 8ac8 	vsub.f32	s16, s17, s16
- 8002e00:	eeb4 8ae7 	vcmpe.f32	s16, s15
- 8002e04:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8002e08:	dc3b      	bgt.n	8002e82 <regulator_difference+0xc2>
- 8002e0a:	eddf 7a23 	vldr	s15, [pc, #140]	; 8002e98 <regulator_difference+0xd8>
- 8002e0e:	eeb4 8a67 	vcmp.f32	s16, s15
- 8002e12:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8002e16:	bf48      	it	mi
- 8002e18:	eeb0 8a67 	vmovmi.f32	s16, s15
- 8002e1c:	f7ff ffa0 	bl	8002d60 <get_right_speed>
- 8002e20:	4605      	mov	r5, r0
- 8002e22:	f7ff ffb5 	bl	8002d90 <get_left_speed>
- 8002e26:	4428      	add	r0, r5
- 8002e28:	eb00 70d0 	add.w	r0, r0, r0, lsr #31
- 8002e2c:	f340 004f 	sbfx	r0, r0, #1, #16
- 8002e30:	1b03      	subs	r3, r0, r4
- 8002e32:	ee07 3a90 	vmov	s15, r3
+ 8002dd4:	dd4b      	ble.n	8002e6e <regulator_difference+0xae>
+ 8002dd6:	f5c1 417f 	rsb	r1, r1, #65280	; 0xff00
+ 8002dda:	31f6      	adds	r1, #246	; 0xf6
+ 8002ddc:	4401      	add	r1, r0
+ 8002dde:	b209      	sxth	r1, r1
+ 8002de0:	f06f 001d 	mvn.w	r0, #29
+ 8002de4:	4281      	cmp	r1, r0
+ 8002de6:	bfb8      	it	lt
+ 8002de8:	4601      	movlt	r1, r0
+ 8002dea:	291e      	cmp	r1, #30
+ 8002dec:	bfa8      	it	ge
+ 8002dee:	211e      	movge	r1, #30
+ 8002df0:	4d26      	ldr	r5, [pc, #152]	; (8002e8c <regulator_difference+0xcc>)
+ 8002df2:	eddf 7a27 	vldr	s15, [pc, #156]	; 8002e90 <regulator_difference+0xd0>
+ 8002df6:	ed95 9a00 	vldr	s18, [r5]
+ 8002dfa:	ee07 1a10 	vmov	s14, r1
+ 8002dfe:	eeb8 8ac7 	vcvt.f32.s32	s16, s14
+ 8002e02:	ee38 9a49 	vsub.f32	s18, s16, s18
+ 8002e06:	eeb4 9ae7 	vcmpe.f32	s18, s15
+ 8002e0a:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8002e0e:	dc36      	bgt.n	8002e7e <regulator_difference+0xbe>
+ 8002e10:	eddf 7a20 	vldr	s15, [pc, #128]	; 8002e94 <regulator_difference+0xd4>
+ 8002e14:	eeb4 9a67 	vcmp.f32	s18, s15
+ 8002e18:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8002e1c:	bf48      	it	mi
+ 8002e1e:	eeb0 9a67 	vmovmi.f32	s18, s15
+ 8002e22:	f7ff ff9d 	bl	8002d60 <get_right_speed>
+ 8002e26:	ee08 0a90 	vmov	s17, r0
+ 8002e2a:	f7ff ffb1 	bl	8002d90 <get_left_speed>
+ 8002e2e:	ee07 0a90 	vmov	s15, r0
+ 8002e32:	ed9f 7a19 	vldr	s14, [pc, #100]	; 8002e98 <regulator_difference+0xd8>
  8002e36:	eef8 7ae7 	vcvt.f32.s32	s15, s15
- 8002e3a:	eeb6 7a00 	vmov.f32	s14, #96	; 0x3f000000  0.5
- 8002e3e:	eef0 6a68 	vmov.f32	s13, s17
- 8002e42:	eee8 6a47 	vfms.f32	s13, s16, s14
- 8002e46:	eee8 7a07 	vfma.f32	s15, s16, s14
- 8002e4a:	ee07 0a10 	vmov	s14, r0
- 8002e4e:	eeb8 7ac7 	vcvt.f32.s32	s14, s14
+ 8002e3a:	eef8 8ae8 	vcvt.f32.s32	s17, s17
+ 8002e3e:	eee8 7a47 	vfms.f32	s15, s16, s14
+ 8002e42:	eee8 8a07 	vfma.f32	s17, s16, s14
+ 8002e46:	eeb6 7a00 	vmov.f32	s14, #96	; 0x3f000000  0.5
+ 8002e4a:	eee9 7a47 	vfms.f32	s15, s18, s14
+ 8002e4e:	eee9 8a07 	vfma.f32	s17, s18, s14
  8002e52:	eefd 7ae7 	vcvt.s32.f32	s15, s15
- 8002e56:	ee36 7a87 	vadd.f32	s14, s13, s14
+ 8002e56:	eefd 8ae8 	vcvt.s32.f32	s17, s17
  8002e5a:	ee17 3a90 	vmov	r3, s15
- 8002e5e:	eebd 7ac7 	vcvt.s32.f32	s14, s14
- 8002e62:	b219      	sxth	r1, r3
- 8002e64:	ee17 3a10 	vmov	r3, s14
- 8002e68:	b218      	sxth	r0, r3
- 8002e6a:	f7ff fea9 	bl	8002bc0 <set_speed>
- 8002e6e:	edc7 8a00 	vstr	s17, [r7]
- 8002e72:	9a01      	ldr	r2, [sp, #4]
- 8002e74:	6833      	ldr	r3, [r6, #0]
- 8002e76:	429a      	cmp	r2, r3
- 8002e78:	d106      	bne.n	8002e88 <regulator_difference+0xc8>
- 8002e7a:	b003      	add	sp, #12
- 8002e7c:	ecbd 8b02 	vpop	{d8}
- 8002e80:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8002e82:	eeb0 8a67 	vmov.f32	s16, s15
- 8002e86:	e7c9      	b.n	8002e1c <regulator_difference+0x5c>
- 8002e88:	f7ff f982 	bl	8002190 <__stack_chk_fail>
- 8002e8c:	20000b00 	.word	0x20000b00
- 8002e90:	200018ec 	.word	0x200018ec
- 8002e94:	42c80000 	.word	0x42c80000
- 8002e98:	c2c80000 	.word	0xc2c80000
+ 8002e5e:	b219      	sxth	r1, r3
+ 8002e60:	ee18 3a90 	vmov	r3, s17
+ 8002e64:	b218      	sxth	r0, r3
+ 8002e66:	f7ff feab 	bl	8002bc0 <set_speed>
+ 8002e6a:	ed85 8a00 	vstr	s16, [r5]
+ 8002e6e:	9a01      	ldr	r2, [sp, #4]
+ 8002e70:	6823      	ldr	r3, [r4, #0]
+ 8002e72:	429a      	cmp	r2, r3
+ 8002e74:	d106      	bne.n	8002e84 <regulator_difference+0xc4>
+ 8002e76:	b003      	add	sp, #12
+ 8002e78:	ecbd 8b04 	vpop	{d8-d9}
+ 8002e7c:	bd30      	pop	{r4, r5, pc}
+ 8002e7e:	eeb0 9a67 	vmov.f32	s18, s15
+ 8002e82:	e7ce      	b.n	8002e22 <regulator_difference+0x62>
+ 8002e84:	f7ff f984 	bl	8002190 <__stack_chk_fail>
+ 8002e88:	20000b00 	.word	0x20000b00
+ 8002e8c:	200018ec 	.word	0x200018ec
+ 8002e90:	42c80000 	.word	0x42c80000
+ 8002e94:	c2c80000 	.word	0xc2c80000
+ 8002e98:	3f8ccccd 	.word	0x3f8ccccd
  8002e9c:	00000000 	.word	0x00000000
 
 08002ea0 <regulator_follow_wall>:
- 8002ea0:	b570      	push	{r4, r5, r6, lr}
- 8002ea2:	1a0d      	subs	r5, r1, r0
- 8002ea4:	b22d      	sxth	r5, r5
- 8002ea6:	f06f 001d 	mvn.w	r0, #29
- 8002eaa:	4285      	cmp	r5, r0
- 8002eac:	bfb8      	it	lt
- 8002eae:	4605      	movlt	r5, r0
- 8002eb0:	2d1e      	cmp	r5, #30
- 8002eb2:	4e1d      	ldr	r6, [pc, #116]	; (8002f28 <regulator_follow_wall+0x88>)
- 8002eb4:	b082      	sub	sp, #8
- 8002eb6:	bfa8      	it	ge
- 8002eb8:	251e      	movge	r5, #30
- 8002eba:	2a02      	cmp	r2, #2
- 8002ebc:	bf08      	it	eq
- 8002ebe:	426d      	negeq	r5, r5
- 8002ec0:	6833      	ldr	r3, [r6, #0]
+ 8002ea0:	b530      	push	{r4, r5, lr}
+ 8002ea2:	1a09      	subs	r1, r1, r0
+ 8002ea4:	2a02      	cmp	r2, #2
+ 8002ea6:	b289      	uxth	r1, r1
+ 8002ea8:	ed2d 8b02 	vpush	{d8}
+ 8002eac:	bf04      	itt	eq
+ 8002eae:	f1c1 010a 	rsbeq	r1, r1, #10
+ 8002eb2:	b289      	uxtheq	r1, r1
+ 8002eb4:	b20c      	sxth	r4, r1
+ 8002eb6:	4d1c      	ldr	r5, [pc, #112]	; (8002f28 <regulator_follow_wall+0x88>)
+ 8002eb8:	f06f 011d 	mvn.w	r1, #29
+ 8002ebc:	428c      	cmp	r4, r1
+ 8002ebe:	b083      	sub	sp, #12
+ 8002ec0:	682b      	ldr	r3, [r5, #0]
  8002ec2:	9301      	str	r3, [sp, #4]
- 8002ec4:	bf08      	it	eq
- 8002ec6:	b22d      	sxtheq	r5, r5
+ 8002ec4:	bfb8      	it	lt
+ 8002ec6:	460c      	movlt	r4, r1
  8002ec8:	f7ff ff4a 	bl	8002d60 <get_right_speed>
- 8002ecc:	4604      	mov	r4, r0
- 8002ece:	f7ff ff5f 	bl	8002d90 <get_left_speed>
- 8002ed2:	4420      	add	r0, r4
- 8002ed4:	eb00 70d0 	add.w	r0, r0, r0, lsr #31
- 8002ed8:	9a01      	ldr	r2, [sp, #4]
- 8002eda:	6833      	ldr	r3, [r6, #0]
- 8002edc:	f340 004f 	sbfx	r0, r0, #1, #16
- 8002ee0:	ee07 0a90 	vmov	s15, r0
- 8002ee4:	ee07 5a10 	vmov	s14, r5
- 8002ee8:	429a      	cmp	r2, r3
- 8002eea:	eef8 7ae7 	vcvt.f32.s32	s15, s15
- 8002eee:	eeb8 7ac7 	vcvt.f32.s32	s14, s14
- 8002ef2:	d116      	bne.n	8002f22 <regulator_follow_wall+0x82>
- 8002ef4:	ed9f 6a0d 	vldr	s12, [pc, #52]	; 8002f2c <regulator_follow_wall+0x8c>
- 8002ef8:	eef0 6a67 	vmov.f32	s13, s15
- 8002efc:	eee7 6a46 	vfms.f32	s13, s14, s12
- 8002f00:	eee7 7a06 	vfma.f32	s15, s14, s12
- 8002f04:	eebd 7ae6 	vcvt.s32.f32	s14, s13
- 8002f08:	eefd 7ae7 	vcvt.s32.f32	s15, s15
- 8002f0c:	ee17 3a10 	vmov	r3, s14
- 8002f10:	b219      	sxth	r1, r3
- 8002f12:	ee17 3a90 	vmov	r3, s15
- 8002f16:	b218      	sxth	r0, r3
- 8002f18:	b002      	add	sp, #8
- 8002f1a:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
- 8002f1e:	f7ff be4f 	b.w	8002bc0 <set_speed>
- 8002f22:	f7ff f935 	bl	8002190 <__stack_chk_fail>
- 8002f26:	bf00      	nop
+ 8002ecc:	2c1e      	cmp	r4, #30
+ 8002ece:	bfa8      	it	ge
+ 8002ed0:	241e      	movge	r4, #30
+ 8002ed2:	ee07 4a90 	vmov	s15, r4
+ 8002ed6:	ee08 0a90 	vmov	s17, r0
+ 8002eda:	eeb8 8ae7 	vcvt.f32.s32	s16, s15
+ 8002ede:	f7ff ff57 	bl	8002d90 <get_left_speed>
+ 8002ee2:	9a01      	ldr	r2, [sp, #4]
+ 8002ee4:	682b      	ldr	r3, [r5, #0]
+ 8002ee6:	429a      	cmp	r2, r3
+ 8002ee8:	ee07 0a90 	vmov	s15, r0
+ 8002eec:	d11a      	bne.n	8002f24 <regulator_follow_wall+0x84>
+ 8002eee:	ed9f 7a0f 	vldr	s14, [pc, #60]	; 8002f2c <regulator_follow_wall+0x8c>
+ 8002ef2:	eef8 7ae7 	vcvt.f32.s32	s15, s15
+ 8002ef6:	eef8 8ae8 	vcvt.f32.s32	s17, s17
+ 8002efa:	eee8 7a47 	vfms.f32	s15, s16, s14
+ 8002efe:	eee8 8a07 	vfma.f32	s17, s16, s14
+ 8002f02:	eefd 7ae7 	vcvt.s32.f32	s15, s15
+ 8002f06:	eefd 8ae8 	vcvt.s32.f32	s17, s17
+ 8002f0a:	ee17 3a90 	vmov	r3, s15
+ 8002f0e:	b219      	sxth	r1, r3
+ 8002f10:	ee18 3a90 	vmov	r3, s17
+ 8002f14:	b218      	sxth	r0, r3
+ 8002f16:	b003      	add	sp, #12
+ 8002f18:	ecbd 8b02 	vpop	{d8}
+ 8002f1c:	e8bd 4030 	ldmia.w	sp!, {r4, r5, lr}
+ 8002f20:	f7ff be4e 	b.w	8002bc0 <set_speed>
+ 8002f24:	f7ff f934 	bl	8002190 <__stack_chk_fail>
  8002f28:	20000b00 	.word	0x20000b00
- 8002f2c:	3f4ccccd 	.word	0x3f4ccccd
+ 8002f2c:	3f666666 	.word	0x3f666666
 
 08002f30 <sound_remote>:
  8002f30:	b510      	push	{r4, lr}
@@ -4228,7 +4229,7 @@ Disassembly of section .text:
  8002fb6:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
  8002fba:	f7ff bb31 	b.w	8002620 <maze_mapping_process_end_of_maze>
  8002fbe:	2003      	movs	r0, #3
- 8002fc0:	f7ff fbee 	bl	80027a0 <maze_mapping_uturn_after_selecting_mode>
+ 8002fc0:	f7ff fbf6 	bl	80027b0 <maze_mapping_uturn_after_selecting_mode>
  8002fc4:	2800      	cmp	r0, #0
  8002fc6:	d0d5      	beq.n	8002f74 <sound_remote+0x44>
  8002fc8:	9a01      	ldr	r2, [sp, #4]
@@ -4240,10 +4241,10 @@ Disassembly of section .text:
  8002fd4:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
  8002fd8:	f7ff be32 	b.w	8002c40 <turn>
  8002fdc:	2002      	movs	r0, #2
- 8002fde:	f7ff fbdf 	bl	80027a0 <maze_mapping_uturn_after_selecting_mode>
+ 8002fde:	f7ff fbe7 	bl	80027b0 <maze_mapping_uturn_after_selecting_mode>
  8002fe2:	e7ef      	b.n	8002fc4 <sound_remote+0x94>
  8002fe4:	2001      	movs	r0, #1
- 8002fe6:	f7ff fbdb 	bl	80027a0 <maze_mapping_uturn_after_selecting_mode>
+ 8002fe6:	f7ff fbe3 	bl	80027b0 <maze_mapping_uturn_after_selecting_mode>
  8002fea:	e7eb      	b.n	8002fc4 <sound_remote+0x94>
  8002fec:	f7ff f8d0 	bl	8002190 <__stack_chk_fail>
  8002ff0:	20000b00 	.word	0x20000b00
