@@ -105,6 +105,8 @@ static THD_FUNCTION(ProcessMeasure, arg){
 
     while(1){
     	uint8_t next_order;
+    	if(maze_mapping_do_a_uturn())
+    		turn(HALF_TURN);
     	/*DETECTION DE L'ENVIRONNEMENT*/
     	process_sensors_values();
 

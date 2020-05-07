@@ -3,6 +3,7 @@
 #include <main.h>
 #include <usbcfg.h>
 #include <chprintf.h>
+#include <stdbool.h>
 
 #include <maze_mapping.h>
 #include <constantes.h>
@@ -11,6 +12,8 @@
 #include <audio_processing.h>
 #include <fft.h>
 #include <arm_math.h>
+
+#include <chprintf.h>
 
 //2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
 static float micFront_cmplx_input[2 * FFT_SIZE];
@@ -87,9 +90,7 @@ void sound_remote(float* data)
 		}
 		else
 			do_a_uturn=false;
-
-		if(do_a_uturn)
-			turn(HALF_TURN);
+		//enlever tous les do_a_u_turn+ rendre la fonction ut_aft_sel_mode en void//
 	}
 }
 
