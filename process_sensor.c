@@ -14,6 +14,7 @@
 #include <constantes.h>
 #include <maze_mapping.h>
 #include <chprintf.h>
+#include <regulator.h>
 
 #include <main.h>
 
@@ -29,11 +30,14 @@ enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
 static bool leaving_corridor;
 static bool sensors_values[PROXIMITY_NB_CHANNELS];
-static int previous_ambient_light_value;
+static int previous_ambient_light_value, reference_distance;
 static int data_sensors[PROXIMITY_NB_CHANNELS*BUFFER_SIZE];
 static uint8_t buffer_state;
+
 static THD_WORKING_AREA(waProcessMeasure,256);
 //INTERNAL FUNCTIONS
+
+void do_follow_wall_regulation(int);
 
 static THD_FUNCTION(ProcessMeasure, arg){
 
@@ -138,6 +142,22 @@ static THD_FUNCTION(ProcessMeasure, arg){
 				break;
 			}
 		}
+
+		//regulation
+		if(maze_mapping_mode_is_selected())
+		{
+			if ((sensors_values[LEFT_SENS]==WALL_DETECTED)&&(sensors_values[RIGHT_SENS]==WALL_DETECTED))
+				regulator_difference(get_calibrated_prox(FRONT_RIGHT_45DEG), get_calibrated_prox(FRONT_LEFT_45DEG));
+			else
+			{
+				if (sensors_values[LEFT_SENS]==WALL_DETECTED)
+					do_follow_wall_regulation(LEFT_SENS);
+				else if (sensors_values[RIGHT_SENS]==WALL_DETECTED)
+					do_follow_wall_regulation(RIGHT_SENS);
+			}
+
+		}
+
 		buffer_state ++;
 		if (buffer_state >= BUFFER_SIZE)
 		{
@@ -146,6 +166,14 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		previous_ambient_light_value = current_ambient_light_value;
     	chThdSleepMilliseconds(25);
     }
+}
+
+void do_follow_wall_regulation(int sensor_id)
+{
+	if (leaving_corridor)
+		reference_distance=data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS];
+
+	regulator_follow_wall(reference_distance, data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS], sensor_id);
 }
 
 void process_sensors_start(void){

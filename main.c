@@ -12,7 +12,6 @@
 #include <sensors/proximity.h>
 #include <process_sensor.h>
 #include <chprintf.h>
-#include <regulator.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>
 #include <spi_comm.h>
@@ -52,14 +51,14 @@ int main(void)
 	//Init les moteurs
 	motors_init();
 	//start the threads for the pi regulator and the proximity sensors process
-	regulator_start();
 	process_sensors_start();
-	//start the microphones thread
-	mic_start(&processAudioData);
-	spi_comm_start();
 	//wait 3s before calibrating
     chThdSleepMilliseconds(3000);
     calibrate_ir();
+	//start the microphones thread
+	mic_start(&processAudioData);
+	spi_comm_start();
+
 
     /* Infinite loop. */
     while (1) {

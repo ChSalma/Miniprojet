@@ -1,7 +1,7 @@
 #ifndef REGULATOR_H
 #define REGULATOR_H
 
-//start the regulator thread
-void regulator_start(void);
+void regulator_difference(int, int);
+void regulator_follow_wall(int, int, int);
 
 #endif /* REGULATOR_H */
