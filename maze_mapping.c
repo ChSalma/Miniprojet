@@ -12,10 +12,8 @@
 #include <maze_mapping.h>
 #include <constantes.h>
 #include "ch.h"
-#include <chprintf.h>
 #include <leds.h>
 #include <Mouvements.h>
-
 #include <main.h>
 
 #define MAX_MAP_SIZE 50
@@ -28,7 +26,7 @@ enum {TURN_OFF, TURN_ON};
 
 //prototypes de fonctions
 uint8_t maze_mapping_corridor_gestion(bool, bool);
-uint8_t maze_mapping_crossroad_gestion(bool, bool, bool, uint8_t);//maze_mapping_crossroad_gestion(bool, uint8_t);
+uint8_t maze_mapping_crossroad_gestion(bool, uint8_t);
 uint8_t maze_mapping_deadend_gestion(void);
 uint8_t maze_mapping_furthest_point_reached(void);
 uint8_t maze_mapping_memorise_crossroad(bool);
@@ -48,18 +46,18 @@ static uint8_t mode = NO_MODE_SELECTED;
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
-	//chprintf((BaseSequentialStream *) &SD3, "corridor: L=%d, R=%d\n", left_status, right_status);
 	if (right_status && left_status)
 	{
 		memorise_crossroad=true;
         return KEEP_GOING;
 	}
-	//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
-	//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
 
 	if(maze_mapping_multi_check_case(CORRIDOR))
 	{
+		//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
+		//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
 		memorise_crossroad=false;
+
 		if (!right_status)
 			return GO_RIGHT;
 		else
@@ -69,13 +67,12 @@ uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 		return GO_FORWARD;
 }
 
-uint8_t maze_mapping_crossroad_gestion(bool right_status, bool forward_status, bool left_status, uint8_t crossroad_form)//uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form)
+uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form)
 {
 	if (memorise_crossroad)
 	{
 		if(maze_mapping_multi_check_case(crossroad_form))
 		{
-			//chprintf((BaseSequentialStream *) &SD3, "crossroad_%d: L=%d, F=%d, R=%d\n", (4-crossroad_form), left_status, forward_status, right_status);
 			uturn_to_do=true;
 			switch (mode)
 			{
@@ -87,10 +84,10 @@ uint8_t maze_mapping_crossroad_gestion(bool right_status, bool forward_status, b
 			}
 		}
 		else
-			return GO_FORWARD;//KEEP_GOING;
+			return GO_FORWARD;
 	}
 	else
-		return GO_FORWARD;//KEEP_GOING;
+		return GO_FORWARD;
 }
 
 uint8_t maze_mapping_deadend_gestion(void)
@@ -99,23 +96,11 @@ uint8_t maze_mapping_deadend_gestion(void)
 		return KEEP_GOING;
 	else
 	{
-		//chprintf((BaseSequentialStream *) &SD3, "deadend\n");
 		if (current_crossroad>RESET)
 			current_crossroad--;
 		uturn_to_do=false;
 		return U_TURN;
 	}
-}
-
-bool maze_mapping_do_a_uturn(void)
-{
-	if (do_a_uturn)
-	{
-		do_a_uturn=false;
-		return true;
-	}
-	else
-		return false;
 }
 
 uint8_t maze_mapping_furthest_point_reached(void)
@@ -214,7 +199,7 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             	return maze_mapping_corridor_gestion(right_status, left_status);
 
         default:
-        	return maze_mapping_crossroad_gestion(right_status, forward_status, left_status, crossroad_form);//maze_mapping_crossroad_gestion(right_status, crossroad_form);
+        	return maze_mapping_crossroad_gestion(right_status, crossroad_form);
     }
 
 }
@@ -246,7 +231,12 @@ uint8_t maze_mapping_next_step_to_goal(void)
         {
     		if (map[robot_position]!=END)
 			{
-    			order=map[robot_position];
+    			if (robot_position!=RESET)
+    				order=map[robot_position];
+    			else
+    			{
+    				order=GO_FORWARD;
+    			}
 
 				if (robot_position<(current_crossroad-1))
 					robot_position++;
@@ -262,7 +252,6 @@ uint8_t maze_mapping_next_step_to_goal(void)
         }
         else
         {
-        	//arrivée dans la zone finale
         	furthest_point_reached=true;
         	order=GO_FORWARD;
         }
@@ -272,37 +261,15 @@ uint8_t maze_mapping_next_step_to_goal(void)
     return order;
 }
 
-bool maze_mapping_uturn_after_selecting_mode(uint8_t mode_selected)
+bool maze_mapping_do_a_uturn(void)
 {
-	if ((map[robot_position]==END)&&(mode_selected!=RETURN_HOME))
+	if (do_a_uturn)
+	{
+		do_a_uturn=false;
+		return true;
+	}
+	else
 		return false;
-
-	if ((map[robot_position]==BEGINNING)&&(mode_selected==RETURN_HOME))
-		return false;
-
-	if (mode_selected!=mode)
-    {
-		if (((mode==RETURN_HOME)||(mode_selected==RETURN_HOME))&&uturn_to_do)
-			do_a_uturn=true;
-    	else
-    		do_a_uturn=false;
-
-    	if ((mode_selected==DISCOVER)&&(robot_position!=current_crossroad))
-    	{
-    		mode=GO_FURTHEST_POINT_KNOWN;
-    		switch_to_discover_mode=true;
-    	}
-    	else
-    		mode=mode_selected;
-
-    	maze_mapping_update_rgb_leds();
-    }
-    else
-    {
-    	do_a_uturn=false;
-    }
-
-    return do_a_uturn;
 }
 
 bool maze_mapping_mode_is_selected(void)
@@ -339,6 +306,33 @@ bool maze_mapping_multi_check_case(uint8_t new_case)
 void maze_mapping_process_end_of_maze(void)
 {
 	map[current_crossroad]=END;
+}
+
+void maze_mapping_select_mode(uint8_t mode_selected)
+{
+	bool ignore_order=false;
+
+	if ((map[robot_position]==END)&&(mode_selected!=RETURN_HOME))
+		ignore_order=true;
+
+	if ((map[robot_position]==BEGINNING)&&(mode_selected==RETURN_HOME))
+		ignore_order=true;
+
+	if ((!ignore_order)&&(mode_selected!=mode))
+    {
+		if (((mode==RETURN_HOME)||(mode_selected==RETURN_HOME))&&uturn_to_do)
+			do_a_uturn=true;
+
+    	if ((mode_selected==DISCOVER)&&(robot_position!=current_crossroad))
+    	{
+    		mode=GO_FURTHEST_POINT_KNOWN;
+    		switch_to_discover_mode=true;
+    	}
+    	else
+    		mode=mode_selected;
+
+    	maze_mapping_update_rgb_leds();
+    }
 }
 
 void maze_mapping_set_rgb_leds(uint8_t red_intensity, uint8_t green_intensity, uint8_t blue_intensity)

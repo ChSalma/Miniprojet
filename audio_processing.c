@@ -46,18 +46,18 @@ void sound_remote(float* data)
 {
 	float max_norm = MIN_VALUE_THRESHOLD;
 	int16_t max_norm_index = -1; 
-	bool do_a_uturn;
 
 	//search for the highest peak
 	for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++)
 	{
-		if(data[i] > max_norm){
+		if(data[i] > max_norm)
+		{
 			max_norm = data[i];
 			max_norm_index = i;
 		}
 	}
 
-	if (max_norm_index != last_index)
+	if (max_norm_index!=last_index)
 	{
 		last_index=max_norm_index;
 		count_index=0;
@@ -65,32 +65,28 @@ void sound_remote(float* data)
 	else
 		count_index++;
 
-	if (count_index == MAX_COUNT_INDEX)
+	if (count_index==MAX_COUNT_INDEX)
 	{
 		//RETURN_HOME
 		if((max_norm_index >= FREQ_RETURN_HOME_L) && (max_norm_index <= FREQ_RETURN_HOME_H))
 		{
-			do_a_uturn=maze_mapping_uturn_after_selecting_mode(RETURN_HOME);
+			maze_mapping_select_mode(RETURN_HOME);
 		}
 		//GO_FPK
 		else if((max_norm_index >= FREQ_GO_FPK_L) && (max_norm_index <= FREQ_GO_FPK_H))
 		{
-			do_a_uturn=maze_mapping_uturn_after_selecting_mode(GO_FURTHEST_POINT_KNOWN);
+			maze_mapping_select_mode(GO_FURTHEST_POINT_KNOWN);
 		}
 		//DISCOVER
 		else if((max_norm_index >= FREQ_DISCOVER_L) && (max_norm_index <= FREQ_DISCOVER_H))
 		{
-			do_a_uturn=maze_mapping_uturn_after_selecting_mode(DISCOVER);
+			maze_mapping_select_mode(DISCOVER);
 		}
 		//END_MAZE
 		else if((max_norm_index >= FREQ_END_MAZE_L) && (max_norm_index <= FREQ_END_MAZE_H))
 		{
 			maze_mapping_process_end_of_maze();
-			do_a_uturn=false;
 		}
-		else
-			do_a_uturn=false;
-		//enlever tous les do_a_u_turn+ rendre la fonction ut_aft_sel_mode en void//
 	}
 }
 
