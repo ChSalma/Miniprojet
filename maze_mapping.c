@@ -13,8 +13,8 @@
 #include <constantes.h>
 #include "ch.h"
 #include <leds.h>
-#include <Mouvements.h>
 #include <main.h>
+#include <mouvements.h>
 
 #define MAX_MAP_SIZE 50
 #define RESET 0

@@ -137,7 +137,7 @@ build/obj/audio_processing.o: audio_processing.c \
  ../../lib/e-puck2_main-processor/src/usbcfg.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
- maze_mapping.h constantes.h Mouvements.h \
+ maze_mapping.h constantes.h \
  ../../lib/e-puck2_main-processor/src/audio/microphone.h \
  ../../lib/e-puck2_main-processor/src/audio/mp45dt02_processing.h \
  audio_processing.h fft.h \
@@ -147,7 +147,8 @@ build/obj/audio_processing.o: audio_processing.c \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\xlocale.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\strings.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h \
+ mouvements.h
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
 
@@ -431,8 +432,6 @@ maze_mapping.h:
 
 constantes.h:
 
-Mouvements.h:
-
 ../../lib/e-puck2_main-processor/src/audio/microphone.h:
 
 ../../lib/e-puck2_main-processor/src/audio/mp45dt02_processing.h:
@@ -454,3 +453,5 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\string.h:
 
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h:
+
+mouvements.h:

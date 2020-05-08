@@ -1,5 +1,5 @@
 /*
- * Mouvements.c
+ * mouvements.c
  *
  *  Created on: 16 avr. 2020
  *      Author: Salma Chatagny
@@ -9,14 +9,14 @@
 #include <stdlib.h>
 #include <math.h>
 #include <motors.h>
-#include <Mouvements.h>
 #include <constantes.h>
+#include <mouvements.h>
 
 #define NSTEP_ONE_TURN      1000 // number of step for 1 turn of the motor
 #define WHEEL_PERIMETER     130.f // [mm]
-#define MIN_DISPLACEMENT	(WHEEL_PERIMETER/NSTEP_ONE_TURN/10)
+#define MIN_DISPLACEMENT	(WHEEL_PERIMETER/NSTEP_ONE_TURN)
 #define PI					3.141592f
-#define DISTANCE_WHEELS		5.5f
+#define DISTANCE_WHEELS		55.f
 #define CIRCLE_PERIMETER	(PI*DISTANCE_WHEELS)
 #define NSTEP_ONE_CIRCLE	(CIRCLE_PERIMETER/MIN_DISPLACEMENT)
 
@@ -35,7 +35,6 @@ void turn(int angle, int speed)
 {
 	int nb_steps_to_do;
 	nb_steps_to_do = (int) (angle*NSTEP_ONE_CIRCLE/FULL_TURN);
-	//chprintf((BaseSequentialStream *)&SD3, "nb_steps_to_do = %d \n", nb_steps_to_do);
 	if (angle>=0)
 	{
 		right_motor_set_pos(0);
@@ -50,7 +49,7 @@ void turn(int angle, int speed)
 		left_motor_set_speed(speed);
 		while(left_motor_get_pos() < -nb_steps_to_do);
 	}
-	stop(); //comme ca le robot arrête de tourner
+	stop(); //permet d'arrêter le robot après sa rotation effectuée
 }
 
 void go_slow(void)

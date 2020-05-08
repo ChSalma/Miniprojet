@@ -7,13 +7,13 @@
 
 #include <maze_mapping.h>
 #include <constantes.h>
-#include <Mouvements.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>
 #include <fft.h>
 #include <arm_math.h>
 
 #include <chprintf.h>
+#include <mouvements.h>
 
 //2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
 static float micFront_cmplx_input[2 * FFT_SIZE];

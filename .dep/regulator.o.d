@@ -100,20 +100,6 @@ build/obj/regulator.o: regulator.c \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\lock.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
- ../../lib/e-puck2_main-processor/src/usbcfg.h \
- ../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
  main.h ../../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/dcmi.h \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/dcmi_lld.h \
@@ -123,7 +109,15 @@ build/obj/regulator.o: regulator.c \
  ../../lib/e-puck2_main-processor/src/msgbus/messagebus.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\unistd.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\types.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\lock.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\endian.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_endian.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\select.h \
@@ -136,9 +130,11 @@ build/obj/regulator.o: regulator.c \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\types.h \
  ../../lib/e-puck2_main-processor/src/parameter/parameter.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdlib.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h \
- Mouvements.h regulator.h constantes.h
+ regulator.h constantes.h mouvements.h
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
 
@@ -342,34 +338,6 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h:
 
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\math.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\lock.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
-
-../../lib/e-puck2_main-processor/src/usbcfg.h:
-
-../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
-
-c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h:
-
 main.h:
 
 ../../lib/e-puck2_main-processor/src/camera/dcmi_camera.h:
@@ -390,7 +358,23 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h:
 
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h:
+
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\types.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\lock.h:
 
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\endian.h:
 
@@ -416,12 +400,16 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdlib.h:
 
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
+
+c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h:
+
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h:
 
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h:
 
-Mouvements.h:
-
 regulator.h:
 
 constantes.h:
+
+mouvements.h:

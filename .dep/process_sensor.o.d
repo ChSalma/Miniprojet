@@ -100,7 +100,7 @@ build/obj/process_sensor.o: process_sensor.c \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h \
- ../../lib/e-puck2_main-processor/src/sensors/proximity.h Mouvements.h \
+ ../../lib/e-puck2_main-processor/src/sensors/proximity.h \
  process_sensor.h constantes.h maze_mapping.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
@@ -138,7 +138,8 @@ build/obj/process_sensor.o: process_sensor.c \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h \
  c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h \
- c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h
+ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h \
+ mouvements.h
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
 
@@ -344,8 +345,6 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 
 ../../lib/e-puck2_main-processor/src/sensors/proximity.h:
 
-Mouvements.h:
-
 process_sensor.h:
 
 constantes.h:
@@ -427,3 +426,5 @@ c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\to
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h:
 
 c:\users\salma\ chatagny\documents\epfl\ba6\microinformatique\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h:
+
+mouvements.h:

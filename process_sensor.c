@@ -9,7 +9,6 @@
 #include "hal.h"
 #include <stdbool.h>
 #include <sensors/proximity.h>
-#include <Mouvements.h>
 #include <process_sensor.h>
 #include <constantes.h>
 #include <maze_mapping.h>
@@ -17,6 +16,7 @@
 #include <regulator.h>
 
 #include <main.h>
+#include <mouvements.h>
 
 #define ROBOT_DIAMETER 75.f
 #define COEFF 0.4f
@@ -57,7 +57,6 @@ void process_sensors_values(void)
 			calibrated_prox += data_sensors[i + j*PROXIMITY_NB_CHANNELS];
 		}
 		calibrated_prox = (int)(calibrated_prox/BUFFER_SIZE);
-		//chprintf((BaseSequentialStream *) &SD3, "id = %d , calibrated = %d\n",i, calibrated_prox);
 		if(i==FRONT_RIGHT || i==FRONT_LEFT)
 		{
 			//si on sait qu'on est de toute façon dans un virage ou carrefour on peut tester plus rapidemeent le capteur avant
@@ -99,20 +98,52 @@ void process_sensors_values(void)
 		sensors_values[FRONT_RIGHT] = FREE_WAY_DETECTED;
 	}
 }
+void do_next_order(uint8_t next_order)
+{
+	switch (next_order)
+			{
+			case (KEEP_GOING):
+				go_fast();
+				leaving_corridor = true;
+				break;
+			case(GO_RIGHT):
+				turn(TURN_RIGHT, HIGH_SPEED);
+				go_fast();
+				reference_to_update = true;
+				break;
+			case(GO_FORWARD):
+				go_fast();
+				break;
+			case(GO_LEFT):
+				turn(TURN_LEFT, HIGH_SPEED);
+				go_fast();
+				reference_to_update = true;
+				break;
+			case(U_TURN):
+				turn(HALF_TURN, ULTRA_HIGH_SPEED);
+				go_fast();
+				break;
+			case(DONT_MOVE):
+				stop();
+				break;
+			default:
+				break;
+			}
+}
 
-/*THREAD*/
+//THREAD//
 static THD_FUNCTION(ProcessMeasure, arg){
 
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 
     while(1){
-    	uint8_t next_order;
+    	//uint8_t next_order;
     	if(maze_mapping_do_a_uturn())
     		turn(HALF_TURN, ULTRA_HIGH_SPEED);
-    	/*DETECTION DE L'ENVIRONNEMENT*/
+    	//DETECTION DE L'ENVIRONNEMENT//
     	process_sensors_values();
-    	/*UPDATE POUR REGULATION*/
+    	//UPDATE POUR REGULATION//
     	if(reference_to_update)
     	{
     		if (sensors_values[LEFT_SENS]==WALL_DETECTED)
@@ -122,10 +153,10 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		reference_to_update = false;
     	}
 
-    	/*GO TO THE MIDDLE OF AREA*/
+    	//GO TO THE MIDDLE OF AREA//
 
-    	//if the robot is entering a crossroad or a corner he goes in the middle of the unit//
-    	//to be well positioned for next move and for characterization of its environment.//
+    	/*if the robot is entering a crossroad or a corner he goes in the middle of the unit
+    	 * to be well positioned for the next move and characterization of its environment.*/
 
 		if(leaving_corridor&&(sensors_values[RIGHT_SENS]== FREE_WAY_DETECTED||
 								sensors_values[LEFT_SENS]== FREE_WAY_DETECTED))
@@ -135,40 +166,12 @@ static THD_FUNCTION(ProcessMeasure, arg){
 			leaving_corridor = false;
 		}
 
-		/*ORDER AQUISITION*/
+		//ORDER AQUISITION AND ROBOT DISPLACMENT//
+		do_next_order(maze_mapping_next_move(sensors_values[FRONT_RIGHT],
+											 sensors_values[RIGHT_SENS],
+											 sensors_values[LEFT_SENS]));
 
-		next_order = maze_mapping_next_move(sensors_values[FRONT_RIGHT], sensors_values[RIGHT_SENS], sensors_values[LEFT_SENS]);
-		switch (next_order)
-		{
-		case (KEEP_GOING):
-			go_fast();
-			leaving_corridor = true;
-			break;
-		case(GO_RIGHT):
-			turn(TURN_RIGHT, HIGH_SPEED);
-			go_fast();
-			reference_to_update = true;
-			break;
-		case(GO_FORWARD):
-			go_fast();
-			break;
-		case(GO_LEFT):
-			turn(TURN_LEFT, HIGH_SPEED);
-			go_fast();
-			reference_to_update = true;
-			break;
-		case(U_TURN):
-			turn(HALF_TURN, ULTRA_HIGH_SPEED);
-			go_fast();
-			break;
-		case(DONT_MOVE):
-			stop();
-			break;
-		default:
-			break;
-		}
-
-		/*REGULATION*/
+		//REGULATION//
 		if(maze_mapping_mode_is_selected())
 		{
 			if ((sensors_values[LEFT_SENS]==WALL_DETECTED)&&(sensors_values[RIGHT_SENS]==WALL_DETECTED))
@@ -182,18 +185,19 @@ static THD_FUNCTION(ProcessMeasure, arg){
 			}
 
 		}
-
+		//MISE A JOUR DU BUFFER CIRCULAIRE//
 		buffer_state ++;
 		if (buffer_state >= BUFFER_SIZE)
 		{
 			buffer_state = 0;
 		}
+
     	chThdSleepMilliseconds(25);
     }
 }
 
 
-/*PUBLIC FONCTIONS*/
+//PUBLIC FONCTIONS//
 void process_sensors_start(void){
 	chThdCreateStatic(waProcessMeasure, sizeof(waProcessMeasure), NORMALPRIO+1, ProcessMeasure, NULL);
 }

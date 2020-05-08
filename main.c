@@ -40,31 +40,29 @@ int main(void)
     chSysInit();
     mpu_init();
 
-    //Init du bus
+    /*Init du bus*/
     messagebus_init(&bus, &bus_lock, &bus_condvar);
 
-    //starts the serial communication
+    /*starts the serial communication*/
     serial_start();
 
-    //Init des capteurs de proximité
+    /*Init des capteurs de proximité*/
     proximity_start();
-	//Init les moteurs
+	/*Init des moteurs*/
 	motors_init();
-	//start the threads for the pi regulator and the proximity sensors process
+	/*start thread to process proximity sensors data*/
 	process_sensors_start();
-	//wait 3s before calibrating
+
+	/*wait 3s before calibration*/
     chThdSleepMilliseconds(3000);
     calibrate_ir();
-	//start the microphones thread
+	/*start the microphones thread*/
 	mic_start(&processAudioData);
 	spi_comm_start();
 
 
     /* Infinite loop. */
     while (1) {
-
-
-    	//y=a*x+(1-a)*y(t-1) 0<a<1
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }
