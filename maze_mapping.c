@@ -163,8 +163,9 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
         {
             current_crossroad++;
             mode=NO_MODE_SELECTED;
+            //uturn_to_do=false;
             maze_mapping_victory_dance();
-            return U_TURN;
+            return DONT_MOVE;//return U_TURN;
         }
     }
     else
@@ -208,7 +209,9 @@ uint8_t maze_mapping_next_step_to_goal(void)
 {
 	uint8_t order;
 
-    if (mode==RETURN_HOME)
+    memorise_crossroad=false;
+
+	if (mode==RETURN_HOME)
     {
     	if (robot_position>RESET)
         {
@@ -222,6 +225,7 @@ uint8_t maze_mapping_next_step_to_goal(void)
        {
         	order=U_TURN;
             mode=NO_MODE_SELECTED;
+            memorise_crossroad=true;
             maze_mapping_victory_dance();
        }
     }
@@ -245,9 +249,10 @@ uint8_t maze_mapping_next_step_to_goal(void)
 			}
 			else
 			{
-				order=U_TURN;
-				uturn_to_do=false;
+				order=DONT_MOVE;//order=U_TURN;
+				//uturn_to_do=false;
 				mode=NO_MODE_SELECTED;
+			    memorise_crossroad=true;
 				maze_mapping_victory_dance();
 			}
         }
@@ -258,7 +263,6 @@ uint8_t maze_mapping_next_step_to_goal(void)
         }
     }
     maze_mapping_update_rgb_leds();
-    memorise_crossroad=false;
     return order;
 }
 

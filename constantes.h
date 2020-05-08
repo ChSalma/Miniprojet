@@ -11,7 +11,7 @@
 //mouvements
 #define LOW_SPEED 200
 #define HIGH_SPEED 350
-#define ULTRA_HIGH_SPEED 900
+#define ULTRA_HIGH_SPEED 1000
 
 #define FULL_TURN	360
 #define TURN_RIGHT	-90 //[degrees]
