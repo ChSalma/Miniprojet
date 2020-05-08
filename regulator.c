@@ -16,12 +16,12 @@
 #define KD_FW 0.3
 #define MAX_DIFF 30
 #define MAX_DERIV 100
-#define THRESHOLD_45_DEG 300//140
-#define OFFSET 0 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
+#define THRESHOLD_45_DEG 250//140
+#define OFFSET 20 //car les capteurs gauche et droite ne donne pas exactement les mêmes valeurs pour une même distance à un obstacle
 
 static float last_difference = 0;
 
-void regulator_difference(int front_right_45deg_value, int front_left_45deg_value)
+void regulator_difference(int front_right_45deg_value, int front_left_45deg_value, int front_right_value, int front_left_value)
 {
     int16_t right_speed, left_speed;
     int16_t difference=0;
@@ -29,20 +29,23 @@ void regulator_difference(int front_right_45deg_value, int front_left_45deg_valu
 
 	if ((front_right_45deg_value>THRESHOLD_45_DEG)&&(front_left_45deg_value>THRESHOLD_45_DEG))
 	{
-		difference = front_right_45deg_value-front_left_45deg_value-OFFSET;
-		if(difference > MAX_DIFF)
-			difference = MAX_DIFF;
-		if(difference < -MAX_DIFF)
-			difference = -MAX_DIFF;
-
-		derivate = difference-last_difference;
-
-		right_speed = get_right_speed()+ KP*difference + KD*derivate;
-		left_speed = get_left_speed()-KP*difference-KD*derivate;
-
-		set_speed(right_speed, left_speed);
-		last_difference = difference;
+		difference = front_right_45deg_value-front_left_45deg_value;
 	}
+	else
+		difference = front_right_value-front_left_value-OFFSET;
+
+	if(difference > MAX_DIFF)
+		difference = MAX_DIFF;
+	if(difference < -MAX_DIFF)
+		difference = -MAX_DIFF;
+
+	derivate = difference-last_difference;
+
+	right_speed = get_right_speed()+ KP*difference + KD*derivate;
+	left_speed = get_left_speed()-KP*difference-KD*derivate;
+
+	set_speed(right_speed, left_speed);
+	last_difference = difference;
 }
 
 void regulator_follow_wall(int reference_value, int current_value, int sensor_id)
@@ -50,7 +53,7 @@ void regulator_follow_wall(int reference_value, int current_value, int sensor_id
     int16_t right_speed, left_speed;
     int16_t difference=0,derivate;
 
-    difference=current_value-reference_value;
+    difference=reference_value-current_value;
 
 	if (sensor_id==RIGHT_SENS)
 		difference = -difference+OFFSET;
