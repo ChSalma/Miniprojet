@@ -38,7 +38,7 @@ static THD_WORKING_AREA(waProcessMeasure,256);
 void do_follow_wall_regulation(int sensor_id)
 {
 	if (leaving_corridor)
-		reference_distance=1.1*data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS];
+		reference_distance=data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS];
 
 	regulator_follow_wall(reference_distance, data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS], sensor_id);
 }

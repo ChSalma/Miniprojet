@@ -2,3 +2,9 @@
 libssp.a
 
 libssp_nonshared.a
+
+*.o
+
+*.lst
+
+*.d
