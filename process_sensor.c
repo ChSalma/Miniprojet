@@ -26,7 +26,7 @@
 
 enum{FREE_WAY_DETECTED, WALL_DETECTED};
 
-static bool leaving_corridor;
+static bool leaving_corridor, reference_to_update;
 static bool sensors_values[PROXIMITY_NB_CHANNELS];
 static int reference_distance;
 static int data_sensors[PROXIMITY_NB_CHANNELS*BUFFER_SIZE];
@@ -38,7 +38,10 @@ static THD_WORKING_AREA(waProcessMeasure,256);
 void do_follow_wall_regulation(int sensor_id)
 {
 	if (leaving_corridor)
+	{
 		reference_distance=data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS];
+		reference_to_update = false;
+	}
 
 	regulator_follow_wall(reference_distance, data_sensors[sensor_id + buffer_state*PROXIMITY_NB_CHANNELS], sensor_id);
 }
@@ -109,6 +112,15 @@ static THD_FUNCTION(ProcessMeasure, arg){
     		turn(HALF_TURN, ULTRA_HIGH_SPEED);
     	/*DETECTION DE L'ENVIRONNEMENT*/
     	process_sensors_values();
+    	/*UPDATE POUR REGULATION*/
+    	if(reference_to_update)
+    	{
+    		if (sensors_values[LEFT_SENS]==WALL_DETECTED)
+    			reference_distance=data_sensors[LEFT_SENS + buffer_state*PROXIMITY_NB_CHANNELS];
+    		else
+    			reference_distance=data_sensors[RIGHT_SENS + buffer_state*PROXIMITY_NB_CHANNELS];
+    		reference_to_update = false;
+    	}
 
     	/*GO TO THE MIDDLE OF AREA*/
 
@@ -135,6 +147,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		case(GO_RIGHT):
 			turn(TURN_RIGHT, HIGH_SPEED);
 			go_fast();
+			reference_to_update = true;
 			break;
 		case(GO_FORWARD):
 			go_fast();
@@ -142,6 +155,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		case(GO_LEFT):
 			turn(TURN_LEFT, HIGH_SPEED);
 			go_fast();
+			reference_to_update = true;
 			break;
 		case(U_TURN):
 			turn(HALF_TURN, ULTRA_HIGH_SPEED);
@@ -158,7 +172,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		if(maze_mapping_mode_is_selected())
 		{
 			if ((sensors_values[LEFT_SENS]==WALL_DETECTED)&&(sensors_values[RIGHT_SENS]==WALL_DETECTED))
-				regulator_difference(get_calibrated_prox(FRONT_RIGHT_45DEG), get_calibrated_prox(FRONT_LEFT_45DEG));
+				regulator_difference(get_calibrated_prox(FRONT_RIGHT_45DEG), get_calibrated_prox(FRONT_LEFT_45DEG), get_calibrated_prox(RIGHT_SENS), get_calibrated_prox(LEFT_SENS));
 			else
 			{
 				if (sensors_values[LEFT_SENS]==WALL_DETECTED)
