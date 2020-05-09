@@ -176,7 +176,10 @@ static THD_FUNCTION(ProcessMeasure, arg){
 		if(maze_mapping_mode_is_selected())
 		{
 			if ((sensors_values[LEFT_SENS]==WALL_DETECTED)&&(sensors_values[RIGHT_SENS]==WALL_DETECTED))
-				regulator_difference(get_calibrated_prox(FRONT_RIGHT_45DEG), get_calibrated_prox(FRONT_LEFT_45DEG), get_calibrated_prox(RIGHT_SENS), get_calibrated_prox(LEFT_SENS));
+				regulator_difference(get_calibrated_prox(FRONT_RIGHT_45DEG)
+									,get_calibrated_prox(FRONT_LEFT_45DEG)
+									,get_calibrated_prox(RIGHT_SENS)
+									,get_calibrated_prox(LEFT_SENS));
 			else
 			{
 				if (sensors_values[LEFT_SENS]==WALL_DETECTED)

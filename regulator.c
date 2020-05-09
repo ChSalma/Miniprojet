@@ -8,7 +8,7 @@
 
 #define KP 1.1 //Régulation PD entre deux murs
 #define KD 0.5
-#define KP_FW 0.9//Régulation PD par rapport à un seul mur
+#define KP_FW 0.6//0.9//Régulation PD par rapport à un seul mur
 #define KD_FW 0.3
 
 #define MAX_DIFF 30
@@ -27,6 +27,8 @@ void regulator_pd(int16_t difference, uint8_t regulation_type)
 {
 	int16_t right_speed, left_speed, derivate;
 
+	/*Pour éviter des corrections angulaires trop fortes, qui pourrait faire dévier le robot
+	 * de sa trajectoire principale, on définit un maximum.*/
 	if(difference > MAX_DIFF)
 		difference = MAX_DIFF;
 	if(difference < -MAX_DIFF)
@@ -42,8 +44,8 @@ void regulator_pd(int16_t difference, uint8_t regulation_type)
 	}																	//comme arguments (p_coeff, d_coeff) pour les
 	else																//bons KP et KD
 	{
-		right_speed = get_right_speed() + KP_FW*difference + KD_FW*derivate;
-		left_speed = get_left_speed() - KP_FW*difference - KD_FW*derivate;
+		right_speed = get_right_speed() + KP_FW*difference  - KD_FW*derivate;// + KD_FW*derivate;
+		left_speed = get_left_speed() - KP_FW*difference  + KD_FW*derivate;//- KD_FW*derivate;
 	}
 
 	set_speed(right_speed, left_speed);
@@ -67,8 +69,7 @@ void regulator_difference(int front_right_45deg_value, int front_left_45deg_valu
 	}
 	else
 		difference = front_right_value-front_left_value-OFFSET;
-	/*Pour éviter des corrections angulaires trop fortes, qui pourrait faire dévier le robot
-	 * de sa trajectoire principale, on définit un maximum.*/
+
     regulator_pd(difference, DIFFERENCE);
 }
 
