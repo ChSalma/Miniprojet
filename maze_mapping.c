@@ -45,14 +45,14 @@ static uint8_t mode = NO_MODE_SELECTED;
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
-	if (right_status && left_status)
-	{
-		memorise_crossroad=true;
-        return KEEP_GOING;
-	}
-
 	if(maze_mapping_multi_check_case(CORRIDOR))
 	{
+		if (right_status && left_status)
+		{
+			memorise_crossroad=true;
+	        return KEEP_GOING;
+		}
+
 		//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
 		//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
 		memorise_crossroad=false;

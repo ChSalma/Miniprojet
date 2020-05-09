@@ -3164,51 +3164,50 @@ Disassembly of section .text:
  800253c:	00000000 	.word	0x00000000
 
 08002540 <maze_mapping_corridor_gestion>:
- 8002540:	b570      	push	{r4, r5, r6, lr}
- 8002542:	4d15      	ldr	r5, [pc, #84]	; (8002598 <maze_mapping_corridor_gestion+0x58>)
- 8002544:	b082      	sub	sp, #8
- 8002546:	682b      	ldr	r3, [r5, #0]
- 8002548:	9301      	str	r3, [sp, #4]
- 800254a:	4606      	mov	r6, r0
- 800254c:	b100      	cbz	r0, 8002550 <maze_mapping_corridor_gestion+0x10>
- 800254e:	b9e1      	cbnz	r1, 800258a <maze_mapping_corridor_gestion+0x4a>
- 8002550:	4b12      	ldr	r3, [pc, #72]	; (800259c <maze_mapping_corridor_gestion+0x5c>)
- 8002552:	781c      	ldrb	r4, [r3, #0]
- 8002554:	2c02      	cmp	r4, #2
- 8002556:	d00b      	beq.n	8002570 <maze_mapping_corridor_gestion+0x30>
- 8002558:	4a11      	ldr	r2, [pc, #68]	; (80025a0 <maze_mapping_corridor_gestion+0x60>)
- 800255a:	2100      	movs	r1, #0
- 800255c:	2402      	movs	r4, #2
- 800255e:	7011      	strb	r1, [r2, #0]
- 8002560:	701c      	strb	r4, [r3, #0]
- 8002562:	9a01      	ldr	r2, [sp, #4]
- 8002564:	682b      	ldr	r3, [r5, #0]
- 8002566:	429a      	cmp	r2, r3
- 8002568:	4620      	mov	r0, r4
- 800256a:	d113      	bne.n	8002594 <maze_mapping_corridor_gestion+0x54>
- 800256c:	b002      	add	sp, #8
- 800256e:	bd70      	pop	{r4, r5, r6, pc}
- 8002570:	f7ff ffc6 	bl	8002500 <maze_mapping_multi_check_case.part.0>
- 8002574:	2800      	cmp	r0, #0
- 8002576:	d0f4      	beq.n	8002562 <maze_mapping_corridor_gestion+0x22>
- 8002578:	4b0a      	ldr	r3, [pc, #40]	; (80025a4 <maze_mapping_corridor_gestion+0x64>)
- 800257a:	2e00      	cmp	r6, #0
- 800257c:	f04f 0200 	mov.w	r2, #0
- 8002580:	bf0c      	ite	eq
- 8002582:	2401      	moveq	r4, #1
- 8002584:	2403      	movne	r4, #3
- 8002586:	701a      	strb	r2, [r3, #0]
- 8002588:	e7eb      	b.n	8002562 <maze_mapping_corridor_gestion+0x22>
- 800258a:	4b06      	ldr	r3, [pc, #24]	; (80025a4 <maze_mapping_corridor_gestion+0x64>)
- 800258c:	2201      	movs	r2, #1
- 800258e:	701a      	strb	r2, [r3, #0]
- 8002590:	2400      	movs	r4, #0
- 8002592:	e7e6      	b.n	8002562 <maze_mapping_corridor_gestion+0x22>
- 8002594:	f7ff fdfc 	bl	8002190 <__stack_chk_fail>
+ 8002540:	b5f0      	push	{r4, r5, r6, r7, lr}
+ 8002542:	4b14      	ldr	r3, [pc, #80]	; (8002594 <maze_mapping_corridor_gestion+0x54>)
+ 8002544:	4d14      	ldr	r5, [pc, #80]	; (8002598 <maze_mapping_corridor_gestion+0x58>)
+ 8002546:	781c      	ldrb	r4, [r3, #0]
+ 8002548:	682a      	ldr	r2, [r5, #0]
+ 800254a:	b083      	sub	sp, #12
+ 800254c:	2c02      	cmp	r4, #2
+ 800254e:	9201      	str	r2, [sp, #4]
+ 8002550:	d00b      	beq.n	800256a <maze_mapping_corridor_gestion+0x2a>
+ 8002552:	4a12      	ldr	r2, [pc, #72]	; (800259c <maze_mapping_corridor_gestion+0x5c>)
+ 8002554:	2100      	movs	r1, #0
+ 8002556:	2402      	movs	r4, #2
+ 8002558:	7011      	strb	r1, [r2, #0]
+ 800255a:	701c      	strb	r4, [r3, #0]
+ 800255c:	9a01      	ldr	r2, [sp, #4]
+ 800255e:	682b      	ldr	r3, [r5, #0]
+ 8002560:	429a      	cmp	r2, r3
+ 8002562:	4620      	mov	r0, r4
+ 8002564:	d114      	bne.n	8002590 <maze_mapping_corridor_gestion+0x50>
+ 8002566:	b003      	add	sp, #12
+ 8002568:	bdf0      	pop	{r4, r5, r6, r7, pc}
+ 800256a:	4606      	mov	r6, r0
+ 800256c:	460f      	mov	r7, r1
+ 800256e:	f7ff ffc7 	bl	8002500 <maze_mapping_multi_check_case.part.0>
+ 8002572:	2800      	cmp	r0, #0
+ 8002574:	d0f2      	beq.n	800255c <maze_mapping_corridor_gestion+0x1c>
+ 8002576:	4b0a      	ldr	r3, [pc, #40]	; (80025a0 <maze_mapping_corridor_gestion+0x60>)
+ 8002578:	b11e      	cbz	r6, 8002582 <maze_mapping_corridor_gestion+0x42>
+ 800257a:	b92f      	cbnz	r7, 8002588 <maze_mapping_corridor_gestion+0x48>
+ 800257c:	2403      	movs	r4, #3
+ 800257e:	701f      	strb	r7, [r3, #0]
+ 8002580:	e7ec      	b.n	800255c <maze_mapping_corridor_gestion+0x1c>
+ 8002582:	2401      	movs	r4, #1
+ 8002584:	701e      	strb	r6, [r3, #0]
+ 8002586:	e7e9      	b.n	800255c <maze_mapping_corridor_gestion+0x1c>
+ 8002588:	2201      	movs	r2, #1
+ 800258a:	701a      	strb	r2, [r3, #0]
+ 800258c:	2400      	movs	r4, #0
+ 800258e:	e7e5      	b.n	800255c <maze_mapping_corridor_gestion+0x1c>
+ 8002590:	f7ff fdfe 	bl	8002190 <__stack_chk_fail>
+ 8002594:	20000b2c 	.word	0x20000b2c
  8002598:	20000b00 	.word	0x20000b00
- 800259c:	20000b2c 	.word	0x20000b2c
- 80025a0:	200018df 	.word	0x200018df
- 80025a4:	20000b2d 	.word	0x20000b2d
+ 800259c:	200018df 	.word	0x200018df
+ 80025a0:	20000b2d 	.word	0x20000b2d
 	...
 
 080025b0 <maze_mapping_deadend_gestion>:
