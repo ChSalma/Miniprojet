@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s 			page 1
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 1
+>>>>>>> redesign_maze_mapping
 
 
    1              		.cpu cortex-m4
@@ -42,6 +46,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s 			page 1
   39              		.cfi_offset 7, -12
   40              		.cfi_offset 8, -8
   41              		.cfi_offset 14, -4
+<<<<<<< HEAD
   42 0004 6FF01D04 		mvn	r4, #29
   43 0008 8442     		cmp	r4, r0
   44 000a B8BF     		it	lt
@@ -84,9 +89,54 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s 			page 1
   78 0036 17EE903A 		vmov	r3, s15	@ int
   79 003a 1DB2     		sxth	r5, r3
   80              	.LVL2:
+=======
+  42 0008 B8BF     		it	lt
+  43 000a 1846     		movlt	r0, r3
+  44              	.LVL1:
+  45              		.loc 1 37 0
+  46 000c 1E28     		cmp	r0, #30
+  47 000e A8BF     		it	ge
+  48 0010 1E20     		movge	r0, #30
+  49              	.LVL2:
+  50 0012 374D     		ldr	r5, .L9
+  51              		.loc 1 27 0
+  52 0014 374E     		ldr	r6, .L9+4
+  53              		.loc 1 37 0
+  54 0016 D5ED007A 		vldr.32	s15, [r5]
+  55              		.loc 1 27 0
+  56 001a 3368     		ldr	r3, [r6]
+  57              		.loc 1 37 0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 2
+
+
+  58 001c 07EE100A 		vmov	s14, r0	@ int
+  59              		.loc 1 27 0
+  60 0020 2DED048B 		vpush.64	{d8, d9}
+  61              		.cfi_def_cfa_offset 32
+  62              		.cfi_offset 80, -32
+  63              		.cfi_offset 81, -28
+  64              		.cfi_offset 82, -24
+  65              		.cfi_offset 83, -20
+  66              		.loc 1 37 0
+  67 0024 B8EEC78A 		vcvt.f32.s32	s16, s14
+  68              		.loc 1 27 0
+  69 0028 82B0     		sub	sp, sp, #8
+  70              		.cfi_def_cfa_offset 40
+  71              		.loc 1 37 0
+  72 002a 78EE677A 		vsub.f32	s15, s16, s15
+  73              		.loc 1 27 0
+  74 002e 0193     		str	r3, [sp, #4]
+  75              		.loc 1 37 0
+  76 0030 FDEEE77A 		vcvt.s32.f32	s15, s15
+  77 0034 17EE903A 		vmov	r3, s15	@ int
+  78 0038 1BB2     		sxth	r3, r3
+  79 003a 08EE903A 		vmov	s17, r3	@ int
+  80              	.LVL3:
+>>>>>>> redesign_maze_mapping
   81              		.loc 1 40 0
   82 003c D9B1     		cbz	r1, .L7
   83              		.loc 1 47 0
+<<<<<<< HEAD
   84 003e FFF7FEFF 		bl	get_right_speed
   85              	.LVL3:
   86 0042 A4B2     		uxth	r4, r4
@@ -3594,10 +3644,3543 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s 			page 1
  3069      5400
  3070              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s 			page 61
+=======
+  84 0040 FFF7FEFF 		bl	get_right_speed
+  85              	.LVL4:
+  86 0044 07EE900A 		vmov	s15, r0	@ int
+  87 0048 DFED2B9A 		vldr.32	s19, .L9+8
+  88 004c 9FED2B9A 		vldr.32	s18, .L9+12
+  89 0050 F8EEE77A 		vcvt.f32.s32	s15, s15
+  90 0054 F8EEE88A 		vcvt.f32.s32	s17, s17
+  91              	.LVL5:
+  92 0058 E8EE297A 		vfma.f32	s15, s16, s19
+  93 005c E8EEC97A 		vfms.f32	s15, s17, s18
+  94 0060 FDEEE77A 		vcvt.s32.f32	s15, s15
+  95 0064 17EE903A 		vmov	r3, s15	@ int
+  96 0068 1CB2     		sxth	r4, r3
+  97              	.LVL6:
+  98              		.loc 1 48 0
+  99 006a FFF7FEFF 		bl	get_left_speed
+ 100              	.LVL7:
+ 101 006e 07EE900A 		vmov	s15, r0	@ int
+ 102 0072 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 103 0076 E8EE697A 		vfms.f32	s15, s16, s19
+ 104 007a E8EE897A 		vfma.f32	s15, s17, s18
+ 105 007e FDEEE77A 		vcvt.s32.f32	s15, s15
+ 106 0082 17EE903A 		vmov	r3, s15	@ int
+ 107 0086 19B2     		sxth	r1, r3
+ 108              	.LVL8:
+ 109              	.L3:
+ 110              		.loc 1 51 0
+ 111 0088 2046     		mov	r0, r4
+ 112 008a FFF7FEFF 		bl	set_speed
+ 113              	.LVL9:
+ 114              		.loc 1 53 0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 3
+
+
+ 115 008e 019A     		ldr	r2, [sp, #4]
+ 116 0090 3368     		ldr	r3, [r6]
+ 117              		.loc 1 52 0
+ 118 0092 85ED008A 		vstr.32	s16, [r5]
+ 119              		.loc 1 53 0
+ 120 0096 9A42     		cmp	r2, r3
+ 121 0098 28D1     		bne	.L8
+ 122 009a 02B0     		add	sp, sp, #8
+ 123              		.cfi_remember_state
+ 124              		.cfi_def_cfa_offset 32
+ 125              		@ sp needed
+ 126 009c BDEC048B 		vldm	sp!, {d8-d9}
+ 127              		.cfi_restore 82
+ 128              		.cfi_restore 83
+ 129              		.cfi_restore 80
+ 130              		.cfi_restore 81
+ 131              		.cfi_def_cfa_offset 16
+ 132 00a0 70BD     		pop	{r4, r5, r6, pc}
+ 133              	.LVL10:
+ 134              	.L7:
+ 135              		.cfi_restore_state
+ 136              		.loc 1 42 0
+ 137 00a2 FFF7FEFF 		bl	get_right_speed
+ 138              	.LVL11:
+ 139 00a6 07EE900A 		vmov	s15, r0	@ int
+ 140 00aa DFED159A 		vldr.32	s19, .L9+16
+ 141 00ae F8EEE77A 		vcvt.f32.s32	s15, s15
+ 142 00b2 F8EEE88A 		vcvt.f32.s32	s17, s17
+ 143              	.LVL12:
+ 144 00b6 E8EE297A 		vfma.f32	s15, s16, s19
+ 145 00ba B6EE009A 		vmov.f32	s18, #5.0e-1
+ 146 00be E8EE897A 		vfma.f32	s15, s17, s18
+ 147 00c2 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 148 00c6 17EE903A 		vmov	r3, s15	@ int
+ 149 00ca 1CB2     		sxth	r4, r3
+ 150              	.LVL13:
+ 151              		.loc 1 43 0
+ 152 00cc FFF7FEFF 		bl	get_left_speed
+ 153              	.LVL14:
+ 154 00d0 07EE900A 		vmov	s15, r0	@ int
+ 155 00d4 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 156 00d8 E8EE697A 		vfms.f32	s15, s16, s19
+ 157 00dc E8EEC97A 		vfms.f32	s15, s17, s18
+ 158 00e0 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 159 00e4 17EE903A 		vmov	r3, s15	@ int
+ 160 00e8 19B2     		sxth	r1, r3
+ 161              	.LVL15:
+ 162 00ea CDE7     		b	.L3
+ 163              	.LVL16:
+ 164              	.L8:
+ 165              		.loc 1 53 0
+ 166 00ec FFF7FEFF 		bl	__stack_chk_fail
+ 167              	.LVL17:
+ 168              	.L10:
+ 169              		.align	2
+ 170              	.L9:
+ 171 00f0 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 4
+
+
+ 172 00f4 00000000 		.word	__stack_chk_guard
+ 173 00f8 9A99193F 		.word	1058642330
+ 174 00fc 9A99993E 		.word	1050253722
+ 175 0100 CDCC8C3F 		.word	1066192077
+ 176              		.cfi_endproc
+ 177              	.LFE3:
+ 178              		.size	regulator_pd, .-regulator_pd
+ 179              		.section	.text.regulator_difference,"ax",%progbits
+ 180              		.align	1
+ 181              		.p2align 4,,15
+ 182              		.global	regulator_difference
+ 183              		.syntax unified
+ 184              		.thumb
+ 185              		.thumb_func
+ 186              		.fpu fpv4-sp-d16
+ 187              		.type	regulator_difference, %function
+ 188              	regulator_difference:
+ 189              	.LFB4:
+ 190              		.loc 1 57 0
+ 191              		.cfi_startproc
+ 192              		@ args = 0, pretend = 0, frame = 8
+ 193              		@ frame_needed = 0, uses_anonymous_args = 0
+ 194              	.LVL18:
+ 195 0000 30B5     		push	{r4, r5, lr}
+ 196              		.cfi_def_cfa_offset 12
+ 197              		.cfi_offset 4, -12
+ 198              		.cfi_offset 5, -8
+ 199              		.cfi_offset 14, -4
+ 200 0002 0D4C     		ldr	r4, .L19
+ 201 0004 83B0     		sub	sp, sp, #12
+ 202              		.cfi_def_cfa_offset 24
+ 203              		.loc 1 57 0
+ 204 0006 2568     		ldr	r5, [r4]
+ 205 0008 0195     		str	r5, [sp, #4]
+ 206              		.loc 1 66 0
+ 207 000a FA28     		cmp	r0, #250
+ 208 000c 01DD     		ble	.L12
+ 209              		.loc 1 66 0 is_stmt 0 discriminator 1
+ 210 000e FA29     		cmp	r1, #250
+ 211 0010 0CDC     		bgt	.L17
+ 212              	.L12:
+ 213              		.loc 1 71 0 is_stmt 1
+ 214 0012 D01A     		subs	r0, r2, r3
+ 215              	.LVL19:
+ 216 0014 1438     		subs	r0, r0, #20
+ 217 0016 00B2     		sxth	r0, r0
+ 218              	.LVL20:
+ 219              	.L13:
+ 220              		.loc 1 73 0
+ 221 0018 019A     		ldr	r2, [sp, #4]
+ 222              	.LVL21:
+ 223 001a 2368     		ldr	r3, [r4]
+ 224              	.LVL22:
+ 225 001c 9A42     		cmp	r2, r3
+ 226 001e 08D1     		bne	.L18
+ 227 0020 0021     		movs	r1, #0
+ 228              	.LVL23:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 5
+
+
+ 229              		.loc 1 74 0
+ 230 0022 03B0     		add	sp, sp, #12
+ 231              		.cfi_remember_state
+ 232              		.cfi_def_cfa_offset 12
+ 233              		@ sp needed
+ 234 0024 BDE83040 		pop	{r4, r5, lr}
+ 235              		.cfi_restore 14
+ 236              		.cfi_restore 5
+ 237              		.cfi_restore 4
+ 238              		.cfi_def_cfa_offset 0
+ 239              		.loc 1 73 0
+ 240 0028 FFF7FEBF 		b	regulator_pd
+ 241              	.LVL24:
+ 242              	.L17:
+ 243              		.cfi_restore_state
+ 244              		.loc 1 68 0
+ 245 002c 401A     		subs	r0, r0, r1
+ 246              	.LVL25:
+ 247 002e 00B2     		sxth	r0, r0
+ 248              	.LVL26:
+ 249 0030 F2E7     		b	.L13
+ 250              	.LVL27:
+ 251              	.L18:
+ 252              		.loc 1 73 0
+ 253 0032 FFF7FEFF 		bl	__stack_chk_fail
+ 254              	.LVL28:
+ 255              	.L20:
+ 256 0036 00BF     		.align	2
+ 257              	.L19:
+ 258 0038 00000000 		.word	__stack_chk_guard
+ 259              		.cfi_endproc
+ 260              	.LFE4:
+ 261              		.size	regulator_difference, .-regulator_difference
+ 262              		.section	.text.regulator_follow_wall,"ax",%progbits
+ 263              		.align	1
+ 264              		.p2align 4,,15
+ 265              		.global	regulator_follow_wall
+ 266              		.syntax unified
+ 267              		.thumb
+ 268              		.thumb_func
+ 269              		.fpu fpv4-sp-d16
+ 270              		.type	regulator_follow_wall, %function
+ 271              	regulator_follow_wall:
+ 272              	.LFB5:
+ 273              		.loc 1 77 0
+ 274              		.cfi_startproc
+ 275              		@ args = 0, pretend = 0, frame = 8
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277              	.LVL29:
+ 278 0000 00B5     		push	{lr}
+ 279              		.cfi_def_cfa_offset 4
+ 280              		.cfi_offset 14, -4
+ 281 0002 0C4B     		ldr	r3, .L27
+ 282 0004 83B0     		sub	sp, sp, #12
+ 283              		.cfi_def_cfa_offset 16
+ 284              		.loc 1 80 0
+ 285 0006 401A     		subs	r0, r0, r1
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 6
+
+
+ 286              	.LVL30:
+ 287              		.loc 1 77 0
+ 288 0008 1968     		ldr	r1, [r3]
+ 289              	.LVL31:
+ 290 000a 0191     		str	r1, [sp, #4]
+ 291              		.loc 1 82 0
+ 292 000c 022A     		cmp	r2, #2
+ 293              		.loc 1 80 0
+ 294 000e 80B2     		uxth	r0, r0
+ 295              	.LVL32:
+ 296              		.loc 1 85 0
+ 297 0010 019A     		ldr	r2, [sp, #4]
+ 298              	.LVL33:
+ 299 0012 1B68     		ldr	r3, [r3]
+ 300              		.loc 1 83 0
+ 301 0014 04BF     		itt	eq
+ 302 0016 C0F11400 		rsbeq	r0, r0, #20
+ 303              	.LVL34:
+ 304 001a 80B2     		uxtheq	r0, r0
+ 305              	.LVL35:
+ 306              		.loc 1 85 0
+ 307 001c 9A42     		cmp	r2, r3
+ 308 001e 06D1     		bne	.L26
+ 309 0020 00B2     		sxth	r0, r0
+ 310 0022 0121     		movs	r1, #1
+ 311              		.loc 1 86 0
+ 312 0024 03B0     		add	sp, sp, #12
+ 313              		.cfi_remember_state
+ 314              		.cfi_def_cfa_offset 4
+ 315              		@ sp needed
+ 316 0026 5DF804EB 		ldr	lr, [sp], #4
+ 317              		.cfi_restore 14
+ 318              		.cfi_def_cfa_offset 0
+ 319              		.loc 1 85 0
+ 320 002a FFF7FEBF 		b	regulator_pd
+ 321              	.LVL36:
+ 322              	.L26:
+ 323              		.cfi_restore_state
+ 324 002e FFF7FEFF 		bl	__stack_chk_fail
+ 325              	.LVL37:
+ 326              	.L28:
+ 327 0032 00BF     		.align	2
+ 328              	.L27:
+ 329 0034 00000000 		.word	__stack_chk_guard
+ 330              		.cfi_endproc
+ 331              	.LFE5:
+ 332              		.size	regulator_follow_wall, .-regulator_follow_wall
+ 333              		.section	.bss.last_difference,"aw",%nobits
+ 334              		.align	2
+ 335              		.set	.LANCHOR0,. + 0
+ 336              		.type	last_difference, %object
+ 337              		.size	last_difference, 4
+ 338              	last_difference:
+ 339 0000 00000000 		.space	4
+ 340              		.text
+ 341              	.Letext0:
+ 342              		.file 2 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 7
+
+
+ 343              		.file 3 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 344              		.file 4 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 345              		.file 5 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\lib\\
+ 346              		.file 6 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 347              		.file 7 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 348              		.file 8 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 349              		.file 9 "./constantes.h"
+ 350              		.file 10 "./mouvements.h"
+ 351              		.section	.debug_info,"",%progbits
+ 352              	.Ldebug_info0:
+ 353 0000 450B0000 		.4byte	0xb45
+ 354 0004 0400     		.2byte	0x4
+ 355 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 356 000a 04       		.byte	0x4
+ 357 000b 01       		.uleb128 0x1
+ 358 000c C3020000 		.4byte	.LASF156
+ 359 0010 0C       		.byte	0xc
+ 360 0011 41000000 		.4byte	.LASF157
+ 361 0015 B1010000 		.4byte	.LASF158
+ 362 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 363 001d 00000000 		.4byte	0
+ 364 0021 00000000 		.4byte	.Ldebug_line0
+ 365 0025 02       		.uleb128 0x2
+ 366 0026 01       		.byte	0x1
+ 367 0027 06       		.byte	0x6
+ 368 0028 44010000 		.4byte	.LASF0
+ 369 002c 03       		.uleb128 0x3
+ 370 002d 4D000000 		.4byte	.LASF2
+ 371 0031 02       		.byte	0x2
+ 372 0032 2B       		.byte	0x2b
+ 373 0033 37000000 		.4byte	0x37
+ 374 0037 02       		.uleb128 0x2
+ 375 0038 01       		.byte	0x1
+ 376 0039 08       		.byte	0x8
+ 377 003a 9C050000 		.4byte	.LASF1
+ 378 003e 03       		.uleb128 0x3
+ 379 003f 6D020000 		.4byte	.LASF3
+ 380 0043 02       		.byte	0x2
+ 381 0044 37       		.byte	0x37
+ 382 0045 49000000 		.4byte	0x49
+ 383 0049 02       		.uleb128 0x2
+ 384 004a 02       		.byte	0x2
+ 385 004b 05       		.byte	0x5
+ 386 004c C1050000 		.4byte	.LASF4
+ 387 0050 02       		.uleb128 0x2
+ 388 0051 02       		.byte	0x2
+ 389 0052 07       		.byte	0x7
+ 390 0053 64040000 		.4byte	.LASF5
+ 391 0057 02       		.uleb128 0x2
+ 392 0058 04       		.byte	0x4
+ 393 0059 05       		.byte	0x5
+ 394 005a 89010000 		.4byte	.LASF6
+ 395 005e 02       		.uleb128 0x2
+ 396 005f 04       		.byte	0x4
+ 397 0060 07       		.byte	0x7
+ 398 0061 1E040000 		.4byte	.LASF7
+ 399 0065 02       		.uleb128 0x2
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 8
+
+
+ 400 0066 08       		.byte	0x8
+ 401 0067 05       		.byte	0x5
+ 402 0068 36010000 		.4byte	.LASF8
+ 403 006c 02       		.uleb128 0x2
+ 404 006d 08       		.byte	0x8
+ 405 006e 07       		.byte	0x7
+ 406 006f C9000000 		.4byte	.LASF9
+ 407 0073 04       		.uleb128 0x4
+ 408 0074 04       		.byte	0x4
+ 409 0075 05       		.byte	0x5
+ 410 0076 696E7400 		.ascii	"int\000"
+ 411 007a 02       		.uleb128 0x2
+ 412 007b 04       		.byte	0x4
+ 413 007c 07       		.byte	0x7
+ 414 007d B6020000 		.4byte	.LASF10
+ 415 0081 02       		.uleb128 0x2
+ 416 0082 08       		.byte	0x8
+ 417 0083 04       		.byte	0x4
+ 418 0084 F2040000 		.4byte	.LASF11
+ 419 0088 05       		.uleb128 0x5
+ 420 0089 04       		.byte	0x4
+ 421 008a 03       		.uleb128 0x3
+ 422 008b A7040000 		.4byte	.LASF12
+ 423 008f 03       		.byte	0x3
+ 424 0090 22       		.byte	0x22
+ 425 0091 95000000 		.4byte	0x95
+ 426 0095 06       		.uleb128 0x6
+ 427 0096 04       		.byte	0x4
+ 428 0097 9B000000 		.4byte	0x9b
+ 429 009b 07       		.uleb128 0x7
+ 430 009c 8B060000 		.4byte	.LASF119
+ 431 00a0 03       		.uleb128 0x3
+ 432 00a1 3B050000 		.4byte	.LASF13
+ 433 00a5 04       		.byte	0x4
+ 434 00a6 2C       		.byte	0x2c
+ 435 00a7 57000000 		.4byte	0x57
+ 436 00ab 03       		.uleb128 0x3
+ 437 00ac C4060000 		.4byte	.LASF14
+ 438 00b0 04       		.byte	0x4
+ 439 00b1 72       		.byte	0x72
+ 440 00b2 57000000 		.4byte	0x57
+ 441 00b6 08       		.uleb128 0x8
+ 442 00b7 AF040000 		.4byte	.LASF15
+ 443 00bb 05       		.byte	0x5
+ 444 00bc 6501     		.2byte	0x165
+ 445 00be 7A000000 		.4byte	0x7a
+ 446 00c2 09       		.uleb128 0x9
+ 447 00c3 04       		.byte	0x4
+ 448 00c4 04       		.byte	0x4
+ 449 00c5 A6       		.byte	0xa6
+ 450 00c6 E1000000 		.4byte	0xe1
+ 451 00ca 0A       		.uleb128 0xa
+ 452 00cb A1040000 		.4byte	.LASF16
+ 453 00cf 04       		.byte	0x4
+ 454 00d0 A8       		.byte	0xa8
+ 455 00d1 B6000000 		.4byte	0xb6
+ 456 00d5 0A       		.uleb128 0xa
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 9
+
+
+ 457 00d6 07040000 		.4byte	.LASF17
+ 458 00da 04       		.byte	0x4
+ 459 00db A9       		.byte	0xa9
+ 460 00dc E1000000 		.4byte	0xe1
+ 461 00e0 00       		.byte	0
+ 462 00e1 0B       		.uleb128 0xb
+ 463 00e2 37000000 		.4byte	0x37
+ 464 00e6 F1000000 		.4byte	0xf1
+ 465 00ea 0C       		.uleb128 0xc
+ 466 00eb 7A000000 		.4byte	0x7a
+ 467 00ef 03       		.byte	0x3
+ 468 00f0 00       		.byte	0
+ 469 00f1 0D       		.uleb128 0xd
+ 470 00f2 08       		.byte	0x8
+ 471 00f3 04       		.byte	0x4
+ 472 00f4 A3       		.byte	0xa3
+ 473 00f5 12010000 		.4byte	0x112
+ 474 00f9 0E       		.uleb128 0xe
+ 475 00fa 83060000 		.4byte	.LASF18
+ 476 00fe 04       		.byte	0x4
+ 477 00ff A5       		.byte	0xa5
+ 478 0100 73000000 		.4byte	0x73
+ 479 0104 00       		.byte	0
+ 480 0105 0E       		.uleb128 0xe
+ 481 0106 92060000 		.4byte	.LASF19
+ 482 010a 04       		.byte	0x4
+ 483 010b AA       		.byte	0xaa
+ 484 010c C2000000 		.4byte	0xc2
+ 485 0110 04       		.byte	0x4
+ 486 0111 00       		.byte	0
+ 487 0112 03       		.uleb128 0x3
+ 488 0113 E9050000 		.4byte	.LASF20
+ 489 0117 04       		.byte	0x4
+ 490 0118 AB       		.byte	0xab
+ 491 0119 F1000000 		.4byte	0xf1
+ 492 011d 03       		.uleb128 0x3
+ 493 011e 7F070000 		.4byte	.LASF21
+ 494 0122 04       		.byte	0x4
+ 495 0123 AF       		.byte	0xaf
+ 496 0124 8A000000 		.4byte	0x8a
+ 497 0128 03       		.uleb128 0x3
+ 498 0129 25070000 		.4byte	.LASF22
+ 499 012d 06       		.byte	0x6
+ 500 012e 16       		.byte	0x16
+ 501 012f 5E000000 		.4byte	0x5e
+ 502 0133 0F       		.uleb128 0xf
+ 503 0134 7F020000 		.4byte	.LASF27
+ 504 0138 18       		.byte	0x18
+ 505 0139 06       		.byte	0x6
+ 506 013a 2F       		.byte	0x2f
+ 507 013b 86010000 		.4byte	0x186
+ 508 013f 0E       		.uleb128 0xe
+ 509 0140 EF060000 		.4byte	.LASF23
+ 510 0144 06       		.byte	0x6
+ 511 0145 31       		.byte	0x31
+ 512 0146 86010000 		.4byte	0x186
+ 513 014a 00       		.byte	0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 10
+
+
+ 514 014b 10       		.uleb128 0x10
+ 515 014c 5F6B00   		.ascii	"_k\000"
+ 516 014f 06       		.byte	0x6
+ 517 0150 32       		.byte	0x32
+ 518 0151 73000000 		.4byte	0x73
+ 519 0155 04       		.byte	0x4
+ 520 0156 0E       		.uleb128 0xe
+ 521 0157 6E060000 		.4byte	.LASF24
+ 522 015b 06       		.byte	0x6
+ 523 015c 32       		.byte	0x32
+ 524 015d 73000000 		.4byte	0x73
+ 525 0161 08       		.byte	0x8
+ 526 0162 0E       		.uleb128 0xe
+ 527 0163 67020000 		.4byte	.LASF25
+ 528 0167 06       		.byte	0x6
+ 529 0168 32       		.byte	0x32
+ 530 0169 73000000 		.4byte	0x73
+ 531 016d 0C       		.byte	0xc
+ 532 016e 0E       		.uleb128 0xe
+ 533 016f 4D070000 		.4byte	.LASF26
+ 534 0173 06       		.byte	0x6
+ 535 0174 32       		.byte	0x32
+ 536 0175 73000000 		.4byte	0x73
+ 537 0179 10       		.byte	0x10
+ 538 017a 10       		.uleb128 0x10
+ 539 017b 5F7800   		.ascii	"_x\000"
+ 540 017e 06       		.byte	0x6
+ 541 017f 33       		.byte	0x33
+ 542 0180 8C010000 		.4byte	0x18c
+ 543 0184 14       		.byte	0x14
+ 544 0185 00       		.byte	0
+ 545 0186 06       		.uleb128 0x6
+ 546 0187 04       		.byte	0x4
+ 547 0188 33010000 		.4byte	0x133
+ 548 018c 0B       		.uleb128 0xb
+ 549 018d 28010000 		.4byte	0x128
+ 550 0191 9C010000 		.4byte	0x19c
+ 551 0195 0C       		.uleb128 0xc
+ 552 0196 7A000000 		.4byte	0x7a
+ 553 019a 00       		.byte	0
+ 554 019b 00       		.byte	0
+ 555 019c 0F       		.uleb128 0xf
+ 556 019d B1020000 		.4byte	.LASF28
+ 557 01a1 24       		.byte	0x24
+ 558 01a2 06       		.byte	0x6
+ 559 01a3 37       		.byte	0x37
+ 560 01a4 15020000 		.4byte	0x215
+ 561 01a8 0E       		.uleb128 0xe
+ 562 01a9 25010000 		.4byte	.LASF29
+ 563 01ad 06       		.byte	0x6
+ 564 01ae 39       		.byte	0x39
+ 565 01af 73000000 		.4byte	0x73
+ 566 01b3 00       		.byte	0
+ 567 01b4 0E       		.uleb128 0xe
+ 568 01b5 D8060000 		.4byte	.LASF30
+ 569 01b9 06       		.byte	0x6
+ 570 01ba 3A       		.byte	0x3a
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 11
+
+
+ 571 01bb 73000000 		.4byte	0x73
+ 572 01bf 04       		.byte	0x4
+ 573 01c0 0E       		.uleb128 0xe
+ 574 01c1 5C010000 		.4byte	.LASF31
+ 575 01c5 06       		.byte	0x6
+ 576 01c6 3B       		.byte	0x3b
+ 577 01c7 73000000 		.4byte	0x73
+ 578 01cb 08       		.byte	0x8
+ 579 01cc 0E       		.uleb128 0xe
+ 580 01cd 0D080000 		.4byte	.LASF32
+ 581 01d1 06       		.byte	0x6
+ 582 01d2 3C       		.byte	0x3c
+ 583 01d3 73000000 		.4byte	0x73
+ 584 01d7 0C       		.byte	0xc
+ 585 01d8 0E       		.uleb128 0xe
+ 586 01d9 15050000 		.4byte	.LASF33
+ 587 01dd 06       		.byte	0x6
+ 588 01de 3D       		.byte	0x3d
+ 589 01df 73000000 		.4byte	0x73
+ 590 01e3 10       		.byte	0x10
+ 591 01e4 0E       		.uleb128 0xe
+ 592 01e5 E8040000 		.4byte	.LASF34
+ 593 01e9 06       		.byte	0x6
+ 594 01ea 3E       		.byte	0x3e
+ 595 01eb 73000000 		.4byte	0x73
+ 596 01ef 14       		.byte	0x14
+ 597 01f0 0E       		.uleb128 0xe
+ 598 01f1 52070000 		.4byte	.LASF35
+ 599 01f5 06       		.byte	0x6
+ 600 01f6 3F       		.byte	0x3f
+ 601 01f7 73000000 		.4byte	0x73
+ 602 01fb 18       		.byte	0x18
+ 603 01fc 0E       		.uleb128 0xe
+ 604 01fd CB050000 		.4byte	.LASF36
+ 605 0201 06       		.byte	0x6
+ 606 0202 40       		.byte	0x40
+ 607 0203 73000000 		.4byte	0x73
+ 608 0207 1C       		.byte	0x1c
+ 609 0208 0E       		.uleb128 0xe
+ 610 0209 96070000 		.4byte	.LASF37
+ 611 020d 06       		.byte	0x6
+ 612 020e 41       		.byte	0x41
+ 613 020f 73000000 		.4byte	0x73
+ 614 0213 20       		.byte	0x20
+ 615 0214 00       		.byte	0
+ 616 0215 11       		.uleb128 0x11
+ 617 0216 6B010000 		.4byte	.LASF38
+ 618 021a 0801     		.2byte	0x108
+ 619 021c 06       		.byte	0x6
+ 620 021d 4A       		.byte	0x4a
+ 621 021e 55020000 		.4byte	0x255
+ 622 0222 0E       		.uleb128 0xe
+ 623 0223 5A020000 		.4byte	.LASF39
+ 624 0227 06       		.byte	0x6
+ 625 0228 4B       		.byte	0x4b
+ 626 0229 55020000 		.4byte	0x255
+ 627 022d 00       		.byte	0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 12
+
+
+ 628 022e 0E       		.uleb128 0xe
+ 629 022f 00000000 		.4byte	.LASF40
+ 630 0233 06       		.byte	0x6
+ 631 0234 4C       		.byte	0x4c
+ 632 0235 55020000 		.4byte	0x255
+ 633 0239 80       		.byte	0x80
+ 634 023a 12       		.uleb128 0x12
+ 635 023b 02070000 		.4byte	.LASF41
+ 636 023f 06       		.byte	0x6
+ 637 0240 4E       		.byte	0x4e
+ 638 0241 28010000 		.4byte	0x128
+ 639 0245 0001     		.2byte	0x100
+ 640 0247 12       		.uleb128 0x12
+ 641 0248 99010000 		.4byte	.LASF42
+ 642 024c 06       		.byte	0x6
+ 643 024d 51       		.byte	0x51
+ 644 024e 28010000 		.4byte	0x128
+ 645 0252 0401     		.2byte	0x104
+ 646 0254 00       		.byte	0
+ 647 0255 0B       		.uleb128 0xb
+ 648 0256 88000000 		.4byte	0x88
+ 649 025a 65020000 		.4byte	0x265
+ 650 025e 0C       		.uleb128 0xc
+ 651 025f 7A000000 		.4byte	0x7a
+ 652 0263 1F       		.byte	0x1f
+ 653 0264 00       		.byte	0
+ 654 0265 11       		.uleb128 0x11
+ 655 0266 1E050000 		.4byte	.LASF43
+ 656 026a 9001     		.2byte	0x190
+ 657 026c 06       		.byte	0x6
+ 658 026d 5D       		.byte	0x5d
+ 659 026e A3020000 		.4byte	0x2a3
+ 660 0272 0E       		.uleb128 0xe
+ 661 0273 EF060000 		.4byte	.LASF23
+ 662 0277 06       		.byte	0x6
+ 663 0278 5E       		.byte	0x5e
+ 664 0279 A3020000 		.4byte	0x2a3
+ 665 027d 00       		.byte	0
+ 666 027e 0E       		.uleb128 0xe
+ 667 027f 22060000 		.4byte	.LASF44
+ 668 0283 06       		.byte	0x6
+ 669 0284 5F       		.byte	0x5f
+ 670 0285 73000000 		.4byte	0x73
+ 671 0289 04       		.byte	0x4
+ 672 028a 0E       		.uleb128 0xe
+ 673 028b 62020000 		.4byte	.LASF45
+ 674 028f 06       		.byte	0x6
+ 675 0290 61       		.byte	0x61
+ 676 0291 A9020000 		.4byte	0x2a9
+ 677 0295 08       		.byte	0x8
+ 678 0296 0E       		.uleb128 0xe
+ 679 0297 6B010000 		.4byte	.LASF38
+ 680 029b 06       		.byte	0x6
+ 681 029c 62       		.byte	0x62
+ 682 029d 15020000 		.4byte	0x215
+ 683 02a1 88       		.byte	0x88
+ 684 02a2 00       		.byte	0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 13
+
+
+ 685 02a3 06       		.uleb128 0x6
+ 686 02a4 04       		.byte	0x4
+ 687 02a5 65020000 		.4byte	0x265
+ 688 02a9 0B       		.uleb128 0xb
+ 689 02aa B9020000 		.4byte	0x2b9
+ 690 02ae B9020000 		.4byte	0x2b9
+ 691 02b2 0C       		.uleb128 0xc
+ 692 02b3 7A000000 		.4byte	0x7a
+ 693 02b7 1F       		.byte	0x1f
+ 694 02b8 00       		.byte	0
+ 695 02b9 06       		.uleb128 0x6
+ 696 02ba 04       		.byte	0x4
+ 697 02bb BF020000 		.4byte	0x2bf
+ 698 02bf 13       		.uleb128 0x13
+ 699 02c0 0F       		.uleb128 0xf
+ 700 02c1 D5050000 		.4byte	.LASF46
+ 701 02c5 08       		.byte	0x8
+ 702 02c6 06       		.byte	0x6
+ 703 02c7 75       		.byte	0x75
+ 704 02c8 E5020000 		.4byte	0x2e5
+ 705 02cc 0E       		.uleb128 0xe
+ 706 02cd 56010000 		.4byte	.LASF47
+ 707 02d1 06       		.byte	0x6
+ 708 02d2 76       		.byte	0x76
+ 709 02d3 E5020000 		.4byte	0x2e5
+ 710 02d7 00       		.byte	0
+ 711 02d8 0E       		.uleb128 0xe
+ 712 02d9 18000000 		.4byte	.LASF48
+ 713 02dd 06       		.byte	0x6
+ 714 02de 77       		.byte	0x77
+ 715 02df 73000000 		.4byte	0x73
+ 716 02e3 04       		.byte	0x4
+ 717 02e4 00       		.byte	0
+ 718 02e5 06       		.uleb128 0x6
+ 719 02e6 04       		.byte	0x4
+ 720 02e7 37000000 		.4byte	0x37
+ 721 02eb 0F       		.uleb128 0xf
+ 722 02ec F4050000 		.4byte	.LASF49
+ 723 02f0 68       		.byte	0x68
+ 724 02f1 06       		.byte	0x6
+ 725 02f2 B5       		.byte	0xb5
+ 726 02f3 15040000 		.4byte	0x415
+ 727 02f7 10       		.uleb128 0x10
+ 728 02f8 5F7000   		.ascii	"_p\000"
+ 729 02fb 06       		.byte	0x6
+ 730 02fc B6       		.byte	0xb6
+ 731 02fd E5020000 		.4byte	0x2e5
+ 732 0301 00       		.byte	0
+ 733 0302 10       		.uleb128 0x10
+ 734 0303 5F7200   		.ascii	"_r\000"
+ 735 0306 06       		.byte	0x6
+ 736 0307 B7       		.byte	0xb7
+ 737 0308 73000000 		.4byte	0x73
+ 738 030c 04       		.byte	0x4
+ 739 030d 10       		.uleb128 0x10
+ 740 030e 5F7700   		.ascii	"_w\000"
+ 741 0311 06       		.byte	0x6
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 14
+
+
+ 742 0312 B8       		.byte	0xb8
+ 743 0313 73000000 		.4byte	0x73
+ 744 0317 08       		.byte	0x8
+ 745 0318 0E       		.uleb128 0xe
+ 746 0319 92010000 		.4byte	.LASF50
+ 747 031d 06       		.byte	0x6
+ 748 031e B9       		.byte	0xb9
+ 749 031f 49000000 		.4byte	0x49
+ 750 0323 0C       		.byte	0xc
+ 751 0324 0E       		.uleb128 0xe
+ 752 0325 30040000 		.4byte	.LASF51
+ 753 0329 06       		.byte	0x6
+ 754 032a BA       		.byte	0xba
+ 755 032b 49000000 		.4byte	0x49
+ 756 032f 0E       		.byte	0xe
+ 757 0330 10       		.uleb128 0x10
+ 758 0331 5F626600 		.ascii	"_bf\000"
+ 759 0335 06       		.byte	0x6
+ 760 0336 BB       		.byte	0xbb
+ 761 0337 C0020000 		.4byte	0x2c0
+ 762 033b 10       		.byte	0x10
+ 763 033c 0E       		.uleb128 0xe
+ 764 033d EA000000 		.4byte	.LASF52
+ 765 0341 06       		.byte	0x6
+ 766 0342 BC       		.byte	0xbc
+ 767 0343 73000000 		.4byte	0x73
+ 768 0347 18       		.byte	0x18
+ 769 0348 0E       		.uleb128 0xe
+ 770 0349 79010000 		.4byte	.LASF53
+ 771 034d 06       		.byte	0x6
+ 772 034e C3       		.byte	0xc3
+ 773 034f 88000000 		.4byte	0x88
+ 774 0353 1C       		.byte	0x1c
+ 775 0354 0E       		.uleb128 0xe
+ 776 0355 A1020000 		.4byte	.LASF54
+ 777 0359 06       		.byte	0x6
+ 778 035a C5       		.byte	0xc5
+ 779 035b 82050000 		.4byte	0x582
+ 780 035f 20       		.byte	0x20
+ 781 0360 0E       		.uleb128 0xe
+ 782 0361 E1040000 		.4byte	.LASF55
+ 783 0365 06       		.byte	0x6
+ 784 0366 C7       		.byte	0xc7
+ 785 0367 AC050000 		.4byte	0x5ac
+ 786 036b 24       		.byte	0x24
+ 787 036c 0E       		.uleb128 0xe
+ 788 036d 9A060000 		.4byte	.LASF56
+ 789 0371 06       		.byte	0x6
+ 790 0372 CA       		.byte	0xca
+ 791 0373 D0050000 		.4byte	0x5d0
+ 792 0377 28       		.byte	0x28
+ 793 0378 0E       		.uleb128 0xe
+ 794 0379 B0070000 		.4byte	.LASF57
+ 795 037d 06       		.byte	0x6
+ 796 037e CB       		.byte	0xcb
+ 797 037f EA050000 		.4byte	0x5ea
+ 798 0383 2C       		.byte	0x2c
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 15
+
+
+ 799 0384 10       		.uleb128 0x10
+ 800 0385 5F756200 		.ascii	"_ub\000"
+ 801 0389 06       		.byte	0x6
+ 802 038a CE       		.byte	0xce
+ 803 038b C0020000 		.4byte	0x2c0
+ 804 038f 30       		.byte	0x30
+ 805 0390 10       		.uleb128 0x10
+ 806 0391 5F757000 		.ascii	"_up\000"
+ 807 0395 06       		.byte	0x6
+ 808 0396 CF       		.byte	0xcf
+ 809 0397 E5020000 		.4byte	0x2e5
+ 810 039b 38       		.byte	0x38
+ 811 039c 10       		.uleb128 0x10
+ 812 039d 5F757200 		.ascii	"_ur\000"
+ 813 03a1 06       		.byte	0x6
+ 814 03a2 D0       		.byte	0xd0
+ 815 03a3 73000000 		.4byte	0x73
+ 816 03a7 3C       		.byte	0x3c
+ 817 03a8 0E       		.uleb128 0xe
+ 818 03a9 50010000 		.4byte	.LASF58
+ 819 03ad 06       		.byte	0x6
+ 820 03ae D3       		.byte	0xd3
+ 821 03af F0050000 		.4byte	0x5f0
+ 822 03b3 40       		.byte	0x40
+ 823 03b4 0E       		.uleb128 0xe
+ 824 03b5 88070000 		.4byte	.LASF59
+ 825 03b9 06       		.byte	0x6
+ 826 03ba D4       		.byte	0xd4
+ 827 03bb 00060000 		.4byte	0x600
+ 828 03bf 43       		.byte	0x43
+ 829 03c0 10       		.uleb128 0x10
+ 830 03c1 5F6C6200 		.ascii	"_lb\000"
+ 831 03c5 06       		.byte	0x6
+ 832 03c6 D7       		.byte	0xd7
+ 833 03c7 C0020000 		.4byte	0x2c0
+ 834 03cb 44       		.byte	0x44
+ 835 03cc 0E       		.uleb128 0xe
+ 836 03cd A8010000 		.4byte	.LASF60
+ 837 03d1 06       		.byte	0x6
+ 838 03d2 DA       		.byte	0xda
+ 839 03d3 73000000 		.4byte	0x73
+ 840 03d7 4C       		.byte	0x4c
+ 841 03d8 0E       		.uleb128 0xe
+ 842 03d9 33020000 		.4byte	.LASF61
+ 843 03dd 06       		.byte	0x6
+ 844 03de DB       		.byte	0xdb
+ 845 03df A0000000 		.4byte	0xa0
+ 846 03e3 50       		.byte	0x50
+ 847 03e4 0E       		.uleb128 0xe
+ 848 03e5 89000000 		.4byte	.LASF62
+ 849 03e9 06       		.byte	0x6
+ 850 03ea DE       		.byte	0xde
+ 851 03eb 33040000 		.4byte	0x433
+ 852 03ef 54       		.byte	0x54
+ 853 03f0 0E       		.uleb128 0xe
+ 854 03f1 B6040000 		.4byte	.LASF63
+ 855 03f5 06       		.byte	0x6
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 16
+
+
+ 856 03f6 E2       		.byte	0xe2
+ 857 03f7 1D010000 		.4byte	0x11d
+ 858 03fb 58       		.byte	0x58
+ 859 03fc 0E       		.uleb128 0xe
+ 860 03fd FC050000 		.4byte	.LASF64
+ 861 0401 06       		.byte	0x6
+ 862 0402 E4       		.byte	0xe4
+ 863 0403 12010000 		.4byte	0x112
+ 864 0407 5C       		.byte	0x5c
+ 865 0408 0E       		.uleb128 0xe
+ 866 0409 BC040000 		.4byte	.LASF65
+ 867 040d 06       		.byte	0x6
+ 868 040e E5       		.byte	0xe5
+ 869 040f 73000000 		.4byte	0x73
+ 870 0413 64       		.byte	0x64
+ 871 0414 00       		.byte	0
+ 872 0415 14       		.uleb128 0x14
+ 873 0416 73000000 		.4byte	0x73
+ 874 041a 33040000 		.4byte	0x433
+ 875 041e 15       		.uleb128 0x15
+ 876 041f 33040000 		.4byte	0x433
+ 877 0423 15       		.uleb128 0x15
+ 878 0424 88000000 		.4byte	0x88
+ 879 0428 15       		.uleb128 0x15
+ 880 0429 70050000 		.4byte	0x570
+ 881 042d 15       		.uleb128 0x15
+ 882 042e 73000000 		.4byte	0x73
+ 883 0432 00       		.byte	0
+ 884 0433 06       		.uleb128 0x6
+ 885 0434 04       		.byte	0x4
+ 886 0435 3E040000 		.4byte	0x43e
+ 887 0439 16       		.uleb128 0x16
+ 888 043a 33040000 		.4byte	0x433
+ 889 043e 17       		.uleb128 0x17
+ 890 043f 76060000 		.4byte	.LASF66
+ 891 0443 2804     		.2byte	0x428
+ 892 0445 06       		.byte	0x6
+ 893 0446 3902     		.2byte	0x239
+ 894 0448 70050000 		.4byte	0x570
+ 895 044c 18       		.uleb128 0x18
+ 896 044d CC060000 		.4byte	.LASF67
+ 897 0451 06       		.byte	0x6
+ 898 0452 3B02     		.2byte	0x23b
+ 899 0454 73000000 		.4byte	0x73
+ 900 0458 00       		.byte	0
+ 901 0459 18       		.uleb128 0x18
+ 902 045a A1010000 		.4byte	.LASF68
+ 903 045e 06       		.byte	0x6
+ 904 045f 4002     		.2byte	0x240
+ 905 0461 57060000 		.4byte	0x657
+ 906 0465 04       		.byte	0x4
+ 907 0466 18       		.uleb128 0x18
+ 908 0467 0E040000 		.4byte	.LASF69
+ 909 046b 06       		.byte	0x6
+ 910 046c 4002     		.2byte	0x240
+ 911 046e 57060000 		.4byte	0x657
+ 912 0472 08       		.byte	0x8
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 17
+
+
+ 913 0473 18       		.uleb128 0x18
+ 914 0474 77020000 		.4byte	.LASF70
+ 915 0478 06       		.byte	0x6
+ 916 0479 4002     		.2byte	0x240
+ 917 047b 57060000 		.4byte	0x657
+ 918 047f 0C       		.byte	0xc
+ 919 0480 18       		.uleb128 0x18
+ 920 0481 1D060000 		.4byte	.LASF71
+ 921 0485 06       		.byte	0x6
+ 922 0486 4202     		.2byte	0x242
+ 923 0488 73000000 		.4byte	0x73
+ 924 048c 10       		.byte	0x10
+ 925 048d 18       		.uleb128 0x18
+ 926 048e 36000000 		.4byte	.LASF72
+ 927 0492 06       		.byte	0x6
+ 928 0493 4302     		.2byte	0x243
+ 929 0495 39080000 		.4byte	0x839
+ 930 0499 14       		.byte	0x14
+ 931 049a 18       		.uleb128 0x18
+ 932 049b 44060000 		.4byte	.LASF73
+ 933 049f 06       		.byte	0x6
+ 934 04a0 4602     		.2byte	0x246
+ 935 04a2 73000000 		.4byte	0x73
+ 936 04a6 30       		.byte	0x30
+ 937 04a7 18       		.uleb128 0x18
+ 938 04a8 32060000 		.4byte	.LASF74
+ 939 04ac 06       		.byte	0x6
+ 940 04ad 4702     		.2byte	0x247
+ 941 04af 4E080000 		.4byte	0x84e
+ 942 04b3 34       		.byte	0x34
+ 943 04b4 18       		.uleb128 0x18
+ 944 04b5 30050000 		.4byte	.LASF75
+ 945 04b9 06       		.byte	0x6
+ 946 04ba 4902     		.2byte	0x249
+ 947 04bc 73000000 		.4byte	0x73
+ 948 04c0 38       		.byte	0x38
+ 949 04c1 18       		.uleb128 0x18
+ 950 04c2 3A060000 		.4byte	.LASF76
+ 951 04c6 06       		.byte	0x6
+ 952 04c7 4B02     		.2byte	0x24b
+ 953 04c9 5F080000 		.4byte	0x85f
+ 954 04cd 3C       		.byte	0x3c
+ 955 04ce 18       		.uleb128 0x18
+ 956 04cf 99040000 		.4byte	.LASF77
+ 957 04d3 06       		.byte	0x6
+ 958 04d4 4E02     		.2byte	0x24e
+ 959 04d6 86010000 		.4byte	0x186
+ 960 04da 40       		.byte	0x40
+ 961 04db 18       		.uleb128 0x18
+ 962 04dc A7020000 		.4byte	.LASF78
+ 963 04e0 06       		.byte	0x6
+ 964 04e1 4F02     		.2byte	0x24f
+ 965 04e3 73000000 		.4byte	0x73
+ 966 04e7 44       		.byte	0x44
+ 967 04e8 18       		.uleb128 0x18
+ 968 04e9 D4070000 		.4byte	.LASF79
+ 969 04ed 06       		.byte	0x6
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 18
+
+
+ 970 04ee 5002     		.2byte	0x250
+ 971 04f0 86010000 		.4byte	0x186
+ 972 04f4 48       		.byte	0x48
+ 973 04f5 18       		.uleb128 0x18
+ 974 04f6 56050000 		.4byte	.LASF80
+ 975 04fa 06       		.byte	0x6
+ 976 04fb 5102     		.2byte	0x251
+ 977 04fd 65080000 		.4byte	0x865
+ 978 0501 4C       		.byte	0x4c
+ 979 0502 18       		.uleb128 0x18
+ 980 0503 16040000 		.4byte	.LASF81
+ 981 0507 06       		.byte	0x6
+ 982 0508 5402     		.2byte	0x254
+ 983 050a 73000000 		.4byte	0x73
+ 984 050e 50       		.byte	0x50
+ 985 050f 18       		.uleb128 0x18
+ 986 0510 2B020000 		.4byte	.LASF82
+ 987 0514 06       		.byte	0x6
+ 988 0515 5502     		.2byte	0x255
+ 989 0517 70050000 		.4byte	0x570
+ 990 051b 54       		.byte	0x54
+ 991 051c 18       		.uleb128 0x18
+ 992 051d AA050000 		.4byte	.LASF83
+ 993 0521 06       		.byte	0x6
+ 994 0522 7802     		.2byte	0x278
+ 995 0524 17080000 		.4byte	0x817
+ 996 0528 58       		.byte	0x58
+ 997 0529 19       		.uleb128 0x19
+ 998 052a 1E050000 		.4byte	.LASF43
+ 999 052e 06       		.byte	0x6
+ 1000 052f 7C02     		.2byte	0x27c
+ 1001 0531 A3020000 		.4byte	0x2a3
+ 1002 0535 4801     		.2byte	0x148
+ 1003 0537 19       		.uleb128 0x19
+ 1004 0538 77040000 		.4byte	.LASF84
+ 1005 053c 06       		.byte	0x6
+ 1006 053d 7D02     		.2byte	0x27d
+ 1007 053f 65020000 		.4byte	0x265
+ 1008 0543 4C01     		.2byte	0x14c
+ 1009 0545 19       		.uleb128 0x19
+ 1010 0546 75070000 		.4byte	.LASF85
+ 1011 054a 06       		.byte	0x6
+ 1012 054b 8102     		.2byte	0x281
+ 1013 054d 76080000 		.4byte	0x876
+ 1014 0551 DC02     		.2byte	0x2dc
+ 1015 0553 19       		.uleb128 0x19
+ 1016 0554 81010000 		.4byte	.LASF86
+ 1017 0558 06       		.byte	0x6
+ 1018 0559 8602     		.2byte	0x286
+ 1019 055b 1C060000 		.4byte	0x61c
+ 1020 055f E002     		.2byte	0x2e0
+ 1021 0561 19       		.uleb128 0x19
+ 1022 0562 66010000 		.4byte	.LASF87
+ 1023 0566 06       		.byte	0x6
+ 1024 0567 8802     		.2byte	0x288
+ 1025 0569 82080000 		.4byte	0x882
+ 1026 056d EC02     		.2byte	0x2ec
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 19
+
+
+ 1027 056f 00       		.byte	0
+ 1028 0570 06       		.uleb128 0x6
+ 1029 0571 04       		.byte	0x4
+ 1030 0572 76050000 		.4byte	0x576
+ 1031 0576 02       		.uleb128 0x2
+ 1032 0577 01       		.byte	0x1
+ 1033 0578 08       		.byte	0x8
+ 1034 0579 D3060000 		.4byte	.LASF88
+ 1035 057d 16       		.uleb128 0x16
+ 1036 057e 76050000 		.4byte	0x576
+ 1037 0582 06       		.uleb128 0x6
+ 1038 0583 04       		.byte	0x4
+ 1039 0584 15040000 		.4byte	0x415
+ 1040 0588 14       		.uleb128 0x14
+ 1041 0589 73000000 		.4byte	0x73
+ 1042 058d A6050000 		.4byte	0x5a6
+ 1043 0591 15       		.uleb128 0x15
+ 1044 0592 33040000 		.4byte	0x433
+ 1045 0596 15       		.uleb128 0x15
+ 1046 0597 88000000 		.4byte	0x88
+ 1047 059b 15       		.uleb128 0x15
+ 1048 059c A6050000 		.4byte	0x5a6
+ 1049 05a0 15       		.uleb128 0x15
+ 1050 05a1 73000000 		.4byte	0x73
+ 1051 05a5 00       		.byte	0
+ 1052 05a6 06       		.uleb128 0x6
+ 1053 05a7 04       		.byte	0x4
+ 1054 05a8 7D050000 		.4byte	0x57d
+ 1055 05ac 06       		.uleb128 0x6
+ 1056 05ad 04       		.byte	0x4
+ 1057 05ae 88050000 		.4byte	0x588
+ 1058 05b2 14       		.uleb128 0x14
+ 1059 05b3 AB000000 		.4byte	0xab
+ 1060 05b7 D0050000 		.4byte	0x5d0
+ 1061 05bb 15       		.uleb128 0x15
+ 1062 05bc 33040000 		.4byte	0x433
+ 1063 05c0 15       		.uleb128 0x15
+ 1064 05c1 88000000 		.4byte	0x88
+ 1065 05c5 15       		.uleb128 0x15
+ 1066 05c6 AB000000 		.4byte	0xab
+ 1067 05ca 15       		.uleb128 0x15
+ 1068 05cb 73000000 		.4byte	0x73
+ 1069 05cf 00       		.byte	0
+ 1070 05d0 06       		.uleb128 0x6
+ 1071 05d1 04       		.byte	0x4
+ 1072 05d2 B2050000 		.4byte	0x5b2
+ 1073 05d6 14       		.uleb128 0x14
+ 1074 05d7 73000000 		.4byte	0x73
+ 1075 05db EA050000 		.4byte	0x5ea
+ 1076 05df 15       		.uleb128 0x15
+ 1077 05e0 33040000 		.4byte	0x433
+ 1078 05e4 15       		.uleb128 0x15
+ 1079 05e5 88000000 		.4byte	0x88
+ 1080 05e9 00       		.byte	0
+ 1081 05ea 06       		.uleb128 0x6
+ 1082 05eb 04       		.byte	0x4
+ 1083 05ec D6050000 		.4byte	0x5d6
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 20
+
+
+ 1084 05f0 0B       		.uleb128 0xb
+ 1085 05f1 37000000 		.4byte	0x37
+ 1086 05f5 00060000 		.4byte	0x600
+ 1087 05f9 0C       		.uleb128 0xc
+ 1088 05fa 7A000000 		.4byte	0x7a
+ 1089 05fe 02       		.byte	0x2
+ 1090 05ff 00       		.byte	0
+ 1091 0600 0B       		.uleb128 0xb
+ 1092 0601 37000000 		.4byte	0x37
+ 1093 0605 10060000 		.4byte	0x610
+ 1094 0609 0C       		.uleb128 0xc
+ 1095 060a 7A000000 		.4byte	0x7a
+ 1096 060e 00       		.byte	0
+ 1097 060f 00       		.byte	0
+ 1098 0610 08       		.uleb128 0x8
+ 1099 0611 E2050000 		.4byte	.LASF89
+ 1100 0615 06       		.byte	0x6
+ 1101 0616 1F01     		.2byte	0x11f
+ 1102 0618 EB020000 		.4byte	0x2eb
+ 1103 061c 1A       		.uleb128 0x1a
+ 1104 061d 5C070000 		.4byte	.LASF90
+ 1105 0621 0C       		.byte	0xc
+ 1106 0622 06       		.byte	0x6
+ 1107 0623 2301     		.2byte	0x123
+ 1108 0625 51060000 		.4byte	0x651
+ 1109 0629 18       		.uleb128 0x18
+ 1110 062a EF060000 		.4byte	.LASF23
+ 1111 062e 06       		.byte	0x6
+ 1112 062f 2501     		.2byte	0x125
+ 1113 0631 51060000 		.4byte	0x651
+ 1114 0635 00       		.byte	0
+ 1115 0636 18       		.uleb128 0x18
+ 1116 0637 5D040000 		.4byte	.LASF91
+ 1117 063b 06       		.byte	0x6
+ 1118 063c 2601     		.2byte	0x126
+ 1119 063e 73000000 		.4byte	0x73
+ 1120 0642 04       		.byte	0x4
+ 1121 0643 18       		.uleb128 0x18
+ 1122 0644 DC050000 		.4byte	.LASF92
+ 1123 0648 06       		.byte	0x6
+ 1124 0649 2701     		.2byte	0x127
+ 1125 064b 57060000 		.4byte	0x657
+ 1126 064f 08       		.byte	0x8
+ 1127 0650 00       		.byte	0
+ 1128 0651 06       		.uleb128 0x6
+ 1129 0652 04       		.byte	0x4
+ 1130 0653 1C060000 		.4byte	0x61c
+ 1131 0657 06       		.uleb128 0x6
+ 1132 0658 04       		.byte	0x4
+ 1133 0659 10060000 		.4byte	0x610
+ 1134 065d 1A       		.uleb128 0x1a
+ 1135 065e 1E000000 		.4byte	.LASF93
+ 1136 0662 0E       		.byte	0xe
+ 1137 0663 06       		.byte	0x6
+ 1138 0664 3F01     		.2byte	0x13f
+ 1139 0666 92060000 		.4byte	0x692
+ 1140 066a 18       		.uleb128 0x18
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 21
+
+
+ 1141 066b 7D060000 		.4byte	.LASF94
+ 1142 066f 06       		.byte	0x6
+ 1143 0670 4001     		.2byte	0x140
+ 1144 0672 92060000 		.4byte	0x692
+ 1145 0676 00       		.byte	0
+ 1146 0677 18       		.uleb128 0x18
+ 1147 0678 E9060000 		.4byte	.LASF95
+ 1148 067c 06       		.byte	0x6
+ 1149 067d 4101     		.2byte	0x141
+ 1150 067f 92060000 		.4byte	0x692
+ 1151 0683 06       		.byte	0x6
+ 1152 0684 18       		.uleb128 0x18
+ 1153 0685 15070000 		.4byte	.LASF96
+ 1154 0689 06       		.byte	0x6
+ 1155 068a 4201     		.2byte	0x142
+ 1156 068c 50000000 		.4byte	0x50
+ 1157 0690 0C       		.byte	0xc
+ 1158 0691 00       		.byte	0
+ 1159 0692 0B       		.uleb128 0xb
+ 1160 0693 50000000 		.4byte	0x50
+ 1161 0697 A2060000 		.4byte	0x6a2
+ 1162 069b 0C       		.uleb128 0xc
+ 1163 069c 7A000000 		.4byte	0x7a
+ 1164 06a0 02       		.byte	0x2
+ 1165 06a1 00       		.byte	0
+ 1166 06a2 1B       		.uleb128 0x1b
+ 1167 06a3 D0       		.byte	0xd0
+ 1168 06a4 06       		.byte	0x6
+ 1169 06a5 5902     		.2byte	0x259
+ 1170 06a7 A3070000 		.4byte	0x7a3
+ 1171 06ab 18       		.uleb128 0x18
+ 1172 06ac 40070000 		.4byte	.LASF97
+ 1173 06b0 06       		.byte	0x6
+ 1174 06b1 5B02     		.2byte	0x25b
+ 1175 06b3 7A000000 		.4byte	0x7a
+ 1176 06b7 00       		.byte	0
+ 1177 06b8 18       		.uleb128 0x18
+ 1178 06b9 F5060000 		.4byte	.LASF98
+ 1179 06bd 06       		.byte	0x6
+ 1180 06be 5C02     		.2byte	0x25c
+ 1181 06c0 70050000 		.4byte	0x570
+ 1182 06c4 04       		.byte	0x4
+ 1183 06c5 18       		.uleb128 0x18
+ 1184 06c6 8C040000 		.4byte	.LASF99
+ 1185 06ca 06       		.byte	0x6
+ 1186 06cb 5D02     		.2byte	0x25d
+ 1187 06cd A3070000 		.4byte	0x7a3
+ 1188 06d1 08       		.byte	0x8
+ 1189 06d2 18       		.uleb128 0x18
+ 1190 06d3 A1070000 		.4byte	.LASF100
+ 1191 06d7 06       		.byte	0x6
+ 1192 06d8 5E02     		.2byte	0x25e
+ 1193 06da 9C010000 		.4byte	0x19c
+ 1194 06de 24       		.byte	0x24
+ 1195 06df 18       		.uleb128 0x18
+ 1196 06e0 87020000 		.4byte	.LASF101
+ 1197 06e4 06       		.byte	0x6
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 22
+
+
+ 1198 06e5 5F02     		.2byte	0x25f
+ 1199 06e7 73000000 		.4byte	0x73
+ 1200 06eb 48       		.byte	0x48
+ 1201 06ec 18       		.uleb128 0x18
+ 1202 06ed 05060000 		.4byte	.LASF102
+ 1203 06f1 06       		.byte	0x6
+ 1204 06f2 6002     		.2byte	0x260
+ 1205 06f4 6C000000 		.4byte	0x6c
+ 1206 06f8 50       		.byte	0x50
+ 1207 06f9 18       		.uleb128 0x18
+ 1208 06fa C1070000 		.4byte	.LASF103
+ 1209 06fe 06       		.byte	0x6
+ 1210 06ff 6102     		.2byte	0x261
+ 1211 0701 5D060000 		.4byte	0x65d
+ 1212 0705 58       		.byte	0x58
+ 1213 0706 18       		.uleb128 0x18
+ 1214 0707 10060000 		.4byte	.LASF104
+ 1215 070b 06       		.byte	0x6
+ 1216 070c 6202     		.2byte	0x262
+ 1217 070e 12010000 		.4byte	0x112
+ 1218 0712 68       		.byte	0x68
+ 1219 0713 18       		.uleb128 0x18
+ 1220 0714 C6070000 		.4byte	.LASF105
+ 1221 0718 06       		.byte	0x6
+ 1222 0719 6302     		.2byte	0x263
+ 1223 071b 12010000 		.4byte	0x112
+ 1224 071f 70       		.byte	0x70
+ 1225 0720 18       		.uleb128 0x18
+ 1226 0721 60050000 		.4byte	.LASF106
+ 1227 0725 06       		.byte	0x6
+ 1228 0726 6402     		.2byte	0x264
+ 1229 0728 12010000 		.4byte	0x112
+ 1230 072c 78       		.byte	0x78
+ 1231 072d 18       		.uleb128 0x18
+ 1232 072e 6B070000 		.4byte	.LASF107
+ 1233 0732 06       		.byte	0x6
+ 1234 0733 6502     		.2byte	0x265
+ 1235 0735 B3070000 		.4byte	0x7b3
+ 1236 0739 80       		.byte	0x80
+ 1237 073a 18       		.uleb128 0x18
+ 1238 073b 80040000 		.4byte	.LASF108
+ 1239 073f 06       		.byte	0x6
+ 1240 0740 6602     		.2byte	0x266
+ 1241 0742 C3070000 		.4byte	0x7c3
+ 1242 0746 88       		.byte	0x88
+ 1243 0747 18       		.uleb128 0x18
+ 1244 0748 7C000000 		.4byte	.LASF109
+ 1245 074c 06       		.byte	0x6
+ 1246 074d 6702     		.2byte	0x267
+ 1247 074f 73000000 		.4byte	0x73
+ 1248 0753 A0       		.byte	0xa0
+ 1249 0754 18       		.uleb128 0x18
+ 1250 0755 4C020000 		.4byte	.LASF110
+ 1251 0759 06       		.byte	0x6
+ 1252 075a 6802     		.2byte	0x268
+ 1253 075c 12010000 		.4byte	0x112
+ 1254 0760 A4       		.byte	0xa4
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 23
+
+
+ 1255 0761 18       		.uleb128 0x18
+ 1256 0762 16010000 		.4byte	.LASF111
+ 1257 0766 06       		.byte	0x6
+ 1258 0767 6902     		.2byte	0x269
+ 1259 0769 12010000 		.4byte	0x112
+ 1260 076d AC       		.byte	0xac
+ 1261 076e 18       		.uleb128 0x18
+ 1262 076f 3B020000 		.4byte	.LASF112
+ 1263 0773 06       		.byte	0x6
+ 1264 0774 6A02     		.2byte	0x26a
+ 1265 0776 12010000 		.4byte	0x112
+ 1266 077a B4       		.byte	0xb4
+ 1267 077b 18       		.uleb128 0x18
+ 1268 077c A9000000 		.4byte	.LASF113
+ 1269 0780 06       		.byte	0x6
+ 1270 0781 6B02     		.2byte	0x26b
+ 1271 0783 12010000 		.4byte	0x112
+ 1272 0787 BC       		.byte	0xbc
+ 1273 0788 18       		.uleb128 0x18
+ 1274 0789 B8000000 		.4byte	.LASF114
+ 1275 078d 06       		.byte	0x6
+ 1276 078e 6C02     		.2byte	0x26c
+ 1277 0790 12010000 		.4byte	0x112
+ 1278 0794 C4       		.byte	0xc4
+ 1279 0795 18       		.uleb128 0x18
+ 1280 0796 B8050000 		.4byte	.LASF115
+ 1281 079a 06       		.byte	0x6
+ 1282 079b 6D02     		.2byte	0x26d
+ 1283 079d 73000000 		.4byte	0x73
+ 1284 07a1 CC       		.byte	0xcc
+ 1285 07a2 00       		.byte	0
+ 1286 07a3 0B       		.uleb128 0xb
+ 1287 07a4 76050000 		.4byte	0x576
+ 1288 07a8 B3070000 		.4byte	0x7b3
+ 1289 07ac 0C       		.uleb128 0xc
+ 1290 07ad 7A000000 		.4byte	0x7a
+ 1291 07b1 19       		.byte	0x19
+ 1292 07b2 00       		.byte	0
+ 1293 07b3 0B       		.uleb128 0xb
+ 1294 07b4 76050000 		.4byte	0x576
+ 1295 07b8 C3070000 		.4byte	0x7c3
+ 1296 07bc 0C       		.uleb128 0xc
+ 1297 07bd 7A000000 		.4byte	0x7a
+ 1298 07c1 07       		.byte	0x7
+ 1299 07c2 00       		.byte	0
+ 1300 07c3 0B       		.uleb128 0xb
+ 1301 07c4 76050000 		.4byte	0x576
+ 1302 07c8 D3070000 		.4byte	0x7d3
+ 1303 07cc 0C       		.uleb128 0xc
+ 1304 07cd 7A000000 		.4byte	0x7a
+ 1305 07d1 17       		.byte	0x17
+ 1306 07d2 00       		.byte	0
+ 1307 07d3 1B       		.uleb128 0x1b
+ 1308 07d4 F0       		.byte	0xf0
+ 1309 07d5 06       		.byte	0x6
+ 1310 07d6 7202     		.2byte	0x272
+ 1311 07d8 F7070000 		.4byte	0x7f7
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 24
+
+
+ 1312 07dc 18       		.uleb128 0x18
+ 1313 07dd FE040000 		.4byte	.LASF116
+ 1314 07e1 06       		.byte	0x6
+ 1315 07e2 7502     		.2byte	0x275
+ 1316 07e4 F7070000 		.4byte	0x7f7
+ 1317 07e8 00       		.byte	0
+ 1318 07e9 18       		.uleb128 0x18
+ 1319 07ea 62070000 		.4byte	.LASF117
+ 1320 07ee 06       		.byte	0x6
+ 1321 07ef 7602     		.2byte	0x276
+ 1322 07f1 07080000 		.4byte	0x807
+ 1323 07f5 78       		.byte	0x78
+ 1324 07f6 00       		.byte	0
+ 1325 07f7 0B       		.uleb128 0xb
+ 1326 07f8 E5020000 		.4byte	0x2e5
+ 1327 07fc 07080000 		.4byte	0x807
+ 1328 0800 0C       		.uleb128 0xc
+ 1329 0801 7A000000 		.4byte	0x7a
+ 1330 0805 1D       		.byte	0x1d
+ 1331 0806 00       		.byte	0
+ 1332 0807 0B       		.uleb128 0xb
+ 1333 0808 7A000000 		.4byte	0x7a
+ 1334 080c 17080000 		.4byte	0x817
+ 1335 0810 0C       		.uleb128 0xc
+ 1336 0811 7A000000 		.4byte	0x7a
+ 1337 0815 1D       		.byte	0x1d
+ 1338 0816 00       		.byte	0
+ 1339 0817 1C       		.uleb128 0x1c
+ 1340 0818 F0       		.byte	0xf0
+ 1341 0819 06       		.byte	0x6
+ 1342 081a 5702     		.2byte	0x257
+ 1343 081c 39080000 		.4byte	0x839
+ 1344 0820 1D       		.uleb128 0x1d
+ 1345 0821 76060000 		.4byte	.LASF66
+ 1346 0825 06       		.byte	0x6
+ 1347 0826 6E02     		.2byte	0x26e
+ 1348 0828 A2060000 		.4byte	0x6a2
+ 1349 082c 1D       		.uleb128 0x1d
+ 1350 082d 8E070000 		.4byte	.LASF118
+ 1351 0831 06       		.byte	0x6
+ 1352 0832 7702     		.2byte	0x277
+ 1353 0834 D3070000 		.4byte	0x7d3
+ 1354 0838 00       		.byte	0
+ 1355 0839 0B       		.uleb128 0xb
+ 1356 083a 76050000 		.4byte	0x576
+ 1357 083e 49080000 		.4byte	0x849
+ 1358 0842 0C       		.uleb128 0xc
+ 1359 0843 7A000000 		.4byte	0x7a
+ 1360 0847 18       		.byte	0x18
+ 1361 0848 00       		.byte	0
+ 1362 0849 07       		.uleb128 0x7
+ 1363 084a FF000000 		.4byte	.LASF120
+ 1364 084e 06       		.uleb128 0x6
+ 1365 084f 04       		.byte	0x4
+ 1366 0850 49080000 		.4byte	0x849
+ 1367 0854 1E       		.uleb128 0x1e
+ 1368 0855 5F080000 		.4byte	0x85f
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 25
+
+
+ 1369 0859 15       		.uleb128 0x15
+ 1370 085a 33040000 		.4byte	0x433
+ 1371 085e 00       		.byte	0
+ 1372 085f 06       		.uleb128 0x6
+ 1373 0860 04       		.byte	0x4
+ 1374 0861 54080000 		.4byte	0x854
+ 1375 0865 06       		.uleb128 0x6
+ 1376 0866 04       		.byte	0x4
+ 1377 0867 86010000 		.4byte	0x186
+ 1378 086b 1E       		.uleb128 0x1e
+ 1379 086c 76080000 		.4byte	0x876
+ 1380 0870 15       		.uleb128 0x15
+ 1381 0871 73000000 		.4byte	0x73
+ 1382 0875 00       		.byte	0
+ 1383 0876 06       		.uleb128 0x6
+ 1384 0877 04       		.byte	0x4
+ 1385 0878 7C080000 		.4byte	0x87c
+ 1386 087c 06       		.uleb128 0x6
+ 1387 087d 04       		.byte	0x4
+ 1388 087e 6B080000 		.4byte	0x86b
+ 1389 0882 0B       		.uleb128 0xb
+ 1390 0883 10060000 		.4byte	0x610
+ 1391 0887 92080000 		.4byte	0x892
+ 1392 088b 0C       		.uleb128 0xc
+ 1393 088c 7A000000 		.4byte	0x7a
+ 1394 0890 02       		.byte	0x2
+ 1395 0891 00       		.byte	0
+ 1396 0892 1F       		.uleb128 0x1f
+ 1397 0893 B8060000 		.4byte	.LASF121
+ 1398 0897 06       		.byte	0x6
+ 1399 0898 0703     		.2byte	0x307
+ 1400 089a 33040000 		.4byte	0x433
+ 1401 089e 1F       		.uleb128 0x1f
+ 1402 089f 2D070000 		.4byte	.LASF122
+ 1403 08a3 06       		.byte	0x6
+ 1404 08a4 0803     		.2byte	0x308
+ 1405 08a6 39040000 		.4byte	0x439
+ 1406 08aa 03       		.uleb128 0x3
+ 1407 08ab E1060000 		.4byte	.LASF123
+ 1408 08af 07       		.byte	0x7
+ 1409 08b0 18       		.byte	0x18
+ 1410 08b1 2C000000 		.4byte	0x2c
+ 1411 08b5 03       		.uleb128 0x3
+ 1412 08b6 2E010000 		.4byte	.LASF124
+ 1413 08ba 07       		.byte	0x7
+ 1414 08bb 20       		.byte	0x20
+ 1415 08bc 3E000000 		.4byte	0x3e
+ 1416 08c0 20       		.uleb128 0x20
+ 1417 08c1 26050000 		.4byte	.LASF125
+ 1418 08c5 08       		.byte	0x8
+ 1419 08c6 63       		.byte	0x63
+ 1420 08c7 70050000 		.4byte	0x570
+ 1421 08cb 21       		.uleb128 0x21
+ 1422 08cc 07       		.byte	0x7
+ 1423 08cd 01       		.byte	0x1
+ 1424 08ce 37000000 		.4byte	0x37
+ 1425 08d2 09       		.byte	0x9
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 26
+
+
+ 1426 08d3 1B       		.byte	0x1b
+ 1427 08d4 09090000 		.4byte	0x909
+ 1428 08d8 22       		.uleb128 0x22
+ 1429 08d9 F3000000 		.4byte	.LASF126
+ 1430 08dd 00       		.byte	0
+ 1431 08de 22       		.uleb128 0x22
+ 1432 08df CF040000 		.4byte	.LASF127
+ 1433 08e3 01       		.byte	0x1
+ 1434 08e4 22       		.uleb128 0x22
+ 1435 08e5 27060000 		.4byte	.LASF128
+ 1436 08e9 02       		.byte	0x2
+ 1437 08ea 22       		.uleb128 0x22
+ 1438 08eb 1A070000 		.4byte	.LASF129
+ 1439 08ef 03       		.byte	0x3
+ 1440 08f0 22       		.uleb128 0x22
+ 1441 08f1 17080000 		.4byte	.LASF130
+ 1442 08f5 04       		.byte	0x4
+ 1443 08f6 22       		.uleb128 0x22
+ 1444 08f7 B7070000 		.4byte	.LASF131
+ 1445 08fb 05       		.byte	0x5
+ 1446 08fc 22       		.uleb128 0x22
+ 1447 08fd 4C040000 		.4byte	.LASF132
+ 1448 0901 06       		.byte	0x6
+ 1449 0902 22       		.uleb128 0x22
+ 1450 0903 96020000 		.4byte	.LASF133
+ 1451 0907 07       		.byte	0x7
+ 1452 0908 00       		.byte	0
+ 1453 0909 21       		.uleb128 0x21
+ 1454 090a 07       		.byte	0x7
+ 1455 090b 01       		.byte	0x1
+ 1456 090c 37000000 		.4byte	0x37
+ 1457 0910 01       		.byte	0x1
+ 1458 0911 15       		.byte	0x15
+ 1459 0912 23090000 		.4byte	0x923
+ 1460 0916 22       		.uleb128 0x22
+ 1461 0917 C4040000 		.4byte	.LASF134
+ 1462 091b 00       		.byte	0
+ 1463 091c 22       		.uleb128 0x22
+ 1464 091d 0C000000 		.4byte	.LASF135
+ 1465 0921 01       		.byte	0x1
+ 1466 0922 00       		.byte	0
+ 1467 0923 23       		.uleb128 0x23
+ 1468 0924 E6070000 		.4byte	.LASF140
+ 1469 0928 01       		.byte	0x1
+ 1470 0929 17       		.byte	0x17
+ 1471 092a 34090000 		.4byte	0x934
+ 1472 092e 05       		.uleb128 0x5
+ 1473 092f 03       		.byte	0x3
+ 1474 0930 00000000 		.4byte	last_difference
+ 1475 0934 02       		.uleb128 0x2
+ 1476 0935 04       		.byte	0x4
+ 1477 0936 04       		.byte	0x4
+ 1478 0937 42050000 		.4byte	.LASF136
+ 1479 093b 24       		.uleb128 0x24
+ 1480 093c 36040000 		.4byte	.LASF142
+ 1481 0940 01       		.byte	0x1
+ 1482 0941 4C       		.byte	0x4c
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 27
+
+
+ 1483 0942 00000000 		.4byte	.LFB5
+ 1484 0946 38000000 		.4byte	.LFE5-.LFB5
+ 1485 094a 01       		.uleb128 0x1
+ 1486 094b 9C       		.byte	0x9c
+ 1487 094c FF090000 		.4byte	0x9ff
+ 1488 0950 25       		.uleb128 0x25
+ 1489 0951 05050000 		.4byte	.LASF137
+ 1490 0955 01       		.byte	0x1
+ 1491 0956 4C       		.byte	0x4c
+ 1492 0957 73000000 		.4byte	0x73
+ 1493 095b 00000000 		.4byte	.LLST10
+ 1494 095f 25       		.uleb128 0x25
+ 1495 0960 48050000 		.4byte	.LASF138
+ 1496 0964 01       		.byte	0x1
+ 1497 0965 4C       		.byte	0x4c
+ 1498 0966 73000000 		.4byte	0x73
+ 1499 096a 21000000 		.4byte	.LLST11
+ 1500 096e 25       		.uleb128 0x25
+ 1501 096f 0B070000 		.4byte	.LASF139
+ 1502 0973 01       		.byte	0x1
+ 1503 0974 4C       		.byte	0x4c
+ 1504 0975 73000000 		.4byte	0x73
+ 1505 0979 42000000 		.4byte	.LLST12
+ 1506 097d 26       		.uleb128 0x26
+ 1507 097e 8F000000 		.4byte	.LASF141
+ 1508 0982 01       		.byte	0x1
+ 1509 0983 4E       		.byte	0x4e
+ 1510 0984 B5080000 		.4byte	0x8b5
+ 1511 0988 63000000 		.4byte	.LLST13
+ 1512 098c 27       		.uleb128 0x27
+ 1513 098d 2E000000 		.4byte	.LVL36
+ 1514 0991 7C0A0000 		.4byte	0xa7c
+ 1515 0995 F5090000 		.4byte	0x9f5
+ 1516 0999 28       		.uleb128 0x28
+ 1517 099a 01       		.uleb128 0x1
+ 1518 099b 50       		.byte	0x50
+ 1519 099c 52       		.uleb128 0x52
+ 1520 099d 44       		.byte	0x44
+ 1521 099e F3       		.byte	0xf3
+ 1522 099f 01       		.uleb128 0x1
+ 1523 09a0 50       		.byte	0x50
+ 1524 09a1 F3       		.byte	0xf3
+ 1525 09a2 01       		.uleb128 0x1
+ 1526 09a3 51       		.byte	0x51
+ 1527 09a4 1C       		.byte	0x1c
+ 1528 09a5 0A       		.byte	0xa
+ 1529 09a6 FFFF     		.2byte	0xffff
+ 1530 09a8 1A       		.byte	0x1a
+ 1531 09a9 1C       		.byte	0x1c
+ 1532 09aa F3       		.byte	0xf3
+ 1533 09ab 01       		.uleb128 0x1
+ 1534 09ac 50       		.byte	0x50
+ 1535 09ad F3       		.byte	0xf3
+ 1536 09ae 01       		.uleb128 0x1
+ 1537 09af 51       		.byte	0x51
+ 1538 09b0 1C       		.byte	0x1c
+ 1539 09b1 0A       		.byte	0xa
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 28
+
+
+ 1540 09b2 FFFF     		.2byte	0xffff
+ 1541 09b4 1A       		.byte	0x1a
+ 1542 09b5 F3       		.byte	0xf3
+ 1543 09b6 01       		.uleb128 0x1
+ 1544 09b7 52       		.byte	0x52
+ 1545 09b8 32       		.byte	0x32
+ 1546 09b9 29       		.byte	0x29
+ 1547 09ba 28       		.byte	0x28
+ 1548 09bb 0100     		.2byte	0x1
+ 1549 09bd 16       		.byte	0x16
+ 1550 09be 13       		.byte	0x13
+ 1551 09bf 0A       		.byte	0xa
+ 1552 09c0 FFFF     		.2byte	0xffff
+ 1553 09c2 1A       		.byte	0x1a
+ 1554 09c3 44       		.byte	0x44
+ 1555 09c4 F3       		.byte	0xf3
+ 1556 09c5 01       		.uleb128 0x1
+ 1557 09c6 50       		.byte	0x50
+ 1558 09c7 F3       		.byte	0xf3
+ 1559 09c8 01       		.uleb128 0x1
+ 1560 09c9 51       		.byte	0x51
+ 1561 09ca 1C       		.byte	0x1c
+ 1562 09cb 0A       		.byte	0xa
+ 1563 09cc FFFF     		.2byte	0xffff
+ 1564 09ce 1A       		.byte	0x1a
+ 1565 09cf 1C       		.byte	0x1c
+ 1566 09d0 F3       		.byte	0xf3
+ 1567 09d1 01       		.uleb128 0x1
+ 1568 09d2 50       		.byte	0x50
+ 1569 09d3 F3       		.byte	0xf3
+ 1570 09d4 01       		.uleb128 0x1
+ 1571 09d5 51       		.byte	0x51
+ 1572 09d6 1C       		.byte	0x1c
+ 1573 09d7 0A       		.byte	0xa
+ 1574 09d8 FFFF     		.2byte	0xffff
+ 1575 09da 1A       		.byte	0x1a
+ 1576 09db F3       		.byte	0xf3
+ 1577 09dc 01       		.uleb128 0x1
+ 1578 09dd 52       		.byte	0x52
+ 1579 09de 32       		.byte	0x32
+ 1580 09df 29       		.byte	0x29
+ 1581 09e0 28       		.byte	0x28
+ 1582 09e1 0100     		.2byte	0x1
+ 1583 09e3 16       		.byte	0x16
+ 1584 09e4 13       		.byte	0x13
+ 1585 09e5 F3       		.byte	0xf3
+ 1586 09e6 01       		.uleb128 0x1
+ 1587 09e7 52       		.byte	0x52
+ 1588 09e8 32       		.byte	0x32
+ 1589 09e9 29       		.byte	0x29
+ 1590 09ea 28       		.byte	0x28
+ 1591 09eb 0100     		.2byte	0x1
+ 1592 09ed 16       		.byte	0x16
+ 1593 09ee 13       		.byte	0x13
+ 1594 09ef 28       		.uleb128 0x28
+ 1595 09f0 01       		.uleb128 0x1
+ 1596 09f1 51       		.byte	0x51
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 29
+
+
+ 1597 09f2 01       		.uleb128 0x1
+ 1598 09f3 31       		.byte	0x31
+ 1599 09f4 00       		.byte	0
+ 1600 09f5 29       		.uleb128 0x29
+ 1601 09f6 32000000 		.4byte	.LVL37
+ 1602 09fa 1E0B0000 		.4byte	0xb1e
+ 1603 09fe 00       		.byte	0
+ 1604 09ff 24       		.uleb128 0x24
+ 1605 0a00 67000000 		.4byte	.LASF143
+ 1606 0a04 01       		.byte	0x1
+ 1607 0a05 38       		.byte	0x38
+ 1608 0a06 00000000 		.4byte	.LFB4
+ 1609 0a0a 3C000000 		.4byte	.LFE4-.LFB4
+ 1610 0a0e 01       		.uleb128 0x1
+ 1611 0a0f 9C       		.byte	0x9c
+ 1612 0a10 7C0A0000 		.4byte	0xa7c
+ 1613 0a14 25       		.uleb128 0x25
+ 1614 0a15 A0060000 		.4byte	.LASF144
+ 1615 0a19 01       		.byte	0x1
+ 1616 0a1a 38       		.byte	0x38
+ 1617 0a1b 73000000 		.4byte	0x73
+ 1618 0a1f 58010000 		.4byte	.LLST5
+ 1619 0a23 25       		.uleb128 0x25
+ 1620 0a24 F6070000 		.4byte	.LASF145
+ 1621 0a28 01       		.byte	0x1
+ 1622 0a29 38       		.byte	0x38
+ 1623 0a2a 73000000 		.4byte	0x73
+ 1624 0a2e 92010000 		.4byte	.LLST6
+ 1625 0a32 25       		.uleb128 0x25
+ 1626 0a33 8A050000 		.4byte	.LASF146
+ 1627 0a37 01       		.byte	0x1
+ 1628 0a38 38       		.byte	0x38
+ 1629 0a39 73000000 		.4byte	0x73
+ 1630 0a3d CC010000 		.4byte	.LLST7
+ 1631 0a41 25       		.uleb128 0x25
+ 1632 0a42 79050000 		.4byte	.LASF147
+ 1633 0a46 01       		.byte	0x1
+ 1634 0a47 38       		.byte	0x38
+ 1635 0a48 73000000 		.4byte	0x73
+ 1636 0a4c 06020000 		.4byte	.LLST8
+ 1637 0a50 26       		.uleb128 0x26
+ 1638 0a51 8F000000 		.4byte	.LASF141
+ 1639 0a55 01       		.byte	0x1
+ 1640 0a56 40       		.byte	0x40
+ 1641 0a57 B5080000 		.4byte	0x8b5
+ 1642 0a5b 40020000 		.4byte	.LLST9
+ 1643 0a5f 27       		.uleb128 0x27
+ 1644 0a60 2C000000 		.4byte	.LVL24
+ 1645 0a64 7C0A0000 		.4byte	0xa7c
+ 1646 0a68 720A0000 		.4byte	0xa72
+ 1647 0a6c 28       		.uleb128 0x28
+ 1648 0a6d 01       		.uleb128 0x1
+ 1649 0a6e 51       		.byte	0x51
+ 1650 0a6f 01       		.uleb128 0x1
+ 1651 0a70 30       		.byte	0x30
+ 1652 0a71 00       		.byte	0
+ 1653 0a72 29       		.uleb128 0x29
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 30
+
+
+ 1654 0a73 36000000 		.4byte	.LVL28
+ 1655 0a77 1E0B0000 		.4byte	0xb1e
+ 1656 0a7b 00       		.byte	0
+ 1657 0a7c 24       		.uleb128 0x24
+ 1658 0a7d D9070000 		.4byte	.LASF148
+ 1659 0a81 01       		.byte	0x1
+ 1660 0a82 1A       		.byte	0x1a
+ 1661 0a83 00000000 		.4byte	.LFB3
+ 1662 0a87 04010000 		.4byte	.LFE3-.LFB3
+ 1663 0a8b 01       		.uleb128 0x1
+ 1664 0a8c 9C       		.byte	0x9c
+ 1665 0a8d 1E0B0000 		.4byte	0xb1e
+ 1666 0a91 25       		.uleb128 0x25
+ 1667 0a92 8F000000 		.4byte	.LASF141
+ 1668 0a96 01       		.byte	0x1
+ 1669 0a97 1A       		.byte	0x1a
+ 1670 0a98 B5080000 		.4byte	0x8b5
+ 1671 0a9c 5E020000 		.4byte	.LLST0
+ 1672 0aa0 25       		.uleb128 0x25
+ 1673 0aa1 26000000 		.4byte	.LASF149
+ 1674 0aa5 01       		.byte	0x1
+ 1675 0aa6 1A       		.byte	0x1a
+ 1676 0aa7 AA080000 		.4byte	0x8aa
+ 1677 0aab 88020000 		.4byte	.LLST1
+ 1678 0aaf 26       		.uleb128 0x26
+ 1679 0ab0 0A010000 		.4byte	.LASF150
+ 1680 0ab4 01       		.byte	0x1
+ 1681 0ab5 1C       		.byte	0x1c
+ 1682 0ab6 B5080000 		.4byte	0x8b5
+ 1683 0aba C2020000 		.4byte	.LLST2
+ 1684 0abe 26       		.uleb128 0x26
+ 1685 0abf 6E050000 		.4byte	.LASF151
+ 1686 0ac3 01       		.byte	0x1
+ 1687 0ac4 1C       		.byte	0x1c
+ 1688 0ac5 B5080000 		.4byte	0x8b5
+ 1689 0ac9 E0020000 		.4byte	.LLST3
+ 1690 0acd 26       		.uleb128 0x26
+ 1691 0ace AF050000 		.4byte	.LASF152
+ 1692 0ad2 01       		.byte	0x1
+ 1693 0ad3 1C       		.byte	0x1c
+ 1694 0ad4 B5080000 		.4byte	0x8b5
+ 1695 0ad8 FE020000 		.4byte	.LLST4
+ 1696 0adc 29       		.uleb128 0x29
+ 1697 0add 44000000 		.4byte	.LVL4
+ 1698 0ae1 270B0000 		.4byte	0xb27
+ 1699 0ae5 29       		.uleb128 0x29
+ 1700 0ae6 6E000000 		.4byte	.LVL7
+ 1701 0aea 320B0000 		.4byte	0xb32
+ 1702 0aee 2A       		.uleb128 0x2a
+ 1703 0aef 8E000000 		.4byte	.LVL9
+ 1704 0af3 3D0B0000 		.4byte	0xb3d
+ 1705 0af7 020B0000 		.4byte	0xb02
+ 1706 0afb 28       		.uleb128 0x28
+ 1707 0afc 01       		.uleb128 0x1
+ 1708 0afd 50       		.byte	0x50
+ 1709 0afe 02       		.uleb128 0x2
+ 1710 0aff 74       		.byte	0x74
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 31
+
+
+ 1711 0b00 00       		.sleb128 0
+ 1712 0b01 00       		.byte	0
+ 1713 0b02 29       		.uleb128 0x29
+ 1714 0b03 A6000000 		.4byte	.LVL11
+ 1715 0b07 270B0000 		.4byte	0xb27
+ 1716 0b0b 29       		.uleb128 0x29
+ 1717 0b0c D0000000 		.4byte	.LVL14
+ 1718 0b10 320B0000 		.4byte	0xb32
+ 1719 0b14 29       		.uleb128 0x29
+ 1720 0b15 F0000000 		.4byte	.LVL17
+ 1721 0b19 1E0B0000 		.4byte	0xb1e
+ 1722 0b1d 00       		.byte	0
+ 1723 0b1e 2B       		.uleb128 0x2b
+ 1724 0b1f 5D060000 		.4byte	.LASF159
+ 1725 0b23 5D060000 		.4byte	.LASF159
+ 1726 0b27 2C       		.uleb128 0x2c
+ 1727 0b28 57000000 		.4byte	.LASF153
+ 1728 0b2c 57000000 		.4byte	.LASF153
+ 1729 0b30 0A       		.byte	0xa
+ 1730 0b31 11       		.byte	0x11
+ 1731 0b32 2C       		.uleb128 0x2c
+ 1732 0b33 9A000000 		.4byte	.LASF154
+ 1733 0b37 9A000000 		.4byte	.LASF154
+ 1734 0b3b 0A       		.byte	0xa
+ 1735 0b3c 12       		.byte	0x12
+ 1736 0b3d 2C       		.uleb128 0x2c
+ 1737 0b3e E0000000 		.4byte	.LASF155
+ 1738 0b42 E0000000 		.4byte	.LASF155
+ 1739 0b46 0A       		.byte	0xa
+ 1740 0b47 0E       		.byte	0xe
+ 1741 0b48 00       		.byte	0
+ 1742              		.section	.debug_abbrev,"",%progbits
+ 1743              	.Ldebug_abbrev0:
+ 1744 0000 01       		.uleb128 0x1
+ 1745 0001 11       		.uleb128 0x11
+ 1746 0002 01       		.byte	0x1
+ 1747 0003 25       		.uleb128 0x25
+ 1748 0004 0E       		.uleb128 0xe
+ 1749 0005 13       		.uleb128 0x13
+ 1750 0006 0B       		.uleb128 0xb
+ 1751 0007 03       		.uleb128 0x3
+ 1752 0008 0E       		.uleb128 0xe
+ 1753 0009 1B       		.uleb128 0x1b
+ 1754 000a 0E       		.uleb128 0xe
+ 1755 000b 55       		.uleb128 0x55
+ 1756 000c 17       		.uleb128 0x17
+ 1757 000d 11       		.uleb128 0x11
+ 1758 000e 01       		.uleb128 0x1
+ 1759 000f 10       		.uleb128 0x10
+ 1760 0010 17       		.uleb128 0x17
+ 1761 0011 00       		.byte	0
+ 1762 0012 00       		.byte	0
+ 1763 0013 02       		.uleb128 0x2
+ 1764 0014 24       		.uleb128 0x24
+ 1765 0015 00       		.byte	0
+ 1766 0016 0B       		.uleb128 0xb
+ 1767 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 32
+
+
+ 1768 0018 3E       		.uleb128 0x3e
+ 1769 0019 0B       		.uleb128 0xb
+ 1770 001a 03       		.uleb128 0x3
+ 1771 001b 0E       		.uleb128 0xe
+ 1772 001c 00       		.byte	0
+ 1773 001d 00       		.byte	0
+ 1774 001e 03       		.uleb128 0x3
+ 1775 001f 16       		.uleb128 0x16
+ 1776 0020 00       		.byte	0
+ 1777 0021 03       		.uleb128 0x3
+ 1778 0022 0E       		.uleb128 0xe
+ 1779 0023 3A       		.uleb128 0x3a
+ 1780 0024 0B       		.uleb128 0xb
+ 1781 0025 3B       		.uleb128 0x3b
+ 1782 0026 0B       		.uleb128 0xb
+ 1783 0027 49       		.uleb128 0x49
+ 1784 0028 13       		.uleb128 0x13
+ 1785 0029 00       		.byte	0
+ 1786 002a 00       		.byte	0
+ 1787 002b 04       		.uleb128 0x4
+ 1788 002c 24       		.uleb128 0x24
+ 1789 002d 00       		.byte	0
+ 1790 002e 0B       		.uleb128 0xb
+ 1791 002f 0B       		.uleb128 0xb
+ 1792 0030 3E       		.uleb128 0x3e
+ 1793 0031 0B       		.uleb128 0xb
+ 1794 0032 03       		.uleb128 0x3
+ 1795 0033 08       		.uleb128 0x8
+ 1796 0034 00       		.byte	0
+ 1797 0035 00       		.byte	0
+ 1798 0036 05       		.uleb128 0x5
+ 1799 0037 0F       		.uleb128 0xf
+ 1800 0038 00       		.byte	0
+ 1801 0039 0B       		.uleb128 0xb
+ 1802 003a 0B       		.uleb128 0xb
+ 1803 003b 00       		.byte	0
+ 1804 003c 00       		.byte	0
+ 1805 003d 06       		.uleb128 0x6
+ 1806 003e 0F       		.uleb128 0xf
+ 1807 003f 00       		.byte	0
+ 1808 0040 0B       		.uleb128 0xb
+ 1809 0041 0B       		.uleb128 0xb
+ 1810 0042 49       		.uleb128 0x49
+ 1811 0043 13       		.uleb128 0x13
+ 1812 0044 00       		.byte	0
+ 1813 0045 00       		.byte	0
+ 1814 0046 07       		.uleb128 0x7
+ 1815 0047 13       		.uleb128 0x13
+ 1816 0048 00       		.byte	0
+ 1817 0049 03       		.uleb128 0x3
+ 1818 004a 0E       		.uleb128 0xe
+ 1819 004b 3C       		.uleb128 0x3c
+ 1820 004c 19       		.uleb128 0x19
+ 1821 004d 00       		.byte	0
+ 1822 004e 00       		.byte	0
+ 1823 004f 08       		.uleb128 0x8
+ 1824 0050 16       		.uleb128 0x16
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 33
+
+
+ 1825 0051 00       		.byte	0
+ 1826 0052 03       		.uleb128 0x3
+ 1827 0053 0E       		.uleb128 0xe
+ 1828 0054 3A       		.uleb128 0x3a
+ 1829 0055 0B       		.uleb128 0xb
+ 1830 0056 3B       		.uleb128 0x3b
+ 1831 0057 05       		.uleb128 0x5
+ 1832 0058 49       		.uleb128 0x49
+ 1833 0059 13       		.uleb128 0x13
+ 1834 005a 00       		.byte	0
+ 1835 005b 00       		.byte	0
+ 1836 005c 09       		.uleb128 0x9
+ 1837 005d 17       		.uleb128 0x17
+ 1838 005e 01       		.byte	0x1
+ 1839 005f 0B       		.uleb128 0xb
+ 1840 0060 0B       		.uleb128 0xb
+ 1841 0061 3A       		.uleb128 0x3a
+ 1842 0062 0B       		.uleb128 0xb
+ 1843 0063 3B       		.uleb128 0x3b
+ 1844 0064 0B       		.uleb128 0xb
+ 1845 0065 01       		.uleb128 0x1
+ 1846 0066 13       		.uleb128 0x13
+ 1847 0067 00       		.byte	0
+ 1848 0068 00       		.byte	0
+ 1849 0069 0A       		.uleb128 0xa
+ 1850 006a 0D       		.uleb128 0xd
+ 1851 006b 00       		.byte	0
+ 1852 006c 03       		.uleb128 0x3
+ 1853 006d 0E       		.uleb128 0xe
+ 1854 006e 3A       		.uleb128 0x3a
+ 1855 006f 0B       		.uleb128 0xb
+ 1856 0070 3B       		.uleb128 0x3b
+ 1857 0071 0B       		.uleb128 0xb
+ 1858 0072 49       		.uleb128 0x49
+ 1859 0073 13       		.uleb128 0x13
+ 1860 0074 00       		.byte	0
+ 1861 0075 00       		.byte	0
+ 1862 0076 0B       		.uleb128 0xb
+ 1863 0077 01       		.uleb128 0x1
+ 1864 0078 01       		.byte	0x1
+ 1865 0079 49       		.uleb128 0x49
+ 1866 007a 13       		.uleb128 0x13
+ 1867 007b 01       		.uleb128 0x1
+ 1868 007c 13       		.uleb128 0x13
+ 1869 007d 00       		.byte	0
+ 1870 007e 00       		.byte	0
+ 1871 007f 0C       		.uleb128 0xc
+ 1872 0080 21       		.uleb128 0x21
+ 1873 0081 00       		.byte	0
+ 1874 0082 49       		.uleb128 0x49
+ 1875 0083 13       		.uleb128 0x13
+ 1876 0084 2F       		.uleb128 0x2f
+ 1877 0085 0B       		.uleb128 0xb
+ 1878 0086 00       		.byte	0
+ 1879 0087 00       		.byte	0
+ 1880 0088 0D       		.uleb128 0xd
+ 1881 0089 13       		.uleb128 0x13
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 34
+
+
+ 1882 008a 01       		.byte	0x1
+ 1883 008b 0B       		.uleb128 0xb
+ 1884 008c 0B       		.uleb128 0xb
+ 1885 008d 3A       		.uleb128 0x3a
+ 1886 008e 0B       		.uleb128 0xb
+ 1887 008f 3B       		.uleb128 0x3b
+ 1888 0090 0B       		.uleb128 0xb
+ 1889 0091 01       		.uleb128 0x1
+ 1890 0092 13       		.uleb128 0x13
+ 1891 0093 00       		.byte	0
+ 1892 0094 00       		.byte	0
+ 1893 0095 0E       		.uleb128 0xe
+ 1894 0096 0D       		.uleb128 0xd
+ 1895 0097 00       		.byte	0
+ 1896 0098 03       		.uleb128 0x3
+ 1897 0099 0E       		.uleb128 0xe
+ 1898 009a 3A       		.uleb128 0x3a
+ 1899 009b 0B       		.uleb128 0xb
+ 1900 009c 3B       		.uleb128 0x3b
+ 1901 009d 0B       		.uleb128 0xb
+ 1902 009e 49       		.uleb128 0x49
+ 1903 009f 13       		.uleb128 0x13
+ 1904 00a0 38       		.uleb128 0x38
+ 1905 00a1 0B       		.uleb128 0xb
+ 1906 00a2 00       		.byte	0
+ 1907 00a3 00       		.byte	0
+ 1908 00a4 0F       		.uleb128 0xf
+ 1909 00a5 13       		.uleb128 0x13
+ 1910 00a6 01       		.byte	0x1
+ 1911 00a7 03       		.uleb128 0x3
+ 1912 00a8 0E       		.uleb128 0xe
+ 1913 00a9 0B       		.uleb128 0xb
+ 1914 00aa 0B       		.uleb128 0xb
+ 1915 00ab 3A       		.uleb128 0x3a
+ 1916 00ac 0B       		.uleb128 0xb
+ 1917 00ad 3B       		.uleb128 0x3b
+ 1918 00ae 0B       		.uleb128 0xb
+ 1919 00af 01       		.uleb128 0x1
+ 1920 00b0 13       		.uleb128 0x13
+ 1921 00b1 00       		.byte	0
+ 1922 00b2 00       		.byte	0
+ 1923 00b3 10       		.uleb128 0x10
+ 1924 00b4 0D       		.uleb128 0xd
+ 1925 00b5 00       		.byte	0
+ 1926 00b6 03       		.uleb128 0x3
+ 1927 00b7 08       		.uleb128 0x8
+ 1928 00b8 3A       		.uleb128 0x3a
+ 1929 00b9 0B       		.uleb128 0xb
+ 1930 00ba 3B       		.uleb128 0x3b
+ 1931 00bb 0B       		.uleb128 0xb
+ 1932 00bc 49       		.uleb128 0x49
+ 1933 00bd 13       		.uleb128 0x13
+ 1934 00be 38       		.uleb128 0x38
+ 1935 00bf 0B       		.uleb128 0xb
+ 1936 00c0 00       		.byte	0
+ 1937 00c1 00       		.byte	0
+ 1938 00c2 11       		.uleb128 0x11
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 35
+
+
+ 1939 00c3 13       		.uleb128 0x13
+ 1940 00c4 01       		.byte	0x1
+ 1941 00c5 03       		.uleb128 0x3
+ 1942 00c6 0E       		.uleb128 0xe
+ 1943 00c7 0B       		.uleb128 0xb
+ 1944 00c8 05       		.uleb128 0x5
+ 1945 00c9 3A       		.uleb128 0x3a
+ 1946 00ca 0B       		.uleb128 0xb
+ 1947 00cb 3B       		.uleb128 0x3b
+ 1948 00cc 0B       		.uleb128 0xb
+ 1949 00cd 01       		.uleb128 0x1
+ 1950 00ce 13       		.uleb128 0x13
+ 1951 00cf 00       		.byte	0
+ 1952 00d0 00       		.byte	0
+ 1953 00d1 12       		.uleb128 0x12
+ 1954 00d2 0D       		.uleb128 0xd
+ 1955 00d3 00       		.byte	0
+ 1956 00d4 03       		.uleb128 0x3
+ 1957 00d5 0E       		.uleb128 0xe
+ 1958 00d6 3A       		.uleb128 0x3a
+ 1959 00d7 0B       		.uleb128 0xb
+ 1960 00d8 3B       		.uleb128 0x3b
+ 1961 00d9 0B       		.uleb128 0xb
+ 1962 00da 49       		.uleb128 0x49
+ 1963 00db 13       		.uleb128 0x13
+ 1964 00dc 38       		.uleb128 0x38
+ 1965 00dd 05       		.uleb128 0x5
+ 1966 00de 00       		.byte	0
+ 1967 00df 00       		.byte	0
+ 1968 00e0 13       		.uleb128 0x13
+ 1969 00e1 15       		.uleb128 0x15
+ 1970 00e2 00       		.byte	0
+ 1971 00e3 27       		.uleb128 0x27
+ 1972 00e4 19       		.uleb128 0x19
+ 1973 00e5 00       		.byte	0
+ 1974 00e6 00       		.byte	0
+ 1975 00e7 14       		.uleb128 0x14
+ 1976 00e8 15       		.uleb128 0x15
+ 1977 00e9 01       		.byte	0x1
+ 1978 00ea 27       		.uleb128 0x27
+ 1979 00eb 19       		.uleb128 0x19
+ 1980 00ec 49       		.uleb128 0x49
+ 1981 00ed 13       		.uleb128 0x13
+ 1982 00ee 01       		.uleb128 0x1
+ 1983 00ef 13       		.uleb128 0x13
+ 1984 00f0 00       		.byte	0
+ 1985 00f1 00       		.byte	0
+ 1986 00f2 15       		.uleb128 0x15
+ 1987 00f3 05       		.uleb128 0x5
+ 1988 00f4 00       		.byte	0
+ 1989 00f5 49       		.uleb128 0x49
+ 1990 00f6 13       		.uleb128 0x13
+ 1991 00f7 00       		.byte	0
+ 1992 00f8 00       		.byte	0
+ 1993 00f9 16       		.uleb128 0x16
+ 1994 00fa 26       		.uleb128 0x26
+ 1995 00fb 00       		.byte	0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 36
+
+
+ 1996 00fc 49       		.uleb128 0x49
+ 1997 00fd 13       		.uleb128 0x13
+ 1998 00fe 00       		.byte	0
+ 1999 00ff 00       		.byte	0
+ 2000 0100 17       		.uleb128 0x17
+ 2001 0101 13       		.uleb128 0x13
+ 2002 0102 01       		.byte	0x1
+ 2003 0103 03       		.uleb128 0x3
+ 2004 0104 0E       		.uleb128 0xe
+ 2005 0105 0B       		.uleb128 0xb
+ 2006 0106 05       		.uleb128 0x5
+ 2007 0107 3A       		.uleb128 0x3a
+ 2008 0108 0B       		.uleb128 0xb
+ 2009 0109 3B       		.uleb128 0x3b
+ 2010 010a 05       		.uleb128 0x5
+ 2011 010b 01       		.uleb128 0x1
+ 2012 010c 13       		.uleb128 0x13
+ 2013 010d 00       		.byte	0
+ 2014 010e 00       		.byte	0
+ 2015 010f 18       		.uleb128 0x18
+ 2016 0110 0D       		.uleb128 0xd
+ 2017 0111 00       		.byte	0
+ 2018 0112 03       		.uleb128 0x3
+ 2019 0113 0E       		.uleb128 0xe
+ 2020 0114 3A       		.uleb128 0x3a
+ 2021 0115 0B       		.uleb128 0xb
+ 2022 0116 3B       		.uleb128 0x3b
+ 2023 0117 05       		.uleb128 0x5
+ 2024 0118 49       		.uleb128 0x49
+ 2025 0119 13       		.uleb128 0x13
+ 2026 011a 38       		.uleb128 0x38
+ 2027 011b 0B       		.uleb128 0xb
+ 2028 011c 00       		.byte	0
+ 2029 011d 00       		.byte	0
+ 2030 011e 19       		.uleb128 0x19
+ 2031 011f 0D       		.uleb128 0xd
+ 2032 0120 00       		.byte	0
+ 2033 0121 03       		.uleb128 0x3
+ 2034 0122 0E       		.uleb128 0xe
+ 2035 0123 3A       		.uleb128 0x3a
+ 2036 0124 0B       		.uleb128 0xb
+ 2037 0125 3B       		.uleb128 0x3b
+ 2038 0126 05       		.uleb128 0x5
+ 2039 0127 49       		.uleb128 0x49
+ 2040 0128 13       		.uleb128 0x13
+ 2041 0129 38       		.uleb128 0x38
+ 2042 012a 05       		.uleb128 0x5
+ 2043 012b 00       		.byte	0
+ 2044 012c 00       		.byte	0
+ 2045 012d 1A       		.uleb128 0x1a
+ 2046 012e 13       		.uleb128 0x13
+ 2047 012f 01       		.byte	0x1
+ 2048 0130 03       		.uleb128 0x3
+ 2049 0131 0E       		.uleb128 0xe
+ 2050 0132 0B       		.uleb128 0xb
+ 2051 0133 0B       		.uleb128 0xb
+ 2052 0134 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 37
+
+
+ 2053 0135 0B       		.uleb128 0xb
+ 2054 0136 3B       		.uleb128 0x3b
+ 2055 0137 05       		.uleb128 0x5
+ 2056 0138 01       		.uleb128 0x1
+ 2057 0139 13       		.uleb128 0x13
+ 2058 013a 00       		.byte	0
+ 2059 013b 00       		.byte	0
+ 2060 013c 1B       		.uleb128 0x1b
+ 2061 013d 13       		.uleb128 0x13
+ 2062 013e 01       		.byte	0x1
+ 2063 013f 0B       		.uleb128 0xb
+ 2064 0140 0B       		.uleb128 0xb
+ 2065 0141 3A       		.uleb128 0x3a
+ 2066 0142 0B       		.uleb128 0xb
+ 2067 0143 3B       		.uleb128 0x3b
+ 2068 0144 05       		.uleb128 0x5
+ 2069 0145 01       		.uleb128 0x1
+ 2070 0146 13       		.uleb128 0x13
+ 2071 0147 00       		.byte	0
+ 2072 0148 00       		.byte	0
+ 2073 0149 1C       		.uleb128 0x1c
+ 2074 014a 17       		.uleb128 0x17
+ 2075 014b 01       		.byte	0x1
+ 2076 014c 0B       		.uleb128 0xb
+ 2077 014d 0B       		.uleb128 0xb
+ 2078 014e 3A       		.uleb128 0x3a
+ 2079 014f 0B       		.uleb128 0xb
+ 2080 0150 3B       		.uleb128 0x3b
+ 2081 0151 05       		.uleb128 0x5
+ 2082 0152 01       		.uleb128 0x1
+ 2083 0153 13       		.uleb128 0x13
+ 2084 0154 00       		.byte	0
+ 2085 0155 00       		.byte	0
+ 2086 0156 1D       		.uleb128 0x1d
+ 2087 0157 0D       		.uleb128 0xd
+ 2088 0158 00       		.byte	0
+ 2089 0159 03       		.uleb128 0x3
+ 2090 015a 0E       		.uleb128 0xe
+ 2091 015b 3A       		.uleb128 0x3a
+ 2092 015c 0B       		.uleb128 0xb
+ 2093 015d 3B       		.uleb128 0x3b
+ 2094 015e 05       		.uleb128 0x5
+ 2095 015f 49       		.uleb128 0x49
+ 2096 0160 13       		.uleb128 0x13
+ 2097 0161 00       		.byte	0
+ 2098 0162 00       		.byte	0
+ 2099 0163 1E       		.uleb128 0x1e
+ 2100 0164 15       		.uleb128 0x15
+ 2101 0165 01       		.byte	0x1
+ 2102 0166 27       		.uleb128 0x27
+ 2103 0167 19       		.uleb128 0x19
+ 2104 0168 01       		.uleb128 0x1
+ 2105 0169 13       		.uleb128 0x13
+ 2106 016a 00       		.byte	0
+ 2107 016b 00       		.byte	0
+ 2108 016c 1F       		.uleb128 0x1f
+ 2109 016d 34       		.uleb128 0x34
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 38
+
+
+ 2110 016e 00       		.byte	0
+ 2111 016f 03       		.uleb128 0x3
+ 2112 0170 0E       		.uleb128 0xe
+ 2113 0171 3A       		.uleb128 0x3a
+ 2114 0172 0B       		.uleb128 0xb
+ 2115 0173 3B       		.uleb128 0x3b
+ 2116 0174 05       		.uleb128 0x5
+ 2117 0175 49       		.uleb128 0x49
+ 2118 0176 13       		.uleb128 0x13
+ 2119 0177 3F       		.uleb128 0x3f
+ 2120 0178 19       		.uleb128 0x19
+ 2121 0179 3C       		.uleb128 0x3c
+ 2122 017a 19       		.uleb128 0x19
+ 2123 017b 00       		.byte	0
+ 2124 017c 00       		.byte	0
+ 2125 017d 20       		.uleb128 0x20
+ 2126 017e 34       		.uleb128 0x34
+ 2127 017f 00       		.byte	0
+ 2128 0180 03       		.uleb128 0x3
+ 2129 0181 0E       		.uleb128 0xe
+ 2130 0182 3A       		.uleb128 0x3a
+ 2131 0183 0B       		.uleb128 0xb
+ 2132 0184 3B       		.uleb128 0x3b
+ 2133 0185 0B       		.uleb128 0xb
+ 2134 0186 49       		.uleb128 0x49
+ 2135 0187 13       		.uleb128 0x13
+ 2136 0188 3F       		.uleb128 0x3f
+ 2137 0189 19       		.uleb128 0x19
+ 2138 018a 3C       		.uleb128 0x3c
+ 2139 018b 19       		.uleb128 0x19
+ 2140 018c 00       		.byte	0
+ 2141 018d 00       		.byte	0
+ 2142 018e 21       		.uleb128 0x21
+ 2143 018f 04       		.uleb128 0x4
+ 2144 0190 01       		.byte	0x1
+ 2145 0191 3E       		.uleb128 0x3e
+ 2146 0192 0B       		.uleb128 0xb
+ 2147 0193 0B       		.uleb128 0xb
+ 2148 0194 0B       		.uleb128 0xb
+ 2149 0195 49       		.uleb128 0x49
+ 2150 0196 13       		.uleb128 0x13
+ 2151 0197 3A       		.uleb128 0x3a
+ 2152 0198 0B       		.uleb128 0xb
+ 2153 0199 3B       		.uleb128 0x3b
+ 2154 019a 0B       		.uleb128 0xb
+ 2155 019b 01       		.uleb128 0x1
+ 2156 019c 13       		.uleb128 0x13
+ 2157 019d 00       		.byte	0
+ 2158 019e 00       		.byte	0
+ 2159 019f 22       		.uleb128 0x22
+ 2160 01a0 28       		.uleb128 0x28
+ 2161 01a1 00       		.byte	0
+ 2162 01a2 03       		.uleb128 0x3
+ 2163 01a3 0E       		.uleb128 0xe
+ 2164 01a4 1C       		.uleb128 0x1c
+ 2165 01a5 0B       		.uleb128 0xb
+ 2166 01a6 00       		.byte	0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 39
+
+
+ 2167 01a7 00       		.byte	0
+ 2168 01a8 23       		.uleb128 0x23
+ 2169 01a9 34       		.uleb128 0x34
+ 2170 01aa 00       		.byte	0
+ 2171 01ab 03       		.uleb128 0x3
+ 2172 01ac 0E       		.uleb128 0xe
+ 2173 01ad 3A       		.uleb128 0x3a
+ 2174 01ae 0B       		.uleb128 0xb
+ 2175 01af 3B       		.uleb128 0x3b
+ 2176 01b0 0B       		.uleb128 0xb
+ 2177 01b1 49       		.uleb128 0x49
+ 2178 01b2 13       		.uleb128 0x13
+ 2179 01b3 02       		.uleb128 0x2
+ 2180 01b4 18       		.uleb128 0x18
+ 2181 01b5 00       		.byte	0
+ 2182 01b6 00       		.byte	0
+ 2183 01b7 24       		.uleb128 0x24
+ 2184 01b8 2E       		.uleb128 0x2e
+ 2185 01b9 01       		.byte	0x1
+ 2186 01ba 3F       		.uleb128 0x3f
+ 2187 01bb 19       		.uleb128 0x19
+ 2188 01bc 03       		.uleb128 0x3
+ 2189 01bd 0E       		.uleb128 0xe
+ 2190 01be 3A       		.uleb128 0x3a
+ 2191 01bf 0B       		.uleb128 0xb
+ 2192 01c0 3B       		.uleb128 0x3b
+ 2193 01c1 0B       		.uleb128 0xb
+ 2194 01c2 27       		.uleb128 0x27
+ 2195 01c3 19       		.uleb128 0x19
+ 2196 01c4 11       		.uleb128 0x11
+ 2197 01c5 01       		.uleb128 0x1
+ 2198 01c6 12       		.uleb128 0x12
+ 2199 01c7 06       		.uleb128 0x6
+ 2200 01c8 40       		.uleb128 0x40
+ 2201 01c9 18       		.uleb128 0x18
+ 2202 01ca 9742     		.uleb128 0x2117
+ 2203 01cc 19       		.uleb128 0x19
+ 2204 01cd 01       		.uleb128 0x1
+ 2205 01ce 13       		.uleb128 0x13
+ 2206 01cf 00       		.byte	0
+ 2207 01d0 00       		.byte	0
+ 2208 01d1 25       		.uleb128 0x25
+ 2209 01d2 05       		.uleb128 0x5
+ 2210 01d3 00       		.byte	0
+ 2211 01d4 03       		.uleb128 0x3
+ 2212 01d5 0E       		.uleb128 0xe
+ 2213 01d6 3A       		.uleb128 0x3a
+ 2214 01d7 0B       		.uleb128 0xb
+ 2215 01d8 3B       		.uleb128 0x3b
+ 2216 01d9 0B       		.uleb128 0xb
+ 2217 01da 49       		.uleb128 0x49
+ 2218 01db 13       		.uleb128 0x13
+ 2219 01dc 02       		.uleb128 0x2
+ 2220 01dd 17       		.uleb128 0x17
+ 2221 01de 00       		.byte	0
+ 2222 01df 00       		.byte	0
+ 2223 01e0 26       		.uleb128 0x26
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 40
+
+
+ 2224 01e1 34       		.uleb128 0x34
+ 2225 01e2 00       		.byte	0
+ 2226 01e3 03       		.uleb128 0x3
+ 2227 01e4 0E       		.uleb128 0xe
+ 2228 01e5 3A       		.uleb128 0x3a
+ 2229 01e6 0B       		.uleb128 0xb
+ 2230 01e7 3B       		.uleb128 0x3b
+ 2231 01e8 0B       		.uleb128 0xb
+ 2232 01e9 49       		.uleb128 0x49
+ 2233 01ea 13       		.uleb128 0x13
+ 2234 01eb 02       		.uleb128 0x2
+ 2235 01ec 17       		.uleb128 0x17
+ 2236 01ed 00       		.byte	0
+ 2237 01ee 00       		.byte	0
+ 2238 01ef 27       		.uleb128 0x27
+ 2239 01f0 898201   		.uleb128 0x4109
+ 2240 01f3 01       		.byte	0x1
+ 2241 01f4 11       		.uleb128 0x11
+ 2242 01f5 01       		.uleb128 0x1
+ 2243 01f6 9542     		.uleb128 0x2115
+ 2244 01f8 19       		.uleb128 0x19
+ 2245 01f9 31       		.uleb128 0x31
+ 2246 01fa 13       		.uleb128 0x13
+ 2247 01fb 01       		.uleb128 0x1
+ 2248 01fc 13       		.uleb128 0x13
+ 2249 01fd 00       		.byte	0
+ 2250 01fe 00       		.byte	0
+ 2251 01ff 28       		.uleb128 0x28
+ 2252 0200 8A8201   		.uleb128 0x410a
+ 2253 0203 00       		.byte	0
+ 2254 0204 02       		.uleb128 0x2
+ 2255 0205 18       		.uleb128 0x18
+ 2256 0206 9142     		.uleb128 0x2111
+ 2257 0208 18       		.uleb128 0x18
+ 2258 0209 00       		.byte	0
+ 2259 020a 00       		.byte	0
+ 2260 020b 29       		.uleb128 0x29
+ 2261 020c 898201   		.uleb128 0x4109
+ 2262 020f 00       		.byte	0
+ 2263 0210 11       		.uleb128 0x11
+ 2264 0211 01       		.uleb128 0x1
+ 2265 0212 31       		.uleb128 0x31
+ 2266 0213 13       		.uleb128 0x13
+ 2267 0214 00       		.byte	0
+ 2268 0215 00       		.byte	0
+ 2269 0216 2A       		.uleb128 0x2a
+ 2270 0217 898201   		.uleb128 0x4109
+ 2271 021a 01       		.byte	0x1
+ 2272 021b 11       		.uleb128 0x11
+ 2273 021c 01       		.uleb128 0x1
+ 2274 021d 31       		.uleb128 0x31
+ 2275 021e 13       		.uleb128 0x13
+ 2276 021f 01       		.uleb128 0x1
+ 2277 0220 13       		.uleb128 0x13
+ 2278 0221 00       		.byte	0
+ 2279 0222 00       		.byte	0
+ 2280 0223 2B       		.uleb128 0x2b
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 41
+
+
+ 2281 0224 2E       		.uleb128 0x2e
+ 2282 0225 00       		.byte	0
+ 2283 0226 3F       		.uleb128 0x3f
+ 2284 0227 19       		.uleb128 0x19
+ 2285 0228 3C       		.uleb128 0x3c
+ 2286 0229 19       		.uleb128 0x19
+ 2287 022a 6E       		.uleb128 0x6e
+ 2288 022b 0E       		.uleb128 0xe
+ 2289 022c 03       		.uleb128 0x3
+ 2290 022d 0E       		.uleb128 0xe
+ 2291 022e 00       		.byte	0
+ 2292 022f 00       		.byte	0
+ 2293 0230 2C       		.uleb128 0x2c
+ 2294 0231 2E       		.uleb128 0x2e
+ 2295 0232 00       		.byte	0
+ 2296 0233 3F       		.uleb128 0x3f
+ 2297 0234 19       		.uleb128 0x19
+ 2298 0235 3C       		.uleb128 0x3c
+ 2299 0236 19       		.uleb128 0x19
+ 2300 0237 6E       		.uleb128 0x6e
+ 2301 0238 0E       		.uleb128 0xe
+ 2302 0239 03       		.uleb128 0x3
+ 2303 023a 0E       		.uleb128 0xe
+ 2304 023b 3A       		.uleb128 0x3a
+ 2305 023c 0B       		.uleb128 0xb
+ 2306 023d 3B       		.uleb128 0x3b
+ 2307 023e 0B       		.uleb128 0xb
+ 2308 023f 00       		.byte	0
+ 2309 0240 00       		.byte	0
+ 2310 0241 00       		.byte	0
+ 2311              		.section	.debug_loc,"",%progbits
+ 2312              	.Ldebug_loc0:
+ 2313              	.LLST10:
+ 2314 0000 00000000 		.4byte	.LVL29
+ 2315 0004 08000000 		.4byte	.LVL30
+ 2316 0008 0100     		.2byte	0x1
+ 2317 000a 50       		.byte	0x50
+ 2318 000b 08000000 		.4byte	.LVL30
+ 2319 000f 38000000 		.4byte	.LFE5
+ 2320 0013 0400     		.2byte	0x4
+ 2321 0015 F3       		.byte	0xf3
+ 2322 0016 01       		.uleb128 0x1
+ 2323 0017 50       		.byte	0x50
+ 2324 0018 9F       		.byte	0x9f
+ 2325 0019 00000000 		.4byte	0
+ 2326 001d 00000000 		.4byte	0
+ 2327              	.LLST11:
+ 2328 0021 00000000 		.4byte	.LVL29
+ 2329 0025 0A000000 		.4byte	.LVL31
+ 2330 0029 0100     		.2byte	0x1
+ 2331 002b 51       		.byte	0x51
+ 2332 002c 0A000000 		.4byte	.LVL31
+ 2333 0030 38000000 		.4byte	.LFE5
+ 2334 0034 0400     		.2byte	0x4
+ 2335 0036 F3       		.byte	0xf3
+ 2336 0037 01       		.uleb128 0x1
+ 2337 0038 51       		.byte	0x51
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 42
+
+
+ 2338 0039 9F       		.byte	0x9f
+ 2339 003a 00000000 		.4byte	0
+ 2340 003e 00000000 		.4byte	0
+ 2341              	.LLST12:
+ 2342 0042 00000000 		.4byte	.LVL29
+ 2343 0046 12000000 		.4byte	.LVL33
+ 2344 004a 0100     		.2byte	0x1
+ 2345 004c 52       		.byte	0x52
+ 2346 004d 12000000 		.4byte	.LVL33
+ 2347 0051 38000000 		.4byte	.LFE5
+ 2348 0055 0400     		.2byte	0x4
+ 2349 0057 F3       		.byte	0xf3
+ 2350 0058 01       		.uleb128 0x1
+ 2351 0059 52       		.byte	0x52
+ 2352 005a 9F       		.byte	0x9f
+ 2353 005b 00000000 		.4byte	0
+ 2354 005f 00000000 		.4byte	0
+ 2355              	.LLST13:
+ 2356 0063 10000000 		.4byte	.LVL32
+ 2357 0067 1A000000 		.4byte	.LVL34
+ 2358 006b 0100     		.2byte	0x1
+ 2359 006d 50       		.byte	0x50
+ 2360 006e 1A000000 		.4byte	.LVL34
+ 2361 0072 1C000000 		.4byte	.LVL35
+ 2362 0076 0800     		.2byte	0x8
+ 2363 0078 F3       		.byte	0xf3
+ 2364 0079 01       		.uleb128 0x1
+ 2365 007a 50       		.byte	0x50
+ 2366 007b F3       		.byte	0xf3
+ 2367 007c 01       		.uleb128 0x1
+ 2368 007d 51       		.byte	0x51
+ 2369 007e 1C       		.byte	0x1c
+ 2370 007f 9F       		.byte	0x9f
+ 2371 0080 1C000000 		.4byte	.LVL35
+ 2372 0084 2D000000 		.4byte	.LVL36-1
+ 2373 0088 0100     		.2byte	0x1
+ 2374 008a 50       		.byte	0x50
+ 2375 008b 2D000000 		.4byte	.LVL36-1
+ 2376 008f 2E000000 		.4byte	.LVL36
+ 2377 0093 5300     		.2byte	0x53
+ 2378 0095 44       		.byte	0x44
+ 2379 0096 F3       		.byte	0xf3
+ 2380 0097 01       		.uleb128 0x1
+ 2381 0098 50       		.byte	0x50
+ 2382 0099 F3       		.byte	0xf3
+ 2383 009a 01       		.uleb128 0x1
+ 2384 009b 51       		.byte	0x51
+ 2385 009c 1C       		.byte	0x1c
+ 2386 009d 0A       		.byte	0xa
+ 2387 009e FFFF     		.2byte	0xffff
+ 2388 00a0 1A       		.byte	0x1a
+ 2389 00a1 1C       		.byte	0x1c
+ 2390 00a2 F3       		.byte	0xf3
+ 2391 00a3 01       		.uleb128 0x1
+ 2392 00a4 50       		.byte	0x50
+ 2393 00a5 F3       		.byte	0xf3
+ 2394 00a6 01       		.uleb128 0x1
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 43
+
+
+ 2395 00a7 51       		.byte	0x51
+ 2396 00a8 1C       		.byte	0x1c
+ 2397 00a9 0A       		.byte	0xa
+ 2398 00aa FFFF     		.2byte	0xffff
+ 2399 00ac 1A       		.byte	0x1a
+ 2400 00ad F3       		.byte	0xf3
+ 2401 00ae 01       		.uleb128 0x1
+ 2402 00af 52       		.byte	0x52
+ 2403 00b0 32       		.byte	0x32
+ 2404 00b1 29       		.byte	0x29
+ 2405 00b2 28       		.byte	0x28
+ 2406 00b3 0100     		.2byte	0x1
+ 2407 00b5 16       		.byte	0x16
+ 2408 00b6 13       		.byte	0x13
+ 2409 00b7 0A       		.byte	0xa
+ 2410 00b8 FFFF     		.2byte	0xffff
+ 2411 00ba 1A       		.byte	0x1a
+ 2412 00bb 44       		.byte	0x44
+ 2413 00bc F3       		.byte	0xf3
+ 2414 00bd 01       		.uleb128 0x1
+ 2415 00be 50       		.byte	0x50
+ 2416 00bf F3       		.byte	0xf3
+ 2417 00c0 01       		.uleb128 0x1
+ 2418 00c1 51       		.byte	0x51
+ 2419 00c2 1C       		.byte	0x1c
+ 2420 00c3 0A       		.byte	0xa
+ 2421 00c4 FFFF     		.2byte	0xffff
+ 2422 00c6 1A       		.byte	0x1a
+ 2423 00c7 1C       		.byte	0x1c
+ 2424 00c8 F3       		.byte	0xf3
+ 2425 00c9 01       		.uleb128 0x1
+ 2426 00ca 50       		.byte	0x50
+ 2427 00cb F3       		.byte	0xf3
+ 2428 00cc 01       		.uleb128 0x1
+ 2429 00cd 51       		.byte	0x51
+ 2430 00ce 1C       		.byte	0x1c
+ 2431 00cf 0A       		.byte	0xa
+ 2432 00d0 FFFF     		.2byte	0xffff
+ 2433 00d2 1A       		.byte	0x1a
+ 2434 00d3 F3       		.byte	0xf3
+ 2435 00d4 01       		.uleb128 0x1
+ 2436 00d5 52       		.byte	0x52
+ 2437 00d6 32       		.byte	0x32
+ 2438 00d7 29       		.byte	0x29
+ 2439 00d8 28       		.byte	0x28
+ 2440 00d9 0100     		.2byte	0x1
+ 2441 00db 16       		.byte	0x16
+ 2442 00dc 13       		.byte	0x13
+ 2443 00dd F3       		.byte	0xf3
+ 2444 00de 01       		.uleb128 0x1
+ 2445 00df 52       		.byte	0x52
+ 2446 00e0 32       		.byte	0x32
+ 2447 00e1 29       		.byte	0x29
+ 2448 00e2 28       		.byte	0x28
+ 2449 00e3 0100     		.2byte	0x1
+ 2450 00e5 16       		.byte	0x16
+ 2451 00e6 13       		.byte	0x13
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 44
+
+
+ 2452 00e7 9F       		.byte	0x9f
+ 2453 00e8 2E000000 		.4byte	.LVL36
+ 2454 00ec 31000000 		.4byte	.LVL37-1
+ 2455 00f0 0100     		.2byte	0x1
+ 2456 00f2 50       		.byte	0x50
+ 2457 00f3 31000000 		.4byte	.LVL37-1
+ 2458 00f7 38000000 		.4byte	.LFE5
+ 2459 00fb 5300     		.2byte	0x53
+ 2460 00fd 44       		.byte	0x44
+ 2461 00fe F3       		.byte	0xf3
+ 2462 00ff 01       		.uleb128 0x1
+ 2463 0100 50       		.byte	0x50
+ 2464 0101 F3       		.byte	0xf3
+ 2465 0102 01       		.uleb128 0x1
+ 2466 0103 51       		.byte	0x51
+ 2467 0104 1C       		.byte	0x1c
+ 2468 0105 0A       		.byte	0xa
+ 2469 0106 FFFF     		.2byte	0xffff
+ 2470 0108 1A       		.byte	0x1a
+ 2471 0109 1C       		.byte	0x1c
+ 2472 010a F3       		.byte	0xf3
+ 2473 010b 01       		.uleb128 0x1
+ 2474 010c 50       		.byte	0x50
+ 2475 010d F3       		.byte	0xf3
+ 2476 010e 01       		.uleb128 0x1
+ 2477 010f 51       		.byte	0x51
+ 2478 0110 1C       		.byte	0x1c
+ 2479 0111 0A       		.byte	0xa
+ 2480 0112 FFFF     		.2byte	0xffff
+ 2481 0114 1A       		.byte	0x1a
+ 2482 0115 F3       		.byte	0xf3
+ 2483 0116 01       		.uleb128 0x1
+ 2484 0117 52       		.byte	0x52
+ 2485 0118 32       		.byte	0x32
+ 2486 0119 29       		.byte	0x29
+ 2487 011a 28       		.byte	0x28
+ 2488 011b 0100     		.2byte	0x1
+ 2489 011d 16       		.byte	0x16
+ 2490 011e 13       		.byte	0x13
+ 2491 011f 0A       		.byte	0xa
+ 2492 0120 FFFF     		.2byte	0xffff
+ 2493 0122 1A       		.byte	0x1a
+ 2494 0123 44       		.byte	0x44
+ 2495 0124 F3       		.byte	0xf3
+ 2496 0125 01       		.uleb128 0x1
+ 2497 0126 50       		.byte	0x50
+ 2498 0127 F3       		.byte	0xf3
+ 2499 0128 01       		.uleb128 0x1
+ 2500 0129 51       		.byte	0x51
+ 2501 012a 1C       		.byte	0x1c
+ 2502 012b 0A       		.byte	0xa
+ 2503 012c FFFF     		.2byte	0xffff
+ 2504 012e 1A       		.byte	0x1a
+ 2505 012f 1C       		.byte	0x1c
+ 2506 0130 F3       		.byte	0xf3
+ 2507 0131 01       		.uleb128 0x1
+ 2508 0132 50       		.byte	0x50
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 45
+
+
+ 2509 0133 F3       		.byte	0xf3
+ 2510 0134 01       		.uleb128 0x1
+ 2511 0135 51       		.byte	0x51
+ 2512 0136 1C       		.byte	0x1c
+ 2513 0137 0A       		.byte	0xa
+ 2514 0138 FFFF     		.2byte	0xffff
+ 2515 013a 1A       		.byte	0x1a
+ 2516 013b F3       		.byte	0xf3
+ 2517 013c 01       		.uleb128 0x1
+ 2518 013d 52       		.byte	0x52
+ 2519 013e 32       		.byte	0x32
+ 2520 013f 29       		.byte	0x29
+ 2521 0140 28       		.byte	0x28
+ 2522 0141 0100     		.2byte	0x1
+ 2523 0143 16       		.byte	0x16
+ 2524 0144 13       		.byte	0x13
+ 2525 0145 F3       		.byte	0xf3
+ 2526 0146 01       		.uleb128 0x1
+ 2527 0147 52       		.byte	0x52
+ 2528 0148 32       		.byte	0x32
+ 2529 0149 29       		.byte	0x29
+ 2530 014a 28       		.byte	0x28
+ 2531 014b 0100     		.2byte	0x1
+ 2532 014d 16       		.byte	0x16
+ 2533 014e 13       		.byte	0x13
+ 2534 014f 9F       		.byte	0x9f
+ 2535 0150 00000000 		.4byte	0
+ 2536 0154 00000000 		.4byte	0
+ 2537              	.LLST5:
+ 2538 0158 00000000 		.4byte	.LVL18
+ 2539 015c 14000000 		.4byte	.LVL19
+ 2540 0160 0100     		.2byte	0x1
+ 2541 0162 50       		.byte	0x50
+ 2542 0163 14000000 		.4byte	.LVL19
+ 2543 0167 2C000000 		.4byte	.LVL24
+ 2544 016b 0400     		.2byte	0x4
+ 2545 016d F3       		.byte	0xf3
+ 2546 016e 01       		.uleb128 0x1
+ 2547 016f 50       		.byte	0x50
+ 2548 0170 9F       		.byte	0x9f
+ 2549 0171 2C000000 		.4byte	.LVL24
+ 2550 0175 2E000000 		.4byte	.LVL25
+ 2551 0179 0100     		.2byte	0x1
+ 2552 017b 50       		.byte	0x50
+ 2553 017c 2E000000 		.4byte	.LVL25
+ 2554 0180 3C000000 		.4byte	.LFE4
+ 2555 0184 0400     		.2byte	0x4
+ 2556 0186 F3       		.byte	0xf3
+ 2557 0187 01       		.uleb128 0x1
+ 2558 0188 50       		.byte	0x50
+ 2559 0189 9F       		.byte	0x9f
+ 2560 018a 00000000 		.4byte	0
+ 2561 018e 00000000 		.4byte	0
+ 2562              	.LLST6:
+ 2563 0192 00000000 		.4byte	.LVL18
+ 2564 0196 22000000 		.4byte	.LVL23
+ 2565 019a 0100     		.2byte	0x1
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 46
+
+
+ 2566 019c 51       		.byte	0x51
+ 2567 019d 22000000 		.4byte	.LVL23
+ 2568 01a1 2C000000 		.4byte	.LVL24
+ 2569 01a5 0400     		.2byte	0x4
+ 2570 01a7 F3       		.byte	0xf3
+ 2571 01a8 01       		.uleb128 0x1
+ 2572 01a9 51       		.byte	0x51
+ 2573 01aa 9F       		.byte	0x9f
+ 2574 01ab 2C000000 		.4byte	.LVL24
+ 2575 01af 35000000 		.4byte	.LVL28-1
+ 2576 01b3 0100     		.2byte	0x1
+ 2577 01b5 51       		.byte	0x51
+ 2578 01b6 35000000 		.4byte	.LVL28-1
+ 2579 01ba 3C000000 		.4byte	.LFE4
+ 2580 01be 0400     		.2byte	0x4
+ 2581 01c0 F3       		.byte	0xf3
+ 2582 01c1 01       		.uleb128 0x1
+ 2583 01c2 51       		.byte	0x51
+ 2584 01c3 9F       		.byte	0x9f
+ 2585 01c4 00000000 		.4byte	0
+ 2586 01c8 00000000 		.4byte	0
+ 2587              	.LLST7:
+ 2588 01cc 00000000 		.4byte	.LVL18
+ 2589 01d0 1A000000 		.4byte	.LVL21
+ 2590 01d4 0100     		.2byte	0x1
+ 2591 01d6 52       		.byte	0x52
+ 2592 01d7 1A000000 		.4byte	.LVL21
+ 2593 01db 2C000000 		.4byte	.LVL24
+ 2594 01df 0400     		.2byte	0x4
+ 2595 01e1 F3       		.byte	0xf3
+ 2596 01e2 01       		.uleb128 0x1
+ 2597 01e3 52       		.byte	0x52
+ 2598 01e4 9F       		.byte	0x9f
+ 2599 01e5 2C000000 		.4byte	.LVL24
+ 2600 01e9 32000000 		.4byte	.LVL27
+ 2601 01ed 0100     		.2byte	0x1
+ 2602 01ef 52       		.byte	0x52
+ 2603 01f0 32000000 		.4byte	.LVL27
+ 2604 01f4 3C000000 		.4byte	.LFE4
+ 2605 01f8 0400     		.2byte	0x4
+ 2606 01fa F3       		.byte	0xf3
+ 2607 01fb 01       		.uleb128 0x1
+ 2608 01fc 52       		.byte	0x52
+ 2609 01fd 9F       		.byte	0x9f
+ 2610 01fe 00000000 		.4byte	0
+ 2611 0202 00000000 		.4byte	0
+ 2612              	.LLST8:
+ 2613 0206 00000000 		.4byte	.LVL18
+ 2614 020a 1C000000 		.4byte	.LVL22
+ 2615 020e 0100     		.2byte	0x1
+ 2616 0210 53       		.byte	0x53
+ 2617 0211 1C000000 		.4byte	.LVL22
+ 2618 0215 2C000000 		.4byte	.LVL24
+ 2619 0219 0400     		.2byte	0x4
+ 2620 021b F3       		.byte	0xf3
+ 2621 021c 01       		.uleb128 0x1
+ 2622 021d 53       		.byte	0x53
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 47
+
+
+ 2623 021e 9F       		.byte	0x9f
+ 2624 021f 2C000000 		.4byte	.LVL24
+ 2625 0223 32000000 		.4byte	.LVL27
+ 2626 0227 0100     		.2byte	0x1
+ 2627 0229 53       		.byte	0x53
+ 2628 022a 32000000 		.4byte	.LVL27
+ 2629 022e 3C000000 		.4byte	.LFE4
+ 2630 0232 0400     		.2byte	0x4
+ 2631 0234 F3       		.byte	0xf3
+ 2632 0235 01       		.uleb128 0x1
+ 2633 0236 53       		.byte	0x53
+ 2634 0237 9F       		.byte	0x9f
+ 2635 0238 00000000 		.4byte	0
+ 2636 023c 00000000 		.4byte	0
+ 2637              	.LLST9:
+ 2638 0240 18000000 		.4byte	.LVL20
+ 2639 0244 2B000000 		.4byte	.LVL24-1
+ 2640 0248 0100     		.2byte	0x1
+ 2641 024a 50       		.byte	0x50
+ 2642 024b 30000000 		.4byte	.LVL26
+ 2643 024f 35000000 		.4byte	.LVL28-1
+ 2644 0253 0100     		.2byte	0x1
+ 2645 0255 50       		.byte	0x50
+ 2646 0256 00000000 		.4byte	0
+ 2647 025a 00000000 		.4byte	0
+ 2648              	.LLST0:
+ 2649 025e 00000000 		.4byte	.LVL0
+ 2650 0262 0C000000 		.4byte	.LVL1
+ 2651 0266 0100     		.2byte	0x1
+ 2652 0268 50       		.byte	0x50
+ 2653 0269 0C000000 		.4byte	.LVL1
+ 2654 026d 12000000 		.4byte	.LVL2
+ 2655 0271 0D00     		.2byte	0xd
+ 2656 0273 70       		.byte	0x70
+ 2657 0274 00       		.sleb128 0
+ 2658 0275 12       		.byte	0x12
+ 2659 0276 4E       		.byte	0x4e
+ 2660 0277 16       		.byte	0x16
+ 2661 0278 14       		.byte	0x14
+ 2662 0279 2D       		.byte	0x2d
+ 2663 027a 28       		.byte	0x28
+ 2664 027b 0100     		.2byte	0x1
+ 2665 027d 16       		.byte	0x16
+ 2666 027e 13       		.byte	0x13
+ 2667 027f 9F       		.byte	0x9f
+ 2668 0280 00000000 		.4byte	0
+ 2669 0284 00000000 		.4byte	0
+ 2670              	.LLST1:
+ 2671 0288 00000000 		.4byte	.LVL0
+ 2672 028c 43000000 		.4byte	.LVL4-1
+ 2673 0290 0100     		.2byte	0x1
+ 2674 0292 51       		.byte	0x51
+ 2675 0293 43000000 		.4byte	.LVL4-1
+ 2676 0297 A2000000 		.4byte	.LVL10
+ 2677 029b 0400     		.2byte	0x4
+ 2678 029d F3       		.byte	0xf3
+ 2679 029e 01       		.uleb128 0x1
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 48
+
+
+ 2680 029f 51       		.byte	0x51
+ 2681 02a0 9F       		.byte	0x9f
+ 2682 02a1 A2000000 		.4byte	.LVL10
+ 2683 02a5 A5000000 		.4byte	.LVL11-1
+ 2684 02a9 0100     		.2byte	0x1
+ 2685 02ab 51       		.byte	0x51
+ 2686 02ac A5000000 		.4byte	.LVL11-1
+ 2687 02b0 04010000 		.4byte	.LFE3
+ 2688 02b4 0400     		.2byte	0x4
+ 2689 02b6 F3       		.byte	0xf3
+ 2690 02b7 01       		.uleb128 0x1
+ 2691 02b8 51       		.byte	0x51
+ 2692 02b9 9F       		.byte	0x9f
+ 2693 02ba 00000000 		.4byte	0
+ 2694 02be 00000000 		.4byte	0
+ 2695              	.LLST2:
+ 2696 02c2 6A000000 		.4byte	.LVL6
+ 2697 02c6 A2000000 		.4byte	.LVL10
+ 2698 02ca 0100     		.2byte	0x1
+ 2699 02cc 54       		.byte	0x54
+ 2700 02cd CC000000 		.4byte	.LVL13
+ 2701 02d1 04010000 		.4byte	.LFE3
+ 2702 02d5 0100     		.2byte	0x1
+ 2703 02d7 54       		.byte	0x54
+ 2704 02d8 00000000 		.4byte	0
+ 2705 02dc 00000000 		.4byte	0
+ 2706              	.LLST3:
+ 2707 02e0 88000000 		.4byte	.LVL8
+ 2708 02e4 8D000000 		.4byte	.LVL9-1
+ 2709 02e8 0100     		.2byte	0x1
+ 2710 02ea 51       		.byte	0x51
+ 2711 02eb EA000000 		.4byte	.LVL15
+ 2712 02ef EC000000 		.4byte	.LVL16
+ 2713 02f3 0100     		.2byte	0x1
+ 2714 02f5 51       		.byte	0x51
+ 2715 02f6 00000000 		.4byte	0
+ 2716 02fa 00000000 		.4byte	0
+ 2717              	.LLST4:
+ 2718 02fe 3E000000 		.4byte	.LVL3
+ 2719 0302 58000000 		.4byte	.LVL5
+ 2720 0306 0200     		.2byte	0x2
+ 2721 0308 90       		.byte	0x90
+ 2722 0309 51       		.uleb128 0x51
+ 2723 030a A2000000 		.4byte	.LVL10
+ 2724 030e B6000000 		.4byte	.LVL12
+ 2725 0312 0200     		.2byte	0x2
+ 2726 0314 90       		.byte	0x90
+ 2727 0315 51       		.uleb128 0x51
+ 2728 0316 00000000 		.4byte	0
+ 2729 031a 00000000 		.4byte	0
+ 2730              		.section	.debug_aranges,"",%progbits
+ 2731 0000 2C000000 		.4byte	0x2c
+ 2732 0004 0200     		.2byte	0x2
+ 2733 0006 00000000 		.4byte	.Ldebug_info0
+ 2734 000a 04       		.byte	0x4
+ 2735 000b 00       		.byte	0
+ 2736 000c 0000     		.2byte	0
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 49
+
+
+ 2737 000e 0000     		.2byte	0
+ 2738 0010 00000000 		.4byte	.LFB3
+ 2739 0014 04010000 		.4byte	.LFE3-.LFB3
+ 2740 0018 00000000 		.4byte	.LFB4
+ 2741 001c 3C000000 		.4byte	.LFE4-.LFB4
+ 2742 0020 00000000 		.4byte	.LFB5
+ 2743 0024 38000000 		.4byte	.LFE5-.LFB5
+ 2744 0028 00000000 		.4byte	0
+ 2745 002c 00000000 		.4byte	0
+ 2746              		.section	.debug_ranges,"",%progbits
+ 2747              	.Ldebug_ranges0:
+ 2748 0000 00000000 		.4byte	.LFB3
+ 2749 0004 04010000 		.4byte	.LFE3
+ 2750 0008 00000000 		.4byte	.LFB4
+ 2751 000c 3C000000 		.4byte	.LFE4
+ 2752 0010 00000000 		.4byte	.LFB5
+ 2753 0014 38000000 		.4byte	.LFE5
+ 2754 0018 00000000 		.4byte	0
+ 2755 001c 00000000 		.4byte	0
+ 2756              		.section	.debug_line,"",%progbits
+ 2757              	.Ldebug_line0:
+ 2758 0000 CD020000 		.section	.debug_str,"MS",%progbits,1
+ 2758      02004E02 
+ 2758      00000201 
+ 2758      FB0E0D00 
+ 2758      01010101 
+ 2759              	.LASF40:
+ 2760 0000 5F64736F 		.ascii	"_dso_handle\000"
+ 2760      5F68616E 
+ 2760      646C6500 
+ 2761              	.LASF135:
+ 2762 000c 464F4C4C 		.ascii	"FOLLOW_WALL\000"
+ 2762      4F575F57 
+ 2762      414C4C00 
+ 2763              	.LASF48:
+ 2764 0018 5F73697A 		.ascii	"_size\000"
+ 2764      6500
+ 2765              	.LASF93:
+ 2766 001e 5F72616E 		.ascii	"_rand48\000"
+ 2766      64343800 
+ 2767              	.LASF149:
+ 2768 0026 72656775 		.ascii	"regulation_type\000"
+ 2768      6C617469 
+ 2768      6F6E5F74 
+ 2768      79706500 
+ 2769              	.LASF72:
+ 2770 0036 5F656D65 		.ascii	"_emergency\000"
+ 2770      7267656E 
+ 2770      637900
+ 2771              	.LASF157:
+ 2772 0041 72656775 		.ascii	"regulator.c\000"
+ 2772      6C61746F 
+ 2772      722E6300 
+ 2773              	.LASF2:
+ 2774 004d 5F5F7569 		.ascii	"__uint8_t\000"
+ 2774      6E74385F 
+ 2774      7400
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 50
+
+
+ 2775              	.LASF153:
+ 2776 0057 6765745F 		.ascii	"get_right_speed\000"
+ 2776      72696768 
+ 2776      745F7370 
+ 2776      65656400 
+ 2777              	.LASF143:
+ 2778 0067 72656775 		.ascii	"regulator_difference\000"
+ 2778      6C61746F 
+ 2778      725F6469 
+ 2778      66666572 
+ 2778      656E6365 
+ 2779              	.LASF109:
+ 2780 007c 5F676574 		.ascii	"_getdate_err\000"
+ 2780      64617465 
+ 2780      5F657272 
+ 2780      00
+ 2781              	.LASF62:
+ 2782 0089 5F646174 		.ascii	"_data\000"
+ 2782      6100
+ 2783              	.LASF141:
+ 2784 008f 64696666 		.ascii	"difference\000"
+ 2784      6572656E 
+ 2784      636500
+ 2785              	.LASF154:
+ 2786 009a 6765745F 		.ascii	"get_left_speed\000"
+ 2786      6C656674 
+ 2786      5F737065 
+ 2786      656400
+ 2787              	.LASF113:
+ 2788 00a9 5F776372 		.ascii	"_wcrtomb_state\000"
+ 2788      746F6D62 
+ 2788      5F737461 
+ 2788      746500
+ 2789              	.LASF114:
+ 2790 00b8 5F776373 		.ascii	"_wcsrtombs_state\000"
+ 2790      72746F6D 
+ 2790      62735F73 
+ 2790      74617465 
+ 2790      00
+ 2791              	.LASF9:
+ 2792 00c9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2792      206C6F6E 
+ 2792      6720756E 
+ 2792      7369676E 
+ 2792      65642069 
+ 2793              	.LASF155:
+ 2794 00e0 7365745F 		.ascii	"set_speed\000"
+ 2794      73706565 
+ 2794      6400
+ 2795              	.LASF52:
+ 2796 00ea 5F6C6266 		.ascii	"_lbfsize\000"
+ 2796      73697A65 
+ 2796      00
+ 2797              	.LASF126:
+ 2798 00f3 46524F4E 		.ascii	"FRONT_RIGHT\000"
+ 2798      545F5249 
+ 2798      47485400 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 51
+
+
+ 2799              	.LASF120:
+ 2800 00ff 5F5F6C6F 		.ascii	"__locale_t\000"
+ 2800      63616C65 
+ 2800      5F7400
+ 2801              	.LASF150:
+ 2802 010a 72696768 		.ascii	"right_speed\000"
+ 2802      745F7370 
+ 2802      65656400 
+ 2803              	.LASF111:
+ 2804 0116 5F6D6272 		.ascii	"_mbrtowc_state\000"
+ 2804      746F7763 
+ 2804      5F737461 
+ 2804      746500
+ 2805              	.LASF29:
+ 2806 0125 5F5F746D 		.ascii	"__tm_sec\000"
+ 2806      5F736563 
+ 2806      00
+ 2807              	.LASF124:
+ 2808 012e 696E7431 		.ascii	"int16_t\000"
+ 2808      365F7400 
+ 2809              	.LASF8:
+ 2810 0136 6C6F6E67 		.ascii	"long long int\000"
+ 2810      206C6F6E 
+ 2810      6720696E 
+ 2810      7400
+ 2811              	.LASF0:
+ 2812 0144 7369676E 		.ascii	"signed char\000"
+ 2812      65642063 
+ 2812      68617200 
+ 2813              	.LASF58:
+ 2814 0150 5F756275 		.ascii	"_ubuf\000"
+ 2814      6600
+ 2815              	.LASF47:
+ 2816 0156 5F626173 		.ascii	"_base\000"
+ 2816      6500
+ 2817              	.LASF31:
+ 2818 015c 5F5F746D 		.ascii	"__tm_hour\000"
+ 2818      5F686F75 
+ 2818      7200
+ 2819              	.LASF87:
+ 2820 0166 5F5F7366 		.ascii	"__sf\000"
+ 2820      00
+ 2821              	.LASF38:
+ 2822 016b 5F6F6E5F 		.ascii	"_on_exit_args\000"
+ 2822      65786974 
+ 2822      5F617267 
+ 2822      7300
+ 2823              	.LASF53:
+ 2824 0179 5F636F6F 		.ascii	"_cookie\000"
+ 2824      6B696500 
+ 2825              	.LASF86:
+ 2826 0181 5F5F7367 		.ascii	"__sglue\000"
+ 2826      6C756500 
+ 2827              	.LASF6:
+ 2828 0189 6C6F6E67 		.ascii	"long int\000"
+ 2828      20696E74 
+ 2828      00
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 52
+
+
+ 2829              	.LASF50:
+ 2830 0192 5F666C61 		.ascii	"_flags\000"
+ 2830      677300
+ 2831              	.LASF42:
+ 2832 0199 5F69735F 		.ascii	"_is_cxa\000"
+ 2832      63786100 
+ 2833              	.LASF68:
+ 2834 01a1 5F737464 		.ascii	"_stdin\000"
+ 2834      696E00
+ 2835              	.LASF60:
+ 2836 01a8 5F626C6B 		.ascii	"_blksize\000"
+ 2836      73697A65 
+ 2836      00
+ 2837              	.LASF158:
+ 2838 01b1 433A5C55 		.ascii	"C:\\Users\\afgou\\Desktop\\Aur\351lien\\EPFL\\Cours"
+ 2838      73657273 
+ 2838      5C616667 
+ 2838      6F755C44 
+ 2838      65736B74 
+ 2839 01db 5C426163 		.ascii	"\\Bachelor 3, Semestre 6\\Microinformatique\\TPs\\T"
+ 2839      68656C6F 
+ 2839      7220332C 
+ 2839      2053656D 
+ 2839      65737472 
+ 2840 020a 50735F47 		.ascii	"Ps_Git\\TP6_Miniprojet\\Miniprojet\000"
+ 2840      69745C54 
+ 2840      50365F4D 
+ 2840      696E6970 
+ 2840      726F6A65 
+ 2841              	.LASF82:
+ 2842 022b 5F637674 		.ascii	"_cvtbuf\000"
+ 2842      62756600 
+ 2843              	.LASF61:
+ 2844 0233 5F6F6666 		.ascii	"_offset\000"
+ 2844      73657400 
+ 2845              	.LASF112:
+ 2846 023b 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
+ 2846      72746F77 
+ 2846      63735F73 
+ 2846      74617465 
+ 2846      00
+ 2847              	.LASF110:
+ 2848 024c 5F6D6272 		.ascii	"_mbrlen_state\000"
+ 2848      6C656E5F 
+ 2848      73746174 
+ 2848      6500
+ 2849              	.LASF39:
+ 2850 025a 5F666E61 		.ascii	"_fnargs\000"
+ 2850      72677300 
+ 2851              	.LASF45:
+ 2852 0262 5F666E73 		.ascii	"_fns\000"
+ 2852      00
+ 2853              	.LASF25:
+ 2854 0267 5F736967 		.ascii	"_sign\000"
+ 2854      6E00
+ 2855              	.LASF3:
+ 2856 026d 5F5F696E 		.ascii	"__int16_t\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 53
+
+
+ 2856      7431365F 
+ 2856      7400
+ 2857              	.LASF70:
+ 2858 0277 5F737464 		.ascii	"_stderr\000"
+ 2858      65727200 
+ 2859              	.LASF27:
+ 2860 027f 5F426967 		.ascii	"_Bigint\000"
+ 2860      696E7400 
+ 2861              	.LASF101:
+ 2862 0287 5F67616D 		.ascii	"_gamma_signgam\000"
+ 2862      6D615F73 
+ 2862      69676E67 
+ 2862      616D00
+ 2863              	.LASF133:
+ 2864 0296 46524F4E 		.ascii	"FRONT_LEFT\000"
+ 2864      545F4C45 
+ 2864      465400
+ 2865              	.LASF54:
+ 2866 02a1 5F726561 		.ascii	"_read\000"
+ 2866      6400
+ 2867              	.LASF78:
+ 2868 02a7 5F726573 		.ascii	"_result_k\000"
+ 2868      756C745F 
+ 2868      6B00
+ 2869              	.LASF28:
+ 2870 02b1 5F5F746D 		.ascii	"__tm\000"
+ 2870      00
+ 2871              	.LASF10:
+ 2872 02b6 756E7369 		.ascii	"unsigned int\000"
+ 2872      676E6564 
+ 2872      20696E74 
+ 2872      00
+ 2873              	.LASF156:
+ 2874 02c3 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 2874      43313120 
+ 2874      372E322E 
+ 2874      31203230 
+ 2874      31373039 
+ 2875 02f6 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 2875      20726576 
+ 2875      6973696F 
+ 2875      6E203235 
+ 2875      35323034 
+ 2876 0329 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 2876      2D6D6670 
+ 2876      753D6670 
+ 2876      76342D73 
+ 2876      702D6431 
+ 2877 035c 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 2877      62202D4F 
+ 2877      32202D66 
+ 2877      6F6D6974 
+ 2877      2D667261 
+ 2878 038f 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 2878      6F2D7374 
+ 2878      72696374 
+ 2878      2D616C69 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 54
+
+
+ 2878      6173696E 
+ 2879 03c2 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 2879      73656374 
+ 2879      696F6E73 
+ 2879      202D6664 
+ 2879      6174612D 
+ 2880 03f5 72656369 		.ascii	"recision-constant\000"
+ 2880      73696F6E 
+ 2880      2D636F6E 
+ 2880      7374616E 
+ 2880      7400
+ 2881              	.LASF17:
+ 2882 0407 5F5F7763 		.ascii	"__wchb\000"
+ 2882      686200
+ 2883              	.LASF69:
+ 2884 040e 5F737464 		.ascii	"_stdout\000"
+ 2884      6F757400 
+ 2885              	.LASF81:
+ 2886 0416 5F637674 		.ascii	"_cvtlen\000"
+ 2886      6C656E00 
+ 2887              	.LASF7:
+ 2888 041e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2888      20756E73 
+ 2888      69676E65 
+ 2888      6420696E 
+ 2888      7400
+ 2889              	.LASF51:
+ 2890 0430 5F66696C 		.ascii	"_file\000"
+ 2890      6500
+ 2891              	.LASF142:
+ 2892 0436 72656775 		.ascii	"regulator_follow_wall\000"
+ 2892      6C61746F 
+ 2892      725F666F 
+ 2892      6C6C6F77 
+ 2892      5F77616C 
+ 2893              	.LASF132:
+ 2894 044c 46524F4E 		.ascii	"FRONT_LEFT_45DEG\000"
+ 2894      545F4C45 
+ 2894      46545F34 
+ 2894      35444547 
+ 2894      00
+ 2895              	.LASF91:
+ 2896 045d 5F6E696F 		.ascii	"_niobs\000"
+ 2896      627300
+ 2897              	.LASF5:
+ 2898 0464 73686F72 		.ascii	"short unsigned int\000"
+ 2898      7420756E 
+ 2898      7369676E 
+ 2898      65642069 
+ 2898      6E7400
+ 2899              	.LASF84:
+ 2900 0477 5F617465 		.ascii	"_atexit0\000"
+ 2900      78697430 
+ 2900      00
+ 2901              	.LASF108:
+ 2902 0480 5F736967 		.ascii	"_signal_buf\000"
+ 2902      6E616C5F 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 55
+
+
+ 2902      62756600 
+ 2903              	.LASF99:
+ 2904 048c 5F617363 		.ascii	"_asctime_buf\000"
+ 2904      74696D65 
+ 2904      5F627566 
+ 2904      00
+ 2905              	.LASF77:
+ 2906 0499 5F726573 		.ascii	"_result\000"
+ 2906      756C7400 
+ 2907              	.LASF16:
+ 2908 04a1 5F5F7763 		.ascii	"__wch\000"
+ 2908      6800
+ 2909              	.LASF12:
+ 2910 04a7 5F4C4F43 		.ascii	"_LOCK_T\000"
+ 2910      4B5F5400 
+ 2911              	.LASF15:
+ 2912 04af 77696E74 		.ascii	"wint_t\000"
+ 2912      5F7400
+ 2913              	.LASF63:
+ 2914 04b6 5F6C6F63 		.ascii	"_lock\000"
+ 2914      6B00
+ 2915              	.LASF65:
+ 2916 04bc 5F666C61 		.ascii	"_flags2\000"
+ 2916      67733200 
+ 2917              	.LASF134:
+ 2918 04c4 44494646 		.ascii	"DIFFERENCE\000"
+ 2918      4552454E 
+ 2918      434500
+ 2919              	.LASF127:
+ 2920 04cf 46524F4E 		.ascii	"FRONT_RIGHT_45DEG\000"
+ 2920      545F5249 
+ 2920      4748545F 
+ 2920      34354445 
+ 2920      4700
+ 2921              	.LASF55:
+ 2922 04e1 5F777269 		.ascii	"_write\000"
+ 2922      746500
+ 2923              	.LASF34:
+ 2924 04e8 5F5F746D 		.ascii	"__tm_year\000"
+ 2924      5F796561 
+ 2924      7200
+ 2925              	.LASF11:
+ 2926 04f2 6C6F6E67 		.ascii	"long double\000"
+ 2926      20646F75 
+ 2926      626C6500 
+ 2927              	.LASF116:
+ 2928 04fe 5F6E6578 		.ascii	"_nextf\000"
+ 2928      746600
+ 2929              	.LASF137:
+ 2930 0505 72656665 		.ascii	"reference_value\000"
+ 2930      72656E63 
+ 2930      655F7661 
+ 2930      6C756500 
+ 2931              	.LASF33:
+ 2932 0515 5F5F746D 		.ascii	"__tm_mon\000"
+ 2932      5F6D6F6E 
+ 2932      00
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 56
+
+
+ 2933              	.LASF43:
+ 2934 051e 5F617465 		.ascii	"_atexit\000"
+ 2934      78697400 
+ 2935              	.LASF125:
+ 2936 0526 7375626F 		.ascii	"suboptarg\000"
+ 2936      70746172 
+ 2936      6700
+ 2937              	.LASF75:
+ 2938 0530 5F5F7364 		.ascii	"__sdidinit\000"
+ 2938      6964696E 
+ 2938      697400
+ 2939              	.LASF13:
+ 2940 053b 5F6F6666 		.ascii	"_off_t\000"
+ 2940      5F7400
+ 2941              	.LASF136:
+ 2942 0542 666C6F61 		.ascii	"float\000"
+ 2942      7400
+ 2943              	.LASF138:
+ 2944 0548 63757272 		.ascii	"current_value\000"
+ 2944      656E745F 
+ 2944      76616C75 
+ 2944      6500
+ 2945              	.LASF80:
+ 2946 0556 5F667265 		.ascii	"_freelist\000"
+ 2946      656C6973 
+ 2946      7400
+ 2947              	.LASF106:
+ 2948 0560 5F776374 		.ascii	"_wctomb_state\000"
+ 2948      6F6D625F 
+ 2948      73746174 
+ 2948      6500
+ 2949              	.LASF151:
+ 2950 056e 6C656674 		.ascii	"left_speed\000"
+ 2950      5F737065 
+ 2950      656400
+ 2951              	.LASF147:
+ 2952 0579 66726F6E 		.ascii	"front_left_value\000"
+ 2952      745F6C65 
+ 2952      66745F76 
+ 2952      616C7565 
+ 2952      00
+ 2953              	.LASF146:
+ 2954 058a 66726F6E 		.ascii	"front_right_value\000"
+ 2954      745F7269 
+ 2954      6768745F 
+ 2954      76616C75 
+ 2954      6500
+ 2955              	.LASF1:
+ 2956 059c 756E7369 		.ascii	"unsigned char\000"
+ 2956      676E6564 
+ 2956      20636861 
+ 2956      7200
+ 2957              	.LASF83:
+ 2958 05aa 5F6E6577 		.ascii	"_new\000"
+ 2958      00
+ 2959              	.LASF152:
+ 2960 05af 64657269 		.ascii	"derivate\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 57
+
+
+ 2960      76617465 
+ 2960      00
+ 2961              	.LASF115:
+ 2962 05b8 5F685F65 		.ascii	"_h_errno\000"
+ 2962      72726E6F 
+ 2962      00
+ 2963              	.LASF4:
+ 2964 05c1 73686F72 		.ascii	"short int\000"
+ 2964      7420696E 
+ 2964      7400
+ 2965              	.LASF36:
+ 2966 05cb 5F5F746D 		.ascii	"__tm_yday\000"
+ 2966      5F796461 
+ 2966      7900
+ 2967              	.LASF46:
+ 2968 05d5 5F5F7362 		.ascii	"__sbuf\000"
+ 2968      756600
+ 2969              	.LASF92:
+ 2970 05dc 5F696F62 		.ascii	"_iobs\000"
+ 2970      7300
+ 2971              	.LASF89:
+ 2972 05e2 5F5F4649 		.ascii	"__FILE\000"
+ 2972      4C4500
+ 2973              	.LASF20:
+ 2974 05e9 5F6D6273 		.ascii	"_mbstate_t\000"
+ 2974      74617465 
+ 2974      5F7400
+ 2975              	.LASF49:
+ 2976 05f4 5F5F7346 		.ascii	"__sFILE\000"
+ 2976      494C4500 
+ 2977              	.LASF64:
+ 2978 05fc 5F6D6273 		.ascii	"_mbstate\000"
+ 2978      74617465 
+ 2978      00
+ 2979              	.LASF102:
+ 2980 0605 5F72616E 		.ascii	"_rand_next\000"
+ 2980      645F6E65 
+ 2980      787400
+ 2981              	.LASF104:
+ 2982 0610 5F6D626C 		.ascii	"_mblen_state\000"
+ 2982      656E5F73 
+ 2982      74617465 
+ 2982      00
+ 2983              	.LASF71:
+ 2984 061d 5F696E63 		.ascii	"_inc\000"
+ 2984      00
+ 2985              	.LASF44:
+ 2986 0622 5F696E64 		.ascii	"_ind\000"
+ 2986      00
+ 2987              	.LASF128:
+ 2988 0627 52494748 		.ascii	"RIGHT_SENS\000"
+ 2988      545F5345 
+ 2988      4E5300
+ 2989              	.LASF74:
+ 2990 0632 5F6C6F63 		.ascii	"_locale\000"
+ 2990      616C6500 
+ 2991              	.LASF76:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 58
+
+
+ 2992 063a 5F5F636C 		.ascii	"__cleanup\000"
+ 2992      65616E75 
+ 2992      7000
+ 2993              	.LASF73:
+ 2994 0644 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 2994      70656369 
+ 2994      66696564 
+ 2994      5F6C6F63 
+ 2994      616C655F 
+ 2995              	.LASF159:
+ 2996 065d 5F5F7374 		.ascii	"__stack_chk_fail\000"
+ 2996      61636B5F 
+ 2996      63686B5F 
+ 2996      6661696C 
+ 2996      00
+ 2997              	.LASF24:
+ 2998 066e 5F6D6178 		.ascii	"_maxwds\000"
+ 2998      77647300 
+ 2999              	.LASF66:
+ 3000 0676 5F726565 		.ascii	"_reent\000"
+ 3000      6E7400
+ 3001              	.LASF94:
+ 3002 067d 5F736565 		.ascii	"_seed\000"
+ 3002      6400
+ 3003              	.LASF18:
+ 3004 0683 5F5F636F 		.ascii	"__count\000"
+ 3004      756E7400 
+ 3005              	.LASF119:
+ 3006 068b 5F5F6C6F 		.ascii	"__lock\000"
+ 3006      636B00
+ 3007              	.LASF19:
+ 3008 0692 5F5F7661 		.ascii	"__value\000"
+ 3008      6C756500 
+ 3009              	.LASF56:
+ 3010 069a 5F736565 		.ascii	"_seek\000"
+ 3010      6B00
+ 3011              	.LASF144:
+ 3012 06a0 66726F6E 		.ascii	"front_right_45deg_value\000"
+ 3012      745F7269 
+ 3012      6768745F 
+ 3012      34356465 
+ 3012      675F7661 
+ 3013              	.LASF121:
+ 3014 06b8 5F696D70 		.ascii	"_impure_ptr\000"
+ 3014      7572655F 
+ 3014      70747200 
+ 3015              	.LASF14:
+ 3016 06c4 5F66706F 		.ascii	"_fpos_t\000"
+ 3016      735F7400 
+ 3017              	.LASF67:
+ 3018 06cc 5F657272 		.ascii	"_errno\000"
+ 3018      6E6F00
+ 3019              	.LASF88:
+ 3020 06d3 63686172 		.ascii	"char\000"
+ 3020      00
+ 3021              	.LASF30:
+ 3022 06d8 5F5F746D 		.ascii	"__tm_min\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 59
+
+
+ 3022      5F6D696E 
+ 3022      00
+ 3023              	.LASF123:
+ 3024 06e1 75696E74 		.ascii	"uint8_t\000"
+ 3024      385F7400 
+ 3025              	.LASF95:
+ 3026 06e9 5F6D756C 		.ascii	"_mult\000"
+ 3026      7400
+ 3027              	.LASF23:
+ 3028 06ef 5F6E6578 		.ascii	"_next\000"
+ 3028      7400
+ 3029              	.LASF98:
+ 3030 06f5 5F737472 		.ascii	"_strtok_last\000"
+ 3030      746F6B5F 
+ 3030      6C617374 
+ 3030      00
+ 3031              	.LASF41:
+ 3032 0702 5F666E74 		.ascii	"_fntypes\000"
+ 3032      79706573 
+ 3032      00
+ 3033              	.LASF139:
+ 3034 070b 73656E73 		.ascii	"sensor_id\000"
+ 3034      6F725F69 
+ 3034      6400
+ 3035              	.LASF96:
+ 3036 0715 5F616464 		.ascii	"_add\000"
+ 3036      00
+ 3037              	.LASF129:
+ 3038 071a 4241434B 		.ascii	"BACK_RIGHT\000"
+ 3038      5F524947 
+ 3038      485400
+ 3039              	.LASF22:
+ 3040 0725 5F5F554C 		.ascii	"__ULong\000"
+ 3040      6F6E6700 
+ 3041              	.LASF122:
+ 3042 072d 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 3042      62616C5F 
+ 3042      696D7075 
+ 3042      72655F70 
+ 3042      747200
+ 3043              	.LASF97:
+ 3044 0740 5F756E75 		.ascii	"_unused_rand\000"
+ 3044      7365645F 
+ 3044      72616E64 
+ 3044      00
+ 3045              	.LASF26:
+ 3046 074d 5F776473 		.ascii	"_wds\000"
+ 3046      00
+ 3047              	.LASF35:
+ 3048 0752 5F5F746D 		.ascii	"__tm_wday\000"
+ 3048      5F776461 
+ 3048      7900
+ 3049              	.LASF90:
+ 3050 075c 5F676C75 		.ascii	"_glue\000"
+ 3050      6500
+ 3051              	.LASF117:
+ 3052 0762 5F6E6D61 		.ascii	"_nmalloc\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 60
+
+
+ 3052      6C6C6F63 
+ 3052      00
+ 3053              	.LASF107:
+ 3054 076b 5F6C3634 		.ascii	"_l64a_buf\000"
+ 3054      615F6275 
+ 3054      6600
+ 3055              	.LASF85:
+ 3056 0775 5F736967 		.ascii	"_sig_func\000"
+ 3056      5F66756E 
+ 3056      6300
+ 3057              	.LASF21:
+ 3058 077f 5F666C6F 		.ascii	"_flock_t\000"
+ 3058      636B5F74 
+ 3058      00
+ 3059              	.LASF59:
+ 3060 0788 5F6E6275 		.ascii	"_nbuf\000"
+ 3060      6600
+ 3061              	.LASF118:
+ 3062 078e 5F756E75 		.ascii	"_unused\000"
+ 3062      73656400 
+ 3063              	.LASF37:
+ 3064 0796 5F5F746D 		.ascii	"__tm_isdst\000"
+ 3064      5F697364 
+ 3064      737400
+ 3065              	.LASF100:
+ 3066 07a1 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 3066      616C7469 
+ 3066      6D655F62 
+ 3066      756600
+ 3067              	.LASF57:
+ 3068 07b0 5F636C6F 		.ascii	"_close\000"
+ 3068      736500
+ 3069              	.LASF131:
+ 3070 07b7 4C454654 		.ascii	"LEFT_SENS\000"
+ 3070      5F53454E 
+ 3070      5300
+ 3071              	.LASF103:
+ 3072 07c1 5F723438 		.ascii	"_r48\000"
+ 3072      00
+ 3073              	.LASF105:
+ 3074 07c6 5F6D6274 		.ascii	"_mbtowc_state\000"
+ 3074      6F77635F 
+ 3074      73746174 
+ 3074      6500
+ 3075              	.LASF79:
+ 3076 07d4 5F703573 		.ascii	"_p5s\000"
+ 3076      00
+ 3077              	.LASF148:
+ 3078 07d9 72656775 		.ascii	"regulator_pd\000"
+ 3078      6C61746F 
+ 3078      725F7064 
+ 3078      00
+ 3079              	.LASF140:
+ 3080 07e6 6C617374 		.ascii	"last_difference\000"
+ 3080      5F646966 
+ 3080      66657265 
+ 3080      6E636500 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 61
+
+
+ 3081              	.LASF145:
+ 3082 07f6 66726F6E 		.ascii	"front_left_45deg_value\000"
+ 3082      745F6C65 
+ 3082      66745F34 
+ 3082      35646567 
+ 3082      5F76616C 
+ 3083              	.LASF32:
+ 3084 080d 5F5F746D 		.ascii	"__tm_mday\000"
+ 3084      5F6D6461 
+ 3084      7900
+ 3085              	.LASF130:
+ 3086 0817 4241434B 		.ascii	"BACK_LEFT\000"
+ 3086      5F4C4546 
+ 3086      5400
+ 3087              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 62
+>>>>>>> redesign_maze_mapping
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 regulator.c
+<<<<<<< HEAD
 C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:18     .text.regulator_pd:00000000 $t
 C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:26     .text.regulator_pd:00000000 regulator_pd
 C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:164    .text.regulator_pd:000000cc $d
@@ -3609,6 +7192,19 @@ C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:263    .text.regulator_follow_wa
 C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:321    .text.regulator_follow_wall:00000034 $d
 C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:326    .bss.last_difference:00000000 $d
 C:\Users\SALMAC~1\AppData\Local\Temp\ccqMZLdK.s:330    .bss.last_difference:00000000 last_difference
+=======
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:18     .text.regulator_pd:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:26     .text.regulator_pd:00000000 regulator_pd
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:171    .text.regulator_pd:000000f0 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:180    .text.regulator_difference:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:188    .text.regulator_difference:00000000 regulator_difference
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:258    .text.regulator_difference:00000038 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:263    .text.regulator_follow_wall:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:271    .text.regulator_follow_wall:00000000 regulator_follow_wall
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:329    .text.regulator_follow_wall:00000034 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:334    .bss.last_difference:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:338    .bss.last_difference:00000000 last_difference
+>>>>>>> redesign_maze_mapping
 
 UNDEFINED SYMBOLS
 get_right_speed
