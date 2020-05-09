@@ -25,78 +25,58 @@ enum {TURN_OFF, TURN_ON};
 
 //prototypes de fonctions
 uint8_t maze_mapping_corridor_gestion(bool, bool);
-uint8_t maze_mapping_crossroad_gestion(bool, uint8_t);
+uint8_t maze_mapping_crossroad_gestion(bool);
 uint8_t maze_mapping_deadend_gestion(void);
 uint8_t maze_mapping_furthest_point_reached(void);
 uint8_t maze_mapping_memorise_crossroad(bool);
 uint8_t maze_mapping_next_step_to_goal(void);
-bool maze_mapping_multi_check_case(uint8_t new_case);
+//bool maze_mapping_multi_check_case(uint8_t new_case);
+bool maze_mapping_multi_check_sensors_values(bool, bool, bool);
 void maze_mapping_set_rgb_leds(uint8_t, uint8_t, uint8_t);
 void maze_mapping_update_red_leds(unsigned int, unsigned int, unsigned int, unsigned int);
 void maze_mapping_update_rgb_leds(void);
 void maze_mapping_victory_dance(void);
 
 //variables globales
-static uint8_t map[MAX_MAP_SIZE], multi_check=RESET, last_case=NO_CASE;
+static uint8_t map[MAX_MAP_SIZE], multi_check=RESET; //last_case=NO_CASE;
 static int8_t current_crossroad=RESET, robot_position=RESET;
 static bool memorise_crossroad=true, switch_to_discover_mode=false, uturn_to_do=true, do_a_uturn=false, furthest_point_reached=false;
 static uint8_t mode = NO_MODE_SELECTED;
+
+static bool last_f_status, last_r_status, last_l_status;
 
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
 	if (right_status && left_status)
 	{
-		if (maze_mapping_multi_check_case(CORRIDOR_FORWARD))
-		{
-			memorise_crossroad=true;
-			return KEEP_GOING;
-		}
-		else
-			return GO_FORWARD;
+		memorise_crossroad=true;
+		return KEEP_GOING;
 	}
-	else if (!right_status)
-	{
-		if (maze_mapping_multi_check_case(CORRIDOR_RIGHT))
-		{
-			//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
-			//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
-			memorise_crossroad=false;
-			return GO_RIGHT;
-		}
-		else
-			return GO_FORWARD;
-	}
+
+	//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
+	//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
+	memorise_crossroad=false;
+
+	if (!right_status)
+		return GO_RIGHT;
 	else
-	{
-		if (maze_mapping_multi_check_case(CORRIDOR_LEFT))
-		{
-			memorise_crossroad=false;
-			return GO_LEFT;
-		}
-		else
-			return GO_FORWARD;
-	}
+		return GO_LEFT;
 }
 
-uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form)
+uint8_t maze_mapping_crossroad_gestion(bool right_status)
 {
 	if (memorise_crossroad)
 	{
-		if(maze_mapping_multi_check_case(crossroad_form))
+		uturn_to_do=true;
+		switch (mode)
 		{
-			uturn_to_do=true;
-			switch (mode)
-			{
-				case DISCOVER:
-					return maze_mapping_memorise_crossroad(right_status);
+			case DISCOVER:
+				return maze_mapping_memorise_crossroad(right_status);
 
-				default:
-					return maze_mapping_next_step_to_goal();
-			}
+			default:
+				return maze_mapping_next_step_to_goal();
 		}
-		else
-			return GO_FORWARD;
 	}
 	else
 		return GO_FORWARD;
@@ -104,15 +84,10 @@ uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form
 
 uint8_t maze_mapping_deadend_gestion(void)
 {
-	if (!maze_mapping_multi_check_case(DEADEND))
-		return KEEP_GOING;
-	else
-	{
-		if (current_crossroad>RESET)
-			current_crossroad--;
-		uturn_to_do=false;
-		return U_TURN;
-	}
+	if (current_crossroad>RESET)
+		current_crossroad--;
+	uturn_to_do=false;
+	return U_TURN;
 }
 
 uint8_t maze_mapping_furthest_point_reached(void)
@@ -195,6 +170,14 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
 
     uint8_t crossroad_form=forward_status+right_status+left_status;
 
+    if (!maze_mapping_multi_check_sensors_values(forward_status, right_status, left_status))
+    {
+//    	if (crossroad_form==DEADEND)
+//    		return KEEP_GOING;
+//    	else
+    	return GO_FORWARD;
+    }
+
     switch (crossroad_form)
     {
         case DEADEND:
@@ -211,7 +194,7 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
             	return maze_mapping_corridor_gestion(right_status, left_status);
 
         default:
-        	return maze_mapping_crossroad_gestion(right_status, crossroad_form);
+        	return maze_mapping_crossroad_gestion(right_status);
     }
 
 }
@@ -295,9 +278,33 @@ bool maze_mapping_mode_is_selected(void)
 		return true;
 }
 
-bool maze_mapping_multi_check_case(uint8_t new_case)
+//bool maze_mapping_multi_check_case(uint8_t new_case)
+//{
+//	if(new_case==last_case)
+//	{
+//		if (multi_check<CASE_VERIFIED)
+//		{
+//			multi_check++;
+//			return false;
+//		}
+//		else
+//		{
+//			last_case=NO_CASE;
+//			multi_check=RESET;
+//			return true;
+//		}
+//	}
+//	else
+//	{
+//		last_case=new_case;
+//		multi_check=RESET;
+//		return false;
+//	}
+//}
+
+bool maze_mapping_multi_check_sensors_values(bool forward_status, bool right_status, bool left_status)
 {
-	if(new_case==last_case)
+	if((forward_status==last_f_status)&&(right_status==last_r_status)&&(left_status==last_l_status))
 	{
 		if (multi_check<CASE_VERIFIED)
 		{
@@ -306,14 +313,15 @@ bool maze_mapping_multi_check_case(uint8_t new_case)
 		}
 		else
 		{
-			last_case=NO_CASE;
 			multi_check=RESET;
 			return true;
 		}
 	}
 	else
 	{
-		last_case=new_case;
+		last_f_status=forward_status;
+		last_r_status=right_status;
+		last_l_status=left_status;
 		multi_check=RESET;
 		return false;
 	}

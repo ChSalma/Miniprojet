@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
   55              		.loc 1 27 0
   56 001a 3368     		ldr	r3, [r6]
   57              		.loc 1 37 0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 2
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 2
 
 
   58 001c 07EE100A 		vmov	s14, r0	@ int
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  112 008a FFF7FEFF 		bl	set_speed
  113              	.LVL9:
  114              		.loc 1 53 0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 3
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 3
 
 
  115 008e 019A     		ldr	r2, [sp, #4]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  169              		.align	2
  170              	.L9:
  171 00f0 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 4
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 4
 
 
  172 00f4 00000000 		.word	__stack_chk_guard
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  226 001e 08D1     		bne	.L18
  227 0020 0021     		movs	r1, #0
  228              	.LVL23:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 5
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 5
 
 
  229              		.loc 1 74 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  283              		.cfi_def_cfa_offset 16
  284              		.loc 1 80 0
  285 0006 401A     		subs	r0, r0, r1
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 6
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 6
 
 
  286              	.LVL30:
@@ -357,16 +357,16 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  339 0000 00000000 		.space	4
  340              		.text
  341              	.Letext0:
- 342              		.file 2 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 7
+ 342              		.file 2 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 7
 
 
- 343              		.file 3 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
- 344              		.file 4 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
- 345              		.file 5 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
- 346              		.file 6 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
- 347              		.file 7 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
- 348              		.file 8 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
+ 343              		.file 3 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 344              		.file 4 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 345              		.file 5 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\lib\\
+ 346              		.file 6 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 347              		.file 7 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
+ 348              		.file 8 "c:\\program files\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-n
  349              		.file 9 "./constantes.h"
  350              		.file 10 "./mouvements.h"
  351              		.section	.debug_info,"",%progbits
@@ -376,10 +376,10 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  355 0006 00000000 		.4byte	.Ldebug_abbrev0
  356 000a 04       		.byte	0x4
  357 000b 01       		.uleb128 0x1
- 358 000c 49020000 		.4byte	.LASF156
+ 358 000c C3020000 		.4byte	.LASF156
  359 0010 0C       		.byte	0xc
  360 0011 41000000 		.4byte	.LASF157
- 361 0015 A4040000 		.4byte	.LASF158
+ 361 0015 B1010000 		.4byte	.LASF158
  362 0019 00000000 		.4byte	.Ldebug_ranges0+0
  363 001d 00000000 		.4byte	0
  364 0021 00000000 		.4byte	.Ldebug_line0
@@ -395,20 +395,20 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  374 0037 02       		.uleb128 0x2
  375 0038 01       		.byte	0x1
  376 0039 08       		.byte	0x8
- 377 003a 85050000 		.4byte	.LASF1
+ 377 003a 9C050000 		.4byte	.LASF1
  378 003e 03       		.uleb128 0x3
- 379 003f F3010000 		.4byte	.LASF3
+ 379 003f 6D020000 		.4byte	.LASF3
  380 0043 02       		.byte	0x2
  381 0044 37       		.byte	0x37
  382 0045 49000000 		.4byte	0x49
  383 0049 02       		.uleb128 0x2
  384 004a 02       		.byte	0x2
  385 004b 05       		.byte	0x5
- 386 004c AA050000 		.4byte	.LASF4
+ 386 004c C1050000 		.4byte	.LASF4
  387 0050 02       		.uleb128 0x2
  388 0051 02       		.byte	0x2
  389 0052 07       		.byte	0x7
- 390 0053 EA030000 		.4byte	.LASF5
+ 390 0053 64040000 		.4byte	.LASF5
  391 0057 02       		.uleb128 0x2
  392 0058 04       		.byte	0x4
  393 0059 05       		.byte	0x5
@@ -416,9 +416,9 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  395 005e 02       		.uleb128 0x2
  396 005f 04       		.byte	0x4
  397 0060 07       		.byte	0x7
- 398 0061 A4030000 		.4byte	.LASF7
+ 398 0061 1E040000 		.4byte	.LASF7
  399 0065 02       		.uleb128 0x2
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 8
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 8
 
 
  400 0066 08       		.byte	0x8
@@ -435,15 +435,15 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  411 007a 02       		.uleb128 0x2
  412 007b 04       		.byte	0x4
  413 007c 07       		.byte	0x7
- 414 007d 3C020000 		.4byte	.LASF10
+ 414 007d B6020000 		.4byte	.LASF10
  415 0081 02       		.uleb128 0x2
  416 0082 08       		.byte	0x8
  417 0083 04       		.byte	0x4
- 418 0084 78040000 		.4byte	.LASF11
+ 418 0084 F2040000 		.4byte	.LASF11
  419 0088 05       		.uleb128 0x5
  420 0089 04       		.byte	0x4
  421 008a 03       		.uleb128 0x3
- 422 008b 2D040000 		.4byte	.LASF12
+ 422 008b A7040000 		.4byte	.LASF12
  423 008f 03       		.byte	0x3
  424 0090 22       		.byte	0x22
  425 0091 95000000 		.4byte	0x95
@@ -451,19 +451,19 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  427 0096 04       		.byte	0x4
  428 0097 9B000000 		.4byte	0x9b
  429 009b 07       		.uleb128 0x7
- 430 009c 74060000 		.4byte	.LASF119
+ 430 009c 8B060000 		.4byte	.LASF119
  431 00a0 03       		.uleb128 0x3
- 432 00a1 24050000 		.4byte	.LASF13
+ 432 00a1 3B050000 		.4byte	.LASF13
  433 00a5 04       		.byte	0x4
  434 00a6 2C       		.byte	0x2c
  435 00a7 57000000 		.4byte	0x57
  436 00ab 03       		.uleb128 0x3
- 437 00ac AD060000 		.4byte	.LASF14
+ 437 00ac C4060000 		.4byte	.LASF14
  438 00b0 04       		.byte	0x4
  439 00b1 72       		.byte	0x72
  440 00b2 57000000 		.4byte	0x57
  441 00b6 08       		.uleb128 0x8
- 442 00b7 35040000 		.4byte	.LASF15
+ 442 00b7 AF040000 		.4byte	.LASF15
  443 00bb 05       		.byte	0x5
  444 00bc 6501     		.2byte	0x165
  445 00be 7A000000 		.4byte	0x7a
@@ -473,15 +473,15 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  449 00c5 A6       		.byte	0xa6
  450 00c6 E1000000 		.4byte	0xe1
  451 00ca 0A       		.uleb128 0xa
- 452 00cb 27040000 		.4byte	.LASF16
+ 452 00cb A1040000 		.4byte	.LASF16
  453 00cf 04       		.byte	0x4
  454 00d0 A8       		.byte	0xa8
  455 00d1 B6000000 		.4byte	0xb6
  456 00d5 0A       		.uleb128 0xa
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 9
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 9
 
 
- 457 00d6 8D030000 		.4byte	.LASF17
+ 457 00d6 07040000 		.4byte	.LASF17
  458 00da 04       		.byte	0x4
  459 00db A9       		.byte	0xa9
  460 00dc E1000000 		.4byte	0xe1
@@ -499,46 +499,46 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  472 00f4 A3       		.byte	0xa3
  473 00f5 12010000 		.4byte	0x112
  474 00f9 0E       		.uleb128 0xe
- 475 00fa 6C060000 		.4byte	.LASF18
+ 475 00fa 83060000 		.4byte	.LASF18
  476 00fe 04       		.byte	0x4
  477 00ff A5       		.byte	0xa5
  478 0100 73000000 		.4byte	0x73
  479 0104 00       		.byte	0
  480 0105 0E       		.uleb128 0xe
- 481 0106 7B060000 		.4byte	.LASF19
+ 481 0106 92060000 		.4byte	.LASF19
  482 010a 04       		.byte	0x4
  483 010b AA       		.byte	0xaa
  484 010c C2000000 		.4byte	0xc2
  485 0110 04       		.byte	0x4
  486 0111 00       		.byte	0
  487 0112 03       		.uleb128 0x3
- 488 0113 D2050000 		.4byte	.LASF20
+ 488 0113 E9050000 		.4byte	.LASF20
  489 0117 04       		.byte	0x4
  490 0118 AB       		.byte	0xab
  491 0119 F1000000 		.4byte	0xf1
  492 011d 03       		.uleb128 0x3
- 493 011e 68070000 		.4byte	.LASF21
+ 493 011e 7F070000 		.4byte	.LASF21
  494 0122 04       		.byte	0x4
  495 0123 AF       		.byte	0xaf
  496 0124 8A000000 		.4byte	0x8a
  497 0128 03       		.uleb128 0x3
- 498 0129 0E070000 		.4byte	.LASF22
+ 498 0129 25070000 		.4byte	.LASF22
  499 012d 06       		.byte	0x6
  500 012e 16       		.byte	0x16
  501 012f 5E000000 		.4byte	0x5e
  502 0133 0F       		.uleb128 0xf
- 503 0134 05020000 		.4byte	.LASF27
+ 503 0134 7F020000 		.4byte	.LASF27
  504 0138 18       		.byte	0x18
  505 0139 06       		.byte	0x6
  506 013a 2F       		.byte	0x2f
  507 013b 86010000 		.4byte	0x186
  508 013f 0E       		.uleb128 0xe
- 509 0140 D8060000 		.4byte	.LASF23
+ 509 0140 EF060000 		.4byte	.LASF23
  510 0144 06       		.byte	0x6
  511 0145 31       		.byte	0x31
  512 0146 86010000 		.4byte	0x186
  513 014a 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 10
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 10
 
 
  514 014b 10       		.uleb128 0x10
@@ -548,19 +548,19 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  518 0151 73000000 		.4byte	0x73
  519 0155 04       		.byte	0x4
  520 0156 0E       		.uleb128 0xe
- 521 0157 57060000 		.4byte	.LASF24
+ 521 0157 6E060000 		.4byte	.LASF24
  522 015b 06       		.byte	0x6
  523 015c 32       		.byte	0x32
  524 015d 73000000 		.4byte	0x73
  525 0161 08       		.byte	0x8
  526 0162 0E       		.uleb128 0xe
- 527 0163 ED010000 		.4byte	.LASF25
+ 527 0163 67020000 		.4byte	.LASF25
  528 0167 06       		.byte	0x6
  529 0168 32       		.byte	0x32
  530 0169 73000000 		.4byte	0x73
  531 016d 0C       		.byte	0xc
  532 016e 0E       		.uleb128 0xe
- 533 016f 36070000 		.4byte	.LASF26
+ 533 016f 4D070000 		.4byte	.LASF26
  534 0173 06       		.byte	0x6
  535 0174 32       		.byte	0x32
  536 0175 73000000 		.4byte	0x73
@@ -583,7 +583,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  553 019a 00       		.byte	0
  554 019b 00       		.byte	0
  555 019c 0F       		.uleb128 0xf
- 556 019d 37020000 		.4byte	.LASF28
+ 556 019d B1020000 		.4byte	.LASF28
  557 01a1 24       		.byte	0x24
  558 01a2 06       		.byte	0x6
  559 01a3 37       		.byte	0x37
@@ -595,10 +595,10 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  565 01af 73000000 		.4byte	0x73
  566 01b3 00       		.byte	0
  567 01b4 0E       		.uleb128 0xe
- 568 01b5 C1060000 		.4byte	.LASF30
+ 568 01b5 D8060000 		.4byte	.LASF30
  569 01b9 06       		.byte	0x6
  570 01ba 3A       		.byte	0x3a
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 11
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 11
 
 
  571 01bb 73000000 		.4byte	0x73
@@ -610,37 +610,37 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  577 01c7 73000000 		.4byte	0x73
  578 01cb 08       		.byte	0x8
  579 01cc 0E       		.uleb128 0xe
- 580 01cd F6070000 		.4byte	.LASF32
+ 580 01cd 0D080000 		.4byte	.LASF32
  581 01d1 06       		.byte	0x6
  582 01d2 3C       		.byte	0x3c
  583 01d3 73000000 		.4byte	0x73
  584 01d7 0C       		.byte	0xc
  585 01d8 0E       		.uleb128 0xe
- 586 01d9 9B040000 		.4byte	.LASF33
+ 586 01d9 15050000 		.4byte	.LASF33
  587 01dd 06       		.byte	0x6
  588 01de 3D       		.byte	0x3d
  589 01df 73000000 		.4byte	0x73
  590 01e3 10       		.byte	0x10
  591 01e4 0E       		.uleb128 0xe
- 592 01e5 6E040000 		.4byte	.LASF34
+ 592 01e5 E8040000 		.4byte	.LASF34
  593 01e9 06       		.byte	0x6
  594 01ea 3E       		.byte	0x3e
  595 01eb 73000000 		.4byte	0x73
  596 01ef 14       		.byte	0x14
  597 01f0 0E       		.uleb128 0xe
- 598 01f1 3B070000 		.4byte	.LASF35
+ 598 01f1 52070000 		.4byte	.LASF35
  599 01f5 06       		.byte	0x6
  600 01f6 3F       		.byte	0x3f
  601 01f7 73000000 		.4byte	0x73
  602 01fb 18       		.byte	0x18
  603 01fc 0E       		.uleb128 0xe
- 604 01fd B4050000 		.4byte	.LASF36
+ 604 01fd CB050000 		.4byte	.LASF36
  605 0201 06       		.byte	0x6
  606 0202 40       		.byte	0x40
  607 0203 73000000 		.4byte	0x73
  608 0207 1C       		.byte	0x1c
  609 0208 0E       		.uleb128 0xe
- 610 0209 7F070000 		.4byte	.LASF37
+ 610 0209 96070000 		.4byte	.LASF37
  611 020d 06       		.byte	0x6
  612 020e 41       		.byte	0x41
  613 020f 73000000 		.4byte	0x73
@@ -653,12 +653,12 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  620 021d 4A       		.byte	0x4a
  621 021e 55020000 		.4byte	0x255
  622 0222 0E       		.uleb128 0xe
- 623 0223 E0010000 		.4byte	.LASF39
+ 623 0223 5A020000 		.4byte	.LASF39
  624 0227 06       		.byte	0x6
  625 0228 4B       		.byte	0x4b
  626 0229 55020000 		.4byte	0x255
  627 022d 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 12
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 12
 
 
  628 022e 0E       		.uleb128 0xe
@@ -668,7 +668,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  632 0235 55020000 		.4byte	0x255
  633 0239 80       		.byte	0x80
  634 023a 12       		.uleb128 0x12
- 635 023b EB060000 		.4byte	.LASF41
+ 635 023b 02070000 		.4byte	.LASF41
  636 023f 06       		.byte	0x6
  637 0240 4E       		.byte	0x4e
  638 0241 28010000 		.4byte	0x128
@@ -688,25 +688,25 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  652 0263 1F       		.byte	0x1f
  653 0264 00       		.byte	0
  654 0265 11       		.uleb128 0x11
- 655 0266 07050000 		.4byte	.LASF43
+ 655 0266 1E050000 		.4byte	.LASF43
  656 026a 9001     		.2byte	0x190
  657 026c 06       		.byte	0x6
  658 026d 5D       		.byte	0x5d
  659 026e A3020000 		.4byte	0x2a3
  660 0272 0E       		.uleb128 0xe
- 661 0273 D8060000 		.4byte	.LASF23
+ 661 0273 EF060000 		.4byte	.LASF23
  662 0277 06       		.byte	0x6
  663 0278 5E       		.byte	0x5e
  664 0279 A3020000 		.4byte	0x2a3
  665 027d 00       		.byte	0
  666 027e 0E       		.uleb128 0xe
- 667 027f 0B060000 		.4byte	.LASF44
+ 667 027f 22060000 		.4byte	.LASF44
  668 0283 06       		.byte	0x6
  669 0284 5F       		.byte	0x5f
  670 0285 73000000 		.4byte	0x73
  671 0289 04       		.byte	0x4
  672 028a 0E       		.uleb128 0xe
- 673 028b E8010000 		.4byte	.LASF45
+ 673 028b 62020000 		.4byte	.LASF45
  674 028f 06       		.byte	0x6
  675 0290 61       		.byte	0x61
  676 0291 A9020000 		.4byte	0x2a9
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  682 029d 15020000 		.4byte	0x215
  683 02a1 88       		.byte	0x88
  684 02a2 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 13
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 13
 
 
  685 02a3 06       		.uleb128 0x6
@@ -736,7 +736,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  697 02bb BF020000 		.4byte	0x2bf
  698 02bf 13       		.uleb128 0x13
  699 02c0 0F       		.uleb128 0xf
- 700 02c1 BE050000 		.4byte	.LASF46
+ 700 02c1 D5050000 		.4byte	.LASF46
  701 02c5 08       		.byte	0x8
  702 02c6 06       		.byte	0x6
  703 02c7 75       		.byte	0x75
@@ -758,7 +758,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  719 02e6 04       		.byte	0x4
  720 02e7 37000000 		.4byte	0x37
  721 02eb 0F       		.uleb128 0xf
- 722 02ec DD050000 		.4byte	.LASF49
+ 722 02ec F4050000 		.4byte	.LASF49
  723 02f0 68       		.byte	0x68
  724 02f1 06       		.byte	0x6
  725 02f2 B5       		.byte	0xb5
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  739 030d 10       		.uleb128 0x10
  740 030e 5F7700   		.ascii	"_w\000"
  741 0311 06       		.byte	0x6
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 14
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 14
 
 
  742 0312 B8       		.byte	0xb8
@@ -791,7 +791,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  749 031f 49000000 		.4byte	0x49
  750 0323 0C       		.byte	0xc
  751 0324 0E       		.uleb128 0xe
- 752 0325 B6030000 		.4byte	.LASF51
+ 752 0325 30040000 		.4byte	.LASF51
  753 0329 06       		.byte	0x6
  754 032a BA       		.byte	0xba
  755 032b 49000000 		.4byte	0x49
@@ -815,30 +815,30 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  773 034f 88000000 		.4byte	0x88
  774 0353 1C       		.byte	0x1c
  775 0354 0E       		.uleb128 0xe
- 776 0355 27020000 		.4byte	.LASF54
+ 776 0355 A1020000 		.4byte	.LASF54
  777 0359 06       		.byte	0x6
  778 035a C5       		.byte	0xc5
  779 035b 82050000 		.4byte	0x582
  780 035f 20       		.byte	0x20
  781 0360 0E       		.uleb128 0xe
- 782 0361 67040000 		.4byte	.LASF55
+ 782 0361 E1040000 		.4byte	.LASF55
  783 0365 06       		.byte	0x6
  784 0366 C7       		.byte	0xc7
  785 0367 AC050000 		.4byte	0x5ac
  786 036b 24       		.byte	0x24
  787 036c 0E       		.uleb128 0xe
- 788 036d 83060000 		.4byte	.LASF56
+ 788 036d 9A060000 		.4byte	.LASF56
  789 0371 06       		.byte	0x6
  790 0372 CA       		.byte	0xca
  791 0373 D0050000 		.4byte	0x5d0
  792 0377 28       		.byte	0x28
  793 0378 0E       		.uleb128 0xe
- 794 0379 99070000 		.4byte	.LASF57
+ 794 0379 B0070000 		.4byte	.LASF57
  795 037d 06       		.byte	0x6
  796 037e CB       		.byte	0xcb
  797 037f EA050000 		.4byte	0x5ea
  798 0383 2C       		.byte	0x2c
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 15
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 15
 
 
  799 0384 10       		.uleb128 0x10
@@ -866,7 +866,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  821 03af F0050000 		.4byte	0x5f0
  822 03b3 40       		.byte	0x40
  823 03b4 0E       		.uleb128 0xe
- 824 03b5 71070000 		.4byte	.LASF59
+ 824 03b5 88070000 		.4byte	.LASF59
  825 03b9 06       		.byte	0x6
  826 03ba D4       		.byte	0xd4
  827 03bb 00060000 		.4byte	0x600
@@ -884,7 +884,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  839 03d3 73000000 		.4byte	0x73
  840 03d7 4C       		.byte	0x4c
  841 03d8 0E       		.uleb128 0xe
- 842 03d9 B9010000 		.4byte	.LASF61
+ 842 03d9 33020000 		.4byte	.LASF61
  843 03dd 06       		.byte	0x6
  844 03de DB       		.byte	0xdb
  845 03df A0000000 		.4byte	0xa0
@@ -896,22 +896,22 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  851 03eb 33040000 		.4byte	0x433
  852 03ef 54       		.byte	0x54
  853 03f0 0E       		.uleb128 0xe
- 854 03f1 3C040000 		.4byte	.LASF63
+ 854 03f1 B6040000 		.4byte	.LASF63
  855 03f5 06       		.byte	0x6
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 16
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 16
 
 
  856 03f6 E2       		.byte	0xe2
  857 03f7 1D010000 		.4byte	0x11d
  858 03fb 58       		.byte	0x58
  859 03fc 0E       		.uleb128 0xe
- 860 03fd E5050000 		.4byte	.LASF64
+ 860 03fd FC050000 		.4byte	.LASF64
  861 0401 06       		.byte	0x6
  862 0402 E4       		.byte	0xe4
  863 0403 12010000 		.4byte	0x112
  864 0407 5C       		.byte	0x5c
  865 0408 0E       		.uleb128 0xe
- 866 0409 42040000 		.4byte	.LASF65
+ 866 0409 BC040000 		.4byte	.LASF65
  867 040d 06       		.byte	0x6
  868 040e E5       		.byte	0xe5
  869 040f 73000000 		.4byte	0x73
@@ -935,13 +935,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  887 0439 16       		.uleb128 0x16
  888 043a 33040000 		.4byte	0x433
  889 043e 17       		.uleb128 0x17
- 890 043f 5F060000 		.4byte	.LASF66
+ 890 043f 76060000 		.4byte	.LASF66
  891 0443 2804     		.2byte	0x428
  892 0445 06       		.byte	0x6
  893 0446 3902     		.2byte	0x239
  894 0448 70050000 		.4byte	0x570
  895 044c 18       		.uleb128 0x18
- 896 044d B5060000 		.4byte	.LASF67
+ 896 044d CC060000 		.4byte	.LASF67
  897 0451 06       		.byte	0x6
  898 0452 3B02     		.2byte	0x23b
  899 0454 73000000 		.4byte	0x73
@@ -953,22 +953,22 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  905 0461 57060000 		.4byte	0x657
  906 0465 04       		.byte	0x4
  907 0466 18       		.uleb128 0x18
- 908 0467 94030000 		.4byte	.LASF69
+ 908 0467 0E040000 		.4byte	.LASF69
  909 046b 06       		.byte	0x6
  910 046c 4002     		.2byte	0x240
  911 046e 57060000 		.4byte	0x657
  912 0472 08       		.byte	0x8
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 17
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 17
 
 
  913 0473 18       		.uleb128 0x18
- 914 0474 FD010000 		.4byte	.LASF70
+ 914 0474 77020000 		.4byte	.LASF70
  915 0478 06       		.byte	0x6
  916 0479 4002     		.2byte	0x240
  917 047b 57060000 		.4byte	0x657
  918 047f 0C       		.byte	0xc
  919 0480 18       		.uleb128 0x18
- 920 0481 06060000 		.4byte	.LASF71
+ 920 0481 1D060000 		.4byte	.LASF71
  921 0485 06       		.byte	0x6
  922 0486 4202     		.2byte	0x242
  923 0488 73000000 		.4byte	0x73
@@ -980,88 +980,88 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  929 0495 39080000 		.4byte	0x839
  930 0499 14       		.byte	0x14
  931 049a 18       		.uleb128 0x18
- 932 049b 2D060000 		.4byte	.LASF73
+ 932 049b 44060000 		.4byte	.LASF73
  933 049f 06       		.byte	0x6
  934 04a0 4602     		.2byte	0x246
  935 04a2 73000000 		.4byte	0x73
  936 04a6 30       		.byte	0x30
  937 04a7 18       		.uleb128 0x18
- 938 04a8 1B060000 		.4byte	.LASF74
+ 938 04a8 32060000 		.4byte	.LASF74
  939 04ac 06       		.byte	0x6
  940 04ad 4702     		.2byte	0x247
  941 04af 4E080000 		.4byte	0x84e
  942 04b3 34       		.byte	0x34
  943 04b4 18       		.uleb128 0x18
- 944 04b5 19050000 		.4byte	.LASF75
+ 944 04b5 30050000 		.4byte	.LASF75
  945 04b9 06       		.byte	0x6
  946 04ba 4902     		.2byte	0x249
  947 04bc 73000000 		.4byte	0x73
  948 04c0 38       		.byte	0x38
  949 04c1 18       		.uleb128 0x18
- 950 04c2 23060000 		.4byte	.LASF76
+ 950 04c2 3A060000 		.4byte	.LASF76
  951 04c6 06       		.byte	0x6
  952 04c7 4B02     		.2byte	0x24b
  953 04c9 5F080000 		.4byte	0x85f
  954 04cd 3C       		.byte	0x3c
  955 04ce 18       		.uleb128 0x18
- 956 04cf 1F040000 		.4byte	.LASF77
+ 956 04cf 99040000 		.4byte	.LASF77
  957 04d3 06       		.byte	0x6
  958 04d4 4E02     		.2byte	0x24e
  959 04d6 86010000 		.4byte	0x186
  960 04da 40       		.byte	0x40
  961 04db 18       		.uleb128 0x18
- 962 04dc 2D020000 		.4byte	.LASF78
+ 962 04dc A7020000 		.4byte	.LASF78
  963 04e0 06       		.byte	0x6
  964 04e1 4F02     		.2byte	0x24f
  965 04e3 73000000 		.4byte	0x73
  966 04e7 44       		.byte	0x44
  967 04e8 18       		.uleb128 0x18
- 968 04e9 BD070000 		.4byte	.LASF79
+ 968 04e9 D4070000 		.4byte	.LASF79
  969 04ed 06       		.byte	0x6
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 18
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 18
 
 
  970 04ee 5002     		.2byte	0x250
  971 04f0 86010000 		.4byte	0x186
  972 04f4 48       		.byte	0x48
  973 04f5 18       		.uleb128 0x18
- 974 04f6 3F050000 		.4byte	.LASF80
+ 974 04f6 56050000 		.4byte	.LASF80
  975 04fa 06       		.byte	0x6
  976 04fb 5102     		.2byte	0x251
  977 04fd 65080000 		.4byte	0x865
  978 0501 4C       		.byte	0x4c
  979 0502 18       		.uleb128 0x18
- 980 0503 9C030000 		.4byte	.LASF81
+ 980 0503 16040000 		.4byte	.LASF81
  981 0507 06       		.byte	0x6
  982 0508 5402     		.2byte	0x254
  983 050a 73000000 		.4byte	0x73
  984 050e 50       		.byte	0x50
  985 050f 18       		.uleb128 0x18
- 986 0510 B1010000 		.4byte	.LASF82
+ 986 0510 2B020000 		.4byte	.LASF82
  987 0514 06       		.byte	0x6
  988 0515 5502     		.2byte	0x255
  989 0517 70050000 		.4byte	0x570
  990 051b 54       		.byte	0x54
  991 051c 18       		.uleb128 0x18
- 992 051d 93050000 		.4byte	.LASF83
+ 992 051d AA050000 		.4byte	.LASF83
  993 0521 06       		.byte	0x6
  994 0522 7802     		.2byte	0x278
  995 0524 17080000 		.4byte	0x817
  996 0528 58       		.byte	0x58
  997 0529 19       		.uleb128 0x19
- 998 052a 07050000 		.4byte	.LASF43
+ 998 052a 1E050000 		.4byte	.LASF43
  999 052e 06       		.byte	0x6
  1000 052f 7C02     		.2byte	0x27c
  1001 0531 A3020000 		.4byte	0x2a3
  1002 0535 4801     		.2byte	0x148
  1003 0537 19       		.uleb128 0x19
- 1004 0538 FD030000 		.4byte	.LASF84
+ 1004 0538 77040000 		.4byte	.LASF84
  1005 053c 06       		.byte	0x6
  1006 053d 7D02     		.2byte	0x27d
  1007 053f 65020000 		.4byte	0x265
  1008 0543 4C01     		.2byte	0x14c
  1009 0545 19       		.uleb128 0x19
- 1010 0546 5E070000 		.4byte	.LASF85
+ 1010 0546 75070000 		.4byte	.LASF85
  1011 054a 06       		.byte	0x6
  1012 054b 8102     		.2byte	0x281
  1013 054d 76080000 		.4byte	0x876
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1024 0567 8802     		.2byte	0x288
  1025 0569 82080000 		.4byte	0x882
  1026 056d EC02     		.2byte	0x2ec
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 19
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 19
 
 
  1027 056f 00       		.byte	0
@@ -1088,7 +1088,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1031 0576 02       		.uleb128 0x2
  1032 0577 01       		.byte	0x1
  1033 0578 08       		.byte	0x8
- 1034 0579 BC060000 		.4byte	.LASF88
+ 1034 0579 D3060000 		.4byte	.LASF88
  1035 057d 16       		.uleb128 0x16
  1036 057e 76050000 		.4byte	0x576
  1037 0582 06       		.uleb128 0x6
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1081 05ea 06       		.uleb128 0x6
  1082 05eb 04       		.byte	0x4
  1083 05ec D6050000 		.4byte	0x5d6
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 20
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 20
 
 
  1084 05f0 0B       		.uleb128 0xb
@@ -1156,30 +1156,30 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1096 060e 00       		.byte	0
  1097 060f 00       		.byte	0
  1098 0610 08       		.uleb128 0x8
- 1099 0611 CB050000 		.4byte	.LASF89
+ 1099 0611 E2050000 		.4byte	.LASF89
  1100 0615 06       		.byte	0x6
  1101 0616 1F01     		.2byte	0x11f
  1102 0618 EB020000 		.4byte	0x2eb
  1103 061c 1A       		.uleb128 0x1a
- 1104 061d 45070000 		.4byte	.LASF90
+ 1104 061d 5C070000 		.4byte	.LASF90
  1105 0621 0C       		.byte	0xc
  1106 0622 06       		.byte	0x6
  1107 0623 2301     		.2byte	0x123
  1108 0625 51060000 		.4byte	0x651
  1109 0629 18       		.uleb128 0x18
- 1110 062a D8060000 		.4byte	.LASF23
+ 1110 062a EF060000 		.4byte	.LASF23
  1111 062e 06       		.byte	0x6
  1112 062f 2501     		.2byte	0x125
  1113 0631 51060000 		.4byte	0x651
  1114 0635 00       		.byte	0
  1115 0636 18       		.uleb128 0x18
- 1116 0637 E3030000 		.4byte	.LASF91
+ 1116 0637 5D040000 		.4byte	.LASF91
  1117 063b 06       		.byte	0x6
  1118 063c 2601     		.2byte	0x126
  1119 063e 73000000 		.4byte	0x73
  1120 0642 04       		.byte	0x4
  1121 0643 18       		.uleb128 0x18
- 1122 0644 C5050000 		.4byte	.LASF92
+ 1122 0644 DC050000 		.4byte	.LASF92
  1123 0648 06       		.byte	0x6
  1124 0649 2701     		.2byte	0x127
  1125 064b 57060000 		.4byte	0x657
@@ -1198,22 +1198,22 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1138 0664 3F01     		.2byte	0x13f
  1139 0666 92060000 		.4byte	0x692
  1140 066a 18       		.uleb128 0x18
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 21
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 21
 
 
- 1141 066b 66060000 		.4byte	.LASF94
+ 1141 066b 7D060000 		.4byte	.LASF94
  1142 066f 06       		.byte	0x6
  1143 0670 4001     		.2byte	0x140
  1144 0672 92060000 		.4byte	0x692
  1145 0676 00       		.byte	0
  1146 0677 18       		.uleb128 0x18
- 1147 0678 D2060000 		.4byte	.LASF95
+ 1147 0678 E9060000 		.4byte	.LASF95
  1148 067c 06       		.byte	0x6
  1149 067d 4101     		.2byte	0x141
  1150 067f 92060000 		.4byte	0x692
  1151 0683 06       		.byte	0x6
  1152 0684 18       		.uleb128 0x18
- 1153 0685 FE060000 		.4byte	.LASF96
+ 1153 0685 15070000 		.4byte	.LASF96
  1154 0689 06       		.byte	0x6
  1155 068a 4201     		.2byte	0x142
  1156 068c 50000000 		.4byte	0x50
@@ -1232,76 +1232,76 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1169 06a5 5902     		.2byte	0x259
  1170 06a7 A3070000 		.4byte	0x7a3
  1171 06ab 18       		.uleb128 0x18
- 1172 06ac 29070000 		.4byte	.LASF97
+ 1172 06ac 40070000 		.4byte	.LASF97
  1173 06b0 06       		.byte	0x6
  1174 06b1 5B02     		.2byte	0x25b
  1175 06b3 7A000000 		.4byte	0x7a
  1176 06b7 00       		.byte	0
  1177 06b8 18       		.uleb128 0x18
- 1178 06b9 DE060000 		.4byte	.LASF98
+ 1178 06b9 F5060000 		.4byte	.LASF98
  1179 06bd 06       		.byte	0x6
  1180 06be 5C02     		.2byte	0x25c
  1181 06c0 70050000 		.4byte	0x570
  1182 06c4 04       		.byte	0x4
  1183 06c5 18       		.uleb128 0x18
- 1184 06c6 12040000 		.4byte	.LASF99
+ 1184 06c6 8C040000 		.4byte	.LASF99
  1185 06ca 06       		.byte	0x6
  1186 06cb 5D02     		.2byte	0x25d
  1187 06cd A3070000 		.4byte	0x7a3
  1188 06d1 08       		.byte	0x8
  1189 06d2 18       		.uleb128 0x18
- 1190 06d3 8A070000 		.4byte	.LASF100
+ 1190 06d3 A1070000 		.4byte	.LASF100
  1191 06d7 06       		.byte	0x6
  1192 06d8 5E02     		.2byte	0x25e
  1193 06da 9C010000 		.4byte	0x19c
  1194 06de 24       		.byte	0x24
  1195 06df 18       		.uleb128 0x18
- 1196 06e0 0D020000 		.4byte	.LASF101
+ 1196 06e0 87020000 		.4byte	.LASF101
  1197 06e4 06       		.byte	0x6
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 22
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 22
 
 
  1198 06e5 5F02     		.2byte	0x25f
  1199 06e7 73000000 		.4byte	0x73
  1200 06eb 48       		.byte	0x48
  1201 06ec 18       		.uleb128 0x18
- 1202 06ed EE050000 		.4byte	.LASF102
+ 1202 06ed 05060000 		.4byte	.LASF102
  1203 06f1 06       		.byte	0x6
  1204 06f2 6002     		.2byte	0x260
  1205 06f4 6C000000 		.4byte	0x6c
  1206 06f8 50       		.byte	0x50
  1207 06f9 18       		.uleb128 0x18
- 1208 06fa AA070000 		.4byte	.LASF103
+ 1208 06fa C1070000 		.4byte	.LASF103
  1209 06fe 06       		.byte	0x6
  1210 06ff 6102     		.2byte	0x261
  1211 0701 5D060000 		.4byte	0x65d
  1212 0705 58       		.byte	0x58
  1213 0706 18       		.uleb128 0x18
- 1214 0707 F9050000 		.4byte	.LASF104
+ 1214 0707 10060000 		.4byte	.LASF104
  1215 070b 06       		.byte	0x6
  1216 070c 6202     		.2byte	0x262
  1217 070e 12010000 		.4byte	0x112
  1218 0712 68       		.byte	0x68
  1219 0713 18       		.uleb128 0x18
- 1220 0714 AF070000 		.4byte	.LASF105
+ 1220 0714 C6070000 		.4byte	.LASF105
  1221 0718 06       		.byte	0x6
  1222 0719 6302     		.2byte	0x263
  1223 071b 12010000 		.4byte	0x112
  1224 071f 70       		.byte	0x70
  1225 0720 18       		.uleb128 0x18
- 1226 0721 49050000 		.4byte	.LASF106
+ 1226 0721 60050000 		.4byte	.LASF106
  1227 0725 06       		.byte	0x6
  1228 0726 6402     		.2byte	0x264
  1229 0728 12010000 		.4byte	0x112
  1230 072c 78       		.byte	0x78
  1231 072d 18       		.uleb128 0x18
- 1232 072e 54070000 		.4byte	.LASF107
+ 1232 072e 6B070000 		.4byte	.LASF107
  1233 0732 06       		.byte	0x6
  1234 0733 6502     		.2byte	0x265
  1235 0735 B3070000 		.4byte	0x7b3
  1236 0739 80       		.byte	0x80
  1237 073a 18       		.uleb128 0x18
- 1238 073b 06040000 		.4byte	.LASF108
+ 1238 073b 80040000 		.4byte	.LASF108
  1239 073f 06       		.byte	0x6
  1240 0740 6602     		.2byte	0x266
  1241 0742 C3070000 		.4byte	0x7c3
@@ -1313,12 +1313,12 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1247 074f 73000000 		.4byte	0x73
  1248 0753 A0       		.byte	0xa0
  1249 0754 18       		.uleb128 0x18
- 1250 0755 D2010000 		.4byte	.LASF110
+ 1250 0755 4C020000 		.4byte	.LASF110
  1251 0759 06       		.byte	0x6
  1252 075a 6802     		.2byte	0x268
  1253 075c 12010000 		.4byte	0x112
  1254 0760 A4       		.byte	0xa4
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 23
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 23
 
 
  1255 0761 18       		.uleb128 0x18
@@ -1328,7 +1328,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1259 0769 12010000 		.4byte	0x112
  1260 076d AC       		.byte	0xac
  1261 076e 18       		.uleb128 0x18
- 1262 076f C1010000 		.4byte	.LASF112
+ 1262 076f 3B020000 		.4byte	.LASF112
  1263 0773 06       		.byte	0x6
  1264 0774 6A02     		.2byte	0x26a
  1265 0776 12010000 		.4byte	0x112
@@ -1346,7 +1346,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1277 0790 12010000 		.4byte	0x112
  1278 0794 C4       		.byte	0xc4
  1279 0795 18       		.uleb128 0x18
- 1280 0796 A1050000 		.4byte	.LASF115
+ 1280 0796 B8050000 		.4byte	.LASF115
  1281 079a 06       		.byte	0x6
  1282 079b 6D02     		.2byte	0x26d
  1283 079d 73000000 		.4byte	0x73
@@ -1378,17 +1378,17 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1309 07d5 06       		.byte	0x6
  1310 07d6 7202     		.2byte	0x272
  1311 07d8 F7070000 		.4byte	0x7f7
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 24
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 24
 
 
  1312 07dc 18       		.uleb128 0x18
- 1313 07dd 84040000 		.4byte	.LASF116
+ 1313 07dd FE040000 		.4byte	.LASF116
  1314 07e1 06       		.byte	0x6
  1315 07e2 7502     		.2byte	0x275
  1316 07e4 F7070000 		.4byte	0x7f7
  1317 07e8 00       		.byte	0
  1318 07e9 18       		.uleb128 0x18
- 1319 07ea 4B070000 		.4byte	.LASF117
+ 1319 07ea 62070000 		.4byte	.LASF117
  1320 07ee 06       		.byte	0x6
  1321 07ef 7602     		.2byte	0x276
  1322 07f1 07080000 		.4byte	0x807
@@ -1414,12 +1414,12 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1342 081a 5702     		.2byte	0x257
  1343 081c 39080000 		.4byte	0x839
  1344 0820 1D       		.uleb128 0x1d
- 1345 0821 5F060000 		.4byte	.LASF66
+ 1345 0821 76060000 		.4byte	.LASF66
  1346 0825 06       		.byte	0x6
  1347 0826 6E02     		.2byte	0x26e
  1348 0828 A2060000 		.4byte	0x6a2
  1349 082c 1D       		.uleb128 0x1d
- 1350 082d 77070000 		.4byte	.LASF118
+ 1350 082d 8E070000 		.4byte	.LASF118
  1351 0831 06       		.byte	0x6
  1352 0832 7702     		.2byte	0x277
  1353 0834 D3070000 		.4byte	0x7d3
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1366 0850 49080000 		.4byte	0x849
  1367 0854 1E       		.uleb128 0x1e
  1368 0855 5F080000 		.4byte	0x85f
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 25
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 25
 
 
  1369 0859 15       		.uleb128 0x15
@@ -1469,17 +1469,17 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1394 0890 02       		.byte	0x2
  1395 0891 00       		.byte	0
  1396 0892 1F       		.uleb128 0x1f
- 1397 0893 A1060000 		.4byte	.LASF121
+ 1397 0893 B8060000 		.4byte	.LASF121
  1398 0897 06       		.byte	0x6
  1399 0898 0703     		.2byte	0x307
  1400 089a 33040000 		.4byte	0x433
  1401 089e 1F       		.uleb128 0x1f
- 1402 089f 16070000 		.4byte	.LASF122
+ 1402 089f 2D070000 		.4byte	.LASF122
  1403 08a3 06       		.byte	0x6
  1404 08a4 0803     		.2byte	0x308
  1405 08a6 39040000 		.4byte	0x439
  1406 08aa 03       		.uleb128 0x3
- 1407 08ab CA060000 		.4byte	.LASF123
+ 1407 08ab E1060000 		.4byte	.LASF123
  1408 08af 07       		.byte	0x7
  1409 08b0 18       		.byte	0x18
  1410 08b1 2C000000 		.4byte	0x2c
@@ -1489,7 +1489,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1414 08bb 20       		.byte	0x20
  1415 08bc 3E000000 		.4byte	0x3e
  1416 08c0 20       		.uleb128 0x20
- 1417 08c1 0F050000 		.4byte	.LASF125
+ 1417 08c1 26050000 		.4byte	.LASF125
  1418 08c5 08       		.byte	0x8
  1419 08c6 63       		.byte	0x63
  1420 08c7 70050000 		.4byte	0x570
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1423 08cd 01       		.byte	0x1
  1424 08ce 37000000 		.4byte	0x37
  1425 08d2 09       		.byte	0x9
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 26
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 26
 
 
  1426 08d3 1B       		.byte	0x1b
@@ -1507,25 +1507,25 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1429 08d9 F3000000 		.4byte	.LASF126
  1430 08dd 00       		.byte	0
  1431 08de 22       		.uleb128 0x22
- 1432 08df 55040000 		.4byte	.LASF127
+ 1432 08df CF040000 		.4byte	.LASF127
  1433 08e3 01       		.byte	0x1
  1434 08e4 22       		.uleb128 0x22
- 1435 08e5 10060000 		.4byte	.LASF128
+ 1435 08e5 27060000 		.4byte	.LASF128
  1436 08e9 02       		.byte	0x2
  1437 08ea 22       		.uleb128 0x22
- 1438 08eb 03070000 		.4byte	.LASF129
+ 1438 08eb 1A070000 		.4byte	.LASF129
  1439 08ef 03       		.byte	0x3
  1440 08f0 22       		.uleb128 0x22
- 1441 08f1 00080000 		.4byte	.LASF130
+ 1441 08f1 17080000 		.4byte	.LASF130
  1442 08f5 04       		.byte	0x4
  1443 08f6 22       		.uleb128 0x22
- 1444 08f7 A0070000 		.4byte	.LASF131
+ 1444 08f7 B7070000 		.4byte	.LASF131
  1445 08fb 05       		.byte	0x5
  1446 08fc 22       		.uleb128 0x22
- 1447 08fd D2030000 		.4byte	.LASF132
+ 1447 08fd 4C040000 		.4byte	.LASF132
  1448 0901 06       		.byte	0x6
  1449 0902 22       		.uleb128 0x22
- 1450 0903 1C020000 		.4byte	.LASF133
+ 1450 0903 96020000 		.4byte	.LASF133
  1451 0907 07       		.byte	0x7
  1452 0908 00       		.byte	0
  1453 0909 21       		.uleb128 0x21
@@ -1536,14 +1536,14 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1458 0911 15       		.byte	0x15
  1459 0912 23090000 		.4byte	0x923
  1460 0916 22       		.uleb128 0x22
- 1461 0917 4A040000 		.4byte	.LASF134
+ 1461 0917 C4040000 		.4byte	.LASF134
  1462 091b 00       		.byte	0
  1463 091c 22       		.uleb128 0x22
  1464 091d 0C000000 		.4byte	.LASF135
  1465 0921 01       		.byte	0x1
  1466 0922 00       		.byte	0
  1467 0923 23       		.uleb128 0x23
- 1468 0924 CF070000 		.4byte	.LASF140
+ 1468 0924 E6070000 		.4byte	.LASF140
  1469 0928 01       		.byte	0x1
  1470 0929 17       		.byte	0x17
  1471 092a 34090000 		.4byte	0x934
@@ -1553,12 +1553,12 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1475 0934 02       		.uleb128 0x2
  1476 0935 04       		.byte	0x4
  1477 0936 04       		.byte	0x4
- 1478 0937 2B050000 		.4byte	.LASF136
+ 1478 0937 42050000 		.4byte	.LASF136
  1479 093b 24       		.uleb128 0x24
- 1480 093c BC030000 		.4byte	.LASF142
+ 1480 093c 36040000 		.4byte	.LASF142
  1481 0940 01       		.byte	0x1
  1482 0941 4C       		.byte	0x4c
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 27
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 27
 
 
  1483 0942 00000000 		.4byte	.LFB5
@@ -1567,19 +1567,19 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1486 094b 9C       		.byte	0x9c
  1487 094c FF090000 		.4byte	0x9ff
  1488 0950 25       		.uleb128 0x25
- 1489 0951 8B040000 		.4byte	.LASF137
+ 1489 0951 05050000 		.4byte	.LASF137
  1490 0955 01       		.byte	0x1
  1491 0956 4C       		.byte	0x4c
  1492 0957 73000000 		.4byte	0x73
  1493 095b 00000000 		.4byte	.LLST10
  1494 095f 25       		.uleb128 0x25
- 1495 0960 31050000 		.4byte	.LASF138
+ 1495 0960 48050000 		.4byte	.LASF138
  1496 0964 01       		.byte	0x1
  1497 0965 4C       		.byte	0x4c
  1498 0966 73000000 		.4byte	0x73
  1499 096a 21000000 		.4byte	.LLST11
  1500 096e 25       		.uleb128 0x25
- 1501 096f F4060000 		.4byte	.LASF139
+ 1501 096f 0B070000 		.4byte	.LASF139
  1502 0973 01       		.byte	0x1
  1503 0974 4C       		.byte	0x4c
  1504 0975 73000000 		.4byte	0x73
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1537 09af 51       		.byte	0x51
  1538 09b0 1C       		.byte	0x1c
  1539 09b1 0A       		.byte	0xa
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 28
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 28
 
 
  1540 09b2 FFFF     		.2byte	0xffff
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1594 09ef 28       		.uleb128 0x28
  1595 09f0 01       		.uleb128 0x1
  1596 09f1 51       		.byte	0x51
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 29
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 29
 
 
  1597 09f2 01       		.uleb128 0x1
@@ -1698,25 +1698,25 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1611 0a0f 9C       		.byte	0x9c
  1612 0a10 7C0A0000 		.4byte	0xa7c
  1613 0a14 25       		.uleb128 0x25
- 1614 0a15 89060000 		.4byte	.LASF144
+ 1614 0a15 A0060000 		.4byte	.LASF144
  1615 0a19 01       		.byte	0x1
  1616 0a1a 38       		.byte	0x38
  1617 0a1b 73000000 		.4byte	0x73
  1618 0a1f 58010000 		.4byte	.LLST5
  1619 0a23 25       		.uleb128 0x25
- 1620 0a24 DF070000 		.4byte	.LASF145
+ 1620 0a24 F6070000 		.4byte	.LASF145
  1621 0a28 01       		.byte	0x1
  1622 0a29 38       		.byte	0x38
  1623 0a2a 73000000 		.4byte	0x73
  1624 0a2e 92010000 		.4byte	.LLST6
  1625 0a32 25       		.uleb128 0x25
- 1626 0a33 73050000 		.4byte	.LASF146
+ 1626 0a33 8A050000 		.4byte	.LASF146
  1627 0a37 01       		.byte	0x1
  1628 0a38 38       		.byte	0x38
  1629 0a39 73000000 		.4byte	0x73
  1630 0a3d CC010000 		.4byte	.LLST7
  1631 0a41 25       		.uleb128 0x25
- 1632 0a42 62050000 		.4byte	.LASF147
+ 1632 0a42 79050000 		.4byte	.LASF147
  1633 0a46 01       		.byte	0x1
  1634 0a47 38       		.byte	0x38
  1635 0a48 73000000 		.4byte	0x73
@@ -1738,14 +1738,14 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1651 0a70 30       		.byte	0x30
  1652 0a71 00       		.byte	0
  1653 0a72 29       		.uleb128 0x29
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 30
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 30
 
 
  1654 0a73 36000000 		.4byte	.LVL28
  1655 0a77 1E0B0000 		.4byte	0xb1e
  1656 0a7b 00       		.byte	0
  1657 0a7c 24       		.uleb128 0x24
- 1658 0a7d C2070000 		.4byte	.LASF148
+ 1658 0a7d D9070000 		.4byte	.LASF148
  1659 0a81 01       		.byte	0x1
  1660 0a82 1A       		.byte	0x1a
  1661 0a83 00000000 		.4byte	.LFB3
@@ -1772,13 +1772,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1682 0ab6 B5080000 		.4byte	0x8b5
  1683 0aba C2020000 		.4byte	.LLST2
  1684 0abe 26       		.uleb128 0x26
- 1685 0abf 57050000 		.4byte	.LASF151
+ 1685 0abf 6E050000 		.4byte	.LASF151
  1686 0ac3 01       		.byte	0x1
  1687 0ac4 1C       		.byte	0x1c
  1688 0ac5 B5080000 		.4byte	0x8b5
  1689 0ac9 E0020000 		.4byte	.LLST3
  1690 0acd 26       		.uleb128 0x26
- 1691 0ace 98050000 		.4byte	.LASF152
+ 1691 0ace AF050000 		.4byte	.LASF152
  1692 0ad2 01       		.byte	0x1
  1693 0ad3 1C       		.byte	0x1c
  1694 0ad4 B5080000 		.4byte	0x8b5
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1708 0afd 50       		.byte	0x50
  1709 0afe 02       		.uleb128 0x2
  1710 0aff 74       		.byte	0x74
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 31
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 31
 
 
  1711 0b00 00       		.sleb128 0
@@ -1814,8 +1814,8 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1721 0b19 1E0B0000 		.4byte	0xb1e
  1722 0b1d 00       		.byte	0
  1723 0b1e 2B       		.uleb128 0x2b
- 1724 0b1f 46060000 		.4byte	.LASF159
- 1725 0b23 46060000 		.4byte	.LASF159
+ 1724 0b1f 5D060000 		.4byte	.LASF159
+ 1725 0b23 5D060000 		.4byte	.LASF159
  1726 0b27 2C       		.uleb128 0x2c
  1727 0b28 57000000 		.4byte	.LASF153
  1728 0b2c 57000000 		.4byte	.LASF153
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1765 0015 00       		.byte	0
  1766 0016 0B       		.uleb128 0xb
  1767 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 32
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 32
 
 
  1768 0018 3E       		.uleb128 0x3e
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1822 004e 00       		.byte	0
  1823 004f 08       		.uleb128 0x8
  1824 0050 16       		.uleb128 0x16
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 33
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 33
 
 
  1825 0051 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1879 0087 00       		.byte	0
  1880 0088 0D       		.uleb128 0xd
  1881 0089 13       		.uleb128 0x13
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 34
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 34
 
 
  1882 008a 01       		.byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1936 00c0 00       		.byte	0
  1937 00c1 00       		.byte	0
  1938 00c2 11       		.uleb128 0x11
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 35
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 35
 
 
  1939 00c3 13       		.uleb128 0x13
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  1993 00f9 16       		.uleb128 0x16
  1994 00fa 26       		.uleb128 0x26
  1995 00fb 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 36
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 36
 
 
  1996 00fc 49       		.uleb128 0x49
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2050 0132 0B       		.uleb128 0xb
  2051 0133 0B       		.uleb128 0xb
  2052 0134 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 37
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 37
 
 
  2053 0135 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2107 016b 00       		.byte	0
  2108 016c 1F       		.uleb128 0x1f
  2109 016d 34       		.uleb128 0x34
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 38
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 38
 
 
  2110 016e 00       		.byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2164 01a4 1C       		.uleb128 0x1c
  2165 01a5 0B       		.uleb128 0xb
  2166 01a6 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 39
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 39
 
 
  2167 01a7 00       		.byte	0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2221 01de 00       		.byte	0
  2222 01df 00       		.byte	0
  2223 01e0 26       		.uleb128 0x26
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 40
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 40
 
 
  2224 01e1 34       		.uleb128 0x34
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2278 0221 00       		.byte	0
  2279 0222 00       		.byte	0
  2280 0223 2B       		.uleb128 0x2b
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 41
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 41
 
 
  2281 0224 2E       		.uleb128 0x2e
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2335 0036 F3       		.byte	0xf3
  2336 0037 01       		.uleb128 0x1
  2337 0038 51       		.byte	0x51
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 42
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 42
 
 
  2338 0039 9F       		.byte	0x9f
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2392 00a4 50       		.byte	0x50
  2393 00a5 F3       		.byte	0xf3
  2394 00a6 01       		.uleb128 0x1
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 43
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 43
 
 
  2395 00a7 51       		.byte	0x51
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2449 00e3 0100     		.2byte	0x1
  2450 00e5 16       		.byte	0x16
  2451 00e6 13       		.byte	0x13
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 44
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 44
 
 
  2452 00e7 9F       		.byte	0x9f
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2506 0130 F3       		.byte	0xf3
  2507 0131 01       		.uleb128 0x1
  2508 0132 50       		.byte	0x50
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 45
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 45
 
 
  2509 0133 F3       		.byte	0xf3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2563 0192 00000000 		.4byte	.LVL18
  2564 0196 22000000 		.4byte	.LVL23
  2565 019a 0100     		.2byte	0x1
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 46
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 46
 
 
  2566 019c 51       		.byte	0x51
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2620 021b F3       		.byte	0xf3
  2621 021c 01       		.uleb128 0x1
  2622 021d 53       		.byte	0x53
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 47
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 47
 
 
  2623 021e 9F       		.byte	0x9f
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2677 029b 0400     		.2byte	0x4
  2678 029d F3       		.byte	0xf3
  2679 029e 01       		.uleb128 0x1
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 48
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 48
 
 
  2680 029f 51       		.byte	0x51
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2734 000a 04       		.byte	0x4
  2735 000b 00       		.byte	0
  2736 000c 0000     		.2byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 49
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 49
 
 
  2737 000e 0000     		.2byte	0
@@ -2902,8 +2902,8 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2755 001c 00000000 		.4byte	0
  2756              		.section	.debug_line,"",%progbits
  2757              	.Ldebug_line0:
- 2758 0000 7D030000 		.section	.debug_str,"MS",%progbits,1
- 2758      0200FE02 
+ 2758 0000 CD020000 		.section	.debug_str,"MS",%progbits,1
+ 2758      02004E02 
  2758      00000201 
  2758      FB0E0D00 
  2758      01010101 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2774 004d 5F5F7569 		.ascii	"__uint8_t\000"
  2774      6E74385F 
  2774      7400
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 50
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 50
 
 
  2775              	.LASF153:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2798 00f3 46524F4E 		.ascii	"FRONT_RIGHT\000"
  2798      545F5249 
  2798      47485400 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 51
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 51
 
 
  2799              	.LASF120:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2828 0189 6C6F6E67 		.ascii	"long int\000"
  2828      20696E74 
  2828      00
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 52
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 52
 
 
  2829              	.LASF50:
@@ -3074,561 +3074,564 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 1
  2836 01a8 5F626C6B 		.ascii	"_blksize\000"
  2836      73697A65 
  2836      00
- 2837              	.LASF82:
- 2838 01b1 5F637674 		.ascii	"_cvtbuf\000"
- 2838      62756600 
- 2839              	.LASF61:
- 2840 01b9 5F6F6666 		.ascii	"_offset\000"
- 2840      73657400 
- 2841              	.LASF112:
- 2842 01c1 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
- 2842      72746F77 
- 2842      63735F73 
- 2842      74617465 
- 2842      00
- 2843              	.LASF110:
- 2844 01d2 5F6D6272 		.ascii	"_mbrlen_state\000"
- 2844      6C656E5F 
- 2844      73746174 
- 2844      6500
- 2845              	.LASF39:
- 2846 01e0 5F666E61 		.ascii	"_fnargs\000"
- 2846      72677300 
- 2847              	.LASF45:
- 2848 01e8 5F666E73 		.ascii	"_fns\000"
- 2848      00
- 2849              	.LASF25:
- 2850 01ed 5F736967 		.ascii	"_sign\000"
- 2850      6E00
- 2851              	.LASF3:
- 2852 01f3 5F5F696E 		.ascii	"__int16_t\000"
- 2852      7431365F 
- 2852      7400
- 2853              	.LASF70:
- 2854 01fd 5F737464 		.ascii	"_stderr\000"
- 2854      65727200 
- 2855              	.LASF27:
- 2856 0205 5F426967 		.ascii	"_Bigint\000"
- 2856      696E7400 
- 2857              	.LASF101:
- 2858 020d 5F67616D 		.ascii	"_gamma_signgam\000"
- 2858      6D615F73 
- 2858      69676E67 
- 2858      616D00
- 2859              	.LASF133:
- 2860 021c 46524F4E 		.ascii	"FRONT_LEFT\000"
- 2860      545F4C45 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 53
+ 2837              	.LASF158:
+ 2838 01b1 433A5C55 		.ascii	"C:\\Users\\afgou\\Desktop\\Aur\351lien\\EPFL\\Cours"
+ 2838      73657273 
+ 2838      5C616667 
+ 2838      6F755C44 
+ 2838      65736B74 
+ 2839 01db 5C426163 		.ascii	"\\Bachelor 3, Semestre 6\\Microinformatique\\TPs\\T"
+ 2839      68656C6F 
+ 2839      7220332C 
+ 2839      2053656D 
+ 2839      65737472 
+ 2840 020a 50735F47 		.ascii	"Ps_Git\\TP6_Miniprojet\\Miniprojet\000"
+ 2840      69745C54 
+ 2840      50365F4D 
+ 2840      696E6970 
+ 2840      726F6A65 
+ 2841              	.LASF82:
+ 2842 022b 5F637674 		.ascii	"_cvtbuf\000"
+ 2842      62756600 
+ 2843              	.LASF61:
+ 2844 0233 5F6F6666 		.ascii	"_offset\000"
+ 2844      73657400 
+ 2845              	.LASF112:
+ 2846 023b 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
+ 2846      72746F77 
+ 2846      63735F73 
+ 2846      74617465 
+ 2846      00
+ 2847              	.LASF110:
+ 2848 024c 5F6D6272 		.ascii	"_mbrlen_state\000"
+ 2848      6C656E5F 
+ 2848      73746174 
+ 2848      6500
+ 2849              	.LASF39:
+ 2850 025a 5F666E61 		.ascii	"_fnargs\000"
+ 2850      72677300 
+ 2851              	.LASF45:
+ 2852 0262 5F666E73 		.ascii	"_fns\000"
+ 2852      00
+ 2853              	.LASF25:
+ 2854 0267 5F736967 		.ascii	"_sign\000"
+ 2854      6E00
+ 2855              	.LASF3:
+ 2856 026d 5F5F696E 		.ascii	"__int16_t\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 53
 
 
- 2860      465400
- 2861              	.LASF54:
- 2862 0227 5F726561 		.ascii	"_read\000"
- 2862      6400
- 2863              	.LASF78:
- 2864 022d 5F726573 		.ascii	"_result_k\000"
- 2864      756C745F 
- 2864      6B00
- 2865              	.LASF28:
- 2866 0237 5F5F746D 		.ascii	"__tm\000"
- 2866      00
- 2867              	.LASF10:
- 2868 023c 756E7369 		.ascii	"unsigned int\000"
- 2868      676E6564 
- 2868      20696E74 
- 2868      00
- 2869              	.LASF156:
- 2870 0249 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 2870      43313120 
- 2870      372E322E 
- 2870      31203230 
- 2870      31373039 
- 2871 027c 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 2871      20726576 
- 2871      6973696F 
- 2871      6E203235 
- 2871      35323034 
- 2872 02af 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
- 2872      2D6D6670 
- 2872      753D6670 
- 2872      76342D73 
- 2872      702D6431 
- 2873 02e2 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 2873      62202D4F 
- 2873      32202D66 
- 2873      6F6D6974 
- 2873      2D667261 
- 2874 0315 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 2874      6F2D7374 
- 2874      72696374 
- 2874      2D616C69 
- 2874      6173696E 
- 2875 0348 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 2875      73656374 
- 2875      696F6E73 
- 2875      202D6664 
- 2875      6174612D 
- 2876 037b 72656369 		.ascii	"recision-constant\000"
- 2876      73696F6E 
- 2876      2D636F6E 
- 2876      7374616E 
- 2876      7400
- 2877              	.LASF17:
- 2878 038d 5F5F7763 		.ascii	"__wchb\000"
- 2878      686200
- 2879              	.LASF69:
- 2880 0394 5F737464 		.ascii	"_stdout\000"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 54
+ 2856      7431365F 
+ 2856      7400
+ 2857              	.LASF70:
+ 2858 0277 5F737464 		.ascii	"_stderr\000"
+ 2858      65727200 
+ 2859              	.LASF27:
+ 2860 027f 5F426967 		.ascii	"_Bigint\000"
+ 2860      696E7400 
+ 2861              	.LASF101:
+ 2862 0287 5F67616D 		.ascii	"_gamma_signgam\000"
+ 2862      6D615F73 
+ 2862      69676E67 
+ 2862      616D00
+ 2863              	.LASF133:
+ 2864 0296 46524F4E 		.ascii	"FRONT_LEFT\000"
+ 2864      545F4C45 
+ 2864      465400
+ 2865              	.LASF54:
+ 2866 02a1 5F726561 		.ascii	"_read\000"
+ 2866      6400
+ 2867              	.LASF78:
+ 2868 02a7 5F726573 		.ascii	"_result_k\000"
+ 2868      756C745F 
+ 2868      6B00
+ 2869              	.LASF28:
+ 2870 02b1 5F5F746D 		.ascii	"__tm\000"
+ 2870      00
+ 2871              	.LASF10:
+ 2872 02b6 756E7369 		.ascii	"unsigned int\000"
+ 2872      676E6564 
+ 2872      20696E74 
+ 2872      00
+ 2873              	.LASF156:
+ 2874 02c3 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 2874      43313120 
+ 2874      372E322E 
+ 2874      31203230 
+ 2874      31373039 
+ 2875 02f6 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 2875      20726576 
+ 2875      6973696F 
+ 2875      6E203235 
+ 2875      35323034 
+ 2876 0329 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 2876      2D6D6670 
+ 2876      753D6670 
+ 2876      76342D73 
+ 2876      702D6431 
+ 2877 035c 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 2877      62202D4F 
+ 2877      32202D66 
+ 2877      6F6D6974 
+ 2877      2D667261 
+ 2878 038f 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 2878      6F2D7374 
+ 2878      72696374 
+ 2878      2D616C69 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 54
 
 
- 2880      6F757400 
- 2881              	.LASF81:
- 2882 039c 5F637674 		.ascii	"_cvtlen\000"
- 2882      6C656E00 
- 2883              	.LASF7:
- 2884 03a4 6C6F6E67 		.ascii	"long unsigned int\000"
- 2884      20756E73 
- 2884      69676E65 
- 2884      6420696E 
- 2884      7400
- 2885              	.LASF51:
- 2886 03b6 5F66696C 		.ascii	"_file\000"
- 2886      6500
- 2887              	.LASF142:
- 2888 03bc 72656775 		.ascii	"regulator_follow_wall\000"
- 2888      6C61746F 
- 2888      725F666F 
- 2888      6C6C6F77 
- 2888      5F77616C 
- 2889              	.LASF132:
- 2890 03d2 46524F4E 		.ascii	"FRONT_LEFT_45DEG\000"
- 2890      545F4C45 
- 2890      46545F34 
- 2890      35444547 
- 2890      00
- 2891              	.LASF91:
- 2892 03e3 5F6E696F 		.ascii	"_niobs\000"
- 2892      627300
- 2893              	.LASF5:
- 2894 03ea 73686F72 		.ascii	"short unsigned int\000"
- 2894      7420756E 
- 2894      7369676E 
- 2894      65642069 
- 2894      6E7400
- 2895              	.LASF84:
- 2896 03fd 5F617465 		.ascii	"_atexit0\000"
- 2896      78697430 
- 2896      00
- 2897              	.LASF108:
- 2898 0406 5F736967 		.ascii	"_signal_buf\000"
- 2898      6E616C5F 
- 2898      62756600 
- 2899              	.LASF99:
- 2900 0412 5F617363 		.ascii	"_asctime_buf\000"
- 2900      74696D65 
- 2900      5F627566 
+ 2878      6173696E 
+ 2879 03c2 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 2879      73656374 
+ 2879      696F6E73 
+ 2879      202D6664 
+ 2879      6174612D 
+ 2880 03f5 72656369 		.ascii	"recision-constant\000"
+ 2880      73696F6E 
+ 2880      2D636F6E 
+ 2880      7374616E 
+ 2880      7400
+ 2881              	.LASF17:
+ 2882 0407 5F5F7763 		.ascii	"__wchb\000"
+ 2882      686200
+ 2883              	.LASF69:
+ 2884 040e 5F737464 		.ascii	"_stdout\000"
+ 2884      6F757400 
+ 2885              	.LASF81:
+ 2886 0416 5F637674 		.ascii	"_cvtlen\000"
+ 2886      6C656E00 
+ 2887              	.LASF7:
+ 2888 041e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2888      20756E73 
+ 2888      69676E65 
+ 2888      6420696E 
+ 2888      7400
+ 2889              	.LASF51:
+ 2890 0430 5F66696C 		.ascii	"_file\000"
+ 2890      6500
+ 2891              	.LASF142:
+ 2892 0436 72656775 		.ascii	"regulator_follow_wall\000"
+ 2892      6C61746F 
+ 2892      725F666F 
+ 2892      6C6C6F77 
+ 2892      5F77616C 
+ 2893              	.LASF132:
+ 2894 044c 46524F4E 		.ascii	"FRONT_LEFT_45DEG\000"
+ 2894      545F4C45 
+ 2894      46545F34 
+ 2894      35444547 
+ 2894      00
+ 2895              	.LASF91:
+ 2896 045d 5F6E696F 		.ascii	"_niobs\000"
+ 2896      627300
+ 2897              	.LASF5:
+ 2898 0464 73686F72 		.ascii	"short unsigned int\000"
+ 2898      7420756E 
+ 2898      7369676E 
+ 2898      65642069 
+ 2898      6E7400
+ 2899              	.LASF84:
+ 2900 0477 5F617465 		.ascii	"_atexit0\000"
+ 2900      78697430 
  2900      00
- 2901              	.LASF77:
- 2902 041f 5F726573 		.ascii	"_result\000"
- 2902      756C7400 
- 2903              	.LASF16:
- 2904 0427 5F5F7763 		.ascii	"__wch\000"
- 2904      6800
- 2905              	.LASF12:
- 2906 042d 5F4C4F43 		.ascii	"_LOCK_T\000"
- 2906      4B5F5400 
- 2907              	.LASF15:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 55
+ 2901              	.LASF108:
+ 2902 0480 5F736967 		.ascii	"_signal_buf\000"
+ 2902      6E616C5F 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 55
 
 
- 2908 0435 77696E74 		.ascii	"wint_t\000"
- 2908      5F7400
- 2909              	.LASF63:
- 2910 043c 5F6C6F63 		.ascii	"_lock\000"
- 2910      6B00
- 2911              	.LASF65:
- 2912 0442 5F666C61 		.ascii	"_flags2\000"
- 2912      67733200 
- 2913              	.LASF134:
- 2914 044a 44494646 		.ascii	"DIFFERENCE\000"
- 2914      4552454E 
- 2914      434500
- 2915              	.LASF127:
- 2916 0455 46524F4E 		.ascii	"FRONT_RIGHT_45DEG\000"
- 2916      545F5249 
- 2916      4748545F 
- 2916      34354445 
- 2916      4700
- 2917              	.LASF55:
- 2918 0467 5F777269 		.ascii	"_write\000"
- 2918      746500
- 2919              	.LASF34:
- 2920 046e 5F5F746D 		.ascii	"__tm_year\000"
- 2920      5F796561 
- 2920      7200
- 2921              	.LASF11:
- 2922 0478 6C6F6E67 		.ascii	"long double\000"
- 2922      20646F75 
- 2922      626C6500 
- 2923              	.LASF116:
- 2924 0484 5F6E6578 		.ascii	"_nextf\000"
- 2924      746600
- 2925              	.LASF137:
- 2926 048b 72656665 		.ascii	"reference_value\000"
- 2926      72656E63 
- 2926      655F7661 
- 2926      6C756500 
- 2927              	.LASF33:
- 2928 049b 5F5F746D 		.ascii	"__tm_mon\000"
- 2928      5F6D6F6E 
- 2928      00
- 2929              	.LASF158:
- 2930 04a4 433A5C55 		.ascii	"C:\\Users\\Salma Chatagny\\Documents\\EPFL\\BA6\\Mi"
- 2930      73657273 
- 2930      5C53616C 
- 2930      6D612043 
- 2930      68617461 
- 2931 04d1 63726F69 		.ascii	"croinformatique\\TPs\\TPs_git\\TP6_Miniprojet\\Mini"
- 2931      6E666F72 
- 2931      6D617469 
- 2931      7175655C 
- 2931      5450735C 
- 2932 0500 70726F6A 		.ascii	"projet\000"
- 2932      657400
+ 2902      62756600 
+ 2903              	.LASF99:
+ 2904 048c 5F617363 		.ascii	"_asctime_buf\000"
+ 2904      74696D65 
+ 2904      5F627566 
+ 2904      00
+ 2905              	.LASF77:
+ 2906 0499 5F726573 		.ascii	"_result\000"
+ 2906      756C7400 
+ 2907              	.LASF16:
+ 2908 04a1 5F5F7763 		.ascii	"__wch\000"
+ 2908      6800
+ 2909              	.LASF12:
+ 2910 04a7 5F4C4F43 		.ascii	"_LOCK_T\000"
+ 2910      4B5F5400 
+ 2911              	.LASF15:
+ 2912 04af 77696E74 		.ascii	"wint_t\000"
+ 2912      5F7400
+ 2913              	.LASF63:
+ 2914 04b6 5F6C6F63 		.ascii	"_lock\000"
+ 2914      6B00
+ 2915              	.LASF65:
+ 2916 04bc 5F666C61 		.ascii	"_flags2\000"
+ 2916      67733200 
+ 2917              	.LASF134:
+ 2918 04c4 44494646 		.ascii	"DIFFERENCE\000"
+ 2918      4552454E 
+ 2918      434500
+ 2919              	.LASF127:
+ 2920 04cf 46524F4E 		.ascii	"FRONT_RIGHT_45DEG\000"
+ 2920      545F5249 
+ 2920      4748545F 
+ 2920      34354445 
+ 2920      4700
+ 2921              	.LASF55:
+ 2922 04e1 5F777269 		.ascii	"_write\000"
+ 2922      746500
+ 2923              	.LASF34:
+ 2924 04e8 5F5F746D 		.ascii	"__tm_year\000"
+ 2924      5F796561 
+ 2924      7200
+ 2925              	.LASF11:
+ 2926 04f2 6C6F6E67 		.ascii	"long double\000"
+ 2926      20646F75 
+ 2926      626C6500 
+ 2927              	.LASF116:
+ 2928 04fe 5F6E6578 		.ascii	"_nextf\000"
+ 2928      746600
+ 2929              	.LASF137:
+ 2930 0505 72656665 		.ascii	"reference_value\000"
+ 2930      72656E63 
+ 2930      655F7661 
+ 2930      6C756500 
+ 2931              	.LASF33:
+ 2932 0515 5F5F746D 		.ascii	"__tm_mon\000"
+ 2932      5F6D6F6E 
+ 2932      00
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 56
+
+
  2933              	.LASF43:
- 2934 0507 5F617465 		.ascii	"_atexit\000"
+ 2934 051e 5F617465 		.ascii	"_atexit\000"
  2934      78697400 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 56
-
-
  2935              	.LASF125:
- 2936 050f 7375626F 		.ascii	"suboptarg\000"
+ 2936 0526 7375626F 		.ascii	"suboptarg\000"
  2936      70746172 
  2936      6700
  2937              	.LASF75:
- 2938 0519 5F5F7364 		.ascii	"__sdidinit\000"
+ 2938 0530 5F5F7364 		.ascii	"__sdidinit\000"
  2938      6964696E 
  2938      697400
  2939              	.LASF13:
- 2940 0524 5F6F6666 		.ascii	"_off_t\000"
+ 2940 053b 5F6F6666 		.ascii	"_off_t\000"
  2940      5F7400
  2941              	.LASF136:
- 2942 052b 666C6F61 		.ascii	"float\000"
+ 2942 0542 666C6F61 		.ascii	"float\000"
  2942      7400
  2943              	.LASF138:
- 2944 0531 63757272 		.ascii	"current_value\000"
+ 2944 0548 63757272 		.ascii	"current_value\000"
  2944      656E745F 
  2944      76616C75 
  2944      6500
  2945              	.LASF80:
- 2946 053f 5F667265 		.ascii	"_freelist\000"
+ 2946 0556 5F667265 		.ascii	"_freelist\000"
  2946      656C6973 
  2946      7400
  2947              	.LASF106:
- 2948 0549 5F776374 		.ascii	"_wctomb_state\000"
+ 2948 0560 5F776374 		.ascii	"_wctomb_state\000"
  2948      6F6D625F 
  2948      73746174 
  2948      6500
  2949              	.LASF151:
- 2950 0557 6C656674 		.ascii	"left_speed\000"
+ 2950 056e 6C656674 		.ascii	"left_speed\000"
  2950      5F737065 
  2950      656400
  2951              	.LASF147:
- 2952 0562 66726F6E 		.ascii	"front_left_value\000"
+ 2952 0579 66726F6E 		.ascii	"front_left_value\000"
  2952      745F6C65 
  2952      66745F76 
  2952      616C7565 
  2952      00
  2953              	.LASF146:
- 2954 0573 66726F6E 		.ascii	"front_right_value\000"
+ 2954 058a 66726F6E 		.ascii	"front_right_value\000"
  2954      745F7269 
  2954      6768745F 
  2954      76616C75 
  2954      6500
  2955              	.LASF1:
- 2956 0585 756E7369 		.ascii	"unsigned char\000"
+ 2956 059c 756E7369 		.ascii	"unsigned char\000"
  2956      676E6564 
  2956      20636861 
  2956      7200
  2957              	.LASF83:
- 2958 0593 5F6E6577 		.ascii	"_new\000"
+ 2958 05aa 5F6E6577 		.ascii	"_new\000"
  2958      00
  2959              	.LASF152:
- 2960 0598 64657269 		.ascii	"derivate\000"
+ 2960 05af 64657269 		.ascii	"derivate\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 57
+
+
  2960      76617465 
  2960      00
  2961              	.LASF115:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 57
-
-
- 2962 05a1 5F685F65 		.ascii	"_h_errno\000"
+ 2962 05b8 5F685F65 		.ascii	"_h_errno\000"
  2962      72726E6F 
  2962      00
  2963              	.LASF4:
- 2964 05aa 73686F72 		.ascii	"short int\000"
+ 2964 05c1 73686F72 		.ascii	"short int\000"
  2964      7420696E 
  2964      7400
  2965              	.LASF36:
- 2966 05b4 5F5F746D 		.ascii	"__tm_yday\000"
+ 2966 05cb 5F5F746D 		.ascii	"__tm_yday\000"
  2966      5F796461 
  2966      7900
  2967              	.LASF46:
- 2968 05be 5F5F7362 		.ascii	"__sbuf\000"
+ 2968 05d5 5F5F7362 		.ascii	"__sbuf\000"
  2968      756600
  2969              	.LASF92:
- 2970 05c5 5F696F62 		.ascii	"_iobs\000"
+ 2970 05dc 5F696F62 		.ascii	"_iobs\000"
  2970      7300
  2971              	.LASF89:
- 2972 05cb 5F5F4649 		.ascii	"__FILE\000"
+ 2972 05e2 5F5F4649 		.ascii	"__FILE\000"
  2972      4C4500
  2973              	.LASF20:
- 2974 05d2 5F6D6273 		.ascii	"_mbstate_t\000"
+ 2974 05e9 5F6D6273 		.ascii	"_mbstate_t\000"
  2974      74617465 
  2974      5F7400
  2975              	.LASF49:
- 2976 05dd 5F5F7346 		.ascii	"__sFILE\000"
+ 2976 05f4 5F5F7346 		.ascii	"__sFILE\000"
  2976      494C4500 
  2977              	.LASF64:
- 2978 05e5 5F6D6273 		.ascii	"_mbstate\000"
+ 2978 05fc 5F6D6273 		.ascii	"_mbstate\000"
  2978      74617465 
  2978      00
  2979              	.LASF102:
- 2980 05ee 5F72616E 		.ascii	"_rand_next\000"
+ 2980 0605 5F72616E 		.ascii	"_rand_next\000"
  2980      645F6E65 
  2980      787400
  2981              	.LASF104:
- 2982 05f9 5F6D626C 		.ascii	"_mblen_state\000"
+ 2982 0610 5F6D626C 		.ascii	"_mblen_state\000"
  2982      656E5F73 
  2982      74617465 
  2982      00
  2983              	.LASF71:
- 2984 0606 5F696E63 		.ascii	"_inc\000"
+ 2984 061d 5F696E63 		.ascii	"_inc\000"
  2984      00
  2985              	.LASF44:
- 2986 060b 5F696E64 		.ascii	"_ind\000"
+ 2986 0622 5F696E64 		.ascii	"_ind\000"
  2986      00
  2987              	.LASF128:
- 2988 0610 52494748 		.ascii	"RIGHT_SENS\000"
+ 2988 0627 52494748 		.ascii	"RIGHT_SENS\000"
  2988      545F5345 
  2988      4E5300
  2989              	.LASF74:
- 2990 061b 5F6C6F63 		.ascii	"_locale\000"
+ 2990 0632 5F6C6F63 		.ascii	"_locale\000"
  2990      616C6500 
  2991              	.LASF76:
- 2992 0623 5F5F636C 		.ascii	"__cleanup\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 58
+
+
+ 2992 063a 5F5F636C 		.ascii	"__cleanup\000"
  2992      65616E75 
  2992      7000
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 58
-
-
  2993              	.LASF73:
- 2994 062d 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 2994 0644 5F756E73 		.ascii	"_unspecified_locale_info\000"
  2994      70656369 
  2994      66696564 
  2994      5F6C6F63 
  2994      616C655F 
  2995              	.LASF159:
- 2996 0646 5F5F7374 		.ascii	"__stack_chk_fail\000"
+ 2996 065d 5F5F7374 		.ascii	"__stack_chk_fail\000"
  2996      61636B5F 
  2996      63686B5F 
  2996      6661696C 
  2996      00
  2997              	.LASF24:
- 2998 0657 5F6D6178 		.ascii	"_maxwds\000"
+ 2998 066e 5F6D6178 		.ascii	"_maxwds\000"
  2998      77647300 
  2999              	.LASF66:
- 3000 065f 5F726565 		.ascii	"_reent\000"
+ 3000 0676 5F726565 		.ascii	"_reent\000"
  3000      6E7400
  3001              	.LASF94:
- 3002 0666 5F736565 		.ascii	"_seed\000"
+ 3002 067d 5F736565 		.ascii	"_seed\000"
  3002      6400
  3003              	.LASF18:
- 3004 066c 5F5F636F 		.ascii	"__count\000"
+ 3004 0683 5F5F636F 		.ascii	"__count\000"
  3004      756E7400 
  3005              	.LASF119:
- 3006 0674 5F5F6C6F 		.ascii	"__lock\000"
+ 3006 068b 5F5F6C6F 		.ascii	"__lock\000"
  3006      636B00
  3007              	.LASF19:
- 3008 067b 5F5F7661 		.ascii	"__value\000"
+ 3008 0692 5F5F7661 		.ascii	"__value\000"
  3008      6C756500 
  3009              	.LASF56:
- 3010 0683 5F736565 		.ascii	"_seek\000"
+ 3010 069a 5F736565 		.ascii	"_seek\000"
  3010      6B00
  3011              	.LASF144:
- 3012 0689 66726F6E 		.ascii	"front_right_45deg_value\000"
+ 3012 06a0 66726F6E 		.ascii	"front_right_45deg_value\000"
  3012      745F7269 
  3012      6768745F 
  3012      34356465 
  3012      675F7661 
  3013              	.LASF121:
- 3014 06a1 5F696D70 		.ascii	"_impure_ptr\000"
+ 3014 06b8 5F696D70 		.ascii	"_impure_ptr\000"
  3014      7572655F 
  3014      70747200 
  3015              	.LASF14:
- 3016 06ad 5F66706F 		.ascii	"_fpos_t\000"
+ 3016 06c4 5F66706F 		.ascii	"_fpos_t\000"
  3016      735F7400 
  3017              	.LASF67:
- 3018 06b5 5F657272 		.ascii	"_errno\000"
+ 3018 06cc 5F657272 		.ascii	"_errno\000"
  3018      6E6F00
  3019              	.LASF88:
- 3020 06bc 63686172 		.ascii	"char\000"
+ 3020 06d3 63686172 		.ascii	"char\000"
  3020      00
  3021              	.LASF30:
- 3022 06c1 5F5F746D 		.ascii	"__tm_min\000"
+ 3022 06d8 5F5F746D 		.ascii	"__tm_min\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 59
+
+
  3022      5F6D696E 
  3022      00
  3023              	.LASF123:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 59
-
-
- 3024 06ca 75696E74 		.ascii	"uint8_t\000"
+ 3024 06e1 75696E74 		.ascii	"uint8_t\000"
  3024      385F7400 
  3025              	.LASF95:
- 3026 06d2 5F6D756C 		.ascii	"_mult\000"
+ 3026 06e9 5F6D756C 		.ascii	"_mult\000"
  3026      7400
  3027              	.LASF23:
- 3028 06d8 5F6E6578 		.ascii	"_next\000"
+ 3028 06ef 5F6E6578 		.ascii	"_next\000"
  3028      7400
  3029              	.LASF98:
- 3030 06de 5F737472 		.ascii	"_strtok_last\000"
+ 3030 06f5 5F737472 		.ascii	"_strtok_last\000"
  3030      746F6B5F 
  3030      6C617374 
  3030      00
  3031              	.LASF41:
- 3032 06eb 5F666E74 		.ascii	"_fntypes\000"
+ 3032 0702 5F666E74 		.ascii	"_fntypes\000"
  3032      79706573 
  3032      00
  3033              	.LASF139:
- 3034 06f4 73656E73 		.ascii	"sensor_id\000"
+ 3034 070b 73656E73 		.ascii	"sensor_id\000"
  3034      6F725F69 
  3034      6400
  3035              	.LASF96:
- 3036 06fe 5F616464 		.ascii	"_add\000"
+ 3036 0715 5F616464 		.ascii	"_add\000"
  3036      00
  3037              	.LASF129:
- 3038 0703 4241434B 		.ascii	"BACK_RIGHT\000"
+ 3038 071a 4241434B 		.ascii	"BACK_RIGHT\000"
  3038      5F524947 
  3038      485400
  3039              	.LASF22:
- 3040 070e 5F5F554C 		.ascii	"__ULong\000"
+ 3040 0725 5F5F554C 		.ascii	"__ULong\000"
  3040      6F6E6700 
  3041              	.LASF122:
- 3042 0716 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 3042 072d 5F676C6F 		.ascii	"_global_impure_ptr\000"
  3042      62616C5F 
  3042      696D7075 
  3042      72655F70 
  3042      747200
  3043              	.LASF97:
- 3044 0729 5F756E75 		.ascii	"_unused_rand\000"
+ 3044 0740 5F756E75 		.ascii	"_unused_rand\000"
  3044      7365645F 
  3044      72616E64 
  3044      00
  3045              	.LASF26:
- 3046 0736 5F776473 		.ascii	"_wds\000"
+ 3046 074d 5F776473 		.ascii	"_wds\000"
  3046      00
  3047              	.LASF35:
- 3048 073b 5F5F746D 		.ascii	"__tm_wday\000"
+ 3048 0752 5F5F746D 		.ascii	"__tm_wday\000"
  3048      5F776461 
  3048      7900
  3049              	.LASF90:
- 3050 0745 5F676C75 		.ascii	"_glue\000"
+ 3050 075c 5F676C75 		.ascii	"_glue\000"
  3050      6500
  3051              	.LASF117:
- 3052 074b 5F6E6D61 		.ascii	"_nmalloc\000"
+ 3052 0762 5F6E6D61 		.ascii	"_nmalloc\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 60
+
+
  3052      6C6C6F63 
  3052      00
  3053              	.LASF107:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 60
-
-
- 3054 0754 5F6C3634 		.ascii	"_l64a_buf\000"
+ 3054 076b 5F6C3634 		.ascii	"_l64a_buf\000"
  3054      615F6275 
  3054      6600
  3055              	.LASF85:
- 3056 075e 5F736967 		.ascii	"_sig_func\000"
+ 3056 0775 5F736967 		.ascii	"_sig_func\000"
  3056      5F66756E 
  3056      6300
  3057              	.LASF21:
- 3058 0768 5F666C6F 		.ascii	"_flock_t\000"
+ 3058 077f 5F666C6F 		.ascii	"_flock_t\000"
  3058      636B5F74 
  3058      00
  3059              	.LASF59:
- 3060 0771 5F6E6275 		.ascii	"_nbuf\000"
+ 3060 0788 5F6E6275 		.ascii	"_nbuf\000"
  3060      6600
  3061              	.LASF118:
- 3062 0777 5F756E75 		.ascii	"_unused\000"
+ 3062 078e 5F756E75 		.ascii	"_unused\000"
  3062      73656400 
  3063              	.LASF37:
- 3064 077f 5F5F746D 		.ascii	"__tm_isdst\000"
+ 3064 0796 5F5F746D 		.ascii	"__tm_isdst\000"
  3064      5F697364 
  3064      737400
  3065              	.LASF100:
- 3066 078a 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 3066 07a1 5F6C6F63 		.ascii	"_localtime_buf\000"
  3066      616C7469 
  3066      6D655F62 
  3066      756600
  3067              	.LASF57:
- 3068 0799 5F636C6F 		.ascii	"_close\000"
+ 3068 07b0 5F636C6F 		.ascii	"_close\000"
  3068      736500
  3069              	.LASF131:
- 3070 07a0 4C454654 		.ascii	"LEFT_SENS\000"
+ 3070 07b7 4C454654 		.ascii	"LEFT_SENS\000"
  3070      5F53454E 
  3070      5300
  3071              	.LASF103:
- 3072 07aa 5F723438 		.ascii	"_r48\000"
+ 3072 07c1 5F723438 		.ascii	"_r48\000"
  3072      00
  3073              	.LASF105:
- 3074 07af 5F6D6274 		.ascii	"_mbtowc_state\000"
+ 3074 07c6 5F6D6274 		.ascii	"_mbtowc_state\000"
  3074      6F77635F 
  3074      73746174 
  3074      6500
  3075              	.LASF79:
- 3076 07bd 5F703573 		.ascii	"_p5s\000"
+ 3076 07d4 5F703573 		.ascii	"_p5s\000"
  3076      00
  3077              	.LASF148:
- 3078 07c2 72656775 		.ascii	"regulator_pd\000"
+ 3078 07d9 72656775 		.ascii	"regulator_pd\000"
  3078      6C61746F 
  3078      725F7064 
  3078      00
  3079              	.LASF140:
- 3080 07cf 6C617374 		.ascii	"last_difference\000"
+ 3080 07e6 6C617374 		.ascii	"last_difference\000"
  3080      5F646966 
  3080      66657265 
  3080      6E636500 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 61
+
+
  3081              	.LASF145:
- 3082 07df 66726F6E 		.ascii	"front_left_45deg_value\000"
+ 3082 07f6 66726F6E 		.ascii	"front_left_45deg_value\000"
  3082      745F6C65 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 61
-
-
  3082      66745F34 
  3082      35646567 
  3082      5F76616C 
  3083              	.LASF32:
- 3084 07f6 5F5F746D 		.ascii	"__tm_mday\000"
+ 3084 080d 5F5F746D 		.ascii	"__tm_mday\000"
  3084      5F6D6461 
  3084      7900
  3085              	.LASF130:
- 3086 0800 4241434B 		.ascii	"BACK_LEFT\000"
+ 3086 0817 4241434B 		.ascii	"BACK_LEFT\000"
  3086      5F4C4546 
  3086      5400
  3087              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s 			page 62
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s 			page 62
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 regulator.c
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:18     .text.regulator_pd:00000000 $t
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:26     .text.regulator_pd:00000000 regulator_pd
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:171    .text.regulator_pd:000000f0 $d
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:180    .text.regulator_difference:00000000 $t
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:188    .text.regulator_difference:00000000 regulator_difference
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:258    .text.regulator_difference:00000038 $d
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:263    .text.regulator_follow_wall:00000000 $t
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:271    .text.regulator_follow_wall:00000000 regulator_follow_wall
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:329    .text.regulator_follow_wall:00000034 $d
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:334    .bss.last_difference:00000000 $d
-C:\Users\SALMAC~1\AppData\Local\Temp\ccLGYfEi.s:338    .bss.last_difference:00000000 last_difference
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:18     .text.regulator_pd:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:26     .text.regulator_pd:00000000 regulator_pd
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:171    .text.regulator_pd:000000f0 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:180    .text.regulator_difference:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:188    .text.regulator_difference:00000000 regulator_difference
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:258    .text.regulator_difference:00000038 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:263    .text.regulator_follow_wall:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:271    .text.regulator_follow_wall:00000000 regulator_follow_wall
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:329    .text.regulator_follow_wall:00000034 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:334    .bss.last_difference:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccgLMGpD.s:338    .bss.last_difference:00000000 last_difference
 
 UNDEFINED SYMBOLS
 get_right_speed
