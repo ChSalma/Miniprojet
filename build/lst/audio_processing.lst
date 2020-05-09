@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 1
+>>>>>>> Cleaning_code
 
 
    1              		.cpu cortex-m4
@@ -58,7 +62,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
   55              	.LBB2:
   56              		.loc 1 47 0
   57 0016 F0EC017A 		vldmia.32	r0!, {s15}
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 2
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 2
+>>>>>>> Cleaning_code
 
 
   58 001a F4EEC77A 		vcmpe.f32	s15, s14
@@ -118,7 +126,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  112 005e 92B2     		uxth	r2, r2
  113 0060 A2F11203 		sub	r3, r2, #18
  114 0064 022B     		cmp	r3, #2
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 3
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 3
+>>>>>>> Cleaning_code
 
 
  115 0066 1ED9     		bls	.L21
@@ -178,7 +190,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  169 00a8 0B68     		ldr	r3, [r1]
  170 00aa 9A42     		cmp	r2, r3
  171 00ac 08BF     		it	eq
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 4
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 4
+>>>>>>> Cleaning_code
 
 
  172 00ae 0220     		moveq	r0, #2
@@ -238,7 +254,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  226 000a 0193     		str	r3, [sp, #4]
  227              	.LVL12:
  228 000c 2B88     		ldrh	r3, [r5]
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 5
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 5
+>>>>>>> Cleaning_code
 
 
  229              	.LBB3:
@@ -298,7 +318,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  283 006e 1FFA8CF3 		uxth	r3, ip
  284              		.loc 1 101 0
  285 0072 B3F5006F 		cmp	r3, #2048
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 6
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 6
+>>>>>>> Cleaning_code
 
 
  286              		.loc 1 94 0
@@ -358,7 +382,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  340              		.cfi_remember_state
  341              		.cfi_def_cfa_offset 20
  342              		@ sp needed
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 7
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 7
+>>>>>>> Cleaning_code
 
 
  343 00c2 BDE8F040 		pop	{r4, r5, r6, r7, lr}
@@ -418,7 +446,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  395      00000000 
  395      00000000 
  395      00000000 
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 8
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 8
+>>>>>>> Cleaning_code
 
 
  396              		.section	.bss.micFront_output,"aw",%nobits
@@ -478,7 +510,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  446              		.file 37 "../../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/LLD/TIMv1/gpt_lld.h"
  447              		.file 38 "../../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/LLD/TIMv1/stm32_tim.h"
  448              		.file 39 "../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/i2c.h"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 9
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 9
+>>>>>>> Cleaning_code
 
 
  449              		.file 40 "../../lib/e-puck2_main-processor/ChibiOS//os/hal/ports/STM32/LLD/I2Cv1/i2c_lld.h"
@@ -538,7 +574,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  503 004c 7D210000 		.4byte	.LASF4
  504 0050 03       		.uleb128 0x3
  505 0051 CF060000 		.4byte	.LASF5
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 10
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 10
+>>>>>>> Cleaning_code
 
 
  506 0055 02       		.byte	0x2
@@ -598,7 +638,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  560 00bb 20170000 		.4byte	.LASF16
  561 00bf 05       		.uleb128 0x5
  562 00c0 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 11
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 11
+>>>>>>> Cleaning_code
 
 
  563 00c1 03       		.uleb128 0x3
@@ -658,7 +702,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  617 0131 330C0000 		.4byte	.LASF23
  618 0135 05       		.byte	0x5
  619 0136 A5       		.byte	0xa5
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 12
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 12
+>>>>>>> Cleaning_code
 
 
  620 0137 9F000000 		.4byte	0x9f
@@ -718,7 +766,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  674 01a5 0E       		.uleb128 0xe
  675 01a6 DD080000 		.4byte	.LASF31
  676 01aa 06       		.byte	0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 13
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 13
+>>>>>>> Cleaning_code
 
 
  677 01ab 32       		.byte	0x32
@@ -778,7 +830,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  731 0216 9F000000 		.4byte	0x9f
  732 021a 10       		.byte	0x10
  733 021b 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 14
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 14
+>>>>>>> Cleaning_code
 
 
  734 021c F9090000 		.4byte	.LASF39
@@ -838,7 +894,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  788 028b 00       		.byte	0
  789 028c 0B       		.uleb128 0xb
  790 028d BF000000 		.4byte	0xbf
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 15
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 15
+>>>>>>> Cleaning_code
 
 
  791 0291 9C020000 		.4byte	0x29c
@@ -898,7 +958,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  845 02fe 75       		.byte	0x75
  846 02ff 1C030000 		.4byte	0x31c
  847 0303 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 16
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 16
+>>>>>>> Cleaning_code
 
 
  848 0304 5C050000 		.4byte	.LASF52
@@ -958,7 +1022,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  902 036d BB       		.byte	0xbb
  903 036e F7020000 		.4byte	0x2f7
  904 0372 10       		.byte	0x10
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 17
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 17
+>>>>>>> Cleaning_code
 
 
  905 0373 0E       		.uleb128 0xe
@@ -1018,7 +1086,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  959 03df 0E       		.uleb128 0xe
  960 03e0 DC190000 		.4byte	.LASF63
  961 03e4 06       		.byte	0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 18
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 18
+>>>>>>> Cleaning_code
 
 
  962 03e5 D3       		.byte	0xd3
@@ -1078,7 +1150,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1016 0451 6A040000 		.4byte	0x46a
  1017 0455 15       		.uleb128 0x15
  1018 0456 6A040000 		.4byte	0x46a
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 19
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 19
+>>>>>>> Cleaning_code
 
 
  1019 045a 15       		.uleb128 0x15
@@ -1138,7 +1214,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1073 04d1 18       		.uleb128 0x18
  1074 04d2 131E0000 		.4byte	.LASF78
  1075 04d6 06       		.byte	0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 20
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 20
+>>>>>>> Cleaning_code
 
 
  1076 04d7 4602     		.2byte	0x246
@@ -1198,7 +1278,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1130 054c 5502     		.2byte	0x255
  1131 054e A7050000 		.4byte	0x5a7
  1132 0552 54       		.byte	0x54
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 21
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 21
+>>>>>>> Cleaning_code
 
 
  1133 0553 18       		.uleb128 0x18
@@ -1258,7 +1342,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1187 05cd 15       		.uleb128 0x15
  1188 05ce BF000000 		.4byte	0xbf
  1189 05d2 15       		.uleb128 0x15
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 22
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 22
+>>>>>>> Cleaning_code
 
 
  1190 05d3 DD050000 		.4byte	0x5dd
@@ -1318,7 +1406,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1244 0651 06       		.byte	0x6
  1245 0652 1F01     		.2byte	0x11f
  1246 0654 22030000 		.4byte	0x322
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 23
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 23
+>>>>>>> Cleaning_code
 
 
  1247 0658 1B       		.uleb128 0x1b
@@ -1378,7 +1470,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1301 06cc 0C       		.byte	0xc
  1302 06cd 00       		.byte	0
  1303 06ce 0B       		.uleb128 0xb
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 24
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 24
+>>>>>>> Cleaning_code
 
 
  1304 06cf 5B000000 		.4byte	0x5b
@@ -1438,7 +1534,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1358 0743 F0190000 		.4byte	.LASF109
  1359 0747 06       		.byte	0x6
  1360 0748 6202     		.2byte	0x262
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 25
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 25
+>>>>>>> Cleaning_code
 
 
  1361 074a 49010000 		.4byte	0x149
@@ -1498,7 +1598,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1415 07bf 49010000 		.4byte	0x149
  1416 07c3 BC       		.byte	0xbc
  1417 07c4 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 26
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 26
+>>>>>>> Cleaning_code
 
 
  1418 07c5 7F150000 		.4byte	.LASF119
@@ -1558,7 +1662,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1472 083c 0C       		.uleb128 0xc
  1473 083d A6000000 		.4byte	0xa6
  1474 0841 1D       		.byte	0x1d
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 27
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 27
+>>>>>>> Cleaning_code
 
 
  1475 0842 00       		.byte	0
@@ -1618,7 +1726,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1529 08b4 B8080000 		.4byte	0x8b8
  1530 08b8 06       		.uleb128 0x6
  1531 08b9 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 28
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 28
+>>>>>>> Cleaning_code
 
 
  1532 08ba A7080000 		.4byte	0x8a7
@@ -1678,7 +1790,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1586 0937 3C       		.byte	0x3c
  1587 0938 8D000000 		.4byte	0x8d
  1588 093c 06       		.uleb128 0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 29
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 29
+>>>>>>> Cleaning_code
 
 
  1589 093d 04       		.byte	0x4
@@ -1738,7 +1854,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1643 09b2 B61F0000 		.4byte	.LASF144
  1644 09b6 09       		.byte	0x9
  1645 09b7 50       		.byte	0x50
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 30
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 30
+>>>>>>> Cleaning_code
 
 
  1646 09b8 1C090000 		.4byte	0x91c
@@ -1798,7 +1918,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1700 0a2a 4F020000 		.4byte	.LASF154
  1701 0a2e 0B       		.byte	0xb
  1702 0a2f CA       		.byte	0xca
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 31
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 31
+>>>>>>> Cleaning_code
 
 
  1703 0a30 160B0000 		.4byte	0xb16
@@ -1858,7 +1982,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1757 0a9d C3170000 		.4byte	0x17c3
  1758 0aa1 28       		.byte	0x28
  1759 0aa2 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 32
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 32
+>>>>>>> Cleaning_code
 
 
  1760 0aa3 6C040000 		.4byte	.LASF163
@@ -1918,7 +2046,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1814 0b17 04       		.byte	0x4
  1815 0b18 E2090000 		.4byte	0x9e2
  1816 0b1c 03       		.uleb128 0x3
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 33
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 33
+>>>>>>> Cleaning_code
 
 
  1817 0b1d AB040000 		.4byte	.LASF172
@@ -1978,7 +2110,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1871 0b8d 0B       		.byte	0xb
  1872 0b8e 9101     		.2byte	0x191
  1873 0b90 400B0000 		.4byte	0xb40
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 34
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 34
+>>>>>>> Cleaning_code
 
 
  1874 0b94 00       		.byte	0
@@ -2038,7 +2174,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1928 0c05 6B01     		.2byte	0x16b
  1929 0c07 4D0C0000 		.4byte	0xc4d
  1930 0c0b 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 35
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 35
+>>>>>>> Cleaning_code
 
 
  1931 0c0c 7E0B0000 		.4byte	.LASF187
@@ -2098,7 +2238,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  1985 0c80 43130000 		.4byte	.LASF189
  1986 0c84 0B       		.byte	0xb
  1987 0c85 8001     		.2byte	0x180
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 36
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 36
+>>>>>>> Cleaning_code
 
 
  1988 0c87 D2090000 		.4byte	0x9d2
@@ -2158,7 +2302,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2042 0cfb C201     		.2byte	0x1c2
  2043 0cfd 600D0000 		.4byte	0xd60
  2044 0d01 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 37
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 37
+>>>>>>> Cleaning_code
 
 
  2045 0d02 A5040000 		.4byte	.LASF203
@@ -2218,7 +2366,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2099 0d7e 07       		.byte	0x7
  2100 0d7f 00       		.byte	0
  2101 0d80 20       		.uleb128 0x20
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 38
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 38
+>>>>>>> Cleaning_code
 
 
  2102 0d81 F21C0000 		.4byte	.LASF208
@@ -2278,7 +2430,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2156 0ded 27090000 		.4byte	0x927
  2157 0df1 18       		.byte	0x18
  2158 0df2 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 39
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 39
+>>>>>>> Cleaning_code
 
 
  2159 0df3 1E100000 		.4byte	.LASF214
@@ -2338,7 +2494,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2213 0e5f 8F1E0000 		.4byte	.LASF221
  2214 0e63 0E       		.byte	0xe
  2215 0e64 D6       		.byte	0xd6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 40
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 40
+>>>>>>> Cleaning_code
 
 
  2216 0e65 27090000 		.4byte	0x927
@@ -2398,7 +2558,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2270 0ed0 0C       		.byte	0xc
  2271 0ed1 00       		.byte	0
  2272 0ed2 03       		.uleb128 0x3
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 41
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 41
+>>>>>>> Cleaning_code
 
 
  2273 0ed3 8F040000 		.4byte	.LASF228
@@ -2458,7 +2622,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2327 0f3f 27090000 		.4byte	0x927
  2328 0f43 04       		.byte	0x4
  2329 0f44 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 42
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 42
+>>>>>>> Cleaning_code
 
 
  2330 0f45 08       		.uleb128 0x8
@@ -2518,7 +2686,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2384 0fbb 0E       		.byte	0xe
  2385 0fbc 1401     		.2byte	0x114
  2386 0fbe 27090000 		.4byte	0x927
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 43
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 43
+>>>>>>> Cleaning_code
 
 
  2387 0fc2 1C       		.byte	0x1c
@@ -2577,8 +2749,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2440 103a 1C090000 		.4byte	0x91c
  2441 103e 1002     		.2byte	0x210
  2442 1040 19       		.uleb128 0x19
+<<<<<<< HEAD
  2443 1041 58170000 		.4byte	.LASF244
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 44
+=======
+ 2443 1041 F5160000 		.4byte	.LASF244
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 44
+>>>>>>> Cleaning_code
 
 
  2444 1045 0E       		.byte	0xe
@@ -2638,7 +2815,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2498 10c1 A6000000 		.4byte	0xa6
  2499 10c5 0B       		.byte	0xb
  2500 10c6 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 45
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 45
+>>>>>>> Cleaning_code
 
 
  2501 10c7 0B       		.uleb128 0xb
@@ -2698,7 +2879,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2555 113a 06190000 		.4byte	.LASF255
  2556 113e 0E       		.byte	0xe
  2557 113f 3E01     		.2byte	0x13e
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 46
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 46
+>>>>>>> Cleaning_code
 
 
  2558 1141 27090000 		.4byte	0x927
@@ -2758,7 +2943,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2612 11b2 04120000 		.4byte	0x1204
  2613 11b6 23       		.uleb128 0x23
  2614 11b7 435200   		.ascii	"CR\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 47
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 47
+>>>>>>> Cleaning_code
 
 
  2615 11ba 0E       		.byte	0xe
@@ -2818,7 +3007,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2669 1233 03       		.byte	0x3
  2670 1234 00       		.byte	0
  2671 1235 1A       		.uleb128 0x1a
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 48
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 48
+>>>>>>> Cleaning_code
 
 
  2672 1236 25120000 		.4byte	0x1225
@@ -2878,7 +3071,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2726 12aa 18       		.uleb128 0x18
  2727 12ab 5D040000 		.4byte	.LASF269
  2728 12af 0E       		.byte	0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 49
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 49
+>>>>>>> Cleaning_code
 
 
  2729 12b0 4902     		.2byte	0x249
@@ -2938,7 +3135,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2783 1323 2C090000 		.4byte	0x92c
  2784 1327 14       		.byte	0x14
  2785 1328 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 50
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 50
+>>>>>>> Cleaning_code
 
 
  2786 1329 79050000 		.4byte	.LASF276
@@ -2998,7 +3199,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2840 139e 6B010000 		.4byte	.LASF283
  2841 13a2 0E       		.byte	0xe
  2842 13a3 D002     		.2byte	0x2d0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 51
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 51
+>>>>>>> Cleaning_code
 
 
  2843 13a5 27090000 		.4byte	0x927
@@ -3058,7 +3263,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2897 1419 27090000 		.4byte	0x927
  2898 141d 04       		.byte	0x4
  2899 141e 23       		.uleb128 0x23
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 52
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 52
+>>>>>>> Cleaning_code
 
 
  2900 141f 535200   		.ascii	"SR\000"
@@ -3118,7 +3327,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  2954 1491 0E       		.byte	0xe
  2955 1492 0B03     		.2byte	0x30b
  2956 1494 27090000 		.4byte	0x927
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 53
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 53
+>>>>>>> Cleaning_code
 
 
  2957 1498 00       		.byte	0
@@ -3178,7 +3391,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3011 150d 0F       		.byte	0xf
  3012 150e 65       		.byte	0x65
  3013 150f BF000000 		.4byte	0xbf
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 54
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 54
+>>>>>>> Cleaning_code
 
 
  3014 1513 03       		.uleb128 0x3
@@ -3238,7 +3455,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3068 157f 10       		.uleb128 0x10
  3069 1580 73323100 		.ascii	"s21\000"
  3070 1584 10       		.byte	0x10
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 55
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 55
+>>>>>>> Cleaning_code
 
 
  3071 1585 FB       		.byte	0xfb
@@ -3298,7 +3519,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3125 15f5 0401     		.2byte	0x104
  3126 15f7 08150000 		.4byte	0x1508
  3127 15fb 38       		.byte	0x38
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 56
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 56
+>>>>>>> Cleaning_code
 
 
  3128 15fc 23       		.uleb128 0x23
@@ -3358,7 +3583,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3182 166b 23       		.uleb128 0x23
  3183 166c 6C7200   		.ascii	"lr\000"
  3184 166f 10       		.byte	0x10
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 57
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 57
+>>>>>>> Cleaning_code
 
 
  3185 1670 0F01     		.2byte	0x10f
@@ -3418,7 +3647,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3239 16d8 52130000 		.4byte	.LASF305
  3240 16dc 11       		.byte	0x11
  3241 16dd 6F       		.byte	0x6f
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 58
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 58
+>>>>>>> Cleaning_code
 
 
  3242 16de F0160000 		.4byte	0x16f0
@@ -3478,7 +3711,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3296 174a 12       		.byte	0x12
  3297 174b 4A       		.byte	0x4a
  3298 174c 4E090000 		.4byte	0x94e
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 59
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 59
+>>>>>>> Cleaning_code
 
 
  3299 1750 04       		.byte	0x4
@@ -3538,7 +3775,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3353 17b7 00       		.byte	0
  3354 17b8 03       		.uleb128 0x3
  3355 17b9 76040000 		.4byte	.LASF319
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 60
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 60
+>>>>>>> Cleaning_code
 
 
  3356 17bd 13       		.byte	0x13
@@ -3598,7 +3839,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3410 1833 081F0000 		.4byte	.LASF328
  3411 1837 14       		.byte	0x14
  3412 1838 35       		.byte	0x35
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 61
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 61
+>>>>>>> Cleaning_code
 
 
  3413 1839 400B0000 		.4byte	0xb40
@@ -3658,7 +3903,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3467 18a5 B0180000 		.4byte	0x18b0
  3468 18a9 0C       		.uleb128 0xc
  3469 18aa A6000000 		.4byte	0xa6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 62
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 62
+>>>>>>> Cleaning_code
 
 
  3470 18ae 30       		.byte	0x30
@@ -3718,7 +3967,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3524 1917 0E       		.uleb128 0xe
  3525 1918 611F0000 		.4byte	.LASF342
  3526 191c 16       		.byte	0x16
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 63
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 63
+>>>>>>> Cleaning_code
 
 
  3527 191d 3C       		.byte	0x3c
@@ -3778,7 +4031,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3581 1989 46       		.byte	0x46
  3582 198a E6080000 		.4byte	0x8e6
  3583 198e 14       		.byte	0x14
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 64
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 64
+>>>>>>> Cleaning_code
 
 
  3584 198f 0E       		.uleb128 0xe
@@ -3838,7 +4095,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3638 1a01 3D       		.byte	0x3d
  3639 1a02 160B0000 		.4byte	0xb16
  3640 1a06 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 65
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 65
+>>>>>>> Cleaning_code
 
 
  3641 1a07 0E       		.uleb128 0xe
@@ -3898,7 +4159,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3695 1a73 4E       		.byte	0x4e
  3696 1a74 400B0000 		.4byte	0xb40
  3697 1a78 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 66
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 66
+>>>>>>> Cleaning_code
 
 
  3698 1a79 0E       		.uleb128 0xe
@@ -3958,7 +4223,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3752 1ae5 EA1A0000 		.4byte	0x1aea
  3753 1ae9 00       		.byte	0
  3754 1aea 06       		.uleb128 0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 67
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 67
+>>>>>>> Cleaning_code
 
 
  3755 1aeb 04       		.byte	0x4
@@ -4018,7 +4287,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3809 1b66 501B0000 		.4byte	0x1b50
  3810 1b6a 14       		.uleb128 0x14
  3811 1b6b 9B090000 		.4byte	0x99b
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 68
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 68
+>>>>>>> Cleaning_code
 
 
  3812 1b6f 791B0000 		.4byte	0x1b79
@@ -4078,7 +4351,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3866 1bdb 16       		.uleb128 0x16
  3867 1bdc D01B0000 		.4byte	0x1bd0
  3868 1be0 0B       		.uleb128 0xb
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 69
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 69
+>>>>>>> Cleaning_code
 
 
  3869 1be1 DB1B0000 		.4byte	0x1bdb
@@ -4138,7 +4415,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3923 1c63 7C1C0000 		.4byte	0x1c7c
  3924 1c67 15       		.uleb128 0x15
  3925 1c68 BF000000 		.4byte	0xbf
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 70
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 70
+>>>>>>> Cleaning_code
 
 
  3926 1c6c 15       		.uleb128 0x15
@@ -4198,7 +4479,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  3980 1cd5 F21C0000 		.4byte	0x1cf2
  3981 1cd9 0E       		.uleb128 0xe
  3982 1cda 41060000 		.4byte	.LASF396
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 71
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 71
+>>>>>>> Cleaning_code
 
 
  3983 1cde 1A       		.byte	0x1a
@@ -4258,7 +4543,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4037 1d56 1C090000 		.4byte	0x91c
  4038 1d5a 00       		.byte	0
  4039 1d5b 06       		.uleb128 0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 72
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 72
+>>>>>>> Cleaning_code
 
 
  4040 1d5c 04       		.byte	0x4
@@ -4318,7 +4607,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4094 1dc7 B6       		.byte	0xb6
  4095 1dc8 911D0000 		.4byte	0x1d91
  4096 1dcc 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 73
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 73
+>>>>>>> Cleaning_code
 
 
  4097 1dcd 1A       		.uleb128 0x1a
@@ -4377,8 +4670,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4150 1e35 27090000 		.4byte	0x927
  4151 1e39 1C       		.byte	0x1c
  4152 1e3a 0E       		.uleb128 0xe
+<<<<<<< HEAD
  4153 1e3b 9D190000 		.4byte	.LASF407
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 74
+=======
+ 4153 1e3b 3A190000 		.4byte	.LASF407
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 74
+>>>>>>> Cleaning_code
 
 
  4154 1e3f 1B       		.byte	0x1b
@@ -4438,7 +4736,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4208 1ea8 CB       		.byte	0xcb
  4209 1ea9 1C090000 		.4byte	0x91c
  4210 1ead 10       		.byte	0x10
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 75
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 75
+>>>>>>> Cleaning_code
 
 
  4211 1eae 0E       		.uleb128 0xe
@@ -4498,7 +4800,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4265 1f17 06220000 		.4byte	.LASF422
  4266 1f1b 1B       		.byte	0x1b
  4267 1f1c F0       		.byte	0xf0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 76
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 76
+>>>>>>> Cleaning_code
 
 
  4268 1f1d C71E0000 		.4byte	0x1ec7
@@ -4558,7 +4864,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4322 1f8e 29       		.uleb128 0x29
  4323 1f8f A71E0000 		.4byte	.LASF431
  4324 1f93 02       		.byte	0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 77
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 77
+>>>>>>> Cleaning_code
 
 
  4325 1f94 29       		.uleb128 0x29
@@ -4617,8 +4927,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4378 2004 9F01     		.2byte	0x19f
  4379 2006 8D200000 		.4byte	0x208d
  4380 200a 18       		.uleb128 0x18
+<<<<<<< HEAD
  4381 200b C7140000 		.4byte	.LASF442
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 78
+=======
+ 4381 200b 64140000 		.4byte	.LASF442
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 78
+>>>>>>> Cleaning_code
 
 
  4382 200f 1D       		.byte	0x1d
@@ -4678,7 +4993,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4436 2084 1D       		.byte	0x1d
  4437 2085 CF01     		.2byte	0x1cf
  4438 2087 1C090000 		.4byte	0x91c
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 79
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 79
+>>>>>>> Cleaning_code
 
 
  4439 208b 34       		.byte	0x34
@@ -4738,7 +5057,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4493 20fe 6001     		.2byte	0x160
  4494 2100 BE1F0000 		.4byte	0x1fbe
  4495 2104 02       		.byte	0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 80
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 80
+>>>>>>> Cleaning_code
 
 
  4496 2105 18       		.uleb128 0x18
@@ -4798,7 +5121,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4550 217a 00       		.byte	0
  4551 217b 08       		.uleb128 0x8
  4552 217c D9040000 		.4byte	.LASF462
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 81
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 81
+>>>>>>> Cleaning_code
 
 
  4553 2180 1D       		.byte	0x1d
@@ -4858,7 +5185,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4607 21f3 37000000 		.4byte	0x37
  4608 21f7 1E       		.byte	0x1e
  4609 21f8 5F       		.byte	0x5f
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 82
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 82
+>>>>>>> Cleaning_code
 
 
  4610 21f9 1C220000 		.4byte	0x221c
@@ -4918,7 +5249,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4664 226a 1C       		.uleb128 0x1c
  4665 226b 30       		.byte	0x30
  4666 226c 1F       		.byte	0x1f
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 83
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 83
+>>>>>>> Cleaning_code
 
 
  4667 226d 0601     		.2byte	0x106
@@ -4978,7 +5313,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4721 22e3 4B1A0000 		.4byte	0x1a4b
  4722 22e7 28       		.byte	0x28
  4723 22e8 23       		.uleb128 0x23
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 84
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 84
+>>>>>>> Cleaning_code
 
 
  4724 22e9 63616E00 		.ascii	"can\000"
@@ -5038,7 +5377,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4778 2358 1C       		.byte	0x1c
  4779 2359 21       		.byte	0x21
  4780 235a F9       		.byte	0xf9
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 85
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 85
+>>>>>>> Cleaning_code
 
 
  4781 235b BA230000 		.4byte	0x23ba
@@ -5098,7 +5441,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4835 23d1 08       		.uleb128 0x8
  4836 23d2 AB0B0000 		.4byte	.LASF496
  4837 23d6 21       		.byte	0x21
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 86
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 86
+>>>>>>> Cleaning_code
 
 
  4838 23d7 1B01     		.2byte	0x11b
@@ -5158,7 +5505,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4892 244d 9D250000 		.4byte	0x259d
  4893 2451 2C       		.byte	0x2c
  4894 2452 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 87
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 87
+>>>>>>> Cleaning_code
 
 
  4895 2453 08       		.uleb128 0x8
@@ -5218,7 +5569,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  4949 24ca 06       		.uleb128 0x6
  4950 24cb 04       		.byte	0x4
  4951 24cc D0240000 		.4byte	0x24d0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 88
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 88
+>>>>>>> Cleaning_code
 
 
  4952 24d0 1F       		.uleb128 0x1f
@@ -5278,7 +5633,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5006 2542 21       		.byte	0x21
  5007 2543 6601     		.2byte	0x166
  5008 2545 1C090000 		.4byte	0x91c
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 89
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 89
+>>>>>>> Cleaning_code
 
 
  5009 2549 0C       		.byte	0xc
@@ -5338,7 +5697,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5063 25b8 CF250000 		.4byte	0x25cf
  5064 25bc 29       		.uleb128 0x29
  5065 25bd E8080000 		.4byte	.LASF514
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 90
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 90
+>>>>>>> Cleaning_code
 
 
  5066 25c1 00       		.byte	0
@@ -5398,7 +5761,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5120 2630 15       		.uleb128 0x15
  5121 2631 0A260000 		.4byte	0x260a
  5122 2635 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 91
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 91
+>>>>>>> Cleaning_code
 
 
  5123 2636 06       		.uleb128 0x6
@@ -5458,7 +5825,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5177 269e 97260000 		.4byte	0x2697
  5178 26a2 22       		.uleb128 0x22
  5179 26a3 24050000 		.4byte	.LASF525
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 92
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 92
+>>>>>>> Cleaning_code
 
 
  5180 26a7 23       		.byte	0x23
@@ -5518,7 +5889,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5234 2716 18       		.uleb128 0x18
  5235 2717 C90B0000 		.4byte	.LASF533
  5236 271b 25       		.byte	0x25
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 93
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 93
+>>>>>>> Cleaning_code
 
 
  5237 271c A701     		.2byte	0x1a7
@@ -5578,7 +5953,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5291 278f 0C       		.byte	0xc
  5292 2790 23       		.uleb128 0x23
  5293 2791 535200   		.ascii	"SR\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 94
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 94
+>>>>>>> Cleaning_code
 
 
  5294 2794 26       		.byte	0x26
@@ -5638,7 +6017,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5348 2809 26       		.byte	0x26
  5349 280a AC01     		.2byte	0x1ac
  5350 280c 35120000 		.4byte	0x1235
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 95
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 95
+>>>>>>> Cleaning_code
 
 
  5351 2810 34       		.byte	0x34
@@ -5698,7 +6081,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5405 2881 A2200000 		.4byte	.LASF546
  5406 2885 25       		.byte	0x25
  5407 2886 7E01     		.2byte	0x17e
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 96
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 96
+>>>>>>> Cleaning_code
 
 
  5408 2888 6B280000 		.4byte	0x286b
@@ -5758,7 +6145,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5462 28fd 29       		.uleb128 0x29
  5463 28fe FC0C0000 		.4byte	.LASF553
  5464 2902 01       		.byte	0x1
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 97
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 97
+>>>>>>> Cleaning_code
 
 
  5465 2903 29       		.uleb128 0x29
@@ -5818,7 +6209,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5519 2973 28       		.byte	0x28
  5520 2974 7D01     		.2byte	0x17d
  5521 2976 8D290000 		.4byte	0x298d
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 98
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 98
+>>>>>>> Cleaning_code
 
 
  5522 297a 29       		.uleb128 0x29
@@ -5878,7 +6273,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5576 29ed 28       		.byte	0x28
  5577 29ee 9801     		.2byte	0x198
  5578 29f0 842A0000 		.4byte	0x2a84
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 99
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 99
+>>>>>>> Cleaning_code
 
 
  5579 29f4 18       		.uleb128 0x18
@@ -5938,7 +6337,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5633 2a69 18       		.uleb128 0x18
  5634 2a6a C2010000 		.4byte	.LASF579
  5635 2a6e 28       		.byte	0x28
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 100
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 100
+>>>>>>> Cleaning_code
 
 
  5636 2a6f C601     		.2byte	0x1c6
@@ -5998,7 +6401,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5690 2ade 1B       		.uleb128 0x1b
  5691 2adf D4210000 		.4byte	.LASF587
  5692 2ae3 20       		.byte	0x20
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 101
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 101
+>>>>>>> Cleaning_code
 
 
  5693 2ae4 2A       		.byte	0x2a
@@ -6058,7 +6465,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5747 2b59 2A       		.byte	0x2a
  5748 2b5a EB       		.byte	0xeb
  5749 2b5b 5F2B0000 		.4byte	0x2b5f
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 102
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 102
+>>>>>>> Cleaning_code
 
 
  5750 2b5f 06       		.uleb128 0x6
@@ -6118,7 +6529,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5804 2bce F6080000 		.4byte	0x8f6
  5805 2bd2 12       		.byte	0x12
  5806 2bd3 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 103
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 103
+>>>>>>> Cleaning_code
 
 
  5807 2bd4 08       		.uleb128 0x8
@@ -6178,7 +6593,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5861 2c46 7D01     		.2byte	0x17d
  5862 2c48 1D2C0000 		.4byte	0x2c1d
  5863 2c4c 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 104
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 104
+>>>>>>> Cleaning_code
 
 
  5864 2c4d 18       		.uleb128 0x18
@@ -6238,7 +6657,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5918 2cbf 13140000 		.4byte	.LASF604
  5919 2cc3 2C       		.byte	0x2c
  5920 2cc4 2501     		.2byte	0x125
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 105
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 105
+>>>>>>> Cleaning_code
 
 
  5921 2cc6 1C090000 		.4byte	0x91c
@@ -6298,7 +6721,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  5975 2d3c E22C0000 		.4byte	0x2ce2
  5976 2d40 04       		.byte	0x4
  5977 2d41 18       		.uleb128 0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 106
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 106
+>>>>>>> Cleaning_code
 
 
  5978 2d42 14150000 		.4byte	.LASF547
@@ -6358,7 +6785,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6032 2dbb C401     		.2byte	0x1c4
  6033 2dbd 282C0000 		.4byte	0x2c28
  6034 2dc1 20       		.uleb128 0x20
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 107
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 107
+>>>>>>> Cleaning_code
 
 
  6035 2dc2 40110000 		.4byte	.LASF613
@@ -6417,8 +6848,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6088 2e2e ED2D0000 		.4byte	0x2ded
  6089 2e32 08       		.byte	0x8
  6090 2e33 0E       		.uleb128 0xe
+<<<<<<< HEAD
  6091 2e34 CA160000 		.4byte	.LASF620
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 108
+=======
+ 6091 2e34 67160000 		.4byte	.LASF620
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 108
+>>>>>>> Cleaning_code
 
 
  6092 2e38 2D       		.byte	0x2d
@@ -6478,7 +6914,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6146 2ea3 2D       		.byte	0x2d
  6147 2ea4 6E       		.byte	0x6e
  6148 2ea5 641B0000 		.4byte	0x1b64
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 109
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 109
+>>>>>>> Cleaning_code
 
 
  6149 2ea9 08       		.byte	0x8
@@ -6538,7 +6978,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6203 2f15 29       		.uleb128 0x29
  6204 2f16 D5020000 		.4byte	.LASF630
  6205 2f1a 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 110
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 110
+>>>>>>> Cleaning_code
 
 
  6206 2f1b 29       		.uleb128 0x29
@@ -6598,7 +7042,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6260 2f8a F7       		.byte	0xf7
  6261 2f8b 811D0000 		.4byte	0x1d81
  6262 2f8f 18       		.byte	0x18
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 111
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 111
+>>>>>>> Cleaning_code
 
 
  6263 2f90 0E       		.uleb128 0xe
@@ -6658,7 +7106,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6317 3002 00       		.byte	0
  6318 3003 0D       		.uleb128 0xd
  6319 3004 08       		.byte	0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 112
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 112
+>>>>>>> Cleaning_code
 
 
  6320 3005 30       		.byte	0x30
@@ -6718,7 +7170,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6374 3071 06040000 		.4byte	.LASF625
  6375 3075 30       		.byte	0x30
  6376 3076 EC       		.byte	0xec
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 113
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 113
+>>>>>>> Cleaning_code
 
 
  6377 3077 371D0000 		.4byte	0x1d37
@@ -6778,7 +7234,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6431 30e4 220D0000 		.4byte	.LASF654
  6432 30e8 03       		.byte	0x3
  6433 30e9 29       		.uleb128 0x29
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 114
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 114
+>>>>>>> Cleaning_code
 
 
  6434 30ea 8D120000 		.4byte	.LASF655
@@ -6838,7 +7298,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6488 3161 24       		.byte	0x24
  6489 3162 18       		.uleb128 0x18
  6490 3163 C2010000 		.4byte	.LASF579
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 115
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 115
+>>>>>>> Cleaning_code
 
 
  6491 3167 32       		.byte	0x32
@@ -6898,7 +7362,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6545 31d8 01090000 		.4byte	0x901
  6546 31dc 08       		.byte	0x8
  6547 31dd 23       		.uleb128 0x23
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 116
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 116
+>>>>>>> Cleaning_code
 
 
  6548 31de 63723100 		.ascii	"cr1\000"
@@ -6958,7 +7426,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6602 3256 01090000 		.4byte	0x901
  6603 325a 0A       		.byte	0xa
  6604 325b 23       		.uleb128 0x23
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 117
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 117
+>>>>>>> Cleaning_code
 
 
  6605 325c 65706300 		.ascii	"epc\000"
@@ -7018,7 +7490,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6659 32d1 5D140000 		.4byte	.LASF674
  6660 32d5 34       		.byte	0x34
  6661 32d6 B501     		.2byte	0x1b5
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 118
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 118
+>>>>>>> Cleaning_code
 
 
  6662 32d8 E6080000 		.4byte	0x8e6
@@ -7078,7 +7554,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6716 334b FF       		.byte	0xff
  6717 334c E6080000 		.4byte	0x8e6
  6718 3350 2B       		.uleb128 0x2b
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 119
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 119
+>>>>>>> Cleaning_code
 
 
  6719 3351 07       		.byte	0x7
@@ -7138,7 +7618,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6773 33c0 06       		.byte	0x6
  6774 33c1 00       		.byte	0
  6775 33c2 08       		.uleb128 0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 120
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 120
+>>>>>>> Cleaning_code
 
 
  6776 33c3 AF100000 		.4byte	.LASF695
@@ -7198,7 +7682,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6830 3432 37140000 		.4byte	.LASF705
  6831 3436 33       		.byte	0x33
  6832 3437 3A01     		.2byte	0x13a
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 121
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 121
+>>>>>>> Cleaning_code
 
 
  6833 3439 0D340000 		.4byte	0x340d
@@ -7258,7 +7746,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6887 34b5 06       		.uleb128 0x6
  6888 34b6 04       		.byte	0x4
  6889 34b7 BB340000 		.4byte	0x34bb
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 122
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 122
+>>>>>>> Cleaning_code
 
 
  6890 34bb 14       		.uleb128 0x14
@@ -7318,7 +7810,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  6944 3531 35       		.byte	0x35
  6945 3532 3A       		.byte	0x3a
  6946 3533 27090000 		.4byte	0x927
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 123
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 123
+>>>>>>> Cleaning_code
 
 
  6947 3537 0C       		.byte	0xc
@@ -7378,7 +7874,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7001 35a0 0E       		.uleb128 0xe
  7002 35a1 27110000 		.4byte	.LASF723
  7003 35a5 35       		.byte	0x35
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 124
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 124
+>>>>>>> Cleaning_code
 
 
  7004 35a6 4C       		.byte	0x4c
@@ -7438,7 +7938,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7058 360f 27090000 		.4byte	0x927
  7059 3613 08       		.byte	0x8
  7060 3614 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 125
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 125
+>>>>>>> Cleaning_code
 
 
  7061 3615 27110000 		.4byte	.LASF723
@@ -7498,7 +8002,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7115 3684 35       		.byte	0x35
  7116 3685 6C       		.byte	0x6c
  7117 3686 27090000 		.4byte	0x927
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 126
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 126
+>>>>>>> Cleaning_code
 
 
  7118 368a 08       		.byte	0x8
@@ -7557,8 +8065,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7171 36f2 27090000 		.4byte	0x927
  7172 36f6 2C       		.byte	0x2c
  7173 36f7 0E       		.uleb128 0xe
+<<<<<<< HEAD
  7174 36f8 550D0000 		.4byte	.LASF744
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 127
+=======
+ 7174 36f8 F20C0000 		.4byte	.LASF744
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 127
+>>>>>>> Cleaning_code
 
 
  7175 36fc 35       		.byte	0x35
@@ -7618,7 +8131,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7229 376c 35       		.byte	0x35
  7230 376d 85       		.byte	0x85
  7231 376e 27090000 		.4byte	0x927
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 128
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 128
+>>>>>>> Cleaning_code
 
 
  7232 3772 0404     		.2byte	0x404
@@ -7677,8 +8194,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7285 37e2 8D390000 		.4byte	0x398d
  7286 37e6 0005     		.2byte	0x500
  7287 37e8 12       		.uleb128 0x12
+<<<<<<< HEAD
  7288 37e9 241F0000 		.4byte	.LASF761
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 129
+=======
+ 7288 37e9 C11E0000 		.4byte	.LASF761
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 129
+>>>>>>> Cleaning_code
 
 
  7289 37ed 35       		.byte	0x35
@@ -7738,7 +8260,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7343 3862 35       		.byte	0x35
  7344 3863 A1       		.byte	0xa1
  7345 3864 27090000 		.4byte	0x927
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 130
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 130
+>>>>>>> Cleaning_code
 
 
  7346 3868 2008     		.2byte	0x820
@@ -7797,8 +8323,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7399 38d9 C2390000 		.4byte	0x39c2
  7400 38dd 8008     		.2byte	0x880
  7401 38df 12       		.uleb128 0x12
+<<<<<<< HEAD
  7402 38e0 14110000 		.4byte	.LASF780
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 131
+=======
+ 7402 38e0 B1100000 		.4byte	.LASF780
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 131
+>>>>>>> Cleaning_code
 
 
  7403 38e4 35       		.byte	0x35
@@ -7858,7 +8389,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7457 3958 A6000000 		.4byte	0xa6
  7458 395c AF       		.byte	0xaf
  7459 395d 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 132
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 132
+>>>>>>> Cleaning_code
 
 
  7460 395e 1A       		.uleb128 0x1a
@@ -7918,7 +8453,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7514 39dc E7390000 		.4byte	0x39e7
  7515 39e0 0C       		.uleb128 0xc
  7516 39e1 A6000000 		.4byte	0xa6
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 133
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 133
+>>>>>>> Cleaning_code
 
 
  7517 39e5 0F       		.byte	0xf
@@ -7978,7 +8517,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7571 3a55 34       		.byte	0x34
  7572 3a56 CA       		.byte	0xca
  7573 3a57 233A0000 		.4byte	0x3a23
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 134
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 134
+>>>>>>> Cleaning_code
 
 
  7574 3a5b 16       		.uleb128 0x16
@@ -8038,7 +8581,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7628 3abe 0C1D0000 		.4byte	0x1d0c
  7629 3ac2 00       		.byte	0
  7630 3ac3 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 135
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 135
+>>>>>>> Cleaning_code
 
 
  7631 3ac4 1B120000 		.4byte	.LASF793
@@ -8098,7 +8645,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7685 3b2e 04       		.byte	0x4
  7686 3b2f F61A0000 		.4byte	0x1af6
  7687 3b33 1D       		.uleb128 0x1d
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 136
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 136
+>>>>>>> Cleaning_code
 
 
  7688 3b34 04       		.byte	0x4
@@ -8158,7 +8709,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7742 3ba2 1201     		.2byte	0x112
  7743 3ba4 553B0000 		.4byte	0x3b55
  7744 3ba8 1C       		.uleb128 0x1c
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 137
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 137
+>>>>>>> Cleaning_code
 
 
  7745 3ba9 24       		.byte	0x24
@@ -8218,7 +8773,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7799 3c1e 34       		.byte	0x34
  7800 3c1f 5001     		.2byte	0x150
  7801 3c21 01090000 		.4byte	0x901
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 138
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 138
+>>>>>>> Cleaning_code
 
 
  7802 3c25 1C       		.byte	0x1c
@@ -8278,7 +8837,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7856 3c95 7201     		.2byte	0x172
  7857 3c97 513C0000 		.4byte	0x3c51
  7858 3c9b 16       		.uleb128 0x16
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 139
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 139
+>>>>>>> Cleaning_code
 
 
  7859 3c9c 8F3C0000 		.4byte	0x3c8f
@@ -8338,7 +8901,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7913 3d0f 25000000 		.4byte	0x25
  7914 3d13 36       		.byte	0x36
  7915 3d14 8202     		.2byte	0x282
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 140
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 140
+>>>>>>> Cleaning_code
 
 
  7916 3d16 333D0000 		.4byte	0x3d33
@@ -8398,7 +8965,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  7970 3d87 0B       		.uleb128 0xb
  7971 3d88 FA3C0000 		.4byte	0x3cfa
  7972 3d8c 983D0000 		.4byte	0x3d98
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 141
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 141
+>>>>>>> Cleaning_code
 
 
  7973 3d90 2E       		.uleb128 0x2e
@@ -8458,7 +9029,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8027 3e09 05       		.uleb128 0x5
  8028 3e0a 03       		.byte	0x3
  8029 3e0b 00000000 		.4byte	nb_samples.14110
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 142
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 142
+>>>>>>> Cleaning_code
 
 
  8030 3e0f 34       		.uleb128 0x34
@@ -8518,7 +9093,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8084 3e78 863E0000 		.4byte	0x3e86
  8085 3e7c 37       		.uleb128 0x37
  8086 3e7d 01       		.uleb128 0x1
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 143
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 143
+>>>>>>> Cleaning_code
 
 
  8087 3e7e 50       		.byte	0x50
@@ -8578,7 +9157,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8141 3f00 B6000000 		.4byte	.LVL10
  8142 3f04 263F0000 		.4byte	0x3f26
  8143 3f08 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 144
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 144
+>>>>>>> Cleaning_code
 
 
  8144 3f09 06       		.uleb128 0x6
@@ -8638,7 +9221,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8198 0019 0B       		.uleb128 0xb
  8199 001a 03       		.uleb128 0x3
  8200 001b 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 145
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 145
+>>>>>>> Cleaning_code
 
 
  8201 001c 00       		.byte	0
@@ -8698,7 +9285,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8255 0052 03       		.uleb128 0x3
  8256 0053 0E       		.uleb128 0xe
  8257 0054 3A       		.uleb128 0x3a
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 146
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 146
+>>>>>>> Cleaning_code
 
 
  8258 0055 0B       		.uleb128 0xb
@@ -8758,7 +9349,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8312 008b 0B       		.uleb128 0xb
  8313 008c 0B       		.uleb128 0xb
  8314 008d 3A       		.uleb128 0x3a
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 147
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 147
+>>>>>>> Cleaning_code
 
 
  8315 008e 0B       		.uleb128 0xb
@@ -8818,7 +9413,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8369 00c4 01       		.byte	0x1
  8370 00c5 03       		.uleb128 0x3
  8371 00c6 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 148
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 148
+>>>>>>> Cleaning_code
 
 
  8372 00c7 0B       		.uleb128 0xb
@@ -8878,7 +9477,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8426 00fd 13       		.uleb128 0x13
  8427 00fe 00       		.byte	0
  8428 00ff 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 149
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 149
+>>>>>>> Cleaning_code
 
 
  8429 0100 17       		.uleb128 0x17
@@ -8938,7 +9541,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8483 0136 01       		.byte	0x1
  8484 0137 03       		.uleb128 0x3
  8485 0138 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 150
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 150
+>>>>>>> Cleaning_code
 
 
  8486 0139 0B       		.uleb128 0xb
@@ -8998,7 +9605,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8540 016f 01       		.uleb128 0x1
  8541 0170 13       		.uleb128 0x13
  8542 0171 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 151
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 151
+>>>>>>> Cleaning_code
 
 
  8543 0172 00       		.byte	0
@@ -9058,7 +9669,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8597 01a8 00       		.byte	0
  8598 01a9 24       		.uleb128 0x24
  8599 01aa 0D       		.uleb128 0xd
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 152
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 152
+>>>>>>> Cleaning_code
 
 
  8600 01ab 00       		.byte	0
@@ -9118,7 +9733,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8654 01e1 00       		.byte	0
  8655 01e2 00       		.byte	0
  8656 01e3 28       		.uleb128 0x28
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 153
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 153
+>>>>>>> Cleaning_code
 
 
  8657 01e4 04       		.uleb128 0x4
@@ -9178,7 +9797,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8711 021a 00       		.byte	0
  8712 021b 2C       		.uleb128 0x2c
  8713 021c 13       		.uleb128 0x13
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 154
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 154
+>>>>>>> Cleaning_code
 
 
  8714 021d 01       		.byte	0x1
@@ -9238,7 +9861,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8768 0253 30       		.uleb128 0x30
  8769 0254 28       		.uleb128 0x28
  8770 0255 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 155
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 155
+>>>>>>> Cleaning_code
 
 
  8771 0256 03       		.uleb128 0x3
@@ -9298,7 +9925,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8825 028d 0B       		.uleb128 0xb
  8826 028e 49       		.uleb128 0x49
  8827 028f 13       		.uleb128 0x13
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 156
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 156
+>>>>>>> Cleaning_code
 
 
  8828 0290 02       		.uleb128 0x2
@@ -9358,7 +9989,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8882 02cd 01       		.uleb128 0x1
  8883 02ce 9542     		.uleb128 0x2115
  8884 02d0 19       		.uleb128 0x19
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 157
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 157
+>>>>>>> Cleaning_code
 
 
  8885 02d1 31       		.uleb128 0x31
@@ -9418,7 +10053,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8939 030c 3B       		.uleb128 0x3b
  8940 030d 0B       		.uleb128 0xb
  8941 030e 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 158
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 158
+>>>>>>> Cleaning_code
 
 
  8942 030f 00       		.byte	0
@@ -9478,7 +10117,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  8996 002f 01       		.uleb128 0x1
  8997 0030 50       		.byte	0x50
  8998 0031 9F       		.byte	0x9f
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 159
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 159
+>>>>>>> Cleaning_code
 
 
  8999 0032 00000000 		.4byte	0
@@ -9538,7 +10181,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9053 00b6 F3       		.byte	0xf3
  9054 00b7 01       		.uleb128 0x1
  9055 00b8 50       		.byte	0x50
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 160
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 160
+>>>>>>> Cleaning_code
 
 
  9056 00b9 9F       		.byte	0x9f
@@ -9598,7 +10245,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9110 013f 0200     		.2byte	0x2
  9111 0141 3A       		.byte	0x3a
  9112 0142 9F       		.byte	0x9f
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 161
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 161
+>>>>>>> Cleaning_code
 
 
  9113 0143 16000000 		.4byte	.LVL3
@@ -9658,7 +10309,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9155      7400
  9156              	.LASF339:
  9157 0027 63685F70 		.ascii	"ch_ptrsize\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 162
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 162
+>>>>>>> Cleaning_code
 
 
  9157      74727369 
@@ -9718,7 +10373,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9183      6D5F7400 
  9184              	.LASF2:
  9185 00bb 5F5F7569 		.ascii	"__uint8_t\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 163
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 163
+>>>>>>> Cleaning_code
 
 
  9185      6E74385F 
@@ -9778,7 +10437,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9217 0137 74785F62 		.ascii	"tx_buffer\000"
  9217      75666665 
  9217      7200
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 164
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 164
+>>>>>>> Cleaning_code
 
 
  9218              	.LASF38:
@@ -9838,7 +10501,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9249 01c2 646D6174 		.ascii	"dmatx\000"
  9249      7800
  9250              	.LASF816:
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 165
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 165
+>>>>>>> Cleaning_code
 
 
  9251 01c8 736F665F 		.ascii	"sof_cb\000"
@@ -9898,7 +10565,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9279 0257 48505254 		.ascii	"HPRT\000"
  9279      00
  9280              	.LASF832:
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 166
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 166
+>>>>>>> Cleaning_code
 
 
  9281 025c 636F756E 		.ascii	"count_index\000"
@@ -9958,7 +10629,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9312              	.LASF711:
  9313 02e3 48434348 		.ascii	"HCCHAR\000"
  9313      415200
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 167
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 167
+>>>>>>> Cleaning_code
 
 
  9314              	.LASF556:
@@ -10018,7 +10693,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9342              	.LASF264:
  9343 037b 4D304152 		.ascii	"M0AR\000"
  9343      00
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 168
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 168
+>>>>>>> Cleaning_code
 
 
  9344              	.LASF718:
@@ -10078,7 +10757,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9373      5800
  9374              	.LASF625:
  9375 0406 72656164 		.ascii	"read\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 169
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 169
+>>>>>>> Cleaning_code
 
 
  9375      00
@@ -10138,7 +10821,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9403      54784D61 
  9403      696C426F 
  9403      785F5479 
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 170
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 170
+>>>>>>> Cleaning_code
 
 
  9403      70654465 
@@ -10198,7 +10885,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9429      65756564 
  9429      00
  9430              	.LASF473:
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 171
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 171
+>>>>>>> Cleaning_code
 
 
  9431 0533 63616E73 		.ascii	"canstate_t\000"
@@ -10258,7 +10949,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9457      00
  9458              	.LASF549:
  9459 05c1 47505443 		.ascii	"GPTConfig\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 172
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 172
+>>>>>>> Cleaning_code
 
 
  9459      6F6E6669 
@@ -10318,7 +11013,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9489      73697A65 
  9489      00
  9490              	.LASF554:
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 173
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 173
+>>>>>>> Cleaning_code
 
 
  9491 064a 4932435F 		.ascii	"I2C_READY\000"
@@ -10378,7 +11077,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9520              	.LASF5:
  9521 06cf 5F5F7569 		.ascii	"__uint16_t\000"
  9521      6E743136 
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 174
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 174
+>>>>>>> Cleaning_code
 
 
  9521      5F7400
@@ -10438,7 +11141,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9548              	.LASF727:
  9549 0765 73746D33 		.ascii	"stm32_otg_in_ep_t\000"
  9549      325F6F74 
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 175
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 175
+>>>>>>> Cleaning_code
 
 
  9549      675F696E 
@@ -10498,7 +11205,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9578              	.LASF40:
  9579 07f5 5F5F746D 		.ascii	"__tm_wday\000"
  9579      5F776461 
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 176
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 176
+>>>>>>> Cleaning_code
 
 
  9579      7900
@@ -10558,7 +11269,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9605      7200
  9606              	.LASF475:
  9607 088d 74787175 		.ascii	"txqueue\000"
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 177
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 177
+>>>>>>> Cleaning_code
 
 
  9607      65756500 
@@ -10618,7 +11333,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9635      656D5F64 
  9635      65627567 
  9635      5F7400
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 178
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 178
+>>>>>>> Cleaning_code
 
 
  9636              	.LASF253:
@@ -10678,7 +11397,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9666              	.LASF316:
  9667 09a6 6E5F6374 		.ascii	"n_ctxswc\000"
  9667      78737763 
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 179
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 179
+>>>>>>> Cleaning_code
 
 
  9667      00
@@ -10738,7 +11461,11 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9693 0a34 72657376 		.ascii	"resvdD00\000"
  9693      64443030 
  9693      00
+<<<<<<< HEAD
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 180
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 180
+>>>>>>> Cleaning_code
 
 
  9694              	.LASF288:
@@ -10775,6 +11502,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9711      6C656E5F 
  9711      73746174 
  9711      6500
+<<<<<<< HEAD
  9712              	.LASF847:
  9713 0a90 433A5C55 		.ascii	"C:\\Users\\Salma Chatagny\\Documents\\EPFL\\BA6\\Mi"
  9713      73657273 
@@ -10819,6 +11547,46 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9729      7000
  9730              	.LASF219:
  9731 0b35 4A535152 		.ascii	"JSQR\000"
+=======
+ 9712              	.LASF344:
+ 9713 0a90 63665F6F 		.ascii	"cf_off_newer\000"
+ 9713      66665F6E 
+ 9713      65776572 
+ 9713      00
+ 9714              	.LASF766:
+ 9715 0a9d 44494550 		.ascii	"DIEPMSK\000"
+ 9715      4D534B00 
+ 9716              	.LASF733:
+ 9717 0aa5 474F5447 		.ascii	"GOTGINT\000"
+ 9717      494E5400 
+ 9718              	.LASF805:
+ 9719 0aad 6F75745F 		.ascii	"out_cb\000"
+ 9719      636200
+ 9720              	.LASF757:
+ 9721 0ab4 4841494E 		.ascii	"HAINTMSK\000"
+ 9721      544D534B 
+ 9721      00
+ 9722              	.LASF667:
+ 9723 0abd 6F75745F 		.ascii	"out_params\000"
+ 9723      70617261 
+ 9723      6D7300
+ 9724              	.LASF301:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 181
+
+
+ 9725 0ac8 73655F77 		.ascii	"se_wtobjp\000"
+ 9725      746F626A 
+ 9725      7000
+ 9726              	.LASF219:
+ 9727 0ad2 4A535152 		.ascii	"JSQR\000"
+ 9727      00
+ 9728              	.LASF73:
+ 9729 0ad7 5F737464 		.ascii	"_stdin\000"
+ 9729      696E00
+ 9730              	.LASF122:
+ 9731 0ade 5F6E6D61 		.ascii	"_nmalloc\000"
+ 9731      6C6C6F63 
+>>>>>>> Cleaning_code
  9731      00
  9732              	.LASF73:
  9733 0b3a 5F737464 		.ascii	"_stdin\000"
@@ -10827,6 +11595,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9735 0b41 5F6E6D61 		.ascii	"_nmalloc\000"
  9735      6C6C6F63 
  9735      00
+<<<<<<< HEAD
  9736              	.LASF548:
  9737 0b4a 64696572 		.ascii	"dier\000"
  9737      00
@@ -11169,6 +11938,350 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9895      73696F6E 
  9895      2D636F6E 
  9895      7374616E 
+=======
+ 9736              	.LASF185:
+ 9737 0af9 76697274 		.ascii	"virtual_timer_t\000"
+ 9737      75616C5F 
+ 9737      74696D65 
+ 9737      725F7400 
+ 9738              	.LASF807:
+ 9739 0b09 6F75745F 		.ascii	"out_maxsize\000"
+ 9739      6D617873 
+ 9739      697A6500 
+ 9740              	.LASF180:
+ 9741 0b15 725F6374 		.ascii	"r_ctx\000"
+ 9741      7800
+ 9742              	.LASF187:
+ 9743 0b1b 76745F6E 		.ascii	"vt_next\000"
+ 9743      65787400 
+ 9744              	.LASF582:
+ 9745 0b23 4932535F 		.ascii	"I2S_STOP\000"
+ 9745      53544F50 
+ 9745      00
+ 9746              	.LASF597:
+ 9747 0b2c 50574D5F 		.ascii	"PWM_STOP\000"
+ 9747      53544F50 
+ 9747      00
+ 9748              	.LASF135:
+ 9749 0b35 7274636E 		.ascii	"rtcnt_t\000"
+ 9749      745F7400 
+ 9750              	.LASF448:
+ 9751 0b3d 6D757465 		.ascii	"mutex\000"
+ 9751      7800
+ 9752              	.LASF591:
+ 9753 0b43 73697A65 		.ascii	"size\000"
+ 9753      00
+ 9754              	.LASF496:
+ 9755 0b48 44414344 		.ascii	"DACDriver\000"
+ 9755      72697665 
+ 9755      7200
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 182
+
+
+ 9756              	.LASF512:
+ 9757 0b52 44414343 		.ascii	"DACConfig\000"
+ 9757      6F6E6669 
+ 9757      6700
+ 9758              	.LASF678:
+ 9759 0b5c 74787065 		.ascii	"txpending\000"
+ 9759      6E64696E 
+ 9759      6700
+ 9760              	.LASF533:
+ 9761 0b66 636C6F63 		.ascii	"clock\000"
+ 9761      6B00
+ 9762              	.LASF400:
+ 9763 0b6c 636C6561 		.ascii	"clear\000"
+ 9763      7200
+ 9764              	.LASF543:
+ 9765 0b72 43435852 		.ascii	"CCXR\000"
+ 9765      00
+ 9766              	.LASF827:
+ 9767 0b77 44495343 		.ascii	"DISCOVER\000"
+ 9767      4F564552 
+ 9767      00
+ 9768              	.LASF249:
+ 9769 0b80 43414E5F 		.ascii	"CAN_TypeDef\000"
+ 9769      54797065 
+ 9769      44656600 
+ 9770              	.LASF18:
+ 9771 0b8c 5F6F6666 		.ascii	"_off_t\000"
+ 9771      5F7400
+ 9772              	.LASF303:
+ 9773 0b93 63685F73 		.ascii	"ch_swc_event_t\000"
+ 9773      77635F65 
+ 9773      76656E74 
+ 9773      5F7400
+ 9774              	.LASF615:
+ 9775 0ba2 53445F53 		.ascii	"SD_STOP\000"
+ 9775      544F5000 
+ 9776              	.LASF712:
+ 9777 0baa 72657376 		.ascii	"resvd8\000"
+ 9777      643800
+ 9778              	.LASF15:
+ 9779 0bb1 73697A65 		.ascii	"size_t\000"
+ 9779      5F7400
+ 9780              	.LASF105:
+ 9781 0bb8 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 9781      616C7469 
+ 9781      6D655F62 
+ 9781      756600
+ 9782              	.LASF779:
+ 9783 0bc7 72657376 		.ascii	"resvd880\000"
+ 9783      64383830 
+ 9783      00
+ 9784              	.LASF23:
+ 9785 0bd0 5F5F636F 		.ascii	"__count\000"
+ 9785      756E7400 
+ 9786              	.LASF128:
+ 9787 0bd8 75696E74 		.ascii	"uint8_t\000"
+ 9787      385F7400 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 183
+
+
+ 9788              	.LASF716:
+ 9789 0be0 72657376 		.ascii	"resvd14\000"
+ 9789      64313400 
+ 9790              	.LASF468:
+ 9791 0be8 43414E5F 		.ascii	"CAN_UNINIT\000"
+ 9791      554E494E 
+ 9791      495400
+ 9792              	.LASF717:
+ 9793 0bf3 72657376 		.ascii	"resvd18\000"
+ 9793      64313800 
+ 9794              	.LASF182:
+ 9795 0bfb 725F6F6C 		.ascii	"r_older\000"
+ 9795      64657200 
+ 9796              	.LASF151:
+ 9797 0c03 705F7072 		.ascii	"p_prev\000"
+ 9797      657600
+ 9798              	.LASF346:
+ 9799 0c0a 63665F6F 		.ascii	"cf_off_name\000"
+ 9799      66665F6E 
+ 9799      616D6500 
+ 9800              	.LASF608:
+ 9801 0c16 50574D43 		.ascii	"PWMChannelConfig\000"
+ 9801      68616E6E 
+ 9801      656C436F 
+ 9801      6E666967 
+ 9801      00
+ 9802              	.LASF607:
+ 9803 0c27 70776D63 		.ascii	"pwmcnt_t\000"
+ 9803      6E745F74 
+ 9803      00
+ 9804              	.LASF775:
+ 9805 0c30 44494550 		.ascii	"DIEPEMPMSK\000"
+ 9805      454D504D 
+ 9805      534B00
+ 9806              	.LASF720:
+ 9807 0c3b 44494550 		.ascii	"DIEPCTL\000"
+ 9807      43544C00 
+ 9808              	.LASF362:
+ 9809 0c43 656C5F77 		.ascii	"el_wflags\000"
+ 9809      666C6167 
+ 9809      7300
+ 9810              	.LASF676:
+ 9811 0c4d 6F746770 		.ascii	"otgparams\000"
+ 9811      6172616D 
+ 9811      7300
+ 9812              	.LASF304:
+ 9813 0c57 74625F73 		.ascii	"tb_size\000"
+ 9813      697A6500 
+ 9814              	.LASF420:
+ 9815 0c5f 50444461 		.ascii	"PDData\000"
+ 9815      746100
+ 9816              	.LASF640:
+ 9817 0c66 73637261 		.ascii	"scratchpad\000"
+ 9817      74636870 
+ 9817      616400
+ 9818              	.LASF87:
+ 9819 0c71 5F637674 		.ascii	"_cvtbuf\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 184
+
+
+ 9819      62756600 
+ 9820              	.LASF809:
+ 9821 0c79 6F75745F 		.ascii	"out_state\000"
+ 9821      73746174 
+ 9821      6500
+ 9822              	.LASF366:
+ 9823 0c83 696F5F71 		.ascii	"io_queue_t\000"
+ 9823      75657565 
+ 9823      5F7400
+ 9824              	.LASF656:
+ 9825 0c8e 73706973 		.ascii	"spistate_t\000"
+ 9825      74617465 
+ 9825      5F7400
+ 9826              	.LASF553:
+ 9827 0c99 4932435F 		.ascii	"I2C_STOP\000"
+ 9827      53544F50 
+ 9827      00
+ 9828              	.LASF575:
+ 9829 0ca2 61646472 		.ascii	"addr\000"
+ 9829      00
+ 9830              	.LASF234:
+ 9831 0ca7 52463052 		.ascii	"RF0R\000"
+ 9831      00
+ 9832              	.LASF438:
+ 9833 0cac 4144435F 		.ascii	"ADC_ERR_DMAFAILURE\000"
+ 9833      4552525F 
+ 9833      444D4146 
+ 9833      41494C55 
+ 9833      524500
+ 9834              	.LASF654:
+ 9835 0cbf 5350495F 		.ascii	"SPI_ACTIVE\000"
+ 9835      41435449 
+ 9835      564500
+ 9836              	.LASF293:
+ 9837 0cca 47545052 		.ascii	"GTPR\000"
+ 9837      00
+ 9838              	.LASF522:
+ 9839 0ccf 45585443 		.ascii	"EXTChannelConfig\000"
+ 9839      68616E6E 
+ 9839      656C436F 
+ 9839      6E666967 
+ 9839      00
+ 9840              	.LASF403:
+ 9841 0ce0 4F535045 		.ascii	"OSPEEDR\000"
+ 9841      45445200 
+ 9842              	.LASF486:
+ 9843 0ce8 4441435F 		.ascii	"DAC_READY\000"
+ 9843      52454144 
+ 9843      5900
+ 9844              	.LASF744:
+ 9845 0cf2 72657376 		.ascii	"resvd30\000"
+ 9845      64333000 
+ 9846              	.LASF22:
+ 9847 0cfa 5F5F7763 		.ascii	"__wchb\000"
+ 9847      686200
+ 9848              	.LASF116:
+ 9849 0d01 5F6D6272 		.ascii	"_mbrtowc_state\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 185
+
+
+ 9849      746F7763 
+ 9849      5F737461 
+ 9849      746500
+ 9850              	.LASF773:
+ 9851 0d10 44564255 		.ascii	"DVBUSPULSE\000"
+ 9851      5350554C 
+ 9851      534500
+ 9852              	.LASF36:
+ 9853 0d1b 5F5F746D 		.ascii	"__tm_hour\000"
+ 9853      5F686F75 
+ 9853      7200
+ 9854              	.LASF387:
+ 9855 0d25 424C4B5F 		.ascii	"BLK_STOP\000"
+ 9855      53544F50 
+ 9855      00
+ 9856              	.LASF623:
+ 9857 0d2e 53657269 		.ascii	"SerialDriverVMT\000"
+ 9857      616C4472 
+ 9857      69766572 
+ 9857      564D5400 
+ 9858              	.LASF694:
+ 9859 0d3e 5553425F 		.ascii	"USB_EP0_ERROR\000"
+ 9859      4550305F 
+ 9859      4552524F 
+ 9859      5200
+ 9860              	.LASF842:
+ 9861 0d4c 61726D5F 		.ascii	"arm_cmplx_mag_f32\000"
+ 9861      636D706C 
+ 9861      785F6D61 
+ 9861      675F6633 
+ 9861      3200
+ 9862              	.LASF20:
+ 9863 0d5e 77696E74 		.ascii	"wint_t\000"
+ 9863      5F7400
+ 9864              	.LASF646:
+ 9865 0d65 636F6E6E 		.ascii	"connect\000"
+ 9865      65637400 
+ 9866              	.LASF88:
+ 9867 0d6d 5F6E6577 		.ascii	"_new\000"
+ 9867      00
+ 9868              	.LASF441:
+ 9869 0d72 41444344 		.ascii	"ADCDriver\000"
+ 9869      72697665 
+ 9869      7200
+ 9870              	.LASF787:
+ 9871 0d7c 6E756D5F 		.ascii	"num_endpoints\000"
+ 9871      656E6470 
+ 9871      6F696E74 
+ 9871      7300
+ 9872              	.LASF464:
+ 9873 0d8a 41444343 		.ascii	"ADCConfig\000"
+ 9873      6F6E6669 
+ 9873      6700
+ 9874              	.LASF795:
+ 9875 0d94 746F7473 		.ascii	"totsize\000"
+ 9875      697A6500 
+ 9876              	.LASF96:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 186
+
+
+ 9877 0d9c 5F6E696F 		.ascii	"_niobs\000"
+ 9877      627300
+ 9878              	.LASF347:
+ 9879 0da3 63665F6F 		.ascii	"cf_off_stklimit\000"
+ 9879      66665F73 
+ 9879      746B6C69 
+ 9879      6D697400 
+ 9880              	.LASF616:
+ 9881 0db3 53445F52 		.ascii	"SD_READY\000"
+ 9881      45414459 
+ 9881      00
+ 9882              	.LASF710:
+ 9883 0dbc 75736267 		.ascii	"usbgetdescriptor_t\000"
+ 9883      65746465 
+ 9883      73637269 
+ 9883      70746F72 
+ 9883      5F7400
+ 9884              	.LASF845:
+ 9885 0dcf 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 9885      43313120 
+ 9885      372E322E 
+ 9885      31203230 
+ 9885      31373039 
+ 9886 0e02 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 9886      20726576 
+ 9886      6973696F 
+ 9886      6E203235 
+ 9886      35323034 
+ 9887 0e35 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 9887      2D6D6670 
+ 9887      753D6670 
+ 9887      76342D73 
+ 9887      702D6431 
+ 9888 0e68 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 9888      62202D4F 
+ 9888      32202D66 
+ 9888      6F6D6974 
+ 9888      2D667261 
+ 9889 0e9b 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 9889      6F2D7374 
+ 9889      72696374 
+ 9889      2D616C69 
+ 9889      6173696E 
+ 9890 0ece 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 9890      73656374 
+ 9890      696F6E73 
+ 9890      202D6664 
+ 9890      6174612D 
+ 9891 0f01 72656369 		.ascii	"recision-constant\000"
+ 9891      73696F6E 
+ 9891      2D636F6E 
+ 9891      7374616E 
+ 9891      7400
+ 9892              	.LASF489:
+ 9893 0f13 4441435F 		.ascii	"DAC_ERROR\000"
+ 9893      4552524F 
+ 9893      5200
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 187
+
+
+ 9894              	.LASF183:
+ 9895 0f1d 725F6375 		.ascii	"r_current\000"
+ 9895      7272656E 
+>>>>>>> Cleaning_code
  9895      7400
  9896              	.LASF489:
  9897 0f76 4441435F 		.ascii	"DAC_ERROR\000"
@@ -11196,6 +12309,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  9908              	.LASF380:
  9909 0faf 69666372 		.ascii	"ifcr\000"
  9909      00
+<<<<<<< HEAD
  9910              	.LASF581:
  9911 0fb4 4932535F 		.ascii	"I2S_UNINIT\000"
  9911      554E494E 
@@ -11410,6 +12524,219 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10013      564500
  10014              	.LASF216:
  10015 11c6 53515231 		.ascii	"SQR1\000"
+=======
+ 9910              	.LASF320:
+ 9911 0f69 7264796D 		.ascii	"rdymsg\000"
+ 9911      736700
+ 9912              	.LASF44:
+ 9913 0f70 5F666E61 		.ascii	"_fnargs\000"
+ 9913      72677300 
+ 9914              	.LASF598:
+ 9915 0f78 50574D5F 		.ascii	"PWM_READY\000"
+ 9915      52454144 
+ 9915      5900
+ 9916              	.LASF225:
+ 9917 0f82 54445452 		.ascii	"TDTR\000"
+ 9917      00
+ 9918              	.LASF233:
+ 9919 0f87 43414E5F 		.ascii	"CAN_FilterRegister_TypeDef\000"
+ 9919      46696C74 
+ 9919      65725265 
+ 9919      67697374 
+ 9919      65725F54 
+ 9920              	.LASF479:
+ 9921 0fa2 6572726F 		.ascii	"error_event\000"
+ 9921      725F6576 
+ 9921      656E7400 
+ 9922              	.LASF454:
+ 9923 0fae 6E756D5F 		.ascii	"num_channels\000"
+ 9923      6368616E 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 188
+
+
+ 9923      6E656C73 
+ 9923      00
+ 9924              	.LASF214:
+ 9925 0fbb 4A4F4652 		.ascii	"JOFR3\000"
+ 9925      3300
+ 9926              	.LASF747:
+ 9927 0fc1 72657376 		.ascii	"resvd58\000"
+ 9927      64353800 
+ 9928              	.LASF796:
+ 9929 0fc9 55534249 		.ascii	"USBInEndpointState\000"
+ 9929      6E456E64 
+ 9929      706F696E 
+ 9929      74537461 
+ 9929      746500
+ 9930              	.LASF152:
+ 9931 0fdc 705F7072 		.ascii	"p_prio\000"
+ 9931      696F00
+ 9932              	.LASF367:
+ 9933 0fe3 696F5F71 		.ascii	"io_queue\000"
+ 9933      75657565 
+ 9933      00
+ 9934              	.LASF417:
+ 9935 0fec 50414461 		.ascii	"PAData\000"
+ 9935      746100
+ 9936              	.LASF12:
+ 9937 0ff3 5F5F7569 		.ascii	"__uint64_t\000"
+ 9937      6E743634 
+ 9937      5F7400
+ 9938              	.LASF28:
+ 9939 0ffe 5F6E6578 		.ascii	"_next\000"
+ 9939      7400
+ 9940              	.LASF603:
+ 9941 1004 70776D63 		.ascii	"pwmcallback_t\000"
+ 9941      616C6C62 
+ 9941      61636B5F 
+ 9941      7400
+ 9942              	.LASF497:
+ 9943 1012 70617261 		.ascii	"params\000"
+ 9943      6D7300
+ 9944              	.LASF693:
+ 9945 1019 5553425F 		.ascii	"USB_EP0_SENDING_STS\000"
+ 9945      4550305F 
+ 9945      53454E44 
+ 9945      494E475F 
+ 9945      53545300 
+ 9946              	.LASF113:
+ 9947 102d 5F736967 		.ascii	"_signal_buf\000"
+ 9947      6E616C5F 
+ 9947      62756600 
+ 9948              	.LASF558:
+ 9949 1039 69326373 		.ascii	"i2cstate_t\000"
+ 9949      74617465 
+ 9949      5F7400
+ 9950              	.LASF58:
+ 9951 1044 5F636F6F 		.ascii	"_cookie\000"
+ 9951      6B696500 
+ 9952              	.LASF695:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 189
+
+
+ 9953 104c 75736265 		.ascii	"usbep0state_t\000"
+ 9953      70307374 
+ 9953      6174655F 
+ 9953      7400
+ 9954              	.LASF501:
+ 9955 105a 64616365 		.ascii	"dacerror_t\000"
+ 9955      72726F72 
+ 9955      5F7400
+ 9956              	.LASF237:
+ 9957 1065 7354784D 		.ascii	"sTxMailBox\000"
+ 9957      61696C42 
+ 9957      6F7800
+ 9958              	.LASF436:
+ 9959 1070 61646373 		.ascii	"adcsample_t\000"
+ 9959      616D706C 
+ 9959      655F7400 
+ 9960              	.LASF534:
+ 9961 107c 67707463 		.ascii	"gptcallback_t\000"
+ 9961      616C6C62 
+ 9961      61636B5F 
+ 9961      7400
+ 9962              	.LASF370:
+ 9963 108a 715F6275 		.ascii	"q_buffer\000"
+ 9963      66666572 
+ 9963      00
+ 9964              	.LASF150:
+ 9965 1093 705F6E65 		.ascii	"p_next\000"
+ 9965      787400
+ 9966              	.LASF580:
+ 9967 109a 49324344 		.ascii	"I2CD1\000"
+ 9967      3100
+ 9968              	.LASF721:
+ 9969 10a0 72657376 		.ascii	"resvd4\000"
+ 9969      643400
+ 9970              	.LASF663:
+ 9971 10a7 55534244 		.ascii	"USBDriver\000"
+ 9971      72697665 
+ 9971      7200
+ 9972              	.LASF780:
+ 9973 10b1 72657376 		.ascii	"resvd8C0\000"
+ 9973      64384330 
+ 9973      00
+ 9974              	.LASF817:
+ 9975 10ba 55534243 		.ascii	"USBConfig\000"
+ 9975      6F6E6669 
+ 9975      6700
+ 9976              	.LASF723:
+ 9977 10c4 72657376 		.ascii	"resvdC\000"
+ 9977      644300
+ 9978              	.LASF610:
+ 9979 10cb 50574D44 		.ascii	"PWMD2\000"
+ 9979      3200
+ 9980              	.LASF611:
+ 9981 10d1 50574D44 		.ascii	"PWMD3\000"
+ 9981      3300
+ 9982              	.LASF612:
+ 9983 10d7 50574D44 		.ascii	"PWMD4\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 190
+
+
+ 9983      3400
+ 9984              	.LASF613:
+ 9985 10dd 50574D44 		.ascii	"PWMD5\000"
+ 9985      3500
+ 9986              	.LASF621:
+ 9987 10e3 6F717565 		.ascii	"oqueue\000"
+ 9987      756500
+ 9988              	.LASF139:
+ 9989 10ea 74726566 		.ascii	"trefs_t\000"
+ 9989      735F7400 
+ 9990              	.LASF169:
+ 9991 10f2 705F6D70 		.ascii	"p_mpool\000"
+ 9991      6F6F6C00 
+ 9992              	.LASF271:
+ 9993 10fa 4932435F 		.ascii	"I2C_TypeDef\000"
+ 9993      54797065 
+ 9993      44656600 
+ 9994              	.LASF509:
+ 9995 1106 44414343 		.ascii	"DACConversionGroup\000"
+ 9995      6F6E7665 
+ 9995      7273696F 
+ 9995      6E47726F 
+ 9995      757000
+ 9996              	.LASF34:
+ 9997 1119 5F5F746D 		.ascii	"__tm_sec\000"
+ 9997      5F736563 
+ 9997      00
+ 9998              	.LASF810:
+ 9999 1122 696E5F6D 		.ascii	"in_multiplier\000"
+ 9999      756C7469 
+ 9999      706C6965 
+ 9999      7200
+ 10000              	.LASF434:
+ 10001 1130 4144435F 		.ascii	"ADC_ERROR\000"
+ 10001      4552524F 
+ 10001      5200
+ 10002              	.LASF43:
+ 10003 113a 5F6F6E5F 		.ascii	"_on_exit_args\000"
+ 10003      65786974 
+ 10003      5F617267 
+ 10003      7300
+ 10004              	.LASF297:
+ 10005 1148 636F6E74 		.ascii	"context\000"
+ 10005      65787400 
+ 10006              	.LASF137:
+ 10007 1150 746D6F64 		.ascii	"tmode_t\000"
+ 10007      655F7400 
+ 10008              	.LASF432:
+ 10009 1158 4144435F 		.ascii	"ADC_ACTIVE\000"
+ 10009      41435449 
+ 10009      564500
+ 10010              	.LASF216:
+ 10011 1163 53515231 		.ascii	"SQR1\000"
+ 10011      00
+ 10012              	.LASF217:
+ 10013 1168 53515232 		.ascii	"SQR2\000"
+ 10013      00
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 191
+
+
+ 10014              	.LASF218:
+ 10015 116d 53515233 		.ascii	"SQR3\000"
+>>>>>>> Cleaning_code
  10015      00
  10016              	.LASF217:
  10017 11cb 53515232 		.ascii	"SQR2\000"
@@ -11420,6 +12747,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10020              	.LASF405:
  10021 11d5 42535252 		.ascii	"BSRR\000"
  10021      00
+<<<<<<< HEAD
  10022              	.LASF384:
  10023 11da 73746D33 		.ascii	"stm32_dma_stream_t\000"
  10023      325F646D 
@@ -11838,6 +13166,421 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10221 15e7 70776D63 		.ascii	"pwmchannel_t\000"
  10221      68616E6E 
  10221      656C5F74 
+=======
+ 10022              	.LASF118:
+ 10023 119b 5F776372 		.ascii	"_wcrtomb_state\000"
+ 10023      746F6D62 
+ 10023      5F737461 
+ 10023      746500
+ 10024              	.LASF632:
+ 10025 11aa 5344435F 		.ascii	"SDC_MODE_8BIT\000"
+ 10025      4D4F4445 
+ 10025      5F384249 
+ 10025      5400
+ 10026              	.LASF793:
+ 10027 11b8 74787369 		.ascii	"txsize\000"
+ 10027      7A6500
+ 10028              	.LASF505:
+ 10029 11bf 4441435F 		.ascii	"DAC_DHRM_12BIT_LEFT\000"
+ 10029      4448524D 
+ 10029      5F313242 
+ 10029      49545F4C 
+ 10029      45465400 
+ 10030              	.LASF601:
+ 10031 11d3 70657269 		.ascii	"period\000"
+ 10031      6F6400
+ 10032              	.LASF331:
+ 10033 11da 6D5F7175 		.ascii	"m_queue\000"
+ 10033      65756500 
+ 10034              	.LASF557:
+ 10035 11e2 4932435F 		.ascii	"I2C_LOCKED\000"
+ 10035      4C4F434B 
+ 10035      454400
+ 10036              	.LASF198:
+ 10037 11ed 6973725F 		.ascii	"isr_cnt\000"
+ 10037      636E7400 
+ 10038              	.LASF684:
+ 10039 11f5 5553425F 		.ascii	"USB_READY\000"
+ 10039      52454144 
+ 10039      5900
+ 10040              	.LASF629:
+ 10041 11ff 72656164 		.ascii	"readt\000"
+ 10041      7400
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 192
+
+
+ 10042              	.LASF736:
+ 10043 1205 47525354 		.ascii	"GRSTCTL\000"
+ 10043      43544C00 
+ 10044              	.LASF531:
+ 10045 120d 67707473 		.ascii	"gptstate_t\000"
+ 10045      74617465 
+ 10045      5F7400
+ 10046              	.LASF27:
+ 10047 1218 5F5F554C 		.ascii	"__ULong\000"
+ 10047      6F6E6700 
+ 10048              	.LASF197:
+ 10049 1220 70616E69 		.ascii	"panic_msg\000"
+ 10049      635F6D73 
+ 10049      6700
+ 10050              	.LASF655:
+ 10051 122a 5350495F 		.ascii	"SPI_COMPLETE\000"
+ 10051      434F4D50 
+ 10051      4C455445 
+ 10051      00
+ 10052              	.LASF279:
+ 10053 1237 4454494D 		.ascii	"DTIMER\000"
+ 10053      455200
+ 10054              	.LASF181:
+ 10055 123e 725F6E65 		.ascii	"r_newer\000"
+ 10055      77657200 
+ 10056              	.LASF701:
+ 10057 1246 5553425F 		.ascii	"USB_EVENT_STALLED\000"
+ 10057      4556454E 
+ 10057      545F5354 
+ 10057      414C4C45 
+ 10057      4400
+ 10058              	.LASF353:
+ 10059 1258 63686465 		.ascii	"chdebug_t\000"
+ 10059      6275675F 
+ 10059      7400
+ 10060              	.LASF799:
+ 10061 1262 72787369 		.ascii	"rxsize\000"
+ 10061      7A6500
+ 10062              	.LASF715:
+ 10063 1269 48435453 		.ascii	"HCTSIZ\000"
+ 10063      495A00
+ 10064              	.LASF698:
+ 10065 1270 5553425F 		.ascii	"USB_EVENT_CONFIGURED\000"
+ 10065      4556454E 
+ 10065      545F434F 
+ 10065      4E464947 
+ 10065      55524544 
+ 10066              	.LASF647:
+ 10067 1285 64697363 		.ascii	"disconnect\000"
+ 10067      6F6E6E65 
+ 10067      637400
+ 10068              	.LASF626:
+ 10069 1290 70757474 		.ascii	"putt\000"
+ 10069      00
+ 10070              	.LASF140:
+ 10071 1295 74736C69 		.ascii	"tslices_t\000"
+ 10071      6365735F 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 193
+
+
+ 10071      7400
+ 10072              	.LASF103:
+ 10073 129f 5F737472 		.ascii	"_strtok_last\000"
+ 10073      746F6B5F 
+ 10073      6C617374 
+ 10073      00
+ 10074              	.LASF340:
+ 10075 12ac 63685F74 		.ascii	"ch_timesize\000"
+ 10075      696D6573 
+ 10075      697A6500 
+ 10076              	.LASF680:
+ 10077 12b8 77615F70 		.ascii	"wa_pump\000"
+ 10077      756D7000 
+ 10078              	.LASF284:
+ 10079 12c0 4649464F 		.ascii	"FIFOCNT\000"
+ 10079      434E5400 
+ 10080              	.LASF365:
+ 10081 12c8 6576656E 		.ascii	"event_source_t\000"
+ 10081      745F736F 
+ 10081      75726365 
+ 10081      5F7400
+ 10082              	.LASF750:
+ 10083 12d7 72657376 		.ascii	"resvd140\000"
+ 10083      64313430 
+ 10083      00
+ 10084              	.LASF189:
+ 10085 12e0 76745F64 		.ascii	"vt_delta\000"
+ 10085      656C7461 
+ 10085      00
+ 10086              	.LASF99:
+ 10087 12e9 5F736565 		.ascii	"_seed\000"
+ 10087      6400
+ 10088              	.LASF305:
+ 10089 12ef 74625F70 		.ascii	"tb_ptr\000"
+ 10089      747200
+ 10090              	.LASF508:
+ 10091 12f6 74726967 		.ascii	"trigger\000"
+ 10091      67657200 
+ 10092              	.LASF61:
+ 10093 12fe 5F736565 		.ascii	"_seek\000"
+ 10093      6B00
+ 10094              	.LASF699:
+ 10095 1304 5553425F 		.ascii	"USB_EVENT_SUSPEND\000"
+ 10095      4556454E 
+ 10095      545F5355 
+ 10095      5350454E 
+ 10095      4400
+ 10096              	.LASF129:
+ 10097 1316 696E7431 		.ascii	"int16_t\000"
+ 10097      365F7400 
+ 10098              	.LASF527:
+ 10099 131e 4750545F 		.ascii	"GPT_STOP\000"
+ 10099      53544F50 
+ 10099      00
+ 10100              	.LASF224:
+ 10101 1327 4144435F 		.ascii	"ADC_TypeDef\000"
+ 10101      54797065 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 194
+
+
+ 10101      44656600 
+ 10102              	.LASF728:
+ 10103 1333 444F4550 		.ascii	"DOEPCTL\000"
+ 10103      43544C00 
+ 10104              	.LASF6:
+ 10105 133b 73686F72 		.ascii	"short unsigned int\000"
+ 10105      7420756E 
+ 10105      7369676E 
+ 10105      65642069 
+ 10105      6E7400
+ 10106              	.LASF569:
+ 10107 134e 6F705F6D 		.ascii	"op_mode\000"
+ 10107      6F646500 
+ 10108              	.LASF0:
+ 10109 1356 7369676E 		.ascii	"signed char\000"
+ 10109      65642063 
+ 10109      68617200 
+ 10110              	.LASF606:
+ 10111 1362 70776D63 		.ascii	"pwmchnmsk_t\000"
+ 10111      686E6D73 
+ 10111      6B5F7400 
+ 10112              	.LASF161:
+ 10113 136e 705F7072 		.ascii	"p_preempt\000"
+ 10113      65656D70 
+ 10113      7400
+ 10114              	.LASF583:
+ 10115 1378 4932535F 		.ascii	"I2S_READY\000"
+ 10115      52454144 
+ 10115      5900
+ 10116              	.LASF146:
+ 10117 1382 75636E74 		.ascii	"ucnt_t\000"
+ 10117      5F7400
+ 10118              	.LASF227:
+ 10119 1389 54444852 		.ascii	"TDHR\000"
+ 10119      00
+ 10120              	.LASF430:
+ 10121 138e 4144435F 		.ascii	"ADC_STOP\000"
+ 10121      53544F50 
+ 10121      00
+ 10122              	.LASF692:
+ 10123 1397 5553425F 		.ascii	"USB_EP0_RX\000"
+ 10123      4550305F 
+ 10123      525800
+ 10124              	.LASF821:
+ 10125 13a2 5F5F6664 		.ascii	"__fdlibm_ieee\000"
+ 10125      6C69626D 
+ 10125      5F696565 
+ 10125      6500
+ 10126              	.LASF604:
+ 10127 13b0 70776D6D 		.ascii	"pwmmode_t\000"
+ 10127      6F64655F 
+ 10127      7400
+ 10128              	.LASF673:
+ 10129 13ba 73746174 		.ascii	"status\000"
+ 10129      757300
+ 10130              	.LASF280:
+ 10131 13c1 444C454E 		.ascii	"DLEN\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 195
+
+
+ 10131      00
+ 10132              	.LASF631:
+ 10133 13c6 5344435F 		.ascii	"SDC_MODE_4BIT\000"
+ 10133      4D4F4445 
+ 10133      5F344249 
+ 10133      5400
+ 10134              	.LASF705:
+ 10135 13d4 55534244 		.ascii	"USBDescriptor\000"
+ 10135      65736372 
+ 10135      6970746F 
+ 10135      7200
+ 10136              	.LASF658:
+ 10137 13e2 73706963 		.ascii	"spicallback_t\000"
+ 10137      616C6C62 
+ 10137      61636B5F 
+ 10137      7400
+ 10138              	.LASF85:
+ 10139 13f0 5F667265 		.ascii	"_freelist\000"
+ 10139      656C6973 
+ 10139      7400
+ 10140              	.LASF674:
+ 10141 13fa 61646472 		.ascii	"address\000"
+ 10141      65737300 
+ 10142              	.LASF164:
+ 10143 1402 705F6D73 		.ascii	"p_msgqueue\000"
+ 10143      67717565 
+ 10143      756500
+ 10144              	.LASF350:
+ 10145 140d 63665F6F 		.ascii	"cf_off_refs\000"
+ 10145      66665F72 
+ 10145      65667300 
+ 10146              	.LASF348:
+ 10147 1419 63665F6F 		.ascii	"cf_off_state\000"
+ 10147      66665F73 
+ 10147      74617465 
+ 10147      00
+ 10148              	.LASF332:
+ 10149 1426 6D5F6F77 		.ascii	"m_owner\000"
+ 10149      6E657200 
+ 10150              	.LASF66:
+ 10151 142e 5F6F6666 		.ascii	"_offset\000"
+ 10151      73657400 
+ 10152              	.LASF209:
+ 10153 1436 53797374 		.ascii	"SystemCoreClock\000"
+ 10153      656D436F 
+ 10153      7265436C 
+ 10153      6F636B00 
+ 10154              	.LASF452:
+ 10155 1446 61646365 		.ascii	"adcerrorcallback_t\000"
+ 10155      72726F72 
+ 10155      63616C6C 
+ 10155      6261636B 
+ 10155      5F7400
+ 10156              	.LASF487:
+ 10157 1459 4441435F 		.ascii	"DAC_ACTIVE\000"
+ 10157      41435449 
+ 10157      564500
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 196
+
+
+ 10158              	.LASF442:
+ 10159 1464 73746174 		.ascii	"state\000"
+ 10159      6500
+ 10160              	.LASF338:
+ 10161 146a 63685F76 		.ascii	"ch_version\000"
+ 10161      65727369 
+ 10161      6F6E00
+ 10162              	.LASF51:
+ 10163 1475 5F5F7362 		.ascii	"__sbuf\000"
+ 10163      756600
+ 10164              	.LASF639:
+ 10165 147c 7364696F 		.ascii	"sdio\000"
+ 10165      00
+ 10166              	.LASF250:
+ 10167 1481 53575452 		.ascii	"SWTRIGR\000"
+ 10167      49475200 
+ 10168              	.LASF691:
+ 10169 1489 5553425F 		.ascii	"USB_EP0_WAITING_STS\000"
+ 10169      4550305F 
+ 10169      57414954 
+ 10169      494E475F 
+ 10169      53545300 
+ 10170              	.LASF112:
+ 10171 149d 5F6C3634 		.ascii	"_l64a_buf\000"
+ 10171      615F6275 
+ 10171      6600
+ 10172              	.LASF231:
+ 10173 14a7 52444852 		.ascii	"RDHR\000"
+ 10173      00
+ 10174              	.LASF541:
+ 10175 14ac 444D4152 		.ascii	"DMAR\000"
+ 10175      00
+ 10176              	.LASF547:
+ 10177 14b1 63616C6C 		.ascii	"callback\000"
+ 10177      6261636B 
+ 10177      00
+ 10178              	.LASF202:
+ 10179 14ba 63685F73 		.ascii	"ch_system\000"
+ 10179      79737465 
+ 10179      6D00
+ 10180              	.LASF272:
+ 10181 14c4 504F5745 		.ascii	"POWER\000"
+ 10181      5200
+ 10182              	.LASF200:
+ 10183 14ca 74726163 		.ascii	"trace_buffer\000"
+ 10183      655F6275 
+ 10183      66666572 
+ 10183      00
+ 10184              	.LASF445:
+ 10185 14d7 64657074 		.ascii	"depth\000"
+ 10185      6800
+ 10186              	.LASF104:
+ 10187 14dd 5F617363 		.ascii	"_asctime_buf\000"
+ 10187      74696D65 
+ 10187      5F627566 
+ 10187      00
+ 10188              	.LASF506:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 197
+
+
+ 10189 14ea 4441435F 		.ascii	"DAC_DHRM_8BIT_RIGHT\000"
+ 10189      4448524D 
+ 10189      5F384249 
+ 10189      545F5249 
+ 10189      47485400 
+ 10190              	.LASF526:
+ 10191 14fe 4750545F 		.ascii	"GPT_UNINIT\000"
+ 10191      554E494E 
+ 10191      495400
+ 10192              	.LASF21:
+ 10193 1509 5F5F7763 		.ascii	"__wch\000"
+ 10193      6800
+ 10194              	.LASF327:
+ 10195 150f 63685F73 		.ascii	"ch_semaphore\000"
+ 10195      656D6170 
+ 10195      686F7265 
+ 10195      00
+ 10196              	.LASF119:
+ 10197 151c 5F776373 		.ascii	"_wcsrtombs_state\000"
+ 10197      72746F6D 
+ 10197      62735F73 
+ 10197      74617465 
+ 10197      00
+ 10198              	.LASF724:
+ 10199 152d 44494550 		.ascii	"DIEPTSIZ\000"
+ 10199      5453495A 
+ 10199      00
+ 10200              	.LASF457:
+ 10201 1536 736D7072 		.ascii	"smpr1\000"
+ 10201      3100
+ 10202              	.LASF458:
+ 10203 153c 736D7072 		.ascii	"smpr2\000"
+ 10203      3200
+ 10204              	.LASF174:
+ 10205 1542 74687265 		.ascii	"threads_queue_t\000"
+ 10205      6164735F 
+ 10205      71756575 
+ 10205      655F7400 
+ 10206              	.LASF395:
+ 10207 1552 626C6B73 		.ascii	"blkstate_t\000"
+ 10207      74617465 
+ 10207      5F7400
+ 10208              	.LASF848:
+ 10209 155d 5F5F6664 		.ascii	"__fdlibm_version\000"
+ 10209      6C69626D 
+ 10209      5F766572 
+ 10209      73696F6E 
+ 10209      00
+ 10210              	.LASF162:
+ 10211 156e 705F7469 		.ascii	"p_time\000"
+ 10211      6D6500
+ 10212              	.LASF160:
+ 10213 1575 705F7265 		.ascii	"p_refs\000"
+ 10213      667300
+ 10214              	.LASF802:
+ 10215 157c 65705F6D 		.ascii	"ep_mode\000"
+ 10215      6F646500 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 198
+
+
+ 10216              	.LASF605:
+ 10217 1584 70776D63 		.ascii	"pwmchannel_t\000"
+ 10217      68616E6E 
+ 10217      656C5F74 
+ 10217      00
+ 10218              	.LASF226:
+ 10219 1591 54444C52 		.ascii	"TDLR\000"
+ 10219      00
+ 10220              	.LASF8:
+ 10221 1596 6C6F6E67 		.ascii	"long int\000"
+ 10221      20696E74 
+>>>>>>> Cleaning_code
  10221      00
  10222              	.LASF226:
  10223 15f4 54444C52 		.ascii	"TDLR\000"
@@ -11846,6 +13589,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10225 15f9 6C6F6E67 		.ascii	"long int\000"
  10225      20696E74 
  10225      00
+<<<<<<< HEAD
  10226              	.LASF205:
  10227 1602 6D61696E 		.ascii	"mainthread\000"
  10227      74687265 
@@ -11950,6 +13694,113 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10281      00
  10282              	.LASF406:
  10283 16e4 4C434B52 		.ascii	"LCKR\000"
+=======
+ 10226              	.LASF783:
+ 10227 15af 72657376 		.ascii	"resvdE04\000"
+ 10227      64453034 
+ 10227      00
+ 10228              	.LASF559:
+ 10229 15b8 69326361 		.ascii	"i2caddr_t\000"
+ 10229      6464725F 
+ 10229      7400
+ 10230              	.LASF111:
+ 10231 15c2 5F776374 		.ascii	"_wctomb_state\000"
+ 10231      6F6D625F 
+ 10231      73746174 
+ 10231      6500
+ 10232              	.LASF494:
+ 10233 15d0 646D6169 		.ascii	"dmairqprio\000"
+ 10233      72717072 
+ 10233      696F00
+ 10234              	.LASF532:
+ 10235 15db 47505444 		.ascii	"GPTDriver\000"
+ 10235      72697665 
+ 10235      7200
+ 10236              	.LASF369:
+ 10237 15e5 715F636F 		.ascii	"q_counter\000"
+ 10237      756E7465 
+ 10237      7200
+ 10238              	.LASF424:
+ 10239 15ef 50484461 		.ascii	"PHData\000"
+ 10239      746100
+ 10240              	.LASF427:
+ 10241 15f6 696F706F 		.ascii	"ioportid_t\000"
+ 10241      72746964 
+ 10241      5F7400
+ 10242              	.LASF465:
+ 10243 1601 41444344 		.ascii	"ADCD1\000"
+ 10243      3100
+ 10244              	.LASF466:
+ 10245 1607 41444344 		.ascii	"ADCD2\000"
+ 10245      3200
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 199
+
+
+ 10246              	.LASF467:
+ 10247 160d 41444344 		.ascii	"ADCD3\000"
+ 10247      3300
+ 10248              	.LASF751:
+ 10249 1613 48434647 		.ascii	"HCFG\000"
+ 10249      00
+ 10250              	.LASF450:
+ 10251 1618 646D616D 		.ascii	"dmamode\000"
+ 10251      6F646500 
+ 10252              	.LASF313:
+ 10253 1620 63756D75 		.ascii	"cumulative\000"
+ 10253      6C617469 
+ 10253      766500
+ 10254              	.LASF97:
+ 10255 162b 5F696F62 		.ascii	"_iobs\000"
+ 10255      7300
+ 10256              	.LASF77:
+ 10257 1631 5F656D65 		.ascii	"_emergency\000"
+ 10257      7267656E 
+ 10257      637900
+ 10258              	.LASF627:
+ 10259 163c 67657474 		.ascii	"gett\000"
+ 10259      00
+ 10260              	.LASF323:
+ 10261 1641 77747472 		.ascii	"wttrp\000"
+ 10261      7000
+ 10262              	.LASF373:
+ 10263 1647 715F7264 		.ascii	"q_rdptr\000"
+ 10263      70747200 
+ 10264              	.LASF121:
+ 10265 164f 5F6E6578 		.ascii	"_nextf\000"
+ 10265      746600
+ 10266              	.LASF624:
+ 10267 1656 77726974 		.ascii	"write\000"
+ 10267      6500
+ 10268              	.LASF107:
+ 10269 165c 5F72616E 		.ascii	"_rand_next\000"
+ 10269      645F6E65 
+ 10269      787400
+ 10270              	.LASF620:
+ 10271 1667 69717565 		.ascii	"iqueue\000"
+ 10271      756500
+ 10272              	.LASF804:
+ 10273 166e 696E5F63 		.ascii	"in_cb\000"
+ 10273      6200
+ 10274              	.LASF729:
+ 10275 1674 444F4550 		.ascii	"DOEPINT\000"
+ 10275      494E5400 
+ 10276              	.LASF312:
+ 10277 167c 6C617374 		.ascii	"last\000"
+ 10277      00
+ 10278              	.LASF406:
+ 10279 1681 4C434B52 		.ascii	"LCKR\000"
+ 10279      00
+ 10280              	.LASF617:
+ 10281 1686 73647374 		.ascii	"sdstate_t\000"
+ 10281      6174655F 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 200
+
+
+ 10281      7400
+ 10282              	.LASF132:
+ 10283 1690 75696E74 		.ascii	"uint32_t\000"
+ 10283      33325F74 
+>>>>>>> Cleaning_code
  10283      00
  10284              	.LASF617:
  10285 16e9 73647374 		.ascii	"sdstate_t\000"
@@ -11981,6 +13832,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10299 172c 72656761 		.ascii	"regarm_t\000"
  10299      726D5F74 
  10299      00
+<<<<<<< HEAD
  10300              	.LASF143:
  10301 1735 6576656E 		.ascii	"eventmask_t\000"
  10301      746D6173 
@@ -12069,6 +13921,97 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10339      736500
  10340              	.LASF93:
  10341 1807 63686172 		.ascii	"char\000"
+=======
+ 10300              	.LASF134:
+ 10301 16eb 7375626F 		.ascii	"suboptarg\000"
+ 10301      70746172 
+ 10301      6700
+ 10302              	.LASF244:
+ 10303 16f5 46464131 		.ascii	"FFA1R\000"
+ 10303      5200
+ 10304              	.LASF235:
+ 10305 16fb 52463152 		.ascii	"RF1R\000"
+ 10305      00
+ 10306              	.LASF685:
+ 10307 1700 5553425F 		.ascii	"USB_SELECTED\000"
+ 10307      53454C45 
+ 10307      43544544 
+ 10307      00
+ 10308              	.LASF471:
+ 10309 170d 43414E5F 		.ascii	"CAN_READY\000"
+ 10309      52454144 
+ 10309      5900
+ 10310              	.LASF10:
+ 10311 1717 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 201
+
+
+ 10311      20756E73 
+ 10311      69676E65 
+ 10311      6420696E 
+ 10311      7400
+ 10312              	.LASF584:
+ 10313 1729 4932535F 		.ascii	"I2S_ACTIVE\000"
+ 10313      41435449 
+ 10313      564500
+ 10314              	.LASF528:
+ 10315 1734 4750545F 		.ascii	"GPT_READY\000"
+ 10315      52454144 
+ 10315      5900
+ 10316              	.LASF490:
+ 10317 173e 64616373 		.ascii	"dacstate_t\000"
+ 10317      74617465 
+ 10317      5F7400
+ 10318              	.LASF300:
+ 10319 1749 73655F74 		.ascii	"se_tp\000"
+ 10319      7000
+ 10320              	.LASF372:
+ 10321 174f 715F7772 		.ascii	"q_wrptr\000"
+ 10321      70747200 
+ 10322              	.LASF498:
+ 10323 1757 64616373 		.ascii	"dacsample_t\000"
+ 10323      616D706C 
+ 10323      655F7400 
+ 10324              	.LASF697:
+ 10325 1763 5553425F 		.ascii	"USB_EVENT_ADDRESS\000"
+ 10325      4556454E 
+ 10325      545F4144 
+ 10325      44524553 
+ 10325      5300
+ 10326              	.LASF592:
+ 10327 1775 69327363 		.ascii	"i2scfgr\000"
+ 10327      66677200 
+ 10328              	.LASF274:
+ 10329 177d 52455350 		.ascii	"RESPCMD\000"
+ 10329      434D4400 
+ 10330              	.LASF477:
+ 10331 1785 72786675 		.ascii	"rxfull_event\000"
+ 10331      6C6C5F65 
+ 10331      76656E74 
+ 10331      00
+ 10332              	.LASF702:
+ 10333 1792 75736265 		.ascii	"usbevent_t\000"
+ 10333      76656E74 
+ 10333      5F7400
+ 10334              	.LASF62:
+ 10335 179d 5F636C6F 		.ascii	"_close\000"
+ 10335      736500
+ 10336              	.LASF93:
+ 10337 17a4 63686172 		.ascii	"char\000"
+ 10337      00
+ 10338              	.LASF474:
+ 10339 17a9 43414E43 		.ascii	"CANConfig\000"
+ 10339      6F6E6669 
+ 10339      6700
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 202
+
+
+ 10340              	.LASF826:
+ 10341 17b3 4E4F5F4D 		.ascii	"NO_MODE_SELECTED\000"
+ 10341      4F44455F 
+ 10341      53454C45 
+ 10341      43544544 
+>>>>>>> Cleaning_code
  10341      00
  10342              	.LASF474:
  10343 180c 43414E43 		.ascii	"CANConfig\000"
@@ -12111,6 +14054,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10362              	.LASF622:
  10363 186e 75736172 		.ascii	"usart\000"
  10363      7400
+<<<<<<< HEAD
  10364              	.LASF830:
  10365 1874 6D696346 		.ascii	"micFront_cmplx_input\000"
  10365      726F6E74 
@@ -12129,6 +14073,23 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10369      6E6B00
  10370              	.LASF762:
  10371 189a 44434647 		.ascii	"DCFG\000"
+=======
+ 10364              	.LASF375:
+ 10365 1830 715F6C69 		.ascii	"q_link\000"
+ 10365      6E6B00
+ 10366              	.LASF762:
+ 10367 1837 44434647 		.ascii	"DCFG\000"
+ 10367      00
+ 10368              	.LASF32:
+ 10369 183c 5F426967 		.ascii	"_Bigint\000"
+ 10369      696E7400 
+ 10370              	.LASF772:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 203
+
+
+ 10371 1844 44564255 		.ascii	"DVBUSDIS\000"
+ 10371      53444953 
+>>>>>>> Cleaning_code
  10371      00
  10372              	.LASF32:
  10373 189f 5F426967 		.ascii	"_Bigint\000"
@@ -12144,6 +14105,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10379 18b8 484E5054 		.ascii	"HNPTXSTS\000"
  10379      58535453 
  10379      00
+<<<<<<< HEAD
  10380              	.LASF675:
  10381 18c1 636F6E66 		.ascii	"configuration\000"
  10381      69677572 
@@ -12479,6 +14441,347 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10536              	.LASF236:
  10537 1c20 52455345 		.ascii	"RESERVED0\000"
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 209
+=======
+ 10380              	.LASF416:
+ 10381 1875 73746D33 		.ascii	"stm32_gpio_setup_t\000"
+ 10381      325F6770 
+ 10381      696F5F73 
+ 10381      65747570 
+ 10381      5F7400
+ 10382              	.LASF385:
+ 10383 1888 5F73746D 		.ascii	"_stm32_dma_streams\000"
+ 10383      33325F64 
+ 10383      6D615F73 
+ 10383      74726561 
+ 10383      6D7300
+ 10384              	.LASF252:
+ 10385 189b 44485231 		.ascii	"DHR12L1\000"
+ 10385      324C3100 
+ 10386              	.LASF255:
+ 10387 18a3 44485231 		.ascii	"DHR12L2\000"
+ 10387      324C3200 
+ 10388              	.LASF114:
+ 10389 18ab 5F676574 		.ascii	"_getdate_err\000"
+ 10389      64617465 
+ 10389      5F657272 
+ 10389      00
+ 10390              	.LASF633:
+ 10391 18b8 73646362 		.ascii	"sdcbusmode_t\000"
+ 10391      75736D6F 
+ 10391      64655F74 
+ 10391      00
+ 10392              	.LASF258:
+ 10393 18c5 44485231 		.ascii	"DHR12LD\000"
+ 10393      324C4400 
+ 10394              	.LASF206:
+ 10395 18cd 6B65726E 		.ascii	"kernel_stats\000"
+ 10395      656C5F73 
+ 10395      74617473 
+ 10395      00
+ 10396              	.LASF451:
+ 10397 18da 61646363 		.ascii	"adccallback_t\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 204
+
+
+ 10397      616C6C62 
+ 10397      61636B5F 
+ 10397      7400
+ 10398              	.LASF157:
+ 10399 18e8 705F7374 		.ascii	"p_stklimit\000"
+ 10399      6B6C696D 
+ 10399      697400
+ 10400              	.LASF145:
+ 10401 18f3 636E745F 		.ascii	"cnt_t\000"
+ 10401      7400
+ 10402              	.LASF517:
+ 10403 18f9 65787473 		.ascii	"extstate_t\000"
+ 10403      74617465 
+ 10403      5F7400
+ 10404              	.LASF690:
+ 10405 1904 5553425F 		.ascii	"USB_EP0_WAITING_TX0\000"
+ 10405      4550305F 
+ 10405      57414954 
+ 10405      494E475F 
+ 10405      54583000 
+ 10406              	.LASF669:
+ 10407 1918 6570306E 		.ascii	"ep0next\000"
+ 10407      65787400 
+ 10408              	.LASF719:
+ 10409 1920 73746D33 		.ascii	"stm32_otg_host_chn_t\000"
+ 10409      325F6F74 
+ 10409      675F686F 
+ 10409      73745F63 
+ 10409      686E5F74 
+ 10410              	.LASF408:
+ 10411 1935 41465248 		.ascii	"AFRH\000"
+ 10411      00
+ 10412              	.LASF407:
+ 10413 193a 4146524C 		.ascii	"AFRL\000"
+ 10413      00
+ 10414              	.LASF126:
+ 10415 193f 5F696D70 		.ascii	"_impure_ptr\000"
+ 10415      7572655F 
+ 10415      70747200 
+ 10416              	.LASF351:
+ 10417 194b 63665F6F 		.ascii	"cf_off_preempt\000"
+ 10417      66665F70 
+ 10417      7265656D 
+ 10417      707400
+ 10418              	.LASF488:
+ 10419 195a 4441435F 		.ascii	"DAC_COMPLETE\000"
+ 10419      434F4D50 
+ 10419      4C455445 
+ 10419      00
+ 10420              	.LASF65:
+ 10421 1967 5F626C6B 		.ascii	"_blksize\000"
+ 10421      73697A65 
+ 10421      00
+ 10422              	.LASF714:
+ 10423 1970 4843494E 		.ascii	"HCINTMSK\000"
+ 10423      544D534B 
+ 10423      00
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 205
+
+
+ 10424              	.LASF63:
+ 10425 1979 5F756275 		.ascii	"_ubuf\000"
+ 10425      6600
+ 10426              	.LASF443:
+ 10427 197f 636F6E66 		.ascii	"config\000"
+ 10427      696700
+ 10428              	.LASF551:
+ 10429 1986 47505444 		.ascii	"GPTD11\000"
+ 10429      313100
+ 10430              	.LASF109:
+ 10431 198d 5F6D626C 		.ascii	"_mblen_state\000"
+ 10431      656E5F73 
+ 10431      74617465 
+ 10431      00
+ 10432              	.LASF91:
+ 10433 199a 5F5F7367 		.ascii	"__sglue\000"
+ 10433      6C756500 
+ 10434              	.LASF125:
+ 10435 19a2 5F5F6C6F 		.ascii	"__locale_t\000"
+ 10435      63616C65 
+ 10435      5F7400
+ 10436              	.LASF389:
+ 10437 19ad 424C4B5F 		.ascii	"BLK_CONNECTING\000"
+ 10437      434F4E4E 
+ 10437      45435449 
+ 10437      4E4700
+ 10438              	.LASF81:
+ 10439 19bc 5F5F636C 		.ascii	"__cleanup\000"
+ 10439      65616E75 
+ 10439      7000
+ 10440              	.LASF484:
+ 10441 19c6 4441435F 		.ascii	"DAC_UNINIT\000"
+ 10441      554E494E 
+ 10441      495400
+ 10442              	.LASF437:
+ 10443 19d1 6164635F 		.ascii	"adc_channels_num_t\000"
+ 10443      6368616E 
+ 10443      6E656C73 
+ 10443      5F6E756D 
+ 10443      5F7400
+ 10444              	.LASF184:
+ 10445 19e4 76746675 		.ascii	"vtfunc_t\000"
+ 10445      6E635F74 
+ 10445      00
+ 10446              	.LASF232:
+ 10447 19ed 43414E5F 		.ascii	"CAN_FIFOMailBox_TypeDef\000"
+ 10447      4649464F 
+ 10447      4D61696C 
+ 10447      426F785F 
+ 10447      54797065 
+ 10448              	.LASF262:
+ 10449 1a05 4441435F 		.ascii	"DAC_TypeDef\000"
+ 10449      54797065 
+ 10449      44656600 
+ 10450              	.LASF322:
+ 10451 1a11 77746F62 		.ascii	"wtobjp\000"
+ 10451      6A7000
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 206
+
+
+ 10452              	.LASF19:
+ 10453 1a18 5F66706F 		.ascii	"_fpos_t\000"
+ 10453      735F7400 
+ 10454              	.LASF504:
+ 10455 1a20 4441435F 		.ascii	"DAC_DHRM_12BIT_RIGHT\000"
+ 10455      4448524D 
+ 10455      5F313242 
+ 10455      49545F52 
+ 10455      49474854 
+ 10456              	.LASF56:
+ 10457 1a35 5F66696C 		.ascii	"_file\000"
+ 10457      6500
+ 10458              	.LASF168:
+ 10459 1a3b 705F7265 		.ascii	"p_realprio\000"
+ 10459      616C7072 
+ 10459      696F00
+ 10460              	.LASF637:
+ 10461 1a46 63617061 		.ascii	"capacity\000"
+ 10461      63697479 
+ 10461      00
+ 10462              	.LASF374:
+ 10463 1a4f 715F6E6F 		.ascii	"q_notify\000"
+ 10463      74696679 
+ 10463      00
+ 10464              	.LASF325:
+ 10465 1a58 77746D74 		.ascii	"wtmtxp\000"
+ 10465      787000
+ 10466              	.LASF54:
+ 10467 1a5f 5F5F7346 		.ascii	"__sFILE\000"
+ 10467      494C4500 
+ 10468              	.LASF820:
+ 10469 1a67 646F7562 		.ascii	"double\000"
+ 10469      6C6500
+ 10470              	.LASF50:
+ 10471 1a6e 5F666E73 		.ascii	"_fns\000"
+ 10471      00
+ 10472              	.LASF801:
+ 10473 1a73 5553424F 		.ascii	"USBOutEndpointState\000"
+ 10473      7574456E 
+ 10473      64706F69 
+ 10473      6E745374 
+ 10473      61746500 
+ 10474              	.LASF758:
+ 10475 1a87 72657376 		.ascii	"resvd41C\000"
+ 10475      64343143 
+ 10475      00
+ 10476              	.LASF25:
+ 10477 1a90 5F6D6273 		.ascii	"_mbstate_t\000"
+ 10477      74617465 
+ 10477      5F7400
+ 10478              	.LASF120:
+ 10479 1a9b 5F685F65 		.ascii	"_h_errno\000"
+ 10479      72726E6F 
+ 10479      00
+ 10480              	.LASF229:
+ 10481 1aa4 52445452 		.ascii	"RDTR\000"
+ 10481      00
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 207
+
+
+ 10482              	.LASF397:
+ 10483 1aa9 626C6B5F 		.ascii	"blk_num\000"
+ 10483      6E756D00 
+ 10484              	.LASF696:
+ 10485 1ab1 5553425F 		.ascii	"USB_EVENT_RESET\000"
+ 10485      4556454E 
+ 10485      545F5245 
+ 10485      53455400 
+ 10486              	.LASF823:
+ 10487 1ac1 5F5F6664 		.ascii	"__fdlibm_xopen\000"
+ 10487      6C69626D 
+ 10487      5F786F70 
+ 10487      656E00
+ 10488              	.LASF177:
+ 10489 1ad0 63685F72 		.ascii	"ch_ready_list\000"
+ 10489      65616479 
+ 10489      5F6C6973 
+ 10489      7400
+ 10490              	.LASF404:
+ 10491 1ade 50555044 		.ascii	"PUPDR\000"
+ 10491      5200
+ 10492              	.LASF7:
+ 10493 1ae4 5F5F696E 		.ascii	"__int32_t\000"
+ 10493      7433325F 
+ 10493      7400
+ 10494              	.LASF9:
+ 10495 1aee 5F5F7569 		.ascii	"__uint32_t\000"
+ 10495      6E743332 
+ 10495      5F7400
+ 10496              	.LASF196:
+ 10497 1af9 63685F73 		.ascii	"ch_system_debug\000"
+ 10497      79737465 
+ 10497      6D5F6465 
+ 10497      62756700 
+ 10498              	.LASF834:
+ 10499 1b09 64617461 		.ascii	"data\000"
+ 10499      00
+ 10500              	.LASF769:
+ 10501 1b0e 4441494E 		.ascii	"DAINTMSK\000"
+ 10501      544D534B 
+ 10501      00
+ 10502              	.LASF524:
+ 10503 1b17 45585443 		.ascii	"EXTConfig\000"
+ 10503      6F6E6669 
+ 10503      6700
+ 10504              	.LASF24:
+ 10505 1b21 5F5F7661 		.ascii	"__value\000"
+ 10505      6C756500 
+ 10506              	.LASF688:
+ 10507 1b29 5553425F 		.ascii	"USB_EP0_WAITING_SETUP\000"
+ 10507      4550305F 
+ 10507      57414954 
+ 10507      494E475F 
+ 10507      53455455 
+ 10508              	.LASF47:
+ 10509 1b3f 5F69735F 		.ascii	"_is_cxa\000"
+ 10509      63786100 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 208
+
+
+ 10510              	.LASF392:
+ 10511 1b47 424C4B5F 		.ascii	"BLK_READING\000"
+ 10511      52454144 
+ 10511      494E4700 
+ 10512              	.LASF414:
+ 10513 1b53 6166726C 		.ascii	"afrl\000"
+ 10513      00
+ 10514              	.LASF791:
+ 10515 1b58 71756575 		.ascii	"queue\000"
+ 10515      6500
+ 10516              	.LASF671:
+ 10517 1b5e 65703065 		.ascii	"ep0endcb\000"
+ 10517      6E646362 
+ 10517      00
+ 10518              	.LASF382:
+ 10519 1b67 73656C66 		.ascii	"selfindex\000"
+ 10519      696E6465 
+ 10519      7800
+ 10520              	.LASF355:
+ 10521 1b71 6D757465 		.ascii	"mutex_t\000"
+ 10521      785F7400 
+ 10522              	.LASF84:
+ 10523 1b79 5F703573 		.ascii	"_p5s\000"
+ 10523      00
+ 10524              	.LASF166:
+ 10525 1b7e 705F6570 		.ascii	"p_epending\000"
+ 10525      656E6469 
+ 10525      6E6700
+ 10526              	.LASF401:
+ 10527 1b89 4D4F4445 		.ascii	"MODER\000"
+ 10527      5200
+ 10528              	.LASF843:
+ 10529 1b8f 6D617A65 		.ascii	"maze_mapping_process_end_of_maze\000"
+ 10529      5F6D6170 
+ 10529      70696E67 
+ 10529      5F70726F 
+ 10529      63657373 
+ 10530              	.LASF585:
+ 10531 1bb0 4932535F 		.ascii	"I2S_COMPLETE\000"
+ 10531      434F4D50 
+ 10531      4C455445 
+ 10531      00
+ 10532              	.LASF236:
+ 10533 1bbd 52455345 		.ascii	"RESERVED0\000"
+ 10533      52564544 
+ 10533      3000
+ 10534              	.LASF239:
+ 10535 1bc7 52455345 		.ascii	"RESERVED1\000"
+ 10535      52564544 
+ 10535      3100
+ 10536              	.LASF241:
+ 10537 1bd1 52455345 		.ascii	"RESERVED2\000"
+ 10537      52564544 
+ 10537      3200
+ 10538              	.LASF243:
+ 10539 1bdb 52455345 		.ascii	"RESERVED3\000"
+ 10539      52564544 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 209
+>>>>>>> Cleaning_code
 
 
  10537      52564544 
@@ -12530,6 +14833,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10561 1c9c 72657376 		.ascii	"resvd444\000"
  10561      64343434 
  10561      00
+<<<<<<< HEAD
  10562              	.LASF428:
  10563 1ca5 70616C5F 		.ascii	"pal_default_config\000"
  10563      64656661 
@@ -12723,12 +15027,209 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
 
  10653      616C4472 
  10653      69766572 
+=======
+ 10562              	.LASF257:
+ 10563 1c5a 44485231 		.ascii	"DHR12RD\000"
+ 10563      32524400 
+ 10564              	.LASF359:
+ 10565 1c62 656C5F6C 		.ascii	"el_listener\000"
+ 10565      69737465 
+ 10565      6E657200 
+ 10566              	.LASF790:
+ 10567 1c6e 6C696E65 		.ascii	"linear\000"
+ 10567      617200
+ 10568              	.LASF544:
+ 10569 1c75 73746D33 		.ascii	"stm32_tim_t\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 210
+
+
+ 10569      325F7469 
+ 10569      6D5F7400 
+ 10570              	.LASF179:
+ 10571 1c81 725F7072 		.ascii	"r_prio\000"
+ 10571      696F00
+ 10572              	.LASF677:
+ 10573 1c88 706D6E65 		.ascii	"pmnext\000"
+ 10573      787400
+ 10574              	.LASF208:
+ 10575 1c8f 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 10575      52784275 
+ 10575      66666572 
+ 10575      00
+ 10576              	.LASF398:
+ 10577 1c9c 426C6F63 		.ascii	"BlockDeviceInfo\000"
+ 10577      6B446576 
+ 10577      69636549 
+ 10577      6E666F00 
+ 10578              	.LASF13:
+ 10579 1cac 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 10579      206C6F6E 
+ 10579      6720756E 
+ 10579      7369676E 
+ 10579      65642069 
+ 10580              	.LASF286:
+ 10581 1cc3 5344494F 		.ascii	"SDIO_TypeDef\000"
+ 10581      5F547970 
+ 10581      65446566 
+ 10581      00
+ 10582              	.LASF308:
+ 10583 1cd0 6F666673 		.ascii	"offset\000"
+ 10583      657400
+ 10584              	.LASF662:
+ 10585 1cd7 53504944 		.ascii	"SPID1\000"
+ 10585      3100
+ 10586              	.LASF263:
+ 10587 1cdd 4E445452 		.ascii	"NDTR\000"
+ 10587      00
+ 10588              	.LASF364:
+ 10589 1ce2 65735F6E 		.ascii	"es_next\000"
+ 10589      65787400 
+ 10590              	.LASF106:
+ 10591 1cea 5F67616D 		.ascii	"_gamma_signgam\000"
+ 10591      6D615F73 
+ 10591      69676E67 
+ 10591      616D00
+ 10592              	.LASF726:
+ 10593 1cf9 72657376 		.ascii	"resvd1C\000"
+ 10593      64314300 
+ 10594              	.LASF207:
+ 10595 1d01 69646C65 		.ascii	"idle_thread_wa\000"
+ 10595      5F746872 
+ 10595      6561645F 
+ 10595      776100
+ 10596              	.LASF722:
+ 10597 1d10 44494550 		.ascii	"DIEPINT\000"
+ 10597      494E5400 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 211
+
+
+ 10598              	.LASF292:
+ 10599 1d18 5350495F 		.ascii	"SPI_TypeDef\000"
+ 10599      54797065 
+ 10599      44656600 
+ 10600              	.LASF190:
+ 10601 1d24 76745F66 		.ascii	"vt_func\000"
+ 10601      756E6300 
+ 10602              	.LASF535:
+ 10603 1d2c 534D4352 		.ascii	"SMCR\000"
+ 10603      00
+ 10604              	.LASF767:
+ 10605 1d31 444F4550 		.ascii	"DOEPMSK\000"
+ 10605      4D534B00 
+ 10606              	.LASF186:
+ 10607 1d39 63685F76 		.ascii	"ch_virtual_timer\000"
+ 10607      69727475 
+ 10607      616C5F74 
+ 10607      696D6572 
+ 10607      00
+ 10608              	.LASF159:
+ 10609 1d4a 705F666C 		.ascii	"p_flags\000"
+ 10609      61677300 
+ 10610              	.LASF326:
+ 10611 1d52 65776D61 		.ascii	"ewmask\000"
+ 10611      736B00
+ 10612              	.LASF361:
+ 10613 1d59 656C5F66 		.ascii	"el_flags\000"
+ 10613      6C616773 
+ 10613      00
+ 10614              	.LASF363:
+ 10615 1d62 6576656E 		.ascii	"event_source\000"
+ 10615      745F736F 
+ 10615      75726365 
+ 10615      00
+ 10616              	.LASF167:
+ 10617 1d6f 705F6D74 		.ascii	"p_mtxlist\000"
+ 10617      786C6973 
+ 10617      7400
+ 10618              	.LASF483:
+ 10619 1d79 43414E44 		.ascii	"CAND1\000"
+ 10619      3100
+ 10620              	.LASF242:
+ 10621 1d7f 46533152 		.ascii	"FS1R\000"
+ 10621      00
+ 10622              	.LASF138:
+ 10623 1d84 74737461 		.ascii	"tstate_t\000"
+ 10623      74655F74 
+ 10623      00
+ 10624              	.LASF127:
+ 10625 1d8d 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 10625      62616C5F 
+ 10625      696D7075 
+ 10625      72655F70 
+ 10625      747200
+ 10626              	.LASF768:
+ 10627 1da0 4441494E 		.ascii	"DAINT\000"
+ 10627      5400
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 212
+
+
+ 10628              	.LASF661:
+ 10629 1da6 53504943 		.ascii	"SPIConfig\000"
+ 10629      6F6E6669 
+ 10629      6700
+ 10630              	.LASF78:
+ 10631 1db0 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 10631      70656369 
+ 10631      66696564 
+ 10631      5F6C6F63 
+ 10631      616C655F 
+ 10632              	.LASF413:
+ 10633 1dc9 70757064 		.ascii	"pupdr\000"
+ 10633      7200
+ 10634              	.LASF503:
+ 10635 1dcf 64616365 		.ascii	"dacerrorcallback_t\000"
+ 10635      72726F72 
+ 10635      63616C6C 
+ 10635      6261636B 
+ 10635      5F7400
+ 10636              	.LASF664:
+ 10637 1de2 7472616E 		.ascii	"transmitting\000"
+ 10637      736D6974 
+ 10637      74696E67 
+ 10637      00
+ 10638              	.LASF523:
+ 10639 1def 6368616E 		.ascii	"channels\000"
+ 10639      6E656C73 
+ 10639      00
+ 10640              	.LASF273:
+ 10641 1df8 434C4B43 		.ascii	"CLKCR\000"
+ 10641      5200
+ 10642              	.LASF636:
+ 10643 1dfe 53444344 		.ascii	"SDCDriver\000"
+ 10643      72697665 
+ 10643      7200
+ 10644              	.LASF156:
+ 10645 1e08 705F6E61 		.ascii	"p_name\000"
+ 10645      6D6500
+ 10646              	.LASF80:
+ 10647 1e0f 5F5F7364 		.ascii	"__sdidinit\000"
+ 10647      6964696E 
+ 10647      697400
+ 10648              	.LASF618:
+ 10649 1e1a 53657269 		.ascii	"SerialDriver\000"
+ 10649      616C4472 
+ 10649      69766572 
+ 10649      00
+ 10650              	.LASF220:
+ 10651 1e27 4A445231 		.ascii	"JDR1\000"
+ 10651      00
+ 10652              	.LASF221:
+ 10653 1e2c 4A445232 		.ascii	"JDR2\000"
+>>>>>>> Cleaning_code
  10653      00
  10654              	.LASF220:
  10655 1e8a 4A445231 		.ascii	"JDR1\000"
  10655      00
+<<<<<<< HEAD
  10656              	.LASF221:
  10657 1e8f 4A445232 		.ascii	"JDR2\000"
+=======
+ 10656              	.LASF223:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 213
+
+
+ 10657 1e36 4A445234 		.ascii	"JDR4\000"
+>>>>>>> Cleaning_code
  10657      00
  10658              	.LASF222:
  10659 1e94 4A445233 		.ascii	"JDR3\000"
@@ -12752,6 +15253,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10669 1ebc 5F666C6F 		.ascii	"_flock_t\000"
  10669      636B5F74 
  10669      00
+<<<<<<< HEAD
  10670              	.LASF192:
  10671 1ec5 76697274 		.ascii	"virtual_timers_list_t\000"
  10671      75616C5F 
@@ -13004,6 +15506,256 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10789 2129 756E7369 		.ascii	"unsigned int\000"
  10789      676E6564 
  10789      20696E74 
+=======
+ 10670              	.LASF453:
+ 10671 1e81 63697263 		.ascii	"circular\000"
+ 10671      756C6172 
+ 10671      00
+ 10672              	.LASF586:
+ 10673 1e8a 69327373 		.ascii	"i2sstate_t\000"
+ 10673      74617465 
+ 10673      5F7400
+ 10674              	.LASF410:
+ 10675 1e95 6D6F6465 		.ascii	"moder\000"
+ 10675      7200
+ 10676              	.LASF657:
+ 10677 1e9b 53504944 		.ascii	"SPIDriver\000"
+ 10677      72697665 
+ 10677      7200
+ 10678              	.LASF328:
+ 10679 1ea5 735F7175 		.ascii	"s_queue\000"
+ 10679      65756500 
+ 10680              	.LASF317:
+ 10681 1ead 6D5F6372 		.ascii	"m_crit_thd\000"
+ 10681      69745F74 
+ 10681      686400
+ 10682              	.LASF485:
+ 10683 1eb8 4441435F 		.ascii	"DAC_STOP\000"
+ 10683      53544F50 
+ 10683      00
+ 10684              	.LASF761:
+ 10685 1ec1 72657376 		.ascii	"resvd700\000"
+ 10685      64373030 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 214
+
+
+ 10685      00
+ 10686              	.LASF290:
+ 10687 1eca 49325343 		.ascii	"I2SCFGR\000"
+ 10687      46475200 
+ 10688              	.LASF335:
+ 10689 1ed2 63685F69 		.ascii	"ch_identifier\000"
+ 10689      64656E74 
+ 10689      69666965 
+ 10689      7200
+ 10690              	.LASF628:
+ 10691 1ee0 77726974 		.ascii	"writet\000"
+ 10691      657400
+ 10692              	.LASF11:
+ 10693 1ee7 6C6F6E67 		.ascii	"long long int\000"
+ 10693      206C6F6E 
+ 10693      6720696E 
+ 10693      7400
+ 10694              	.LASF748:
+ 10695 1ef5 48505458 		.ascii	"HPTXFSIZ\000"
+ 10695      4653495A 
+ 10695      00
+ 10696              	.LASF342:
+ 10697 1efe 63665F6F 		.ascii	"cf_off_prio\000"
+ 10697      66665F70 
+ 10697      72696F00 
+ 10698              	.LASF70:
+ 10699 1f0a 5F666C61 		.ascii	"_flags2\000"
+ 10699      67733200 
+ 10700              	.LASF314:
+ 10701 1f12 74696D65 		.ascii	"time_measurement_t\000"
+ 10701      5F6D6561 
+ 10701      73757265 
+ 10701      6D656E74 
+ 10701      5F7400
+ 10702              	.LASF649:
+ 10703 1f25 6765745F 		.ascii	"get_info\000"
+ 10703      696E666F 
+ 10703      00
+ 10704              	.LASF440:
+ 10705 1f2e 61646365 		.ascii	"adcerror_t\000"
+ 10705      72726F72 
+ 10705      5F7400
+ 10706              	.LASF814:
+ 10707 1f39 6765745F 		.ascii	"get_descriptor_cb\000"
+ 10707      64657363 
+ 10707      72697074 
+ 10707      6F725F63 
+ 10707      6200
+ 10708              	.LASF79:
+ 10709 1f4b 5F6C6F63 		.ascii	"_locale\000"
+ 10709      616C6500 
+ 10710              	.LASF144:
+ 10711 1f53 6576656E 		.ascii	"eventflags_t\000"
+ 10711      74666C61 
+ 10711      67735F74 
+ 10711      00
+ 10712              	.LASF653:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 215
+
+
+ 10713 1f60 5350495F 		.ascii	"SPI_READY\000"
+ 10713      52454144 
+ 10713      5900
+ 10714              	.LASF238:
+ 10715 1f6a 73464946 		.ascii	"sFIFOMailBox\000"
+ 10715      4F4D6169 
+ 10715      6C426F78 
+ 10715      00
+ 10716              	.LASF641:
+ 10717 1f77 6275735F 		.ascii	"bus_width\000"
+ 10717      77696474 
+ 10717      6800
+ 10718              	.LASF259:
+ 10719 1f81 44485238 		.ascii	"DHR8RD\000"
+ 10719      524400
+ 10720              	.LASF763:
+ 10721 1f88 4443544C 		.ascii	"DCTL\000"
+ 10721      00
+ 10722              	.LASF643:
+ 10723 1f8d 53444344 		.ascii	"SDCDriverVMT\000"
+ 10723      72697665 
+ 10723      72564D54 
+ 10723      00
+ 10724              	.LASF789:
+ 10725 1f9a 74786275 		.ascii	"txbuf\000"
+ 10725      6600
+ 10726              	.LASF782:
+ 10727 1fa0 50434743 		.ascii	"PCGCCTL\000"
+ 10727      43544C00 
+ 10728              	.LASF700:
+ 10729 1fa8 5553425F 		.ascii	"USB_EVENT_WAKEUP\000"
+ 10729      4556454E 
+ 10729      545F5741 
+ 10729      4B455550 
+ 10729      00
+ 10730              	.LASF155:
+ 10731 1fb9 705F6F6C 		.ascii	"p_older\000"
+ 10731      64657200 
+ 10732              	.LASF394:
+ 10733 1fc1 424C4B5F 		.ascii	"BLK_SYNCING\000"
+ 10733      53594E43 
+ 10733      494E4700 
+ 10734              	.LASF425:
+ 10735 1fcd 50494461 		.ascii	"PIData\000"
+ 10735      746100
+ 10736              	.LASF811:
+ 10737 1fd4 73657475 		.ascii	"setup_buf\000"
+ 10737      705F6275 
+ 10737      6600
+ 10738              	.LASF745:
+ 10739 1fde 72657376 		.ascii	"resvd34\000"
+ 10739      64333400 
+ 10740              	.LASF550:
+ 10741 1fe6 47505444 		.ascii	"GPTD6\000"
+ 10741      3600
+ 10742              	.LASF456:
+ 10743 1fec 6572726F 		.ascii	"error_cb\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 216
+
+
+ 10743      725F6362 
+ 10743      00
+ 10744              	.LASF390:
+ 10745 1ff5 424C4B5F 		.ascii	"BLK_DISCONNECTING\000"
+ 10745      44495343 
+ 10745      4F4E4E45 
+ 10745      4354494E 
+ 10745      4700
+ 10746              	.LASF659:
+ 10747 2007 7373706F 		.ascii	"ssport\000"
+ 10747      727400
+ 10748              	.LASF171:
+ 10749 200e 74687265 		.ascii	"thread_reference_t\000"
+ 10749      61645F72 
+ 10749      65666572 
+ 10749      656E6365 
+ 10749      5F7400
+ 10750              	.LASF519:
+ 10751 2021 65787063 		.ascii	"expchannel_t\000"
+ 10751      68616E6E 
+ 10751      656C5F74 
+ 10751      00
+ 10752              	.LASF665:
+ 10753 202e 72656365 		.ascii	"receiving\000"
+ 10753      6976696E 
+ 10753      6700
+ 10754              	.LASF94:
+ 10755 2038 5F5F4649 		.ascii	"__FILE\000"
+ 10755      4C4500
+ 10756              	.LASF546:
+ 10757 203f 66726571 		.ascii	"frequency\000"
+ 10757      75656E63 
+ 10757      7900
+ 10758              	.LASF30:
+ 10759 2049 5F736967 		.ascii	"_sign\000"
+ 10759      6E00
+ 10760              	.LASF808:
+ 10761 204f 696E5F73 		.ascii	"in_state\000"
+ 10761      74617465 
+ 10761      00
+ 10762              	.LASF35:
+ 10763 2058 5F5F746D 		.ascii	"__tm_min\000"
+ 10763      5F6D696E 
+ 10763      00
+ 10764              	.LASF336:
+ 10765 2061 63685F7A 		.ascii	"ch_zero\000"
+ 10765      65726F00 
+ 10766              	.LASF566:
+ 10767 2069 46415354 		.ascii	"FAST_DUTY_CYCLE_2\000"
+ 10767      5F445554 
+ 10767      595F4359 
+ 10767      434C455F 
+ 10767      3200
+ 10768              	.LASF281:
+ 10769 207b 44435452 		.ascii	"DCTRL\000"
+ 10769      4C00
+ 10770              	.LASF341:
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 217
+
+
+ 10771 2081 63685F74 		.ascii	"ch_threadsize\000"
+ 10771      68726561 
+ 10771      6473697A 
+ 10771      6500
+ 10772              	.LASF270:
+ 10773 208f 464C5452 		.ascii	"FLTR\000"
+ 10773      00
+ 10774              	.LASF841:
+ 10775 2094 646F4646 		.ascii	"doFFT_optimized\000"
+ 10775      545F6F70 
+ 10775      74696D69 
+ 10775      7A656400 
+ 10776              	.LASF825:
+ 10777 20a4 5F5F6664 		.ascii	"__fdlib_version\000"
+ 10777      6C69625F 
+ 10777      76657273 
+ 10777      696F6E00 
+ 10778              	.LASF537:
+ 10779 20b4 43434D52 		.ascii	"CCMR1\000"
+ 10779      3100
+ 10780              	.LASF538:
+ 10781 20ba 43434D52 		.ascii	"CCMR2\000"
+ 10781      3200
+ 10782              	.LASF542:
+ 10783 20c0 43434D52 		.ascii	"CCMR3\000"
+ 10783      3300
+ 10784              	.LASF14:
+ 10785 20c6 756E7369 		.ascii	"unsigned int\000"
+ 10785      676E6564 
+ 10785      20696E74 
+ 10785      00
+ 10786              	.LASF460:
+ 10787 20d3 73717232 		.ascii	"sqr2\000"
+ 10787      00
+ 10788              	.LASF461:
+ 10789 20d8 73717233 		.ascii	"sqr3\000"
+>>>>>>> Cleaning_code
  10789      00
  10790              	.LASF460:
  10791 2136 73717232 		.ascii	"sqr2\000"
@@ -13011,6 +15763,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10792              	.LASF461:
  10793 213b 73717233 		.ascii	"sqr3\000"
  10793      00
+<<<<<<< HEAD
  10794              	.LASF108:
  10795 2140 5F723438 		.ascii	"_r48\000"
  10795      00
@@ -13034,6 +15787,41 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10805 2162 6932636F 		.ascii	"i2copmode_t\000"
  10805      706D6F64 
  10805      655F7400 
+=======
+ 10794              	.LASF682:
+ 10795 20e7 5553425F 		.ascii	"USB_UNINIT\000"
+ 10795      554E494E 
+ 10795      495400
+ 10796              	.LASF379:
+ 10797 20f2 73747265 		.ascii	"stream\000"
+ 10797      616D00
+ 10798              	.LASF463:
+ 10799 20f9 64756D6D 		.ascii	"dummy\000"
+ 10799      7900
+ 10800              	.LASF564:
+ 10801 20ff 6932636F 		.ascii	"i2copmode_t\000"
+ 10801      706D6F64 
+ 10801      655F7400 
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 218
+
+
+ 10802              	.LASF847:
+ 10803 210b 433A5C55 		.ascii	"C:\\Users\\afgou\\Desktop\\Aur\351lien\\EPFL\\Cours"
+ 10803      73657273 
+ 10803      5C616667 
+ 10803      6F755C44 
+ 10803      65736B74 
+ 10804 2135 5C426163 		.ascii	"\\Bachelor 3, Semestre 6\\Microinformatique\\TPs\\T"
+ 10804      68656C6F 
+ 10804      7220332C 
+ 10804      2053656D 
+ 10804      65737472 
+ 10805 2164 50735F47 		.ascii	"Ps_Git\\TP6_Miniprojet\\Miniprojet\000"
+ 10805      69745C54 
+ 10805      50365F4D 
+ 10805      696E6970 
+ 10805      726F6A65 
+>>>>>>> Cleaning_code
  10806              	.LASF357:
  10807 216e 6576656E 		.ascii	"event_listener\000"
  10807      745F6C69 
@@ -13075,10 +15863,14 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10825 21d4 49325344 		.ascii	"I2SDriver\000"
  10825      72697665 
  10825      7200
+<<<<<<< HEAD
  10826              	.LASF571:
  10827 21de 64757479 		.ascii	"duty_cycle\000"
  10827      5F637963 
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 219
+=======
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 219
+>>>>>>> Cleaning_code
 
 
  10827      6C6500
@@ -13134,6 +15926,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
  10855 226a 705F7374 		.ascii	"p_stats\000"
  10855      61747300 
  10856              	.LASF687:
+<<<<<<< HEAD
  10857 2272 75736273 		.ascii	"usbstate_t\000"
  10857      74617465 
  10857      5F7400
@@ -13142,10 +15935,21 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 1
 
 
 ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s 			page 221
+=======
+ 10857 2289 75736273 		.ascii	"usbstate_t\000"
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 220
+
+
+ 10857      74617465 
+ 10857      5F7400
+ 10858              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s 			page 221
+>>>>>>> Cleaning_code
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 audio_processing.c
+<<<<<<< HEAD
 C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:18     .text.sound_remote:00000000 $t
 C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:26     .text.sound_remote:00000000 sound_remote
 C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:190    .text.sound_remote:000000c4 $d
@@ -13162,6 +15966,24 @@ C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:391    .bss.micFront_cmplx_input
 C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:397    .bss.micFront_output:00000000 $d
 C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:403    .bss.nb_samples.14110:00000000 $d
 C:\Users\SALMAC~1\AppData\Local\Temp\ccbXn7db.s:407    .bss.nb_samples.14110:00000000 nb_samples.14110
+=======
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:18     .text.sound_remote:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:26     .text.sound_remote:00000000 sound_remote
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:190    .text.sound_remote:000000c4 $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:198    .text.processAudioData:00000000 $t
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:206    .text.processAudioData:00000000 processAudioData
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:370    .text.processAudioData:000000dc $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:394    .bss.micFront_cmplx_input:00000000 micFront_cmplx_input
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:400    .bss.micFront_output:00000000 micFront_output
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:381    .bss.count_index:00000000 count_index
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:382    .bss.count_index:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:384    .bss.last_index:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:388    .bss.last_index:00000000 last_index
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:391    .bss.micFront_cmplx_input:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:397    .bss.micFront_output:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:403    .bss.nb_samples.14110:00000000 $d
+C:\Users\afgou\AppData\Local\Temp\ccNVKbHl.s:407    .bss.nb_samples.14110:00000000 nb_samples.14110
+>>>>>>> Cleaning_code
 
 UNDEFINED SYMBOLS
 maze_mapping_process_end_of_maze

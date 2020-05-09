@@ -20,7 +20,7 @@
 #define CASE_VERIFIED 5
 
 enum {NO_SELECTED_PATH, RIGHT, FORWARD, LEFT, ALL_PATHS_CHECKED, BEGINNING, END};
-enum {CROSSROAD_4, CROSSROAD_3, CORRIDOR, DEADEND, CORRIDOR_FORWARD, CORRIDOR_RIGHT, CORRIDOR_LEFT, NO_CASE};
+enum {CORRIDOR=2, DEADEND};
 enum {TURN_OFF, TURN_ON};
 
 //prototypes de fonctions
@@ -30,7 +30,6 @@ uint8_t maze_mapping_deadend_gestion(void);
 uint8_t maze_mapping_furthest_point_reached(void);
 uint8_t maze_mapping_memorise_crossroad(bool);
 uint8_t maze_mapping_next_step_to_goal(void);
-//bool maze_mapping_multi_check_case(uint8_t new_case);
 bool maze_mapping_multi_check_sensors_values(bool, bool, bool);
 void maze_mapping_set_rgb_leds(uint8_t, uint8_t, uint8_t);
 void maze_mapping_update_red_leds(unsigned int, unsigned int, unsigned int, unsigned int);
@@ -38,12 +37,11 @@ void maze_mapping_update_rgb_leds(void);
 void maze_mapping_victory_dance(void);
 
 //variables globales
-static uint8_t map[MAX_MAP_SIZE], multi_check=RESET; //last_case=NO_CASE;
+static uint8_t map[MAX_MAP_SIZE], multi_check=RESET;
 static int8_t current_crossroad=RESET, robot_position=RESET;
 static bool memorise_crossroad=true, switch_to_discover_mode=false, uturn_to_do=true, do_a_uturn=false, furthest_point_reached=false;
-static uint8_t mode = NO_MODE_SELECTED;
-
 static bool last_f_status, last_r_status, last_l_status;
+static uint8_t mode = NO_MODE_SELECTED;
 
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
@@ -99,7 +97,7 @@ uint8_t maze_mapping_furthest_point_reached(void)
 	    mode=DISCOVER;
 	    maze_mapping_update_rgb_leds();
 	    switch_to_discover_mode=false;
-	    return GO_FORWARD; //return KEEP_GOING;
+	    return GO_FORWARD;
 	}
 	else
 	{
@@ -171,12 +169,7 @@ uint8_t maze_mapping_next_move(bool forward_status, bool right_status, bool left
     uint8_t crossroad_form=forward_status+right_status+left_status;
 
     if (!maze_mapping_multi_check_sensors_values(forward_status, right_status, left_status))
-    {
-//    	if (crossroad_form==DEADEND)
-//    		return KEEP_GOING;
-//    	else
     	return GO_FORWARD;
-    }
 
     switch (crossroad_form)
     {
@@ -277,30 +270,6 @@ bool maze_mapping_mode_is_selected(void)
 	else
 		return true;
 }
-
-//bool maze_mapping_multi_check_case(uint8_t new_case)
-//{
-//	if(new_case==last_case)
-//	{
-//		if (multi_check<CASE_VERIFIED)
-//		{
-//			multi_check++;
-//			return false;
-//		}
-//		else
-//		{
-//			last_case=NO_CASE;
-//			multi_check=RESET;
-//			return true;
-//		}
-//	}
-//	else
-//	{
-//		last_case=new_case;
-//		multi_check=RESET;
-//		return false;
-//	}
-//}
 
 bool maze_mapping_multi_check_sensors_values(bool forward_status, bool right_status, bool left_status)
 {
