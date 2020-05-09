@@ -6,15 +6,15 @@
 #include <constantes.h>
 #include <mouvements.h>
 
-#define KP 1.4 //Régulation PD entre deux murs
-#define KD 0.7
+#define KP 1.6 //Régulation PD entre deux murs
+#define KD 0.8
 #define KP_FW 1 //Régulation PD par rapport à un seul mur
-#define KD_FW 1
+#define KD_FW 0.5
 
 #define MAX_DIFF 30
 #define THRESHOLD_45_DEG 250
 //Pour corriger le fait que RIGHT_SENS donne des valeurs
-//plus élevées que LEFT_SENS pour une distance donnée
+//plus faible que LEFT_SENS pour une distance donnée
 //on définit un offset
 #define OFFSET 20
 
@@ -64,11 +64,9 @@ void regulator_difference(int front_right_45deg_value, int front_left_45deg_valu
     int16_t difference;
 
     if ((front_right_45deg_value>THRESHOLD_45_DEG)&&(front_left_45deg_value>THRESHOLD_45_DEG))
-	{
 		difference = front_right_45deg_value-front_left_45deg_value;
-	}
 	else
-		difference = front_right_value-front_left_value-OFFSET;
+		difference = front_right_value-front_left_value+OFFSET;
 
     regulator_pd(difference, DIFFERENCE);
 }
@@ -80,7 +78,7 @@ void regulator_follow_wall(int reference_value, int current_value, int sensor_id
     difference=reference_value-current_value;
 
 	if (sensor_id==FRONT_RIGHT_45DEG)
-		difference = -difference+OFFSET;
-
-	regulator_pd(difference, FOLLOW_WALL);
+		difference = -difference;
+	if(current_value>THRESHOLD_45_DEG)
+		regulator_pd(difference, FOLLOW_WALL);
 }

@@ -20,7 +20,7 @@
 #include <mouvements.h>
 
 #define ROBOT_DIAMETER 75.f
-#define COEFF 0.3f
+#define COEFF 0.35f
 #define BUFFER_SIZE 3
 
 enum{FREE_WAY_DETECTED, WALL_DETECTED};
