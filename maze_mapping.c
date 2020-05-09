@@ -20,7 +20,7 @@
 #define CASE_VERIFIED 5
 
 enum {NO_SELECTED_PATH, RIGHT, FORWARD, LEFT, ALL_PATHS_CHECKED, BEGINNING, END};
-enum {CROSSROAD_4, CROSSROAD_3, CORRIDOR, DEADEND, NO_CASE};
+enum {CROSSROAD_4, CROSSROAD_3, CORRIDOR, DEADEND, CORRIDOR_FORWARD, CORRIDOR_RIGHT, CORRIDOR_LEFT, NO_CASE};
 enum {TURN_OFF, TURN_ON};
 
 //prototypes de fonctions
@@ -45,25 +45,38 @@ static uint8_t mode = NO_MODE_SELECTED;
 //Déclarations des fonctions
 uint8_t maze_mapping_corridor_gestion(bool right_status, bool left_status)
 {
-	if(maze_mapping_multi_check_case(CORRIDOR))
+	if (right_status && left_status)
 	{
-		if (right_status && left_status)
+		if (maze_mapping_multi_check_case(CORRIDOR_FORWARD))
 		{
 			memorise_crossroad=true;
-	        return KEEP_GOING;
+			return KEEP_GOING;
 		}
-
-		//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
-		//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
-		memorise_crossroad=false;
-
-		if (!right_status)
-			return GO_RIGHT;
 		else
-			return GO_LEFT;
+			return GO_FORWARD;
+	}
+	else if (!right_status)
+	{
+		if (maze_mapping_multi_check_case(CORRIDOR_RIGHT))
+		{
+			//après avoir fait un quart de tour, le robot perçoit son environnement comme un carrefour à 3 issues
+			//afin d'éviter de mémoriser ce carrefour "virtuel", on active la sécurité
+			memorise_crossroad=false;
+			return GO_RIGHT;
+		}
+		else
+			return GO_FORWARD;
 	}
 	else
-		return GO_FORWARD;
+	{
+		if (maze_mapping_multi_check_case(CORRIDOR_LEFT))
+		{
+			memorise_crossroad=false;
+			return GO_LEFT;
+		}
+		else
+			return GO_FORWARD;
+	}
 }
 
 uint8_t maze_mapping_crossroad_gestion(bool right_status, uint8_t crossroad_form)
@@ -111,7 +124,7 @@ uint8_t maze_mapping_furthest_point_reached(void)
 	    mode=DISCOVER;
 	    maze_mapping_update_rgb_leds();
 	    switch_to_discover_mode=false;
-	    return KEEP_GOING;
+	    return GO_FORWARD; //return KEEP_GOING;
 	}
 	else
 	{
@@ -293,6 +306,7 @@ bool maze_mapping_multi_check_case(uint8_t new_case)
 		}
 		else
 		{
+			last_case=NO_CASE;
 			multi_check=RESET;
 			return true;
 		}
