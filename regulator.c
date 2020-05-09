@@ -6,13 +6,13 @@
 #include <constantes.h>
 #include <mouvements.h>
 
-#define KP 1.1 //Régulation PD entre deux murs
-#define KD 0.5
-#define KP_FW 1//0.6//0.9//Régulation PD par rapport à un seul mur
-#define KD_FW 0.5//0.3
+#define KP 1.4 //Régulation PD entre deux murs
+#define KD 0.7
+#define KP_FW 1 //Régulation PD par rapport à un seul mur
+#define KD_FW 1
 
 #define MAX_DIFF 30
-#define THRESHOLD_45_DEG 290//250
+#define THRESHOLD_45_DEG 250
 //Pour corriger le fait que RIGHT_SENS donne des valeurs
 //plus élevées que LEFT_SENS pour une distance donnée
 //on définit un offset
@@ -44,8 +44,8 @@ void regulator_pd(int16_t difference, uint8_t regulation_type)
 	}																	//comme arguments (p_coeff, d_coeff) pour les
 	else																//bons KP et KD
 	{
-		right_speed = get_right_speed() + KP_FW*difference  - KD_FW*derivate;// + KD_FW*derivate;
-		left_speed = get_left_speed() - KP_FW*difference  + KD_FW*derivate;//- KD_FW*derivate;
+		right_speed = get_right_speed() + KP_FW*difference  + KD_FW*derivate;
+		left_speed = get_left_speed() - KP_FW*difference  - KD_FW*derivate;
 	}
 
 	set_speed(right_speed, left_speed);
@@ -79,7 +79,7 @@ void regulator_follow_wall(int reference_value, int current_value, int sensor_id
 
     difference=reference_value-current_value;
 
-	if (sensor_id==RIGHT_SENS)
+	if (sensor_id==FRONT_RIGHT_45DEG)
 		difference = -difference+OFFSET;
 
 	regulator_pd(difference, FOLLOW_WALL);

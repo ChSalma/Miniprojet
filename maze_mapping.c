@@ -118,7 +118,6 @@ uint8_t maze_mapping_furthest_point_reached(void)
 	    mode=NO_MODE_SELECTED;
 	    maze_mapping_update_rgb_leds();
 	    return DONT_MOVE;
-
 	}
 }
 
