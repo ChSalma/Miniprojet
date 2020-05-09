@@ -20,7 +20,7 @@
 #include <mouvements.h>
 
 #define ROBOT_DIAMETER 75.f
-#define COEFF 0.4f
+#define COEFF 0.35f//0.4f
 #define ANTICIPATION_OFFSET 300
 
 #define BUFFER_SIZE 3

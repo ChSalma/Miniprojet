@@ -8,11 +8,11 @@
 
 #define KP 1.1 //Régulation PD entre deux murs
 #define KD 0.5
-#define KP_FW 0.6//0.9//Régulation PD par rapport à un seul mur
-#define KD_FW 0.3
+#define KP_FW 1//0.6//0.9//Régulation PD par rapport à un seul mur
+#define KD_FW 0.5//0.3
 
 #define MAX_DIFF 30
-#define THRESHOLD_45_DEG 250
+#define THRESHOLD_45_DEG 290//250
 //Pour corriger le fait que RIGHT_SENS donne des valeurs
 //plus élevées que LEFT_SENS pour une distance donnée
 //on définit un offset
