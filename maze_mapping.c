@@ -347,7 +347,7 @@ void maze_mapping_select_mode(uint8_t mode_selected)
 		if (((mode==RETURN_HOME)||(mode_selected==RETURN_HOME))&&uturn_to_do)
 			do_a_uturn=true;
 
-    	if ((mode_selected==DISCOVER)&&(robot_position!=current_crossroad))
+    	if ((mode_selected==DISCOVER)&&(robot_position<(current_crossroad-1)))
     	{
     		mode=GO_FURTHEST_POINT_KNOWN;
     		switch_to_discover_mode=true;
