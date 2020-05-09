@@ -2,7 +2,7 @@
  * maze_mapping.c
  *
  *  Created on: 16 avr. 2020
- *      Author: afgou
+ *      Author: Aurélien Goumaz
  */
 
 #include <stdio.h>

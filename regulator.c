@@ -1,8 +1,7 @@
-#include "ch.h"
-#include "hal.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
-
-#include <main.h>
+#include <stdint.h>
 #include <regulator.h>
 #include <constantes.h>
 #include <mouvements.h>

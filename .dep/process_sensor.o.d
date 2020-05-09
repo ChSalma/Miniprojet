@@ -100,29 +100,22 @@ build/obj/process_sensor.o: process_sensor.c \
  ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/ports/STM32/STM32F4xx/stm32_registry.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/mmc_spi.h \
  ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h \
- ../../lib/e-puck2_main-processor/src/sensors/proximity.h \
- process_sensor.h constantes.h maze_mapping.h \
- ../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
- regulator.h main.h \
- ../../lib/e-puck2_main-processor/src/camera/dcmi_camera.h \
- ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/dcmi.h \
- ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/dcmi_lld.h \
- ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/stm32_registry.h \
- ../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/stm32_rcc.h \
- ../../lib/e-puck2_main-processor/src/camera/po8030.h \
- ../../lib/e-puck2_main-processor/src/msgbus/messagebus.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\unistd.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdlib.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\types.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\lock.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h \
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\types.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\endian.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_endian.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\select.h \
@@ -133,13 +126,11 @@ build/obj/process_sensor.o: process_sensor.c \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_pthreadtypes.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\sched.h \
  c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\types.h \
- ../../lib/e-puck2_main-processor/src/parameter/parameter.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdlib.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h \
- c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h \
- mouvements.h
+ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\stdio.h \
+ ../../lib/e-puck2_main-processor/src/sensors/proximity.h \
+ process_sensor.h constantes.h maze_mapping.h \
+ ../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
+ regulator.h mouvements.h
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/ch.h:
 
@@ -343,39 +334,9 @@ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\
 
 ../../lib/e-puck2_main-processor/ChibiOS//os/hal/include/serial_usb.h:
 
-../../lib/e-puck2_main-processor/src/sensors/proximity.h:
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdlib.h:
 
-process_sensor.h:
-
-constantes.h:
-
-maze_mapping.h:
-
-../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
-
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h:
-
-regulator.h:
-
-main.h:
-
-../../lib/e-puck2_main-processor/src/camera/dcmi_camera.h:
-
-../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/dcmi.h:
-
-../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/dcmi_lld.h:
-
-../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/stm32_registry.h:
-
-../../lib/e-puck2_main-processor/ChibiOS_ext/os/hal/include/../ports/STM32/STM32F4xx/stm32_rcc.h:
-
-../../lib/e-puck2_main-processor/src/camera/po8030.h:
-
-../../lib/e-puck2_main-processor/src/msgbus/messagebus.h:
-
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\unistd.h:
-
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\unistd.h:
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h:
 
 c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
 
@@ -383,17 +344,27 @@ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\
 
 c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\config.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\ieeefp.h:
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h:
-
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\types.h:
-
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h:
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
 
 c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\_types.h:
 
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\_types.h:
+
 c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\lock.h:
+
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\cdefs.h:
+
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h:
+
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h:
+
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdio.h:
+
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include\stdarg.h:
+
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\types.h:
 
 c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\endian.h:
 
@@ -415,16 +386,18 @@ c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\
 
 c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\types.h:
 
-../../lib/e-puck2_main-processor/src/parameter/parameter.h:
+c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\stdio.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\stdlib.h:
+../../lib/e-puck2_main-processor/src/sensors/proximity.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\_ansi.h:
+process_sensor.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\sys\reent.h:
+constantes.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\machine\stdlib.h:
+maze_mapping.h:
 
-c:\program\ files\eclipse_e-puck2\tools\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\alloca.h:
+../../lib/e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
+
+regulator.h:
 
 mouvements.h:

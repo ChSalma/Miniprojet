@@ -7,15 +7,16 @@
 
 #include "ch.h"
 #include "hal.h"
+#include <stdlib.h>
+#include <stdio.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <sensors/proximity.h>
 #include <process_sensor.h>
 #include <constantes.h>
 #include <maze_mapping.h>
 #include <chprintf.h>
 #include <regulator.h>
-
-#include <main.h>
 #include <mouvements.h>
 
 #define ROBOT_DIAMETER 75.f

@@ -2,7 +2,7 @@
  * maze_mapping.h
  *
  *  Created on: 16 avr. 2020
- *      Author: afgou
+ *      Author: Aurélien Goumaz
  */
 
 #ifndef MAZE_MAPPING_H_
