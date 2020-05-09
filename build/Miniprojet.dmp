@@ -56,21 +56,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  17 .comment      0000015e  00000000  00000000  000315d9  2**0
                   CONTENTS, READONLY
- 18 .debug_info   001010e8  00000000  00000000  00031737  2**0
+ 18 .debug_info   00100489  00000000  00000000  00031737  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_abbrev 000110f0  00000000  00000000  0013281f  2**0
+ 19 .debug_abbrev 000110ce  00000000  00000000  00131bc0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_aranges 00001cf0  00000000  00000000  00143910  2**3
+ 20 .debug_aranges 00001cf0  00000000  00000000  00142c90  2**3
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_ranges 00003cc8  00000000  00000000  00145600  2**0
+ 21 .debug_ranges 00003cc8  00000000  00000000  00144980  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_line   0002f519  00000000  00000000  001492c8  2**0
+ 22 .debug_line   0002cbbc  00000000  00000000  00148648  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_str    00009310  00000000  00000000  001787e1  2**0
+ 23 .debug_str    0000931d  00000000  00000000  00175204  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_frame  0000863c  00000000  00000000  00181af4  2**2
+ 24 .debug_frame  0000863c  00000000  00000000  0017e524  2**2
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_loc    00016d0c  00000000  00000000  0018a130  2**0
+ 25 .debug_loc    00016d0c  00000000  00000000  00186b60  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -165,7 +165,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 200038f4 l     O .bss	00001000 micFront_output
 200018f0 l     O .bss	00000001 count_index
 200018f2 l     O .bss	00000002 last_index
-200048f4 l     O .bss	00000002 nb_samples.14178
+200048f4 l     O .bss	00000002 nb_samples.14110
 00000000 l    df *ABS*	00000000 fft.c
 00000000 l    df *ABS*	00000000 spi3_slave_lld.c
 080031f0 l     F .text	00000068 spi3_slave_lld_serve_tx_interrupt.part.0

@@ -9,11 +9,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <maze_mapping.h>
-#include <constantes.h>
 #include "ch.h"
+#include <constantes.h>
 #include <leds.h>
-#include <main.h>
+#include <maze_mapping.h>
 #include <mouvements.h>
 
 #define MAX_MAP_SIZE 50
@@ -163,9 +162,8 @@ uint8_t maze_mapping_memorise_crossroad(bool right_status)
         {
             current_crossroad++;
             mode=NO_MODE_SELECTED;
-            //uturn_to_do=false;
             maze_mapping_victory_dance();
-            return DONT_MOVE;//return U_TURN;
+            return DONT_MOVE;
         }
     }
     else
@@ -249,8 +247,7 @@ uint8_t maze_mapping_next_step_to_goal(void)
 			}
 			else
 			{
-				order=DONT_MOVE;//order=U_TURN;
-				//uturn_to_do=false;
+				order=DONT_MOVE;
 				mode=NO_MODE_SELECTED;
 			    memorise_crossroad=true;
 				maze_mapping_victory_dance();

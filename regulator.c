@@ -63,6 +63,7 @@ void regulator_follow_wall(int reference_value, int current_value, int sensor_id
 
 	if (sensor_id==RIGHT_SENS)
 		difference = -difference+OFFSET;
+
 	if(difference > MAX_DIFF)
 		difference = MAX_DIFF;
 	if(difference < -MAX_DIFF)
