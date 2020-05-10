@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
   55              		.loc 1 29 0
   56 001a 2DED048B 		vpush.64	{d8, d9}
   57              		.cfi_def_cfa_offset 36
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 2
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 2
 
 
   58              		.cfi_offset 80, -36
@@ -87,10 +87,10 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
   81              		.loc 1 42 0
   82 003e 0029     		cmp	r1, #0
   83 0040 53D0     		beq	.L9
-  84              		.loc 1 49 0
+  84              		.loc 1 47 0
   85 0042 0129     		cmp	r1, #1
   86 0044 2CD0     		beq	.L10
-  87              		.loc 1 56 0
+  87              		.loc 1 54 0
   88 0046 FFF7FEFF 		bl	get_right_speed
   89              	.LVL3:
   90 004a 2044     		add	r0, r0, r4
@@ -104,7 +104,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
   98 0064 17EE903A 		vmov	r3, s15	@ int
   99 0068 1DB2     		sxth	r5, r3
  100              	.LVL5:
- 101              		.loc 1 57 0
+ 101              		.loc 1 55 0
  102 006a FFF7FEFF 		bl	get_left_speed
  103              	.LVL6:
  104 006e 001B     		subs	r0, r0, r4
@@ -116,19 +116,19 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  110 0084 19B2     		sxth	r1, r3
  111              	.LVL7:
  112              	.L3:
- 113              		.loc 1 60 0
+ 113              		.loc 1 58 0
  114 0086 2846     		mov	r0, r5
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 3
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 3
 
 
  115 0088 FFF7FEFF 		bl	set_speed
  116              	.LVL8:
- 117              		.loc 1 62 0
+ 117              		.loc 1 60 0
  118 008c 019A     		ldr	r2, [sp, #4]
  119 008e 3368     		ldr	r3, [r6]
- 120              		.loc 1 61 0
+ 120              		.loc 1 59 0
  121 0090 87ED008A 		vstr.32	s16, [r7]
- 122              		.loc 1 62 0
+ 122              		.loc 1 60 0
  123 0094 9A42     		cmp	r2, r3
  124 0096 2FD1     		bne	.L11
  125 0098 03B0     		add	sp, sp, #12
@@ -145,7 +145,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  136              	.LVL9:
  137              	.L10:
  138              		.cfi_restore_state
- 139              		.loc 1 51 0
+ 139              		.loc 1 49 0
  140 00a0 FFF7FEFF 		bl	get_right_speed
  141              	.LVL10:
  142 00a4 DFED179A 		vldr.32	s19, .L12+8
@@ -161,7 +161,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  152 00c4 17EE903A 		vmov	r3, s15	@ int
  153 00c8 1DB2     		sxth	r5, r3
  154              	.LVL12:
- 155              		.loc 1 52 0
+ 155              		.loc 1 50 0
  156 00ca FFF7FEFF 		bl	get_left_speed
  157              	.LVL13:
  158 00ce 07EE900A 		vmov	s15, r0	@ int
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  169              		.loc 1 44 0
  170 00ea FFF7FEFF 		bl	get_right_speed
  171              	.LVL16:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 4
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 4
 
 
  172 00ee DFED079A 		vldr.32	s19, .L12+16
@@ -186,7 +186,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  174 00f6 D9E7     		b	.L7
  175              	.LVL17:
  176              	.L11:
- 177              		.loc 1 62 0
+ 177              		.loc 1 60 0
  178 00f8 FFF7FEFF 		bl	__stack_chk_fail
  179              	.LVL18:
  180              	.L13:
@@ -211,7 +211,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  199              		.type	regulator_difference, %function
  200              	regulator_difference:
  201              	.LFB4:
- 202              		.loc 1 66 0
+ 202              		.loc 1 64 0
  203              		.cfi_startproc
  204              		@ args = 0, pretend = 0, frame = 8
  205              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -224,35 +224,35 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  212 0002 124C     		ldr	r4, .L23
  213 0004 83B0     		sub	sp, sp, #12
  214              		.cfi_def_cfa_offset 24
- 215              		.loc 1 66 0
+ 215              		.loc 1 64 0
  216 0006 2568     		ldr	r5, [r4]
  217 0008 0195     		str	r5, [sp, #4]
- 218              		.loc 1 75 0
+ 218              		.loc 1 73 0
  219 000a FA28     		cmp	r0, #250
  220 000c 01DD     		ble	.L15
- 221              		.loc 1 75 0 is_stmt 0 discriminator 1
+ 221              		.loc 1 73 0 is_stmt 0 discriminator 1
  222 000e FA29     		cmp	r1, #250
  223 0010 0DDC     		bgt	.L22
  224              	.L15:
  225              	.LVL20:
- 226              		.loc 1 83 0 is_stmt 1
+ 226              		.loc 1 81 0 is_stmt 1
  227 0012 0198     		ldr	r0, [sp, #4]
  228              	.LVL21:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 5
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 5
 
 
  229 0014 2168     		ldr	r1, [r4]
  230              	.LVL22:
  231 0016 8842     		cmp	r0, r1
  232 0018 15D1     		bne	.L21
- 233              		.loc 1 82 0
+ 233              		.loc 1 80 0
  234 001a D21A     		subs	r2, r2, r3
  235              	.LVL23:
  236 001c 02F13200 		add	r0, r2, #50
- 237              		.loc 1 83 0
+ 237              		.loc 1 81 0
  238 0020 00B2     		sxth	r0, r0
  239 0022 0121     		movs	r1, #1
- 240              		.loc 1 85 0
+ 240              		.loc 1 83 0
  241 0024 03B0     		add	sp, sp, #12
  242              		.cfi_remember_state
  243              		.cfi_def_cfa_offset 12
@@ -262,26 +262,26 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  247              		.cfi_restore 5
  248              		.cfi_restore 4
  249              		.cfi_def_cfa_offset 0
- 250              		.loc 1 83 0
+ 250              		.loc 1 81 0
  251 002a FFF7FEBF 		b	regulator_pd
  252              	.LVL24:
  253              	.L22:
  254              		.cfi_restore_state
- 255              		.loc 1 78 0
+ 255              		.loc 1 76 0
  256 002e 019A     		ldr	r2, [sp, #4]
  257              	.LVL25:
  258 0030 2368     		ldr	r3, [r4]
  259              	.LVL26:
  260 0032 9A42     		cmp	r2, r3
  261 0034 07D1     		bne	.L21
- 262              		.loc 1 77 0
+ 262              		.loc 1 75 0
  263 0036 401A     		subs	r0, r0, r1
  264              	.LVL27:
- 265              		.loc 1 78 0
+ 265              		.loc 1 76 0
  266 0038 00B2     		sxth	r0, r0
  267 003a 0021     		movs	r1, #0
  268              	.LVL28:
- 269              		.loc 1 85 0
+ 269              		.loc 1 83 0
  270 003c 03B0     		add	sp, sp, #12
  271              		.cfi_remember_state
  272              		.cfi_def_cfa_offset 12
@@ -291,14 +291,14 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  276              		.cfi_restore 5
  277              		.cfi_restore 4
  278              		.cfi_def_cfa_offset 0
- 279              		.loc 1 83 0
+ 279              		.loc 1 81 0
  280 0042 FFF7FEBF 		b	regulator_pd
  281              	.LVL29:
  282              	.L21:
  283              		.cfi_restore_state
  284 0046 FFF7FEFF 		bl	__stack_chk_fail
  285              	.LVL30:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 6
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 6
 
 
  286              	.L24:
@@ -319,7 +319,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  301              		.type	regulator_follow_wall, %function
  302              	regulator_follow_wall:
  303              	.LFB5:
- 304              		.loc 1 88 0
+ 304              		.loc 1 86 0
  305              		.cfi_startproc
  306              		@ args = 0, pretend = 0, frame = 8
  307              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -329,36 +329,36 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  311              		.cfi_offset 4, -8
  312              		.cfi_offset 14, -4
  313 0002 0E4B     		ldr	r3, .L33
- 314              		.loc 1 91 0
+ 314              		.loc 1 89 0
  315 0004 401A     		subs	r0, r0, r1
  316              	.LVL32:
- 317              		.loc 1 93 0
+ 317              		.loc 1 91 0
  318 0006 012A     		cmp	r2, #1
- 319              		.loc 1 88 0
+ 319              		.loc 1 86 0
  320 0008 82B0     		sub	sp, sp, #8
  321              		.cfi_def_cfa_offset 16
- 322              		.loc 1 91 0
+ 322              		.loc 1 89 0
  323 000a 80B2     		uxth	r0, r0
  324              	.LVL33:
- 325              		.loc 1 88 0
+ 325              		.loc 1 86 0
  326 000c 1C68     		ldr	r4, [r3]
  327 000e 0194     		str	r4, [sp, #4]
- 328              		.loc 1 94 0
+ 328              		.loc 1 92 0
  329 0010 04BF     		itt	eq
  330 0012 4042     		rsbeq	r0, r0, #0
  331              	.LVL34:
  332 0014 80B2     		uxtheq	r0, r0
  333              	.LVL35:
- 334              		.loc 1 95 0
+ 334              		.loc 1 93 0
  335 0016 FA29     		cmp	r1, #250
- 336              		.loc 1 96 0
+ 336              		.loc 1 94 0
  337 0018 019A     		ldr	r2, [sp, #4]
  338              	.LVL36:
  339 001a 1B68     		ldr	r3, [r3]
- 340              		.loc 1 95 0
+ 340              		.loc 1 93 0
  341 001c 03DC     		bgt	.L32
- 342              		.loc 1 97 0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 7
+ 342              		.loc 1 95 0
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 7
 
 
  343 001e 9A42     		cmp	r2, r3
@@ -370,13 +370,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  349 0024 10BD     		pop	{r4, pc}
  350              	.L32:
  351              		.cfi_restore_state
- 352              		.loc 1 96 0
+ 352              		.loc 1 94 0
  353 0026 9A42     		cmp	r2, r3
  354 0028 06D1     		bne	.L31
  355 002a 00B2     		sxth	r0, r0
  356 002c 0221     		movs	r1, #2
  357              	.LVL37:
- 358              		.loc 1 97 0
+ 358              		.loc 1 95 0
  359 002e 02B0     		add	sp, sp, #8
  360              		.cfi_remember_state
  361              		.cfi_def_cfa_offset 8
@@ -385,12 +385,12 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  364              		.cfi_restore 14
  365              		.cfi_restore 4
  366              		.cfi_def_cfa_offset 0
- 367              		.loc 1 96 0
+ 367              		.loc 1 94 0
  368 0034 FFF7FEBF 		b	regulator_pd
  369              	.LVL38:
  370              	.L31:
  371              		.cfi_restore_state
- 372              		.loc 1 97 0
+ 372              		.loc 1 95 0
  373 0038 FFF7FEFF 		bl	__stack_chk_fail
  374              	.LVL39:
  375              	.L34:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  397              		.file 8 "c:\\users\\salma chatagny\\documents\\epfl\\ba6\\microinformatique\\eclipse_e-puck2\\tool
  398              		.file 9 "./constantes.h"
  399              		.file 10 "./mouvements.h"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 8
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 8
 
 
  400              		.section	.debug_info,"",%progbits
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  454 006e 07       		.byte	0x7
  455 006f CD000000 		.4byte	.LASF9
  456 0073 04       		.uleb128 0x4
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 9
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 9
 
 
  457 0074 04       		.byte	0x4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  511 00e1 0B       		.uleb128 0xb
  512 00e2 37000000 		.4byte	0x37
  513 00e6 F1000000 		.4byte	0xf1
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 10
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 10
 
 
  514 00ea 0C       		.uleb128 0xc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  568 0155 04       		.byte	0x4
  569 0156 0E       		.uleb128 0xe
  570 0157 61060000 		.4byte	.LASF24
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 11
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 11
 
 
  571 015b 06       		.byte	0x6
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  625 01c6 3B       		.byte	0x3b
  626 01c7 73000000 		.4byte	0x73
  627 01cb 08       		.byte	0x8
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 12
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 12
 
 
  628 01cc 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  682 0239 80       		.byte	0x80
  683 023a 12       		.uleb128 0x12
  684 023b F5060000 		.4byte	.LASF41
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 13
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 13
 
 
  685 023f 06       		.byte	0x6
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  739 02ae B9020000 		.4byte	0x2b9
  740 02b2 0C       		.uleb128 0xc
  741 02b3 7A000000 		.4byte	0x7a
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 14
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 14
 
 
  742 02b7 1F       		.byte	0x1f
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  796 031d 06       		.byte	0x6
  797 031e B9       		.byte	0xb9
  798 031f 49000000 		.4byte	0x49
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 15
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 15
 
 
  799 0323 0C       		.byte	0xc
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  853 038f 30       		.byte	0x30
  854 0390 10       		.uleb128 0x10
  855 0391 5F757000 		.ascii	"_up\000"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 16
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 16
 
 
  856 0395 06       		.byte	0x6
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  910 0401 06       		.byte	0x6
  911 0402 E4       		.byte	0xe4
  912 0403 12010000 		.4byte	0x112
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 17
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 17
 
 
  913 0407 5C       		.byte	0x5c
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  967 047f 0C       		.byte	0xc
  968 0480 18       		.uleb128 0x18
  969 0481 10060000 		.4byte	.LASF71
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 18
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 18
 
 
  970 0485 06       		.byte	0x6
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1024 04fa 06       		.byte	0x6
  1025 04fb 5102     		.2byte	0x251
  1026 04fd 65080000 		.4byte	0x865
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 19
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 19
 
 
  1027 0501 4C       		.byte	0x4c
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1081 0577 01       		.byte	0x1
  1082 0578 08       		.byte	0x8
  1083 0579 C6060000 		.4byte	.LASF88
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 20
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 20
 
 
  1084 057d 16       		.uleb128 0x16
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1138 05fe 02       		.byte	0x2
  1139 05ff 00       		.byte	0
  1140 0600 0B       		.uleb128 0xb
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 21
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 21
 
 
  1141 0601 37000000 		.4byte	0x37
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1195 0677 18       		.uleb128 0x18
  1196 0678 DC060000 		.4byte	.LASF95
  1197 067c 06       		.byte	0x6
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 22
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 22
 
 
  1198 067d 4101     		.2byte	0x141
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1252 06f1 06       		.byte	0x6
  1253 06f2 6002     		.2byte	0x260
  1254 06f4 6C000000 		.4byte	0x6c
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 23
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 23
 
 
  1255 06f8 50       		.byte	0x50
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1309 076d AC       		.byte	0xac
  1310 076e 18       		.uleb128 0x18
  1311 076f D0010000 		.4byte	.LASF112
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 24
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 24
 
 
  1312 0773 06       		.byte	0x6
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1366 07e8 00       		.byte	0
  1367 07e9 18       		.uleb128 0x18
  1368 07ea 55070000 		.4byte	.LASF117
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 25
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 25
 
 
  1369 07ee 06       		.byte	0x6
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1423 0861 54080000 		.4byte	0x854
  1424 0865 06       		.uleb128 0x6
  1425 0866 04       		.byte	0x4
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 26
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 26
 
 
  1426 0867 86010000 		.4byte	0x186
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1480 08de 22       		.uleb128 0x22
  1481 08df 59040000 		.4byte	.LASF127
  1482 08e3 01       		.byte	0x1
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 27
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 27
 
 
  1483 08e4 22       		.uleb128 0x22
@@ -1612,37 +1612,37 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1531 0941 24       		.uleb128 0x24
  1532 0942 CB030000 		.4byte	.LASF143
  1533 0946 01       		.byte	0x1
- 1534 0947 57       		.byte	0x57
+ 1534 0947 55       		.byte	0x55
  1535 0948 00000000 		.4byte	.LFB5
  1536 094c 40000000 		.4byte	.LFE5-.LFB5
  1537 0950 01       		.uleb128 0x1
  1538 0951 9C       		.byte	0x9c
  1539 0952 030A0000 		.4byte	0xa03
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 28
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 28
 
 
  1540 0956 25       		.uleb128 0x25
  1541 0957 A6040000 		.4byte	.LASF138
  1542 095b 01       		.byte	0x1
- 1543 095c 57       		.byte	0x57
+ 1543 095c 55       		.byte	0x55
  1544 095d 73000000 		.4byte	0x73
  1545 0961 00000000 		.4byte	.LLST10
  1546 0965 25       		.uleb128 0x25
  1547 0966 4C050000 		.4byte	.LASF139
  1548 096a 01       		.byte	0x1
- 1549 096b 57       		.byte	0x57
+ 1549 096b 55       		.byte	0x55
  1550 096c 73000000 		.4byte	0x73
  1551 0970 21000000 		.4byte	.LLST11
  1552 0974 25       		.uleb128 0x25
  1553 0975 FE060000 		.4byte	.LASF140
  1554 0979 01       		.byte	0x1
- 1555 097a 57       		.byte	0x57
+ 1555 097a 55       		.byte	0x55
  1556 097b 73000000 		.4byte	0x73
  1557 097f 5B000000 		.4byte	.LLST12
  1558 0983 26       		.uleb128 0x26
  1559 0984 7C040000 		.4byte	.LASF142
  1560 0988 01       		.byte	0x1
- 1561 0989 59       		.byte	0x59
+ 1561 0989 57       		.byte	0x57
  1562 098a B5080000 		.4byte	0x8b5
  1563 098e 7C000000 		.4byte	.LLST13
  1564 0992 27       		.uleb128 0x27
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1594 09bb 01       		.uleb128 0x1
  1595 09bc 52       		.byte	0x52
  1596 09bd 31       		.byte	0x31
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 29
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 29
 
 
  1597 09be 29       		.byte	0x29
@@ -1738,13 +1738,13 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1651 09fa 3C000000 		.4byte	.LVL39
  1652 09fe 560B0000 		.4byte	0xb56
  1653 0a02 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 30
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 30
 
 
  1654 0a03 24       		.uleb128 0x24
  1655 0a04 67000000 		.4byte	.LASF144
  1656 0a08 01       		.byte	0x1
- 1657 0a09 41       		.byte	0x41
+ 1657 0a09 3F       		.byte	0x3f
  1658 0a0a 00000000 		.4byte	.LFB4
  1659 0a0e 50000000 		.4byte	.LFE4-.LFB4
  1660 0a12 01       		.uleb128 0x1
@@ -1753,31 +1753,31 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1663 0a18 25       		.uleb128 0x25
  1664 0a19 93060000 		.4byte	.LASF145
  1665 0a1d 01       		.byte	0x1
- 1666 0a1e 41       		.byte	0x41
+ 1666 0a1e 3F       		.byte	0x3f
  1667 0a1f 73000000 		.4byte	0x73
  1668 0a23 6C010000 		.4byte	.LLST5
  1669 0a27 25       		.uleb128 0x25
  1670 0a28 E9070000 		.4byte	.LASF146
  1671 0a2c 01       		.byte	0x1
- 1672 0a2d 41       		.byte	0x41
+ 1672 0a2d 3F       		.byte	0x3f
  1673 0a2e 73000000 		.4byte	0x73
  1674 0a32 A6010000 		.4byte	.LLST6
  1675 0a36 25       		.uleb128 0x25
  1676 0a37 87040000 		.4byte	.LASF147
  1677 0a3b 01       		.byte	0x1
- 1678 0a3c 41       		.byte	0x41
+ 1678 0a3c 3F       		.byte	0x3f
  1679 0a3d 73000000 		.4byte	0x73
  1680 0a41 E0010000 		.4byte	.LLST7
  1681 0a45 25       		.uleb128 0x25
  1682 0a46 8D010000 		.4byte	.LASF148
  1683 0a4a 01       		.byte	0x1
- 1684 0a4b 41       		.byte	0x41
+ 1684 0a4b 3F       		.byte	0x3f
  1685 0a4c 73000000 		.4byte	0x73
  1686 0a50 1A020000 		.4byte	.LLST8
  1687 0a54 26       		.uleb128 0x26
  1688 0a55 7C040000 		.4byte	.LASF142
  1689 0a59 01       		.byte	0x1
- 1690 0a5a 49       		.byte	0x49
+ 1690 0a5a 47       		.byte	0x47
  1691 0a5b B5080000 		.4byte	0x8b5
  1692 0a5f 54020000 		.4byte	.LLST9
  1693 0a63 27       		.uleb128 0x27
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1708 0a7b 23       		.byte	0x23
  1709 0a7c 32       		.uleb128 0x32
  1710 0a7d 28       		.uleb128 0x28
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 31
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 31
 
 
  1711 0a7e 01       		.uleb128 0x1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1765 0ae4 1E       		.byte	0x1e
  1766 0ae5 B5080000 		.4byte	0x8b5
  1767 0ae9 EF020000 		.4byte	.LLST2
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 32
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 32
 
 
  1768 0aed 26       		.uleb128 0x26
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1822 0b74 12       		.byte	0x12
  1823 0b75 2C       		.uleb128 0x2c
  1824 0b76 E4000000 		.4byte	.LASF156
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 33
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 33
 
 
  1825 0b7a E4000000 		.4byte	.LASF156
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1879 0030 3E       		.uleb128 0x3e
  1880 0031 0B       		.uleb128 0xb
  1881 0032 03       		.uleb128 0x3
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 34
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 34
 
 
  1882 0033 08       		.uleb128 0x8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1936 0069 0A       		.uleb128 0xa
  1937 006a 0D       		.uleb128 0xd
  1938 006b 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 35
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 35
 
 
  1939 006c 03       		.uleb128 0x3
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  1993 00a2 00       		.byte	0
  1994 00a3 00       		.byte	0
  1995 00a4 0F       		.uleb128 0xf
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 36
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 36
 
 
  1996 00a5 13       		.uleb128 0x13
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2050 00db 13       		.uleb128 0x13
  2051 00dc 38       		.uleb128 0x38
  2052 00dd 05       		.uleb128 0x5
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 37
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 37
 
 
  2053 00de 00       		.byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2107 0114 3A       		.uleb128 0x3a
  2108 0115 0B       		.uleb128 0xb
  2109 0116 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 38
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 38
 
 
  2110 0117 05       		.uleb128 0x5
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2164 014d 0B       		.uleb128 0xb
  2165 014e 3A       		.uleb128 0x3a
  2166 014f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 39
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 39
 
 
  2167 0150 3B       		.uleb128 0x3b
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2221 0186 49       		.uleb128 0x49
  2222 0187 13       		.uleb128 0x13
  2223 0188 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 40
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 40
 
 
  2224 0189 19       		.uleb128 0x19
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2278 01bf 0B       		.uleb128 0xb
  2279 01c0 3B       		.uleb128 0x3b
  2280 01c1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 41
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 41
 
 
  2281 01c2 27       		.uleb128 0x27
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2335 01fc 13       		.uleb128 0x13
  2336 01fd 00       		.byte	0
  2337 01fe 00       		.byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 42
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 42
 
 
  2338 01ff 28       		.uleb128 0x28
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2392 023c 0B       		.uleb128 0xb
  2393 023d 3B       		.uleb128 0x3b
  2394 023e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 43
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 43
 
 
  2395 023f 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2449 0072 52       		.byte	0x52
  2450 0073 9F       		.byte	0x9f
  2451 0074 00000000 		.4byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 44
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 44
 
 
  2452 0078 00000000 		.4byte	0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2506 00cf FFFF     		.2byte	0xffff
  2507 00d1 1A       		.byte	0x1a
  2508 00d2 F3       		.byte	0xf3
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 45
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 45
 
 
  2509 00d3 01       		.uleb128 0x1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2563 011b FFFF     		.2byte	0xffff
  2564 011d 1A       		.byte	0x1a
  2565 011e 1F       		.byte	0x1f
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 46
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 46
 
 
  2566 011f F3       		.byte	0xf3
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2620 015b 52       		.byte	0x52
  2621 015c 31       		.byte	0x31
  2622 015d 29       		.byte	0x29
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 47
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 47
 
 
  2623 015e 28       		.byte	0x28
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2677 01d7 9F       		.byte	0x9f
  2678 01d8 00000000 		.4byte	0
  2679 01dc 00000000 		.4byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 48
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 48
 
 
  2680              	.LLST7:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2734 025e 72       		.byte	0x72
  2735 025f 00       		.sleb128 0
  2736 0260 73       		.byte	0x73
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 49
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 49
 
 
  2737 0261 00       		.sleb128 0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2791 02d9 ED000000 		.4byte	.LVL16-1
  2792 02dd 10010000 		.4byte	.LFE3
  2793 02e1 0400     		.2byte	0x4
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 50
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 50
 
 
  2794 02e3 F3       		.byte	0xf3
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2848 000a 04       		.byte	0x4
  2849 000b 00       		.byte	0
  2850 000c 0000     		.2byte	0
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 51
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 51
 
 
  2851 000e 0000     		.2byte	0
@@ -3022,7 +3022,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2869 001c 00000000 		.4byte	0
  2870              		.section	.debug_line,"",%progbits
  2871              	.Ldebug_line0:
- 2872 0000 8B030000 		.section	.debug_str,"MS",%progbits,1
+ 2872 0000 8A030000 		.section	.debug_str,"MS",%progbits,1
  2872      0200FE02 
  2872      00000201 
  2872      FB0E0D00 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2888 004d 5F5F7569 		.ascii	"__uint8_t\000"
  2888      6E74385F 
  2888      7400
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 52
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 52
 
 
  2889              	.LASF154:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2911              	.LASF126:
  2912 00f7 46524F4E 		.ascii	"FRONT_RIGHT\000"
  2912      545F5249 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 53
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 53
 
 
  2912      47485400 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2941              	.LASF148:
  2942 018d 6C656674 		.ascii	"left_value\000"
  2942      5F76616C 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 54
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 54
 
 
  2942      756500
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2973              	.LASF101:
  2974 021c 5F67616D 		.ascii	"_gamma_signgam\000"
  2974      6D615F73 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 55
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 55
 
 
  2974      69676E67 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  2992      2D636F6E 
  2992      7374616E 
  2992      7400
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 56
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 56
 
 
  2993              	.LASF17:
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3018      756C7400 
  3019              	.LASF16:
  3020 0436 5F5F7763 		.ascii	"__wch\000"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 57
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 57
 
 
  3020      6800
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3048      6D612043 
  3048      68617461 
  3049 04ec 63726F69 		.ascii	"croinformatique\\TPs\\TPs_git\\TP6_Miniprojet\\Mini"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 58
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 58
 
 
  3049      6E666F72 
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3074      00
  3075              	.LASF153:
  3076 05a2 64657269 		.ascii	"derivate\000"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 59
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 59
 
 
  3076      76617465 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3106 0625 5F6C6F63 		.ascii	"_locale\000"
  3106      616C6500 
  3107              	.LASF76:
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 60
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 60
 
 
  3108 062d 5F5F636C 		.ascii	"__cleanup\000"
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3136      00
  3137              	.LASF30:
  3138 06cb 5F5F746D 		.ascii	"__tm_min\000"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 61
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 61
 
 
  3138      5F6D696E 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3166      6500
  3167              	.LASF117:
  3168 0755 5F6E6D61 		.ascii	"_nmalloc\000"
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 62
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 62
 
 
  3168      6C6C6F63 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3196      5F646966 
  3196      66657265 
  3196      6E636500 
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 63
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 63
 
 
  3197              	.LASF146:
@@ -3736,22 +3736,22 @@ ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 1
  3202      5F4C4546 
  3202      5400
  3203              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s 			page 64
+ARM GAS  C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s 			page 64
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 regulator.c
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:18     .text.regulator_pd:00000000 $t
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:26     .text.regulator_pd:00000000 regulator_pd
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:183    .text.regulator_pd:000000fc $d
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:192    .text.regulator_difference:00000000 $t
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:200    .text.regulator_difference:00000000 regulator_difference
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:289    .text.regulator_difference:0000004c $d
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:294    .text.regulator_follow_wall:00000000 $t
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:302    .text.regulator_follow_wall:00000000 regulator_follow_wall
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:378    .text.regulator_follow_wall:0000003c $d
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:383    .bss.last_difference:00000000 $d
-C:\Users\SALMAC~1\AppData\Local\Temp\cccheL1R.s:387    .bss.last_difference:00000000 last_difference
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:18     .text.regulator_pd:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:26     .text.regulator_pd:00000000 regulator_pd
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:183    .text.regulator_pd:000000fc $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:192    .text.regulator_difference:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:200    .text.regulator_difference:00000000 regulator_difference
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:289    .text.regulator_difference:0000004c $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:294    .text.regulator_follow_wall:00000000 $t
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:302    .text.regulator_follow_wall:00000000 regulator_follow_wall
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:378    .text.regulator_follow_wall:0000003c $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:383    .bss.last_difference:00000000 $d
+C:\Users\SALMAC~1\AppData\Local\Temp\ccDnqsiv.s:387    .bss.last_difference:00000000 last_difference
 
 UNDEFINED SYMBOLS
 get_right_speed

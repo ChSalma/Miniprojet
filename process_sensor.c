@@ -165,7 +165,7 @@ static THD_FUNCTION(ProcessMeasure, arg){
 									,get_calibrated_prox(FRONT_LEFT_45DEG)
 									,get_calibrated_prox(RIGHT_SENS)
 									,get_calibrated_prox(LEFT_SENS));
-			else if (FRONT_RIGHT == FREE_WAY_DETECTED)
+			else
 			{
 				if (sensors_values[LEFT_SENS]==WALL_DETECTED)
 					do_follow_wall_regulation(FRONT_LEFT_45DEG);
