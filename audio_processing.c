@@ -1,19 +1,13 @@
-#include "ch.h"
-#include "hal.h"
-#include <main.h>
-#include <usbcfg.h>
-#include <chprintf.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
-
-#include <maze_mapping.h>
-#include <constantes.h>
+#include <stdint.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>
-#include <fft.h>
 #include <arm_math.h>
-
-#include <chprintf.h>
-#include <mouvements.h>
+#include <constantes.h>
+#include <fft.h>
+#include <maze_mapping.h>
 
 //2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
 static float micFront_cmplx_input[2 * FFT_SIZE];
@@ -24,10 +18,10 @@ static float micFront_output[FFT_SIZE];
 #define MAX_COUNT_INDEX 10
 
 #define MIN_FREQ			10	//we don't analyze before this index to not use resources for nothing
-#define FREQ_DISCOVER		16	//250Hz 230-
+#define FREQ_DISCOVER		16	//250Hz
 #define FREQ_RETURN_HOME	19	//296Hz
-#define FREQ_GO_FPK			23	//359HZ 322-370
-#define FREQ_END_MAZE		26	//406Hz 377
+#define FREQ_GO_FPK			23	//359HZ
+#define FREQ_END_MAZE		26	//406Hz
 #define MAX_FREQ			30	//we don't analyze after this index to not use resources for nothing
 
 #define FREQ_DISCOVER_L		(FREQ_DISCOVER-1)

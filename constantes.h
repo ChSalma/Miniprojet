@@ -10,7 +10,7 @@
 
 //mouvements
 #define LOW_SPEED 200
-#define HIGH_SPEED 350
+#define HIGH_SPEED 500
 #define ULTRA_HIGH_SPEED 1000
 
 #define FULL_TURN	360

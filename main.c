@@ -11,7 +11,6 @@
 #include <motors.h>
 #include <sensors/proximity.h>
 #include <process_sensor.h>
-#include <chprintf.h>
 #include <audio/microphone.h>
 #include <audio_processing.h>
 #include <spi_comm.h>
@@ -20,18 +19,18 @@
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
-
-static void serial_start(void)
-{
-	static SerialConfig ser_cfg = {
-	    115200,
-	    0,
-	    0,
-	    0,
-	};
-
-	sdStart(&SD3, &ser_cfg); // UART3.
-}
+//
+//static void serial_start(void)
+//{
+//	static SerialConfig ser_cfg = {
+//	    115200,
+//	    0,
+//	    0,
+//	    0,
+//	};
+//
+//	sdStart(&SD3, &ser_cfg); // UART3.
+//}
 
 int main(void)
 {
@@ -44,7 +43,7 @@ int main(void)
     messagebus_init(&bus, &bus_lock, &bus_condvar);
 
     /*starts the serial communication*/
-    serial_start();
+//    serial_start();
 
     /*Init des capteurs de proximité*/
     proximity_start();
