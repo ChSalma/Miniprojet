@@ -8,6 +8,8 @@
 
 #define KP 1.6 //Régulation PD entre deux murs
 #define KD 0.8
+#define KP_LAT 0.8
+#define KD_LAT 0.4
 #define KP_FW 1 //Régulation PD par rapport à un seul mur
 #define KD_FW 0.5
 
@@ -16,9 +18,9 @@
 //Pour corriger le fait que RIGHT_SENS donne des valeurs
 //plus faible que LEFT_SENS pour une distance donnée
 //on définit un offset
-#define OFFSET 20
+#define OFFSET 50
 
-enum{DIFFERENCE, FOLLOW_WALL};
+enum{DIFFERENCE_45_DEG, DIFFERENCE_LAT, FOLLOW_WALL};
 
 static float last_difference = 0;
 
@@ -37,12 +39,19 @@ void regulator_pd(int16_t difference, uint8_t regulation_type)
 	derivate = difference-last_difference;
 
 	//REGULATION PD//
-	if (regulation_type==DIFFERENCE)
+	if (regulation_type==DIFFERENCE_45_DEG)
 	{
 		right_speed = get_right_speed() + KP*difference + KD*derivate; 	//Cette méthode consomme moins de mémoire que
 		left_speed = get_left_speed() - KP*difference - KD*derivate;	//de créer deux variables float que l'on passe
 	}																	//comme arguments (p_coeff, d_coeff) pour les
-	else																//bons KP et KD
+																		//bons KP et KD
+
+	else if (regulation_type==DIFFERENCE_LAT)
+	{
+		right_speed = get_right_speed() + KP_LAT*difference + KD_LAT*derivate;
+		left_speed = get_left_speed() - KP_LAT*difference - KD_LAT*derivate;
+	}
+	else
 	{
 		right_speed = get_right_speed() + KP_FW*difference  + KD_FW*derivate;
 		left_speed = get_left_speed() - KP_FW*difference  - KD_FW*derivate;
@@ -53,7 +62,7 @@ void regulator_pd(int16_t difference, uint8_t regulation_type)
 }
 
 //Fonctions publiques
-void regulator_difference(int front_right_45deg_value, int front_left_45deg_value, int front_right_value, int front_left_value)
+void regulator_difference(int front_right_45deg_value, int front_left_45deg_value, int right_value, int left_value)
 {
     /*Cette fonction est appelée uniquement quand le robot est entre deux murs.
      * On utilise les capteurs avant 45deg autant que possible car ils permettent une meilleure anticipation de
@@ -64,11 +73,15 @@ void regulator_difference(int front_right_45deg_value, int front_left_45deg_valu
     int16_t difference;
 
     if ((front_right_45deg_value>THRESHOLD_45_DEG)&&(front_left_45deg_value>THRESHOLD_45_DEG))
+    {
 		difference = front_right_45deg_value-front_left_45deg_value;
+    	regulator_pd(difference, DIFFERENCE_45_DEG);
+    }
 	else
-		difference = front_right_value-front_left_value+OFFSET;
-
-    regulator_pd(difference, DIFFERENCE);
+	{
+		difference = right_value-left_value+OFFSET;
+		regulator_pd(difference, DIFFERENCE_LAT);
+	}
 }
 
 void regulator_follow_wall(int reference_value, int current_value, int sensor_id)
