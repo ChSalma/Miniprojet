@@ -41,11 +41,9 @@ void regulator_pd(int16_t difference, uint8_t regulation_type)
 	//REGULATION PD//
 	if (regulation_type==DIFFERENCE_45_DEG)
 	{
-		right_speed = get_right_speed() + KP*difference + KD*derivate; 	//Cette méthode consomme moins de mémoire que
-		left_speed = get_left_speed() - KP*difference - KD*derivate;	//de créer deux variables float que l'on passe
-	}																	//comme arguments (p_coeff, d_coeff) pour les
-																		//bons KP et KD
-
+		right_speed = get_right_speed() + KP*difference + KD*derivate;
+		left_speed = get_left_speed() - KP*difference - KD*derivate;
+	}
 	else if (regulation_type==DIFFERENCE_LAT)
 	{
 		right_speed = get_right_speed() + KP_LAT*difference + KD_LAT*derivate;
