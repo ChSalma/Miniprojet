@@ -39,6 +39,8 @@ void maze_mapping_victory_dance(void);
 //variables globales
 static uint8_t map[MAX_MAP_SIZE], multi_check=RESET;
 static int8_t current_crossroad=RESET, robot_position=RESET;
+//current_crossroad correspond à l'ID du prochain carrefour que le robot va découvrir
+//robot_position correspond à la position du robot dans la liste des carrefours, 0 <= robot_position < current_crossroad
 static bool memorise_crossroad=true, switch_to_discover_mode=false, uturn_to_do=true, do_a_uturn=false, furthest_point_reached=false;
 static bool last_f_status, last_r_status, last_l_status;
 static uint8_t mode = NO_MODE_SELECTED;
@@ -92,8 +94,8 @@ uint8_t maze_mapping_furthest_point_reached(void)
 {
 	furthest_point_reached=false;
 	memorise_crossroad=true;
-	if (switch_to_discover_mode)
-	{
+	if (switch_to_discover_mode)		//Bascule à DISCOVER si l'ordre initial était DISCOVER et bascule à
+	{									//NO_MODE_SELECTED si l'ordre inital état GO_FURTHEST_POINT_KNOWN
 	    mode=DISCOVER;
 	    maze_mapping_update_rgb_leds();
 	    switch_to_discover_mode=false;
@@ -305,7 +307,7 @@ void maze_mapping_select_mode(uint8_t mode_selected)
 {
 	bool ignore_order=false;
 
-	if ((map[robot_position]==END)&&(mode_selected!=RETURN_HOME))
+	if ((map[robot_position]==END)&&(mode_selected!=RETURN_HOME)) //Ignore les ordres incohérents
 		ignore_order=true;
 
 	if ((map[robot_position]==BEGINNING)&&(mode_selected==RETURN_HOME))
